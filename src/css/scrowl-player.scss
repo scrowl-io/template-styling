@@ -1,0 +1,25 @@
+// Scrowl Player
+@import "tokens";
+@import "icons";
+@import "typography";
+@import "themes";
+
+html,
+body {
+  margin: 0;
+}
+
+section {
+  font-family: var(--template-font-family-base);
+  color: var(--template-color);
+  background-color: var(--template-bg);
+}
+
+.section-wrapper {
+  padding: 5vmin;
+}
+
+hr {
+  margin: 1em 0;
+  border: 1px solid var(--template-border-color);
+}

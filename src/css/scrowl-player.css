@@ -1,0 +1,200 @@
+span[class^=material-symbols] {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.material-symbols-rounded {
+  font-size: 1.2em;
+  vertical-align: text-bottom;
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 20;
+}
+
+.material-symbols-outlined {
+  font-size: 1.2em;
+  vertical-align: text-bottom;
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 200, "opsz" 20;
+}
+
+.material-symbols-sharp {
+  font-size: 1.2em;
+  vertical-align: text-bottom;
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 20;
+}
+
+/* Fluid font size variables, for browsers that support clamp */
+@supports (font-size: clamp(1rem, 1vmin, 1rem)) {
+  :root {
+    --template-font-size-sm: clamp(0.7rem, 0.262vmin + 0.635rem, 0.844rem);
+    --template-font-size-base: clamp(0.875rem, 0.455vmin + 0.761rem, 1.125rem);
+    --template-font-size-h5: clamp(1.094rem, 0.738vmin + 0.909rem, 1.5rem);
+    --template-font-size-h4: clamp(1.367rem, 1.149vmin + 1.08rem, 1.999rem);
+    --template-font-size-h3: clamp(1.709rem, 1.738vmin + 1.275rem, 2.665rem);
+    --template-font-size-h2: clamp(2.136rem, 2.574vmin + 1.493rem, 3.552rem);
+    --template-font-size-h1: clamp(2.67rem, 3.754vmin + 1.732rem, 4.735rem);
+  }
+}
+/* Fallback variables for browsers that don't support clamp */
+@supports not (font-size: clamp(1rem, 1vmin, 1rem)) {
+  :root {
+    --template-font-size-sm: 0.7rem;
+    --template-font-size-base: 0.875rem;
+    --template-font-size-h5: 1.094rem;
+    --template-font-size-h4: 1.367rem;
+    --template-font-size-h3: 1.709rem;
+    --template-font-size-h2: 2.136rem;
+    --template-font-size-h1: 2.67rem;
+  }
+  @media screen and (min-width: 1280px) {
+    :root {
+      --template-font-size-sm: 0.844rem;
+      --template-font-size-base: 1.125rem;
+      --template-font-size-h5: 1.5rem;
+      --template-font-size-h4: 1.999rem;
+      --template-font-size-h3: 2.665rem;
+      --template-font-size-h2: 3.552rem;
+      --template-font-size-h1: 4.735rem;
+    }
+  }
+}
+body {
+  font-size: var(--template-font-size-base);
+  font-family: var(--template-font-family-base);
+  line-height: 1.6875;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  -webkit-hyphens: manual;
+      -ms-hyphens: manual;
+          hyphens: manual;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  margin: 0 0 0.5em 0;
+  line-height: 1.25;
+  font-family: var(--template-font-family-heading);
+  letter-spacing: var(--template-font-letterspacing-heading);
+}
+
+h1,
+.h1 {
+  font-size: var(--template-font-size-h1);
+}
+
+h2,
+.h2 {
+  font-size: var(--template-font-size-h2);
+}
+
+h3,
+.h3 {
+  font-size: var(--template-font-size-h3);
+}
+
+h4,
+.h4 {
+  font-size: var(--template-font-size-h4);
+}
+
+h5,
+.h5 {
+  font-size: var(--template-font-size-h5);
+}
+
+small,
+.small {
+  font-size: var(--template-font-size-sm);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  max-width: 80ch;
+}
+
+.switcher {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: white;
+  background: #495057;
+}
+.switcher label {
+  margin: 0 0.5em;
+  cursor: pointer;
+}
+
+.switcher:has(input[value=theme--default]:checked) ~ section,
+:root,
+.theme--default {
+  --template-color: #343a40;
+  --template-bg: #fff;
+  --template-border-color: #dee2e6;
+  --template-font-family-base: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --template-font-family-heading: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --template-font-letterspacing-heading: -0.025em;
+}
+
+.switcher:has(input[value=theme--news]:checked) ~ section,
+.theme--news {
+  --template-color: #000;
+  --template-bg: #e9ecef;
+  --template-border-color: #000;
+  --template-font-family-base: Georgia, serif;
+  --template-font-family-heading: Georgia, serif;
+  --template-font-letterspacing-heading: -0.025em;
+}
+
+.switcher:has(input[value=theme--dark]:checked) ~ section,
+.theme--dark {
+  --template-color: #fff;
+  --template-bg: #212529;
+  --template-border-color: #6c757d;
+  --template-font-family-base: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --template-font-family-heading: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --template-font-letterspacing-heading: -0.025em;
+}
+
+.switcher:has(input[value=theme--fiesta]:checked) ~ section,
+.theme--fiesta {
+  --template-color: #3c0e66;
+  --template-bg: #f6dfff;
+  --template-border-color: #d361ff;
+  --template-font-family-base: "Tahoma", serif;
+  --template-font-family-heading: "Comic Sans MS", "Comic Sans", cursive;
+  --template-font-letterspacing-heading: 0.025em;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+section {
+  font-family: var(--template-font-family-base);
+  color: var(--template-color);
+  background-color: var(--template-bg);
+}
+
+.section-wrapper {
+  padding: 5vmin;
+}
+
+hr {
+  margin: 1em 0;
+  border: 1px solid var(--template-border-color);
+}/*# sourceMappingURL=scrowl-player.css.map */

@@ -1,0 +1,105 @@
+// Default Font Styles and variables.
+
+// https://www.fluid-type-scale.com/calculate?minFontSize=14&minWidth=400&minRatio=1.25&maxFontSize=18&maxWidth=1280&maxRatio=1.333&steps=sm%2Cbase%2Ch5%2Ch4%2Ch3%2Ch2%2Ch1&baseStep=base&prefix=template-font-size&decimals=3&includeFallbacks=on&useRems=on&remValue=16&previewFont=Inter
+/* Fluid font size variables, for browsers that support clamp */
+@supports (font-size: clamp(1rem, 1vmin, 1rem)) {
+  :root {
+    --template-font-size-sm: clamp(0.7rem, 0.262vmin + 0.635rem, 0.844rem);
+    --template-font-size-base: clamp(0.875rem, 0.455vmin + 0.761rem, 1.125rem);
+    --template-font-size-h5: clamp(1.094rem, 0.738vmin + 0.909rem, 1.5rem);
+    --template-font-size-h4: clamp(1.367rem, 1.149vmin + 1.08rem, 1.999rem);
+    --template-font-size-h3: clamp(1.709rem, 1.738vmin + 1.275rem, 2.665rem);
+    --template-font-size-h2: clamp(2.136rem, 2.574vmin + 1.493rem, 3.552rem);
+    --template-font-size-h1: clamp(2.67rem, 3.754vmin + 1.732rem, 4.735rem);
+  }
+}
+/* Fallback variables for browsers that don't support clamp */
+@supports not (font-size: clamp(1rem, 1vmin, 1rem)) {
+  :root {
+    --template-font-size-sm: 0.7rem;
+    --template-font-size-base: 0.875rem;
+    --template-font-size-h5: 1.094rem;
+    --template-font-size-h4: 1.367rem;
+    --template-font-size-h3: 1.709rem;
+    --template-font-size-h2: 2.136rem;
+    --template-font-size-h1: 2.67rem;
+  }
+  @media screen and (min-width: 1280px) {
+    :root {
+      --template-font-size-sm: 0.844rem;
+      --template-font-size-base: 1.125rem;
+      --template-font-size-h5: 1.5rem;
+      --template-font-size-h4: 1.999rem;
+      --template-font-size-h3: 2.665rem;
+      --template-font-size-h2: 3.552rem;
+      --template-font-size-h1: 4.735rem;
+    }
+  }
+}
+
+body{
+  font-size: var(--template-font-size-base);
+  font-family: var(--template-font-family-base);
+  line-height: $owl-ref-typeface-lineheight-base;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: manual;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  margin: 0 0 0.5em 0;
+  line-height: $owl-ref-typeface-lineheight-sm;
+  font-family: var(--template-font-family-heading);
+  letter-spacing: var(--template-font-letterspacing-heading);
+}
+
+h1,
+.h1 {
+  font-size: var(--template-font-size-h1);
+}
+
+h2,
+.h2 {
+  font-size: var(--template-font-size-h2);
+}
+
+h3,
+.h3 {
+  font-size: var(--template-font-size-h3);
+}
+
+h4,
+.h4 {
+  font-size: var(--template-font-size-h4);
+}
+
+h5,
+.h5 {
+  font-size: var(--template-font-size-h5);
+}
+
+small,
+.small {
+  font-size: var(--template-font-size-sm);
+}
+
+// Accessibility setting that text blocks aren't wider than 80 characters.
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  max-width: 80ch;
+}

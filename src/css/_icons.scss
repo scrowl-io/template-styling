@@ -1,0 +1,37 @@
+// Material Icons
+
+span[class^="material-symbols"] {
+  pointer-events: none;
+  user-select: none;
+}
+
+// Material Icon Settings
+.material-symbols-rounded {
+  font-size: 1.2em;
+  vertical-align: text-bottom;
+  font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 20;
+}
+
+.material-symbols-outlined {
+  font-size: 1.2em;
+  vertical-align: text-bottom;
+  font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 200,
+    'opsz' 20;
+}
+
+.material-symbols-sharp {
+  font-size: 1.2em;
+  vertical-align: text-bottom;
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 20
+}
