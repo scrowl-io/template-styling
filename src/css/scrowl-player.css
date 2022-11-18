@@ -144,6 +144,7 @@ p {
   --template-color: #343a40;
   --template-bg: #fff;
   --template-border-color: #dee2e6;
+  --template-max-width: 1200px;
   --template-font-family-base: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --template-font-family-heading: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --template-font-letterspacing-heading: -0.025em;
@@ -154,6 +155,7 @@ p {
   --template-color: #000;
   --template-bg: #e9ecef;
   --template-border-color: #000;
+  --template-max-width: 1024px;
   --template-font-family-base: Georgia, serif;
   --template-font-family-heading: Georgia, serif;
   --template-font-letterspacing-heading: -0.025em;
@@ -164,6 +166,7 @@ p {
   --template-color: #fff;
   --template-bg: #212529;
   --template-border-color: #6c757d;
+  --template-max-width: 1200px;
   --template-font-family-base: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --template-font-family-heading: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --template-font-letterspacing-heading: -0.025em;
@@ -174,6 +177,7 @@ p {
   --template-color: #3c0e66;
   --template-bg: #f6dfff;
   --template-border-color: #d361ff;
+  --template-max-width: 1440px;
   --template-font-family-base: "Tahoma", serif;
   --template-font-family-heading: "Comic Sans MS", "Comic Sans", cursive;
   --template-font-letterspacing-heading: 0.025em;
@@ -184,13 +188,16 @@ body {
   margin: 0;
 }
 
-section {
+.section {
+  display: flex;
+  justify-content: center;
   font-family: var(--template-font-family-base);
   color: var(--template-color);
   background-color: var(--template-bg);
 }
-
-.section-wrapper {
+.section__body {
+  flex: 1 1 auto;
+  max-width: var(--template-max-width);
   padding: 5vmin;
 }
 

@@ -2,6 +2,8 @@
 
 Workspace for mocking up template stylesheets
 
+[View here](src/index.html)
+
 ## Setup
 
 There isn't any build processes necessary to view this project, just open up the `.html` files and everything that is needed is compiled.
@@ -17,6 +19,7 @@ To develop locally, a sass compiler is necessary to build the stylesheet.
 | `--template-color`                      | text color       | $owl-ref-palette-gray-800                |
 | `--template-bg`                         | background color | $owl-ref-palette-white                   |
 | `--template-border-color`               | border color     | $owl-ref-palette-gray-300                |
+| `--template-max-width`                  | value            | 1200px                                   |
 | `--template-font-family-base`           | font family      | $owl-ref-typeface-font-family-sans-serif |
 | `--template-font-family-heading`        | font family      | $owl-ref-typeface-font-family-sans-serif |
 | `--template-font-letterspacing-heading` | value            | -0.025em                                 |

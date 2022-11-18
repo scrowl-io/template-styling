@@ -17,6 +17,7 @@
   --template-color:        #{$owl-ref-palette-gray-800};
   --template-bg:           #{$owl-ref-palette-white};
   --template-border-color: #{$owl-ref-palette-gray-300};
+  --template-max-width:    1200px;
 
   --template-font-family-base:            #{$owl-ref-typeface-font-family-sans-serif};
   --template-font-family-heading:         #{$owl-ref-typeface-font-family-sans-serif};
@@ -28,6 +29,7 @@
   --template-color:        #{$owl-ref-palette-black};
   --template-bg:           #{$owl-ref-palette-gray-200};
   --template-border-color: #{$owl-ref-palette-black};
+  --template-max-width:    1024px;
 
   --template-font-family-base:            Georgia, serif;
   --template-font-family-heading:         Georgia, serif;
@@ -39,6 +41,7 @@
   --template-color:        #{$owl-ref-palette-white};
   --template-bg:           #{$owl-ref-palette-gray-900};
   --template-border-color: #{$owl-ref-palette-gray-600};
+  --template-max-width:    1200px;
 
   --template-font-family-base:            #{$owl-ref-typeface-font-family-sans-serif};
   --template-font-family-heading:         #{$owl-ref-typeface-font-family-sans-serif};
@@ -50,6 +53,7 @@
   --template-color:        #{$owl-ref-palette-purple-800};
   --template-bg:           #{$owl-ref-palette-pink-100};
   --template-border-color: #{$owl-ref-palette-pink-500};
+  --template-max-width:    1440px;
 
   --template-font-family-base:            "Tahoma", serif;
   --template-font-family-heading:         "Comic Sans MS", "Comic Sans", cursive;

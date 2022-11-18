@@ -9,14 +9,18 @@ body {
   margin: 0;
 }
 
-section {
+.section {
+  display: flex;
+  justify-content: center;
   font-family: var(--template-font-family-base);
   color: var(--template-color);
   background-color: var(--template-bg);
-}
 
-.section-wrapper {
-  padding: 5vmin;
+  &__body {
+    flex: 1 1 auto;
+    max-width: var(--template-max-width);
+    padding: 5vmin;
+  }
 }
 
 hr {
