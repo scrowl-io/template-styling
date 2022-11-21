@@ -1,4 +1,5 @@
 // Scrowl Player
+@import "normalize";
 @import "tokens";
 @import "icons";
 @import "typography";
@@ -7,6 +8,12 @@
 html,
 body {
   margin: 0;
+  font-size: 16px;
+}
+
+hr {
+  margin: 1em 0;
+  border: 1px solid var(--template-border-color);
 }
 
 .section {
@@ -21,9 +28,4 @@ body {
     max-width: var(--template-max-width);
     padding: 5vmin;
   }
-}
-
-hr {
-  margin: 1em 0;
-  border: 1px solid var(--template-border-color);
 }

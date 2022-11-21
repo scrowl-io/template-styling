@@ -27,7 +27,7 @@
 .switcher:has(input[value="theme--news"]:checked) ~ section,// Just for the theme switcher example page
 .theme--news{
   --template-color:        #{$owl-ref-palette-black};
-  --template-bg:           #{$owl-ref-palette-gray-200};
+  --template-bg:           #fefaf0;
   --template-border-color: #{$owl-ref-palette-black};
   --template-max-width:    1024px;
 
