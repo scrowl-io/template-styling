@@ -5,10 +5,13 @@
 @import "typography";
 @import "themes";
 
+html {
+  font-size: 16px;
+}
+
 html,
 body {
   margin: 0;
-  font-size: 16px;
 }
 
 hr {

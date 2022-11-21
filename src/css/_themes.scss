@@ -2,12 +2,25 @@
   position: fixed;
   bottom: 0;
   right: 0;
+  padding: 0 0.25em 0.5em 0;
   color: white;
+  border: 0;
   background: $owl-ref-palette-gray-700;
+
+  legend {
+    padding: 0 0.5em;
+    background-color: $owl-ref-palette-gray-700;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
 
   label {
     margin: 0 0.5em;
     cursor: pointer;
+
+    input {
+      margin-right: 0.5em;
+    }
   }
 }
 

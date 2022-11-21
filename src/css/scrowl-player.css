@@ -381,47 +381,49 @@ body {
 }
 
 h1,
-.h1,
 h2,
-.h2,
 h3,
-.h3,
 h4,
-.h4,
 h5,
+small {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
 .h5 {
   margin: 0 0 0.5em 0;
   line-height: 1.25;
   font-family: var(--template-font-family-heading);
+  font-weight: 700;
   letter-spacing: var(--template-font-letterspacing-heading);
 }
 
-h1,
 .h1 {
   font-size: var(--template-font-size-h1);
 }
 
-h2,
 .h2 {
   font-size: var(--template-font-size-h2);
 }
 
-h3,
 .h3 {
   font-size: var(--template-font-size-h3);
 }
 
-h4,
 .h4 {
   font-size: var(--template-font-size-h4);
 }
 
-h5,
 .h5 {
   font-size: var(--template-font-size-h5);
 }
 
-small,
 .small {
   font-size: var(--template-font-size-sm);
 }
@@ -432,20 +434,42 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+dt,
+dd {
   max-width: 80ch;
+}
+
+dt {
+  font-weight: 600;
+}
+
+dd {
+  margin-bottom: 1em;
+  font-style: italic;
 }
 
 .switcher {
   position: fixed;
   bottom: 0;
   right: 0;
+  padding: 0 0.25em 0.5em 0;
   color: white;
+  border: 0;
   background: #495057;
+}
+.switcher legend {
+  padding: 0 0.5em;
+  background-color: #495057;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .switcher label {
   margin: 0 0.5em;
   cursor: pointer;
+}
+.switcher label input {
+  margin-right: 0.5em;
 }
 
 .switcher:has(input[value=theme--default]:checked) ~ section,
@@ -493,10 +517,13 @@ p {
   --template-font-letterspacing-heading: 0.025em;
 }
 
+html {
+  font-size: 16px;
+}
+
 html,
 body {
   margin: 0;
-  font-size: 16px;
 }
 
 hr {

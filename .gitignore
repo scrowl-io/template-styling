@@ -4,3 +4,5 @@
 *.scss.map
 
 .vscode/settings.json
+
+.DS_Store

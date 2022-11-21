@@ -48,47 +48,49 @@ body{
 }
 
 h1,
-.h1,
 h2,
-.h2,
 h3,
-.h3,
 h4,
-.h4,
 h5,
+small {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
 .h5 {
   margin: 0 0 0.5em 0;
   line-height: $owl-ref-typeface-lineheight-sm;
   font-family: var(--template-font-family-heading);
+  font-weight: 700;
   letter-spacing: var(--template-font-letterspacing-heading);
 }
 
-h1,
 .h1 {
   font-size: var(--template-font-size-h1);
 }
 
-h2,
 .h2 {
   font-size: var(--template-font-size-h2);
 }
 
-h3,
 .h3 {
   font-size: var(--template-font-size-h3);
 }
 
-h4,
 .h4 {
   font-size: var(--template-font-size-h4);
 }
 
-h5,
 .h5 {
   font-size: var(--template-font-size-h5);
 }
 
-small,
 .small {
   font-size: var(--template-font-size-sm);
 }
@@ -100,6 +102,17 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+dt,
+dd {
   max-width: 80ch;
+}
+
+dt {
+  font-weight: 600;
+}
+
+dd {
+  margin-bottom: 1em;
+  font-style: italic;
 }
