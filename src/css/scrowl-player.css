@@ -314,6 +314,7 @@ span[class^=material-symbols] {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  color: var(--template-icon-color);
 }
 
 .material-symbols-rounded {
@@ -453,6 +454,7 @@ dd {
   position: fixed;
   bottom: 0;
   right: 0;
+  z-index: 2;
   padding: 0 0.25em 0.5em 0;
   color: white;
   border: 0;
@@ -472,58 +474,156 @@ dd {
   margin-right: 0.5em;
 }
 
-.switcher:has(input[value=theme--default]:checked) ~ section,
+body:has(input[value=theme--default]:checked),
 :root,
 .theme--default {
   --template-color: #343a40;
+  --template-icon-color: currentColor;
   --template-bg: #fff;
   --template-border-color: #dee2e6;
+  --template-invert-color: #fff;
+  --template-invert-icon-color: currentColor;
+  --template-invert-bg: #212529;
+  --template-invert-border-color: #6c757d;
   --template-max-width: 1200px;
+  --template-spacer: 5vmin;
   --template-font-family-base: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --template-font-family-heading: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --template-font-letterspacing-heading: -0.025em;
 }
 
-.switcher:has(input[value=theme--news]:checked) ~ section,
+body:has(input[value=theme--news]:checked),
 .theme--news {
   --template-color: #000;
+  --template-icon-color: #adb5bd;
   --template-bg: #fefaf0;
   --template-border-color: #000;
   --template-max-width: 1024px;
+  --template-spacer: 5vmin;
   --template-font-family-base: Georgia, serif;
   --template-font-family-heading: Georgia, serif;
   --template-font-letterspacing-heading: -0.025em;
 }
 
-.switcher:has(input[value=theme--dark]:checked) ~ section,
+body:has(input[value=theme--dark]:checked),
 .theme--dark {
   --template-color: #fff;
+  --template-icon-color: #adb5bd;
   --template-bg: #212529;
   --template-border-color: #6c757d;
   --template-max-width: 1200px;
+  --template-spacer: 5vmin;
   --template-font-family-base: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --template-font-family-heading: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --template-font-letterspacing-heading: -0.025em;
 }
 
-.switcher:has(input[value=theme--fiesta]:checked) ~ section,
+body:has(input[value=theme--fiesta]:checked),
 .theme--fiesta {
   --template-color: #3c0e66;
-  --template-bg: #f6dfff;
+  --template-icon-color: #3bbefe;
+  --template-bg: transparent;
   --template-border-color: #d361ff;
   --template-max-width: 1440px;
+  --template-spacer: 5vmin;
   --template-font-family-base: "Tahoma", serif;
   --template-font-family-heading: "Comic Sans MS", "Comic Sans", cursive;
   --template-font-letterspacing-heading: 0.025em;
+  background: linear-gradient(0deg, hsl(283deg, 100%, 94%) 0%, hsl(255deg, 100%, 95%) 21%, hsl(213deg, 100%, 92%) 30%, hsl(195deg, 100%, 87%) 39%, hsl(186deg, 100%, 82%) 46%, hsl(182deg, 100%, 77%) 54%, hsl(180deg, 100%, 74%) 61%, hsl(172deg, 100%, 74%) 69%, hsl(155deg, 100%, 78%) 79%, hsl(124deg, 100%, 84%) 100%);
+}
+
+.template {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-family: var(--template-font-family-base);
+  color: var(--template-color);
+  background: var(--template-bg);
+}
+.template--min-height {
+  min-height: 100vh;
+}
+.template--invert {
+  --template-bg: var(--template-invert-bg);
+  --template-color: var(--template-invert-color);
+}
+.template--inset {
+  margin: var(--template-spacer);
+}
+.template--inset.template--min-height {
+  min-height: calc(100vh - var(--template-spacer) * 2);
+}
+.template--inset.template--invert {
+  padding: var(--template-spacer);
+  margin: 0;
+}
+.template--inset.template--invert.template--min-height {
+  min-height: 100vh;
+}
+.template--inset.template--invert.template--background .template__background {
+  top: var(--template-spacer);
+  left: var(--template-spacer);
+  bottom: var(--template-spacer);
+  right: var(--template-spacer);
+}
+.template--background .template__background {
+  display: block;
+}
+.template--background .template__body > * span {
+  padding: 0 0.0625em;
+  margin: 0 -0.0625em;
+  display: inline;
+  color: var(--template-color);
+  background: var(--template-bg);
+  box-shadow: -0.0625em 0 0 0.05em var(--template-bg), 0.0625em 0 0 0.05em var(--template-bg);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.template__body {
+  max-width: var(--template-max-width);
+  flex: 1 1 auto;
+  display: grid;
+  align-items: center;
+  align-content: center;
+  z-index: 1;
+  padding: var(--template-spacer);
+}
+.template__background {
+  display: none;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+}
+.template__background--fixed {
+  background-attachment: fixed;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
+  margin: 0;
   font-size: 16px;
 }
 
-html,
 body {
   margin: 0;
+  background: var(--template-bg);
+}
+
+@media screen and (max-width: 300px) {
+  body {
+    zoom: 0.75;
+  }
+}
+[role=main] {
+  background: var(--template-bg);
 }
 
 hr {
@@ -531,15 +631,12 @@ hr {
   border: 1px solid var(--template-border-color);
 }
 
-.section {
-  display: flex;
-  justify-content: center;
-  font-family: var(--template-font-family-base);
-  color: var(--template-color);
-  background-color: var(--template-bg);
-}
-.section__body {
-  flex: 1 1 auto;
-  max-width: var(--template-max-width);
-  padding: 5vmin;
+@media print {
+  * {
+    color: black !important;
+    background: transparent !important;
+  }
+  .switcher {
+    display: none;
+  }
 }/*# sourceMappingURL=scrowl-player.css.map */

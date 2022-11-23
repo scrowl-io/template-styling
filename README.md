@@ -19,7 +19,17 @@ To develop locally, a sass compiler is necessary to build the stylesheet.
 | `--template-color`                      | text color       | $owl-ref-palette-gray-800                |
 | `--template-bg`                         | background color | $owl-ref-palette-white                   |
 | `--template-border-color`               | border color     | $owl-ref-palette-gray-300                |
-| `--template-max-width`                  | value            | 1200px                                   |
+| `--template-max-width`                  | length           | 1200px                                   |
 | `--template-font-family-base`           | font family      | $owl-ref-typeface-font-family-sans-serif |
 | `--template-font-family-heading`        | font family      | $owl-ref-typeface-font-family-sans-serif |
-| `--template-font-letterspacing-heading` | value            | -0.025em                                 |
+| `--template-font-letterspacing-heading` | length           | -0.025em                                 |
+| `--template-spacer`                     | length           | 5vmin                                    |
+
+## Template Options
+
+| Class Name              | Usage                                                                                                                                |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `.template--background` | Adding a full width and full height image or color to the background. This will put a background behind text to maintain readability |
+| `.template--inset`      | Adds padding around the template of the `--template-spacer` amount.                                                                  |
+| `.template--min-height` | Sets the min-height of the template to be the full height of the window.                                                             |
+| `.template--`           |                                                                                                                                      |

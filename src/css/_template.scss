@@ -1,0 +1,101 @@
+// Template Classes
+
+
+.template {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-family: var(--template-font-family-base);
+  color: var(--template-color);
+  background: var(--template-bg);
+
+  &--min-height {
+    min-height: 100vh;
+  }
+
+  &--invert {
+    --template-bg: var(--template-invert-bg);
+    --template-color: var(--template-invert-color);
+  }
+
+  &--inset {
+    margin: var(--template-spacer);
+
+    &.template--min-height {
+      min-height: calc(100vh - var(--template-spacer) *2);
+    }
+
+    &.template--invert {
+      padding: var(--template-spacer);
+      margin: 0;
+
+      &.template--min-height {
+        min-height: 100vh;
+      }
+
+      &.template--background {
+        .template__background {
+          top: var(--template-spacer);
+          left: var(--template-spacer);
+          bottom: var(--template-spacer);
+          right: var(--template-spacer);
+        }
+      }
+    }
+  }
+
+  &--center {
+
+  }
+
+  &--background {
+    .template__background {
+      display: block;
+    }
+
+    .template__body {
+      // This targets the top level elements of the template, and the spans directly inside of them to give them a background color when template--background is in use.
+      & > * {
+        span {
+          padding: 0 0.0625em;
+          margin: 0 -0.0625em;
+          display: inline;
+          color: var(--template-color);
+          background: var(--template-bg);
+          box-shadow: -0.0625em 0 0 0.05em var(--template-bg), 0.0625em 0 0 0.05em var(--template-bg);
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+        }
+      }
+    }
+  }
+
+  &__body {
+    // Centering the block on the page
+    max-width: var(--template-max-width);
+    flex: 1 1 auto;
+    // Aligning the children
+    display: grid;
+    align-items: center;
+    align-content: center;
+    z-index: 1;
+    padding: var(--template-spacer);
+  }
+
+  // This is the element that houses the background color or image when template--background is in use.
+  &__background {
+    display: none;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+
+    &--fixed {
+      background-attachment: fixed;
+    }
+  }
+}

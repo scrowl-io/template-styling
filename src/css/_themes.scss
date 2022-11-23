@@ -2,6 +2,7 @@
   position: fixed;
   bottom: 0;
   right: 0;
+  z-index: 2;
   padding: 0 0.25em 0.5em 0;
   color: white;
   border: 0;
@@ -24,51 +25,77 @@
   }
 }
 
-.switcher:has(input[value="theme--default"]:checked) ~ section, // Just for the theme switcher example page
+body:has(input[value="theme--default"]:checked), // Just for the theme switcher example page
 :root,
 .theme--default {
-  --template-color:        #{$owl-ref-palette-gray-800};
-  --template-bg:           #{$owl-ref-palette-white};
-  --template-border-color: #{$owl-ref-palette-gray-300};
+  --template-color:               #{$owl-ref-palette-gray-800};
+  --template-icon-color:          currentColor;
+  --template-bg:                  #{$owl-ref-palette-white};
+  --template-border-color:        #{$owl-ref-palette-gray-300};
+  --template-invert-color:        #{$owl-ref-palette-white};
+  --template-invert-icon-color:   currentColor;
+  --template-invert-bg:           #{$owl-ref-palette-gray-900};
+  --template-invert-border-color: #{$owl-ref-palette-gray-600};
+
   --template-max-width:    1200px;
+  --template-spacer:     5vmin;
 
   --template-font-family-base:            #{$owl-ref-typeface-font-family-sans-serif};
   --template-font-family-heading:         #{$owl-ref-typeface-font-family-sans-serif};
   --template-font-letterspacing-heading:  -0.025em;
 }
 
-.switcher:has(input[value="theme--news"]:checked) ~ section,// Just for the theme switcher example page
+body:has(input[value="theme--news"]:checked),// Just for the theme switcher example page
 .theme--news{
   --template-color:        #{$owl-ref-palette-black};
+  --template-icon-color:   #{$owl-ref-palette-gray-500};
   --template-bg:           #fefaf0;
   --template-border-color: #{$owl-ref-palette-black};
   --template-max-width:    1024px;
+  --template-spacer:     5vmin;
 
   --template-font-family-base:            Georgia, serif;
   --template-font-family-heading:         Georgia, serif;
   --template-font-letterspacing-heading:  -0.025em;
 }
 
-.switcher:has(input[value="theme--dark"]:checked) ~ section,// Just for the theme switcher example page
+body:has(input[value="theme--dark"]:checked),// Just for the theme switcher example page
 .theme--dark {
   --template-color:        #{$owl-ref-palette-white};
+  --template-icon-color:   #{$owl-ref-palette-gray-500};
   --template-bg:           #{$owl-ref-palette-gray-900};
   --template-border-color: #{$owl-ref-palette-gray-600};
   --template-max-width:    1200px;
+  --template-spacer:     5vmin;
 
   --template-font-family-base:            #{$owl-ref-typeface-font-family-sans-serif};
   --template-font-family-heading:         #{$owl-ref-typeface-font-family-sans-serif};
   --template-font-letterspacing-heading:  -0.025em;
 }
 
-.switcher:has(input[value="theme--fiesta"]:checked) ~ section,// Just for the theme switcher example page
+body:has(input[value="theme--fiesta"]:checked),// Just for the theme switcher example page
 .theme--fiesta {
   --template-color:        #{$owl-ref-palette-purple-800};
-  --template-bg:           #{$owl-ref-palette-pink-100};
+  --template-icon-color:   #{$owl-ref-palette-cyan-500};
+  --template-bg:           transparent;
   --template-border-color: #{$owl-ref-palette-pink-500};
   --template-max-width:    1440px;
+  --template-spacer:     5vmin;
 
   --template-font-family-base:            "Tahoma", serif;
   --template-font-family-heading:         "Comic Sans MS", "Comic Sans", cursive;
   --template-font-letterspacing-heading:  0.025em;
+
+  background: linear-gradient(0deg,
+              hsl(283deg 100% 94%) 0%,
+              hsl(255deg 100% 95%) 21%,
+              hsl(213deg 100% 92%) 30%,
+              hsl(195deg 100% 87%) 39%,
+              hsl(186deg 100% 82%) 46%,
+              hsl(182deg 100% 77%) 54%,
+              hsl(180deg 100% 74%) 61%,
+              hsl(172deg 100% 74%) 69%,
+              hsl(155deg 100% 78%) 79%,
+              hsl(124deg 100% 84%) 100%
+            );
 }

@@ -4,14 +4,31 @@
 @import "icons";
 @import "typography";
 @import "themes";
+@import "template";
+
+* {
+  box-sizing: border-box;
+}
 
 html {
+  margin: 0;
   font-size: 16px;
 }
 
-html,
 body {
   margin: 0;
+  background: var(--template-bg);
+}
+
+// When browser size is this small, extra zoom out.
+@media screen and (max-width: 300px) {
+  body {
+    zoom: 0.75;
+  }
+}
+
+[role="main"] {
+  background: var(--template-bg);
 }
 
 hr {
@@ -19,16 +36,13 @@ hr {
   border: 1px solid var(--template-border-color);
 }
 
-.section {
-  display: flex;
-  justify-content: center;
-  font-family: var(--template-font-family-base);
-  color: var(--template-color);
-  background-color: var(--template-bg);
+@media print {
+  * {
+    color: black !important;
+    background: transparent !important;
+  }
 
-  &__body {
-    flex: 1 1 auto;
-    max-width: var(--template-max-width);
-    padding: 5vmin;
+  .switcher {
+    display: none;
   }
 }
