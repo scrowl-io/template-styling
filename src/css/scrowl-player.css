@@ -373,7 +373,7 @@ span[class^=material-symbols] {
 body {
   font-size: var(--template-font-size-base);
   font-family: var(--template-font-family-base);
-  line-height: 1.6875;
+  line-height: var(--template-font-lineheight-base);
   word-wrap: break-word;
   overflow-wrap: break-word;
   -webkit-hyphens: manual;
@@ -399,7 +399,7 @@ small {
 .h4,
 .h5 {
   margin: 0 0 0.5em 0;
-  line-height: 1.25;
+  line-height: var(--template-font-lineheight-heading);
   font-family: var(--template-font-family-heading);
   font-weight: 700;
   letter-spacing: var(--template-font-letterspacing-heading);
@@ -443,11 +443,15 @@ dd {
 
 dt {
   font-weight: 600;
+  -moz-column-break-after: avoid;
+       break-after: avoid;
 }
 
 dd {
   margin-bottom: 1em;
   font-style: italic;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
 }
 
 .switcher {
@@ -489,6 +493,8 @@ body:has(input[value=theme--default]:checked),
   --template-spacer: 5vmin;
   --template-font-family-base: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --template-font-family-heading: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --template-font-lineheight-base: 1.6875;
+  --template-font-lineheight-heading: 1.25;
   --template-font-letterspacing-heading: -0.025em;
 }
 
@@ -498,10 +504,16 @@ body:has(input[value=theme--news]:checked),
   --template-icon-color: #adb5bd;
   --template-bg: #fefaf0;
   --template-border-color: #000;
+  --template-invert-color: #fff;
+  --template-invert-icon-color: #adb5bd;
+  --template-invert-bg: #000;
+  --template-invert-border-color: #adb5bd;
   --template-max-width: 1024px;
   --template-spacer: 5vmin;
   --template-font-family-base: Georgia, serif;
   --template-font-family-heading: Georgia, serif;
+  --template-font-lineheight-base: 1.6875;
+  --template-font-lineheight-heading: 1.25;
   --template-font-letterspacing-heading: -0.025em;
 }
 
@@ -511,10 +523,16 @@ body:has(input[value=theme--dark]:checked),
   --template-icon-color: #adb5bd;
   --template-bg: #212529;
   --template-border-color: #6c757d;
+  --template-invert-color: #343a40;
+  --template-invert-icon-color: #adb5bd;
+  --template-invert-bg: #fafbfc;
+  --template-invert-border-color: #adb5bd;
   --template-max-width: 1200px;
   --template-spacer: 5vmin;
   --template-font-family-base: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --template-font-family-heading: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --template-font-lineheight-base: 1.6875;
+  --template-font-lineheight-heading: 1.25;
   --template-font-letterspacing-heading: -0.025em;
 }
 
@@ -522,14 +540,19 @@ body:has(input[value=theme--fiesta]:checked),
 .theme--fiesta {
   --template-color: #3c0e66;
   --template-icon-color: #3bbefe;
-  --template-bg: transparent;
+  --template-bg: #f6dfff;
   --template-border-color: #d361ff;
+  --template-invert-color: #b1e5ff;
+  --template-invert-icon-color: #e66f00;
+  --template-invert-bg: #3c0e66;
+  --template-invert-border-color: #edc0ff;
   --template-max-width: 1440px;
   --template-spacer: 5vmin;
   --template-font-family-base: "Tahoma", serif;
   --template-font-family-heading: "Comic Sans MS", "Comic Sans", cursive;
+  --template-font-lineheight-base: 1.6875;
+  --template-font-lineheight-heading: 1.45;
   --template-font-letterspacing-heading: 0.025em;
-  background: linear-gradient(0deg, hsl(283deg, 100%, 94%) 0%, hsl(255deg, 100%, 95%) 21%, hsl(213deg, 100%, 92%) 30%, hsl(195deg, 100%, 87%) 39%, hsl(186deg, 100%, 82%) 46%, hsl(182deg, 100%, 77%) 54%, hsl(180deg, 100%, 74%) 61%, hsl(172deg, 100%, 74%) 69%, hsl(155deg, 100%, 78%) 79%, hsl(124deg, 100%, 84%) 100%);
 }
 
 .template {
@@ -543,33 +566,32 @@ body:has(input[value=theme--fiesta]:checked),
 .template--min-height {
   min-height: 100vh;
 }
+.template--min-height.template--inset:not(.template--invert) {
+  min-height: calc(100vh - var(--template-spacer) * 2);
+}
 .template--invert {
   --template-bg: var(--template-invert-bg);
   --template-color: var(--template-invert-color);
+  --template-icon-color: var(--template-invert-icon-color);
+  --template-border-color: var(--template-invert-border-color);
 }
 .template--inset {
   margin: var(--template-spacer);
 }
-.template--inset.template--min-height {
-  min-height: calc(100vh - var(--template-spacer) * 2);
-}
-.template--inset.template--invert {
+.template--inset.template--invert.template--bg {
   padding: var(--template-spacer);
   margin: 0;
 }
-.template--inset.template--invert.template--min-height {
-  min-height: 100vh;
-}
-.template--inset.template--invert.template--background .template__background {
+.template--inset.template--invert.template--bg .template__background {
   top: var(--template-spacer);
   left: var(--template-spacer);
   bottom: var(--template-spacer);
   right: var(--template-spacer);
 }
-.template--background .template__background {
+.template--bg .template__background {
   display: block;
 }
-.template--background .template__body > * span {
+.template--bg .template__body > :is(h1, h2, h3, h4, h5, h6) span {
   padding: 0 0.0625em;
   margin: 0 -0.0625em;
   display: inline;
@@ -578,6 +600,10 @@ body:has(input[value=theme--fiesta]:checked),
   box-shadow: -0.0625em 0 0 0.05em var(--template-bg), 0.0625em 0 0 0.05em var(--template-bg);
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+}
+.template--bg .template__body > :is(ol, ul, p, figure, blockquote, dl) {
+  background: var(--template-bg);
+  box-shadow: 0 0 0 0.5em var(--template-bg);
 }
 .template__body {
   max-width: var(--template-max-width);

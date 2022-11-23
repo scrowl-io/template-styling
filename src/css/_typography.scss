@@ -40,7 +40,7 @@
 body{
   font-size: var(--template-font-size-base);
   font-family: var(--template-font-family-base);
-  line-height: $owl-ref-typeface-lineheight-base;
+  line-height: var(--template-font-lineheight-base);
 
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -65,7 +65,7 @@ small {
 .h4,
 .h5 {
   margin: 0 0 0.5em 0;
-  line-height: $owl-ref-typeface-lineheight-sm;
+  line-height: var(--template-font-lineheight-heading);
   font-family: var(--template-font-family-heading);
   font-weight: 700;
   letter-spacing: var(--template-font-letterspacing-heading);
@@ -110,9 +110,11 @@ dd {
 
 dt {
   font-weight: 600;
+  break-after: avoid;
 }
 
 dd {
   margin-bottom: 1em;
   font-style: italic;
+  break-inside: avoid;
 }
