@@ -4,6 +4,7 @@
 @import "icons";
 @import "typography";
 @import "themes";
+@import "section";
 @import "template";
 
 * {
@@ -13,6 +14,7 @@
 html {
   margin: 0;
   font-size: 16px;
+  scroll-snap-type: y;
 }
 
 body {
@@ -29,6 +31,7 @@ body {
 
 [role="main"] {
   background: var(--template-bg);
+
 }
 
 hr {
@@ -37,9 +40,22 @@ hr {
 }
 
 @media print {
+  @page {
+    size: landscape
+  }
+
   * {
     color: black !important;
     background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .section {
+    page-break-inside: avoid;
+    page-break-after: always;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100vh;
   }
 
   .switcher {

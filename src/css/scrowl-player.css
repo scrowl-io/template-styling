@@ -555,43 +555,47 @@ body:has(input[value=theme--fiesta]:checked),
   --template-font-letterspacing-heading: 0.025em;
 }
 
-.template {
+.section {
   position: relative;
   display: flex;
   justify-content: center;
   font-family: var(--template-font-family-base);
   color: var(--template-color);
   background: var(--template-bg);
+  scroll-snap-align: start;
 }
-.template--min-height {
+.section--min-height {
   min-height: 100vh;
 }
-.template--min-height.template--inset:not(.template--invert) {
+.section--min-height.section--inset {
   min-height: calc(100vh - var(--template-spacer) * 2);
 }
-.template--invert {
+.section--invert {
   --template-bg: var(--template-invert-bg);
   --template-color: var(--template-invert-color);
   --template-icon-color: var(--template-invert-icon-color);
   --template-border-color: var(--template-invert-border-color);
 }
-.template--inset {
+.section--inset {
   margin: var(--template-spacer);
 }
-.template--inset.template--invert.template--bg {
+.section--inset.section--invert.section--bg {
   padding: var(--template-spacer);
   margin: 0;
 }
-.template--inset.template--invert.template--bg .template__background {
+.section--inset.section--invert.section--bg.section--min-height {
+  min-height: 100vh;
+}
+.section--inset.section--invert.section--bg .template__background {
   top: var(--template-spacer);
   left: var(--template-spacer);
   bottom: var(--template-spacer);
   right: var(--template-spacer);
 }
-.template--bg .template__background {
+.section--bg .template__background {
   display: block;
 }
-.template--bg .template__body > :is(h1, h2, h3, h4, h5, h6) span {
+.section--bg .template__body > :is(h1, h2, h3, h4, h5, h6) span {
   padding: 0 0.0625em;
   margin: 0 -0.0625em;
   display: inline;
@@ -601,10 +605,11 @@ body:has(input[value=theme--fiesta]:checked),
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
-.template--bg .template__body > :is(ol, ul, p, figure, blockquote, dl) {
+.section--bg .template__body > :is(ol, ul, p, figure, sectionquote, dl) {
   background: var(--template-bg);
   box-shadow: 0 0 0 0.5em var(--template-bg);
 }
+
 .template__body {
   max-width: var(--template-max-width);
   flex: 1 1 auto;
@@ -636,6 +641,8 @@ body:has(input[value=theme--fiesta]:checked),
 html {
   margin: 0;
   font-size: 16px;
+  -ms-scroll-snap-type: y;
+      scroll-snap-type: y;
 }
 
 body {
@@ -658,9 +665,20 @@ hr {
 }
 
 @media print {
+  @page {
+    size: landscape;
+  }
   * {
     color: black !important;
     background: transparent !important;
+    box-shadow: none !important;
+  }
+  .section {
+    page-break-inside: avoid;
+    page-break-after: always;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100vh;
   }
   .switcher {
     display: none;

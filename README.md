@@ -32,11 +32,13 @@ To develop locally, a sass compiler is necessary to build the stylesheet.
 | `--template-font-letterspacing-heading` | length           | -0.025em                                 |
 | `--template-spacer`                     | length           | 5vmin                                    |
 
-## Template Options
+## Section Options
 
-| Feature    | Class Name              | Usage                                                                                                                                      |
-| ---------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Background | `.template--bg`         | Adding a full width and full height image or color to the background. This will put a background color behind text to maintain readability |
-| Inset      | `.template--inset`      | Adds padding/margin around the template of the `--template-spacer` amount.                                                                 |
-| Min Height | `.template--min-height` | Sets the min-height of the template to be the full height of the window.                                                                   |
-| Invert     | `.template--invert`     | This is an alternate color option for the template. By default it swaps the `background-color` and `color` values                          |
+| Feature    | Class Name             | Usage                                                                                                                                      |
+| ---------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Background | `.section--bg`         | Adding a full width and full height image or color to the background. This will put a background color behind text to maintain readability |
+| Inset      | `.section--inset`      | Adds padding/margin around the section of the `--template-spacer` amount.                                                                  |
+| Min Height | `.section--min-height` | Sets the min-height of the section to be the full height of the window.                                                                    |
+| Invert     | `.section--invert`     | This is an alternate color option for the section. By default it swaps the `background-color` and `color` values                           |
+
+Testing these variations can be [Viewed here](src/section-options.html)

@@ -1,0 +1,72 @@
+// Section Classes
+.section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-family: var(--template-font-family-base);
+  color: var(--template-color);
+  background: var(--template-bg);
+  scroll-snap-align: start;
+
+  &--min-height {
+    min-height: 100vh;
+
+    &.section--inset {
+      min-height: calc(100vh - var(--template-spacer) *2);
+    }
+  }
+
+  &--invert {
+    --template-bg: var(--template-invert-bg);
+    --template-color: var(--template-invert-color);
+    --template-icon-color: var(--template-invert-icon-color);
+    --template-border-color: var(--template-invert-border-color);
+  }
+
+  &--inset {
+    margin: var(--template-spacer);
+
+    &.section--invert.section--bg {
+      padding: var(--template-spacer);
+      margin: 0;
+
+      &.section--min-height {
+        min-height: 100vh;
+      }
+
+      .template__background {
+        top: var(--template-spacer);
+        left: var(--template-spacer);
+        bottom: var(--template-spacer);
+        right: var(--template-spacer);
+      }
+    }
+  }
+
+  &--bg {
+    .template__background {
+      display: block;;
+    }
+
+    .template__body {
+      // This targets the top level elements of the section, and the spans directly inside of them to give them a background color when section--bg is in use.
+      & > :is(h1,h2,h3,h4,h5,h6) {
+        span {
+          padding: 0 0.0625em;
+          margin: 0 -0.0625em;
+          display: inline;
+          color: var(--template-color);
+          background: var(--template-bg);
+          box-shadow: -0.0625em 0 0 0.05em var(--template-bg), 0.0625em 0 0 0.05em var(--template-bg);
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+        }
+      }
+
+      & > :is(ol, ul, p, figure, sectionquote, dl) {
+        background: var(--template-bg);
+        box-shadow: 0 0 0 0.5em var(--template-bg);
+      }
+    }
+  }
+}
