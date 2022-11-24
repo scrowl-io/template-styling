@@ -7,6 +7,9 @@
 @import "section";
 @import "template";
 
+// Templates
+@import "block-text";
+
 * {
   box-sizing: border-box;
 }
@@ -14,7 +17,6 @@
 html {
   margin: 0;
   font-size: 16px;
-  scroll-snap-type: y;
 }
 
 body {

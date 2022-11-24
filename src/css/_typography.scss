@@ -95,6 +95,10 @@ small {
   font-size: var(--template-font-size-sm);
 }
 
+.lead {
+  font-size: var(--template-font-size-h4);
+}
+
 // Accessibility setting that text sections aren't wider than 80 characters.
 h1,
 h2,
