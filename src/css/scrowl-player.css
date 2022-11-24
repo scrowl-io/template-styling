@@ -174,7 +174,6 @@ button,
 [type=reset],
 [type=submit] {
   -webkit-appearance: button;
-  appearance: button;
 }
 
 /**
@@ -258,7 +257,6 @@ textarea {
  */
 [type=search] {
   -webkit-appearance: textfield; /* 1 */
-  appearance: textfield;
   outline-offset: -2px; /* 2 */
 }
 
@@ -267,7 +265,6 @@ textarea {
  */
 [type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
-  appearance: none;
 }
 
 /**
@@ -276,7 +273,6 @@ textarea {
  */
 ::-webkit-file-upload-button {
   -webkit-appearance: button; /* 1 */
-  appearance: button;
   font: inherit; /* 2 */
 }
 
@@ -327,7 +323,7 @@ span[class^=material-symbols] {
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 20;
 }
 
-.material-symbols-rounded {
+.material-symbols-outlined {
   font-size: 1.2em;
   vertical-align: text-bottom;
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 200, "opsz" 20;
@@ -506,6 +502,14 @@ body:has(input[value=theme--default]:checked),
   --template-font-letterspacing-heading: -0.025em;
 }
 
+body:has(input[value=theme--default]:checked) .block-text h1,
+.theme--default .block-text h1 {
+  border: 0.125em solid var(--template-border-color);
+  border-top: none;
+  border-right: none;
+  padding: 0.5em;
+}
+
 body:has(input[value=theme--news]:checked),
 .theme--news {
   --template-color: #000;
@@ -523,6 +527,11 @@ body:has(input[value=theme--news]:checked),
   --template-font-lineheight-base: 1.6875;
   --template-font-lineheight-heading: 1.25;
   --template-font-letterspacing-heading: -0.025em;
+}
+body:has(input[value=theme--news]:checked) .block-text h1,
+.theme--news .block-text h1 {
+  border-bottom: 0.125em solid var(--template-border-color);
+  padding-bottom: 0.5em;
 }
 
 body:has(input[value=theme--dark]:checked),
@@ -542,6 +551,13 @@ body:has(input[value=theme--dark]:checked),
   --template-font-lineheight-base: 1.6875;
   --template-font-lineheight-heading: 1.25;
   --template-font-letterspacing-heading: -0.025em;
+}
+body:has(input[value=theme--dark]:checked) .block-text h1,
+.theme--dark .block-text h1 {
+  border: 0.125em solid var(--template-border-color);
+  border-top: none;
+  border-right: none;
+  padding: 0.5em;
 }
 
 body:has(input[value=theme--fiesta]:checked),
@@ -650,10 +666,6 @@ body:has(input[value=theme--fiesta]:checked),
 }
 .block-text .template__body h1 {
   grid-area: heading;
-  border: 0.125em solid var(--template-border-color);
-  border-top: none;
-  border-right: none;
-  padding: 0.5em;
 }
 .block-text .template__body p {
   grid-area: text;
