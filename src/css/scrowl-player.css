@@ -340,11 +340,11 @@ span[class^=material-symbols] {
   :root {
     --template-font-size-sm: clamp(0.7rem, 0.262vmin + 0.635rem, 0.844rem);
     --template-font-size-base: clamp(0.875rem, 0.455vmin + 0.761rem, 1.125rem);
-    --template-font-size-h5: clamp(1.094rem, 0.738vmin + 0.909rem, 1.5rem);
-    --template-font-size-h4: clamp(1.367rem, 1.149vmin + 1.08rem, 1.999rem);
-    --template-font-size-h3: clamp(1.709rem, 1.738vmin + 1.275rem, 2.665rem);
-    --template-font-size-h2: clamp(2.136rem, 2.574vmin + 1.493rem, 3.552rem);
-    --template-font-size-h1: clamp(2.67rem, 3.754vmin + 1.732rem, 4.735rem);
+    --template-font-size-md: clamp(1.094rem, 0.738vmin + 0.909rem, 1.5rem);
+    --template-font-size-lg: clamp(1.367rem, 1.149vmin + 1.08rem, 1.999rem);
+    --template-font-size-xl: clamp(1.709rem, 1.738vmin + 1.275rem, 2.665rem);
+    --template-font-size-2xl: clamp(2.136rem, 2.574vmin + 1.493rem, 3.552rem);
+    --template-font-size-3xl: clamp(2.67rem, 3.754vmin + 1.732rem, 4.735rem);
   }
 }
 /* Fallback variables for browsers that don't support clamp */
@@ -352,21 +352,21 @@ span[class^=material-symbols] {
   :root {
     --template-font-size-sm: 0.7rem;
     --template-font-size-base: 0.875rem;
-    --template-font-size-h5: 1.094rem;
-    --template-font-size-h4: 1.367rem;
-    --template-font-size-h3: 1.709rem;
-    --template-font-size-h2: 2.136rem;
-    --template-font-size-h1: 2.67rem;
+    --template-font-size-md: 1.094rem;
+    --template-font-size-lg: 1.367rem;
+    --template-font-size-xl: 1.709rem;
+    --template-font-size-2xl: 2.136rem;
+    --template-font-size-3xl: 2.67rem;
   }
   @media screen and (min-width: 1280px) {
     :root {
       --template-font-size-sm: 0.844rem;
       --template-font-size-base: 1.125rem;
-      --template-font-size-h5: 1.5rem;
-      --template-font-size-h4: 1.999rem;
-      --template-font-size-h3: 2.665rem;
-      --template-font-size-h2: 3.552rem;
-      --template-font-size-h1: 4.735rem;
+      --template-font-size-md: 1.5rem;
+      --template-font-size-lg: 1.999rem;
+      --template-font-size-xl: 2.665rem;
+      --template-font-size-2xl: 3.552rem;
+      --template-font-size-3xl: 4.735rem;
     }
   }
 }
@@ -406,23 +406,23 @@ small {
 }
 
 .h1 {
-  font-size: var(--template-font-size-h1);
+  font-size: var(--template-font-size-3xl);
 }
 
 .h2 {
-  font-size: var(--template-font-size-h2);
+  font-size: var(--template-font-size-2xl);
 }
 
 .h3 {
-  font-size: var(--template-font-size-h3);
+  font-size: var(--template-font-size-xl);
 }
 
 .h4 {
-  font-size: var(--template-font-size-h4);
+  font-size: var(--template-font-size-lg);
 }
 
 .h5 {
-  font-size: var(--template-font-size-h5);
+  font-size: var(--template-font-size-md);
 }
 
 .small {
@@ -430,7 +430,7 @@ small {
 }
 
 .lead {
-  font-size: var(--template-font-size-h4);
+  font-size: var(--template-font-size-lg);
 }
 
 h1,
@@ -504,33 +504,7 @@ body:has(input[value=theme--default]:checked),
 
 body:has(input[value=theme--default]:checked) .block-text h1,
 .theme--default .block-text h1 {
-  border: 0.125em solid var(--template-border-color);
-  border-top: none;
-  border-right: none;
-  padding: 0.5em;
-}
-
-body:has(input[value=theme--news]:checked),
-.theme--news {
-  --template-color: #000;
-  --template-icon-color: #adb5bd;
-  --template-bg: #fefaf0;
-  --template-border-color: #000;
-  --template-invert-color: #fff;
-  --template-invert-icon-color: #adb5bd;
-  --template-invert-bg: #000;
-  --template-invert-border-color: #adb5bd;
-  --template-max-width: 1024px;
-  --template-spacer: 5vmin;
-  --template-font-family-base: Georgia, serif;
-  --template-font-family-heading: Georgia, serif;
-  --template-font-lineheight-base: 1.6875;
-  --template-font-lineheight-heading: 1.25;
-  --template-font-letterspacing-heading: -0.025em;
-}
-body:has(input[value=theme--news]:checked) .block-text h1,
-.theme--news .block-text h1 {
-  border-bottom: 0.125em solid var(--template-border-color);
+  border-bottom: 0.0625em solid var(--template-border-color);
   padding-bottom: 0.5em;
 }
 
@@ -554,6 +528,30 @@ body:has(input[value=theme--dark]:checked),
 }
 body:has(input[value=theme--dark]:checked) .block-text h1,
 .theme--dark .block-text h1 {
+  border-bottom: 0.0625em solid var(--template-border-color);
+  padding-bottom: 0.5em;
+}
+
+body:has(input[value=theme--news]:checked),
+.theme--news {
+  --template-color: #000;
+  --template-icon-color: #adb5bd;
+  --template-bg: #fefaf0;
+  --template-border-color: #000;
+  --template-invert-color: #fff;
+  --template-invert-icon-color: #adb5bd;
+  --template-invert-bg: #000;
+  --template-invert-border-color: #adb5bd;
+  --template-max-width: 1024px;
+  --template-spacer: 5vmin;
+  --template-font-family-base: Georgia, serif;
+  --template-font-family-heading: Georgia, serif;
+  --template-font-lineheight-base: 1.6875;
+  --template-font-lineheight-heading: 1.25;
+  --template-font-letterspacing-heading: -0.025em;
+}
+body:has(input[value=theme--news]:checked) .block-text h1,
+.theme--news .block-text h1 {
   border: 0.125em solid var(--template-border-color);
   border-top: none;
   border-right: none;
@@ -658,28 +656,32 @@ body:has(input[value=theme--fiesta]:checked),
 }
 
 .block-text .template__body {
-  display: grid;
-  grid-template-areas: "heading heading" "media text";
-  grid-template-columns: repeat(1fr);
-  grid-auto-flow: row;
-  gap: var(--template-spacer);
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--template-spacer) / 2);
 }
 .block-text .template__body h1 {
-  grid-area: heading;
+  flex: 1 0 100%;
+  order: 1;
 }
-.block-text .template__body p {
-  grid-area: text;
-  min-width: 40ch;
-  font-size: var(--template-font-size-h5);
+.block-text .template__body__content {
+  flex: 1 1 70%;
+  order: 5;
+  font-size: var(--template-font-size-md);
 }
-.block-text .template__body i {
-  grid-area: media;
+.block-text .template__body__media {
+  flex: 1 1 25%;
+  order: 3;
+}
+.block-text .template__body__media i {
   font-size: 24vmin;
   font-variation-settings: "FILL" 0, "wght" 100, "GRAD" -25, "opsz" 48;
 }
-.block-text--right .template__body {
-  grid-auto-columns: 4fr 1fr;
-  grid-template-areas: "heading heading" "text media";
+.block-text--right .template__body__content {
+  order: 2;
+}
+.block-text--right .template__body__media {
+  text-align: right;
 }
 
 * {

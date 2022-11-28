@@ -2,41 +2,45 @@
 
 .block-text {
   .template__body {
-    display: grid;
-    grid-template-areas: "heading heading"
-                         "media text";
-    grid-template-columns: repeat(1fr);
-    grid-auto-flow: row;
-    gap: var(--template-spacer);
-
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--template-spacer) / 2);
 
     h1 {
-      grid-area: heading;
+      flex: 1 0 100%;
+      order: 1;
     }
 
-    p {
-      grid-area: text;
-      min-width: 40ch;
-      font-size: var(--template-font-size-h5);
+    &__content {
+      flex: 1 1 70%;
+      order: 5;
+      font-size: var(--template-font-size-md);
     }
 
-    i {
-      grid-area: media;
-      font-size: 24vmin;
-      font-variation-settings:
-        'FILL' 0,
-        'wght' 100,
-        'GRAD' -25,
-        'opsz' 48
+    &__media {
+      flex: 1 1 25%;
+      order: 3;
 
+      i {
+        font-size: 24vmin;
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 100,
+          'GRAD' -25,
+          'opsz' 48;
+      }
     }
   }
 
   &--right {
     .template__body {
-      grid-auto-columns: 4fr 1fr;
-      grid-template-areas: "heading heading"
-                           "text media";
+      &__content {
+        order: 2;
+      }
+
+      &__media {
+        text-align: right;
+      }
     }
   }
 }

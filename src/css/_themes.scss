@@ -51,37 +51,7 @@ body:has(input[value="theme--default"]:checked),
 .theme--default {
   .block-text {
     h1 {
-      border: 0.125em solid var(--template-border-color);
-      border-top: none;
-      border-right: none;
-      padding: 0.5em;
-    }
-  }
-}
-
-body:has(input[value="theme--news"]:checked),// Just for the theme switcher example page
-.theme--news{
-  --template-color:               #{$owl-ref-palette-black};
-  --template-icon-color:          #{$owl-ref-palette-gray-500};
-  --template-bg:                #fefaf0;
-  --template-border-color:        #{$owl-ref-palette-black};
-  --template-invert-color:        #{$owl-ref-palette-white};
-  --template-invert-icon-color:   #{$owl-ref-palette-gray-500};
-  --template-invert-bg:           #{$owl-ref-palette-black};
-  --template-invert-border-color: #{$owl-ref-palette-gray-500};
-
-  --template-max-width:    1024px;
-  --template-spacer:       5vmin;
-
-  --template-font-family-base:            Georgia, serif;
-  --template-font-family-heading:         Georgia, serif;
-  --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
-  --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
-  --template-font-letterspacing-heading:  -0.025em;
-
-  .block-text {
-    h1 {
-      border-bottom: 0.125em solid var(--template-border-color);
+      border-bottom: 0.0625em solid var(--template-border-color);
       padding-bottom: 0.5em;
     }
   }
@@ -103,6 +73,34 @@ body:has(input[value="theme--dark"]:checked),// Just for the theme switcher exam
 
   --template-font-family-base:            #{$owl-ref-typeface-font-family-sans-serif};
   --template-font-family-heading:         #{$owl-ref-typeface-font-family-sans-serif};
+  --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
+  --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
+  --template-font-letterspacing-heading:  -0.025em;
+
+  .block-text {
+    h1 {
+      border-bottom: 0.0625em solid var(--template-border-color);
+      padding-bottom: 0.5em;
+    }
+  }
+}
+
+body:has(input[value="theme--news"]:checked),// Just for the theme switcher example page
+.theme--news{
+  --template-color:               #{$owl-ref-palette-black};
+  --template-icon-color:          #{$owl-ref-palette-gray-500};
+  --template-bg:                #fefaf0;
+  --template-border-color:        #{$owl-ref-palette-black};
+  --template-invert-color:        #{$owl-ref-palette-white};
+  --template-invert-icon-color:   #{$owl-ref-palette-gray-500};
+  --template-invert-bg:           #{$owl-ref-palette-black};
+  --template-invert-border-color: #{$owl-ref-palette-gray-500};
+
+  --template-max-width:    1024px;
+  --template-spacer:       5vmin;
+
+  --template-font-family-base:            Georgia, serif;
+  --template-font-family-heading:         Georgia, serif;
   --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
   --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
   --template-font-letterspacing-heading:  -0.025em;
