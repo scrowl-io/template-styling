@@ -62,7 +62,7 @@
         }
       }
 
-      & > :is(ol, ul, p, figure, sectionquote, dl) {
+      & .template__body__content > :is(ol, ul, p, figure, sectionquote, dl) {
         background: var(--template-bg);
         box-shadow: 0 0 0 0.5em var(--template-bg);
       }

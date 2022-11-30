@@ -626,7 +626,7 @@ body:has(input[value=theme--fiesta]:checked),
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
-.section--bg .template__body > :is(ol, ul, p, figure, sectionquote, dl) {
+.section--bg .template__body .template__body__content > :is(ol, ul, p, figure, sectionquote, dl) {
   background: var(--template-bg);
   box-shadow: 0 0 0 0.5em var(--template-bg);
 }
@@ -662,23 +662,22 @@ body:has(input[value=theme--fiesta]:checked),
 }
 .block-text .template__body h1 {
   flex: 1 0 100%;
-  order: 1;
 }
 .block-text .template__body__content {
   flex: 1 1 70%;
   order: 5;
+  min-width: 300px;
   font-size: var(--template-font-size-md);
 }
 .block-text .template__body__media {
   flex: 1 1 25%;
-  order: 3;
 }
 .block-text .template__body__media i {
   font-size: 24vmin;
   font-variation-settings: "FILL" 0, "wght" 100, "GRAD" -25, "opsz" 48;
 }
 .block-text--right .template__body__content {
-  order: 2;
+  order: unset;
 }
 .block-text--right .template__body__media {
   text-align: right;
@@ -703,7 +702,7 @@ body {
     zoom: 0.75;
   }
 }
-[role=main] {
+main {
   background: var(--template-bg);
 }
 

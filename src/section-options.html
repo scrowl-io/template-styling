@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="theme-color" content="#0083C3" />
-  <!-- Importing Default Font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" />
-  <!-- Importing Icon Set -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,200&family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- Importing Default Font and Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,200&family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
+
   <!-- Importing Player Styling -->
   <link href="css/scrowl-player.css" rel="stylesheet">
 
@@ -23,202 +23,232 @@
     <label><input name="theme" type="radio" value="theme--fiesta">Fiesta</label>
   </fieldset>
 
-  <div role="main">
+  <main>
     <!-- SLIDES -->
-    <section class="section">
+    <section id="section1" class="section">
       <div class="template__body">
-        <ul>
-          <li>Min Height: OFF</li>
-          <li>Background: OFF</li>
-          <li>Invert: OFF</li>
-          <li>Inset: OFF</li>
-        </ul>
+        <div class="template__body__content">
+          <ul>
+            <li>Min Height: OFF</li>
+            <li>Background: OFF</li>
+            <li>Invert: OFF</li>
+            <li>Inset: OFF</li>
+          </ul>
+        </div>
       </div>
-      <div class="template__background" style="background-image:url('https://source.unsplash.com/random/?Workplace&7')"></div>
+      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=7')"></div>
     </section>
 
-    <section class="section section--invert">
+    <section id="section2" class="section section--invert">
       <div class="template__body">
-        <ul>
-          <li>Min Height: OFF</li>
-          <li>Background: OFF</li>
-          <li>Invert: ON</li>
-          <li>Inset: OFF</li>
-        </ul>
+        <div class="template__body__content">
+          <ul>
+            <li>Min Height: OFF</li>
+            <li>Background: OFF</li>
+            <li>Invert: ON</li>
+            <li>Inset: OFF</li>
+          </ul>
+        </div>
       </div>
-      <div class="template__background" style="background-image:url('https://source.unsplash.com/random/?Workplace&8')"></div>
+      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=8')"></div>
     </section>
 
-    <section class="section section--inset">
+    <section id="section3" class="section section--inset">
       <div class="template__body">
-        <ul>
-          <li>Min Height: OFF</li>
-          <li>Background: OFF</li>
-          <li>Invert: OFF</li>
-          <li>Inset: ON</li>
-        </ul>
+        <div class="template__body__content">
+          <ul>
+            <li>Min Height: OFF</li>
+            <li>Background: OFF</li>
+            <li>Invert: OFF</li>
+            <li>Inset: ON</li>
+          </ul>
+        </div>
       </div>
-      <div class="template__background" style="background-image:url('https://source.unsplash.com/random/?Workplace&9')"></div>
+      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=9')"></div>
     </section>
 
-    <section class="section section--invert section--inset">
+    <section id="section4" class="section section--invert section--inset">
       <div class="template__body">
-        <ul>
-          <li>Min Height: OFF</li>
-          <li>Background: OFF</li>
-          <li>Invert: ON</li>
-          <li>Inset: ON</li>
-        </ul>
+        <div class="template__body__content">
+          <ul>
+            <li>Min Height: OFF</li>
+            <li>Background: OFF</li>
+            <li>Invert: ON</li>
+            <li>Inset: ON</li>
+          </ul>
+        </div>
       </div>
-      <div class="template__background" style="background-image:url('https://source.unsplash.com/random/?Workplace&9')"></div>
+      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=9')"></div>
     </section>
 
-    <section class="section section--min-height">
+    <section id="section5" class="section section--min-height">
       <div class="template__body">
-        <ul>
-          <li>Min Height: ON</li>
-          <li>Background: OFF</li>
-          <li>Invert: OFF</li>
-          <li>Inset: OFF</li>
-        </ul>
+        <div class="template__body__content">
+          <ul>
+            <li>Min Height: ON</li>
+            <li>Background: OFF</li>
+            <li>Invert: OFF</li>
+            <li>Inset: OFF</li>
+          </ul>
+        </div>
       </div>
-      <div class="template__background" style="background-image:url('https://source.unsplash.com/random/?Workplace&7')"></div>
+      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=7')"></div>
     </section>
 
-    <section class="section section--min-height section--invert">
+    <section id="section6" class="section section--min-height section--invert">
       <div class="template__body">
-        <ul>
-          <li>Min Height: ON</li>
-          <li>Background: OFF</li>
-          <li>Invert: ON</li>
-          <li>Inset: OFF</li>
-        </ul>
+        <div class="template__body__content">
+          <ul>
+            <li>Min Height: ON</li>
+            <li>Background: OFF</li>
+            <li>Invert: ON</li>
+            <li>Inset: OFF</li>
+          </ul>
+        </div>
       </div>
-      <div class="template__background" style="background-image:url('https://source.unsplash.com/random/?Workplace&8')"></div>
+      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=8')"></div>
     </section>
 
-    <section class="section section--min-height section--inset">
+    <section id="section7" class="section section--min-height section--inset">
       <div class="template__body">
-        <ul>
-          <li>Min Height: ON</li>
-          <li>Background: OFF</li>
-          <li>Invert: OFF</li>
-          <li>Inset: ON</li>
-        </ul>
+        <div class="template__body__content">
+          <ul>
+            <li>Min Height: ON</li>
+            <li>Background: OFF</li>
+            <li>Invert: OFF</li>
+            <li>Inset: ON</li>
+          </ul>
+        </div>
       </div>
-      <div class="template__background" style="background-image:url('https://source.unsplash.com/random/?Workplace&8')"></div>
+      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=8')"></div>
     </section>
 
-    <section class="section section--min-height section--invert section--inset">
+    <section id="section8" class="section section--min-height section--invert section--inset">
       <div class="template__body">
-        <ul>
-          <li>Min Height: ON</li>
-          <li>Background: OFF</li>
-          <li>Invert: ON</li>
-          <li>Inset: ON</li>
-        </ul>
+        <div class="template__body__content">
+          <ul>
+            <li>Min Height: ON</li>
+            <li>Background: OFF</li>
+            <li>Invert: ON</li>
+            <li>Inset: ON</li>
+          </ul>
+        </div>
       </div>
-      <div class="template__background" style="background-image:url('https://source.unsplash.com/random/?Workplace&9')"></div>
+      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=9')"></div>
     </section>
 
-    <section class="section section--bg">
+    <section id="section9" class="section section--bg">
       <div class="template__body">
-        <ul>
-          <li>Min Height: OFF</li>
-          <li>Background: ON</li>
-          <li>Invert: OFF</li>
-          <li>Inset: OFF</li>
-        </ul>
+        <div class="template__body__content">
+          <ul>
+            <li>Min Height: OFF</li>
+            <li>Background: ON</li>
+            <li>Invert: OFF</li>
+            <li>Inset: OFF</li>
+          </ul>
+        </div>
       </div>
-      <div class="template__background" style="background-image:url('https://source.unsplash.com/random/?Workplace&1');"></div>
+      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=1');"></div>
     </section>
 
-    <section class="section section--bg section--invert">
+    <section id="section10" class="section section--bg section--invert">
       <div class="template__body">
-        <ul>
-          <li>Min Height: OFF</li>
-          <li>Background: ON</li>
-          <li>Invert: ON</li>
-          <li>Inset: OFF</li>
-        </ul>
+        <div class="template__body__content">
+          <ul>
+            <li>Min Height: OFF</li>
+            <li>Background: ON</li>
+            <li>Invert: ON</li>
+            <li>Inset: OFF</li>
+          </ul>
+        </div>
       </div>
-      <div class="template__background" style="background-image:url('https://source.unsplash.com/random/?Workplace&3')"></div>
+      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=3')"></div>
     </section>
 
-    <section class="section section--bg section--inset">
+    <section id="section11" class="section section--bg section--inset">
       <div class="template__body">
-        <ul>
-          <li>Min Height: OFF</li>
-          <li>Background: ON</li>
-          <li>Invert: OFF</li>
-          <li>Inset: ON</li>
-        </ul>
+        <div class="template__body__content">
+          <ul>
+            <li>Min Height: OFF</li>
+            <li>Background: ON</li>
+            <li>Invert: OFF</li>
+            <li>Inset: ON</li>
+          </ul>
+        </div>
       </div>
-      <div class="template__background" style="background-image:url('https://source.unsplash.com/random/?Workplace&4')"></div>
+      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=4')"></div>
     </section>
 
-    <section class="section section--bg section--inset section--invert">
+    <section id="section12" class="section section--bg section--inset section--invert">
       <div class="template__body">
-        <ul>
-          <li>Min Height: OFF</li>
-          <li>Background: ON</li>
-          <li>Invert: ON</li>
-          <li>Inset: ON</li>
-        </ul>
+        <div class="template__body__content">
+          <ul>
+            <li>Min Height: OFF</li>
+            <li>Background: ON</li>
+            <li>Invert: ON</li>
+            <li>Inset: ON</li>
+          </ul>
+        </div>
       </div>
-      <div class="template__background" style="background-image:url('https://source.unsplash.com/random/?Workplace&5')"></div>
+      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=5')"></div>
     </section>
 
-    <section class="section section--min-height section--bg">
+    <section id="section13" class="section section--min-height section--bg">
       <div class="template__body">
-        <ul>
-          <li>Min Height: ON</li>
-          <li>Background: ON</li>
-          <li>Invert: OFF</li>
-          <li>Inset: OFF</li>
-        </ul>
+        <div class="template__body__content">
+          <ul>
+            <li>Min Height: ON</li>
+            <li>Background: ON</li>
+            <li>Invert: OFF</li>
+            <li>Inset: OFF</li>
+          </ul>
+        </div>
       </div>
-      <div class="template__background" style="background-image:url('https://source.unsplash.com/random/?Workplace&1');"></div>
+      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=1');"></div>
     </section>
 
-    <section class="section section--min-height section--bg section--invert">
+    <section id="section14" class="section section--min-height section--bg section--invert">
       <div class="template__body">
-        <ul>
-          <li>Min Height: ON</li>
-          <li>Background: ON</li>
-          <li>Invert: ON</li>
-          <li>Inset: OFF</li>
-        </ul>
+        <div class="template__body__content">
+          <ul>
+            <li>Min Height: ON</li>
+            <li>Background: ON</li>
+            <li>Invert: ON</li>
+            <li>Inset: OFF</li>
+          </ul>
+        </div>
       </div>
-      <div class="template__background" style="background-image:url('https://source.unsplash.com/random/?Workplace&3')"></div>
+      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=3')"></div>
     </section>
 
-    <section class="section section--min-height section--bg section--inset">
+    <section id="section15" class="section section--min-height section--bg section--inset">
       <div class="template__body">
-        <ul>
-          <li>Min Height: ON</li>
-          <li>Background: ON</li>
-          <li>Invert: OFF</li>
-          <li>Inset: ON</li>
-        </ul>
+        <div class="template__body__content">
+          <ul>
+            <li>Min Height: ON</li>
+            <li>Background: ON</li>
+            <li>Invert: OFF</li>
+            <li>Inset: ON</li>
+          </ul>
+        </div>
       </div>
-      <div class="template__background" style="background-image:url('https://source.unsplash.com/random/?Workplace&4')"></div>
+      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=4')"></div>
     </section>
 
-    <section class="section section--min-height section--bg section--inset section--invert">
+    <section id="section16" class="section section--min-height section--bg section--inset section--invert">
       <div class="template__body">
-        <ul>
-          <li>Min Height: ON</li>
-          <li>Background: ON</li>
-          <li>Invert: ON</li>
-          <li>Inset: ON</li>
-        </ul>
+        <div class="template__body__content">
+          <ul>
+            <li>Min Height: ON</li>
+            <li>Background: ON</li>
+            <li>Invert: ON</li>
+            <li>Inset: ON</li>
+          </ul>
+        </div>
       </div>
-      <div class="template__background" style="background-image:url('https://source.unsplash.com/random/?Workplace&5')"></div>
+      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=5')"></div>
     </section>
 
-
-
-  </div>
+  </main>
 </body>
 </html>

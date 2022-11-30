@@ -8,18 +8,18 @@
 
     h1 {
       flex: 1 0 100%;
-      order: 1;
+
     }
 
     &__content {
       flex: 1 1 70%;
       order: 5;
+      min-width: 300px;
       font-size: var(--template-font-size-md);
     }
 
     &__media {
       flex: 1 1 25%;
-      order: 3;
 
       i {
         font-size: 24vmin;
@@ -35,7 +35,7 @@
   &--right {
     .template__body {
       &__content {
-        order: 2;
+        order: unset;
       }
 
       &__media {
