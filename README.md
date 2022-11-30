@@ -10,7 +10,7 @@ There isn't any build processes necessary to view this project, just open up the
 
 ## Development
 
-To develop locally, a sass compiler is necessary to build the stylesheet.
+To develop locally, a local sass compiler is necessary to build the stylesheet.
 
 ## Available Theme Variables
 
