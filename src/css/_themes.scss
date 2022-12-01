@@ -22,6 +22,10 @@
     input {
       margin-right: 0.5em;
     }
+
+    @media screen and (max-width: 500px) {
+      display: block;
+    }
   }
 }
 
@@ -127,10 +131,10 @@ body:has(input[value="theme--fiesta"]:checked),// Just for the theme switcher ex
   --template-invert-border-color: #{$owl-ref-palette-pink-200};
 
   --template-max-width:    1440px;
-  --template-spacer:       5vmin;
+  --template-spacer:       8vmin;
 
-  --template-font-family-base:            "Tahoma", serif;
-  --template-font-family-heading:         "Comic Sans MS", "Comic Sans", cursive;
+  --template-font-family-base:            "Century Gothic", AppleGothic, "Tahoma", sans-serif;
+  --template-font-family-heading:         "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", cursive;
   --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
   --template-font-lineheight-heading:     1.45;
   --template-font-letterspacing-heading:  0.025em;

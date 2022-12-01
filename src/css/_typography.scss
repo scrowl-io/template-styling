@@ -112,13 +112,18 @@ dd {
   max-width: 80ch;
 }
 
+dl {
+  margin: 0 0 1em 0;
+}
+
 dt {
+  font-size: var(--template-font-size-md);
   font-weight: 600;
+  border-bottom: 1px solid var(--template-border-color);
   break-after: avoid;
 }
 
 dd {
-  margin-bottom: 1em;
-  font-style: italic;
+  margin: 0.25em 0 1em 0;
   break-inside: avoid;
 }

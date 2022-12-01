@@ -1,0 +1,46 @@
+// Numbered List Template
+
+.numbered-list {
+  .template__body {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 90ch;
+
+    h1 {
+      flex: 1 0 100%;
+    }
+
+    &__content {
+      font-size: var(--template-font-size-md);
+
+      ol {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        display: flex;
+        margin-bottom: 1.5em;
+        counter-increment: numbered-list-counter;
+
+        &:before {
+          flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 2em;
+          height: 2em;
+          margin-right: 1rem;
+          line-height: 1;
+          font-weight: 600;
+          text-indent: 0;
+          font-variant-numeric: tabular-nums;
+          color: var(--template-bg);
+          border-radius: 50em;
+          background: var(--template-color);
+          content: counter(numbered-list-counter);
+        }
+      }
+    }
+  }
+}

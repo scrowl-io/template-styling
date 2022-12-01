@@ -1,0 +1,18 @@
+// Centered Text Template
+
+.centered-text {
+  .template__body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--template-spacer) / 2);
+    max-width: 90ch;
+
+    h1 {
+      flex: 1 0 100%;
+    }
+
+    &__content {
+
+    }
+  }
+}

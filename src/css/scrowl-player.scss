@@ -9,6 +9,10 @@
 
 // Templates
 @import "block-text";
+@import "two-column";
+@import "definition-list";
+@import "numbered-list";
+@import "centered-text";
 
 * {
   box-sizing: border-box;
@@ -33,6 +37,8 @@ body {
 
 main {
   background: var(--template-bg);
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 hr {

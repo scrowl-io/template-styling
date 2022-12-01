@@ -1,0 +1,20 @@
+// Two Column Template
+
+.two-column {
+  .template__body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--template-spacer) / 2);
+
+    h1 {
+      flex: 1 0 100%;
+    }
+
+    &__content {
+      column-fill: balance;
+      column-count: 2;
+      column-width: 40ch;
+      column-gap: var(--template-spacer);
+    }
+  }
+}
