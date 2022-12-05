@@ -1,0 +1,31 @@
+// Side Figure Template
+
+.side-figure {
+  .template__body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: calc(var(--template-spacer) / 2);
+
+    h1 {
+      flex: 1 0 100%;
+    }
+
+    &__content {
+      flex: 1 1 50%;
+    }
+
+    &__figure {
+      flex: 1 1 40%;
+      margin: 0;
+      padding: var(--template-spacer);
+      color: var(--template-bg);
+      background: var(--template-accent);
+      font-size: var(--template-font-size-md);
+
+      figcaption {
+        font-weight: 600;
+      }
+    }
+  }
+}

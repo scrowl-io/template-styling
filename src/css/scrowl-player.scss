@@ -8,11 +8,12 @@
 @import "template";
 
 // Templates
-@import "block-text";
-@import "two-column";
-@import "definition-list";
-@import "numbered-list";
-@import "centered-text";
+@import "templates/block-text";
+@import "templates/two-column";
+@import "templates/definition-list";
+@import "templates/numbered-list";
+@import "templates/centered-text";
+@import "templates/side-figure";
 
 * {
   box-sizing: border-box;
@@ -52,6 +53,10 @@ hr {
   }
 
   * {
+    --template-accent: white;
+    --template-icon-color: black;
+    --template-color: black;
+
     color: black !important;
     background: transparent !important;
     box-shadow: none !important;

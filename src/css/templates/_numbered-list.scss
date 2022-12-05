@@ -37,7 +37,7 @@
           font-variant-numeric: tabular-nums;
           color: var(--template-bg);
           border-radius: 50em;
-          background: var(--template-color);
+          background: var(--template-accent);
           content: counter(numbered-list-counter);
         }
       }

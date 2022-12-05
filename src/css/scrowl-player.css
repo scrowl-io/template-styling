@@ -308,7 +308,8 @@ template {
   display: none;
 }
 
-span[class^=material-symbols] {
+*[class^=material-symbols] {
+  padding: 0.125em;
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -469,13 +470,14 @@ dd {
   right: 0;
   z-index: 2;
   padding: 0 0.25em 0.5em 0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: white;
   border: 0;
-  background: #495057;
+  background: #000;
 }
 .switcher legend {
   padding: 0 0.5em;
-  background-color: #495057;
+  background-color: #000;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -496,13 +498,15 @@ body:has(input[value=theme--default]:checked),
 :root,
 .theme--default {
   --template-color: #343a40;
-  --template-icon-color: currentColor;
+  --template-icon-color: #007aba;
   --template-bg: #fff;
   --template-border-color: #dee2e6;
+  --template-accent: #007aba;
   --template-invert-color: #fff;
   --template-invert-icon-color: currentColor;
   --template-invert-bg: #212529;
   --template-invert-border-color: #6c757d;
+  --template-invert-accent: #3bbefe;
   --template-max-width: 1200px;
   --template-spacer: 5vmin;
   --template-font-family-base: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
@@ -521,13 +525,15 @@ body:has(input[value=theme--default]:checked) .block-text h1,
 body:has(input[value=theme--dark]:checked),
 .theme--dark {
   --template-color: #fff;
-  --template-icon-color: #adb5bd;
+  --template-icon-color: #3bbefe;
   --template-bg: #212529;
   --template-border-color: #6c757d;
+  --template-accent: #3bbefe;
   --template-invert-color: #343a40;
-  --template-invert-icon-color: #adb5bd;
+  --template-invert-icon-color: currentColor;
   --template-invert-bg: #fafbfc;
   --template-invert-border-color: #adb5bd;
+  --template-invert-accent: #007aba;
   --template-max-width: 1200px;
   --template-spacer: 5vmin;
   --template-font-family-base: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
@@ -545,13 +551,15 @@ body:has(input[value=theme--dark]:checked) .block-text h1,
 body:has(input[value=theme--news]:checked),
 .theme--news {
   --template-color: #000;
-  --template-icon-color: #adb5bd;
+  --template-icon-color: #000;
   --template-bg: #fefaf0;
   --template-border-color: #000;
+  --template-accent: #000;
   --template-invert-color: #fff;
-  --template-invert-icon-color: #adb5bd;
+  --template-invert-icon-color: #fff;
   --template-invert-bg: #000;
-  --template-invert-border-color: #adb5bd;
+  --template-invert-border-color: #fff;
+  --template-invert-accent: #fefaf0;
   --template-max-width: 1024px;
   --template-spacer: 5vmin;
   --template-font-family-base: Georgia, serif;
@@ -574,10 +582,12 @@ body:has(input[value=theme--fiesta]:checked),
   --template-icon-color: #3bbefe;
   --template-bg: #f6dfff;
   --template-border-color: #d361ff;
+  --template-accent: #3bbefe;
   --template-invert-color: #b1e5ff;
-  --template-invert-icon-color: #e66f00;
+  --template-invert-icon-color: #d361ff;
   --template-invert-bg: #3c0e66;
   --template-invert-border-color: #edc0ff;
+  --template-invert-accent: #3bbefe;
   --template-max-width: 1440px;
   --template-spacer: 8vmin;
   --template-font-family-base: "Century Gothic", AppleGothic, "Tahoma", sans-serif;
@@ -585,6 +595,32 @@ body:has(input[value=theme--fiesta]:checked),
   --template-font-lineheight-base: 1.6875;
   --template-font-lineheight-heading: 1.45;
   --template-font-letterspacing-heading: 0.025em;
+}
+
+body:has(input[value=theme--draplin]:checked),
+.theme--draplin {
+  --template-color: #000;
+  --template-icon-color: #e66f00;
+  --template-bg: #fff;
+  --template-border-color: #000;
+  --template-accent: #000;
+  --template-invert-color: #000;
+  --template-invert-icon-color: #000;
+  --template-invert-bg: #e66f00;
+  --template-invert-border-color: #fff;
+  --template-invert-accent: #000;
+  --template-max-width: 1200px;
+  --template-spacer: 5vmin;
+  --template-font-family-base: "Futura", Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --template-font-family-heading: "Futura", Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --template-font-lineheight-base: 1.6875;
+  --template-font-lineheight-heading: 1.33;
+  --template-font-letterspacing-heading: -0.025em;
+}
+body:has(input[value=theme--draplin]:checked) .block-text h1,
+.theme--draplin .block-text h1 {
+  border-bottom: 0.125em dotted var(--template-accent);
+  padding-bottom: 0.5em;
 }
 
 .section {
@@ -606,6 +642,7 @@ body:has(input[value=theme--fiesta]:checked),
   --template-color: var(--template-invert-color);
   --template-icon-color: var(--template-invert-icon-color);
   --template-border-color: var(--template-invert-border-color);
+  --template-accent: var(--template-invert-accent);
 }
 .section--inset {
   margin: var(--template-spacer);
@@ -636,9 +673,14 @@ body:has(input[value=theme--fiesta]:checked),
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
-.section--bg .template__body .template__body__content > :is(ol, ul, p, figure, sectionquote, dl) {
+.section--bg .template__body__content > :is(ol, ul, p, figure, sectionquote, dl) {
   background: var(--template-bg);
   box-shadow: 0 0 0 0.5em var(--template-bg);
+}
+.section--bg .template__body__media *[class^=material-symbols] {
+  background: var(--template-bg);
+  border-radius: 9in;
+  line-height: 1;
 }
 
 .template__body {
@@ -732,7 +774,7 @@ body:has(input[value=theme--fiesta]:checked),
   padding-right: 0.5rem;
   color: var(--template-bg);
   border: none;
-  background: var(--template-color);
+  background: var(--template-accent);
 }
 .definition-list .template__body__content dd {
   padding-left: 0.5rem;
@@ -773,7 +815,7 @@ body:has(input[value=theme--fiesta]:checked),
   font-variant-numeric: tabular-nums;
   color: var(--template-bg);
   border-radius: 50em;
-  background: var(--template-color);
+  background: var(--template-accent);
   content: counter(numbered-list-counter);
 }
 
@@ -786,6 +828,30 @@ body:has(input[value=theme--fiesta]:checked),
 .centered-text .template__body h1 {
   flex: 1 0 100%;
 }
+.side-figure .template__body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: calc(var(--template-spacer) / 2);
+}
+.side-figure .template__body h1 {
+  flex: 1 0 100%;
+}
+.side-figure .template__body__content {
+  flex: 1 1 50%;
+}
+.side-figure .template__body__figure {
+  flex: 1 1 40%;
+  margin: 0;
+  padding: var(--template-spacer);
+  color: var(--template-bg);
+  background: var(--template-accent);
+  font-size: var(--template-font-size-md);
+}
+.side-figure .template__body__figure figcaption {
+  font-weight: 600;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -821,6 +887,9 @@ hr {
     size: landscape;
   }
   * {
+    --template-accent: white;
+    --template-icon-color: black;
+    --template-color: black;
     color: black !important;
     background: transparent !important;
     box-shadow: none !important;

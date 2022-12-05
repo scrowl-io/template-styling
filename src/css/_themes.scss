@@ -4,13 +4,14 @@
   right: 0;
   z-index: 2;
   padding: 0 0.25em 0.5em 0;
+  font-family: $owl-ref-typeface-font-family-sans-serif;
   color: white;
   border: 0;
-  background: $owl-ref-palette-gray-700;
+  background: $owl-ref-palette-black;
 
   legend {
     padding: 0 0.5em;
-    background-color: $owl-ref-palette-gray-700;
+    background-color: $owl-ref-palette-black;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
   }
@@ -33,13 +34,16 @@ body:has(input[value="theme--default"]:checked), // Just for the theme switcher 
 :root,
 .theme--default {
   --template-color:               #{$owl-ref-palette-gray-800};
-  --template-icon-color:          currentColor;
+  --template-icon-color:          #{$owl-ref-palette-primary-500};
   --template-bg:                  #{$owl-ref-palette-white};
   --template-border-color:        #{$owl-ref-palette-gray-300};
+  --template-accent:              #{$owl-ref-palette-primary-500};
+
   --template-invert-color:        #{$owl-ref-palette-white};
   --template-invert-icon-color:   currentColor;
   --template-invert-bg:           #{$owl-ref-palette-gray-900};
   --template-invert-border-color: #{$owl-ref-palette-gray-600};
+  --template-invert-accent:       #{$owl-ref-palette-cyan-500};
 
   --template-max-width:    1200px;
   --template-spacer:       5vmin;
@@ -64,13 +68,16 @@ body:has(input[value="theme--default"]:checked),
 body:has(input[value="theme--dark"]:checked),// Just for the theme switcher example page
 .theme--dark {
   --template-color:               #{$owl-ref-palette-white};
-  --template-icon-color:          #{$owl-ref-palette-gray-500};
+  --template-icon-color:          #{$owl-ref-palette-cyan-500};
   --template-bg:                  #{$owl-ref-palette-gray-900};
   --template-border-color:        #{$owl-ref-palette-gray-600};
+  --template-accent:              #{$owl-ref-palette-cyan-500};
+
   --template-invert-color:        #{$owl-ref-palette-gray-800};
-  --template-invert-icon-color:   #{$owl-ref-palette-gray-500};
+  --template-invert-icon-color:   currentColor;
   --template-invert-bg:           #{$owl-ref-palette-gray-100};
   --template-invert-border-color: #{$owl-ref-palette-gray-500};
+  --template-invert-accent:       #{$owl-ref-palette-primary-500};
 
   --template-max-width:    1200px;
   --template-spacer:       5vmin;
@@ -92,13 +99,16 @@ body:has(input[value="theme--dark"]:checked),// Just for the theme switcher exam
 body:has(input[value="theme--news"]:checked),// Just for the theme switcher example page
 .theme--news{
   --template-color:               #{$owl-ref-palette-black};
-  --template-icon-color:          #{$owl-ref-palette-gray-500};
+  --template-icon-color:          #{$owl-ref-palette-black};
   --template-bg:                #fefaf0;
   --template-border-color:        #{$owl-ref-palette-black};
+  --template-accent:              #{$owl-ref-palette-black};
+
   --template-invert-color:        #{$owl-ref-palette-white};
-  --template-invert-icon-color:   #{$owl-ref-palette-gray-500};
+  --template-invert-icon-color:   #{$owl-ref-palette-white};
   --template-invert-bg:           #{$owl-ref-palette-black};
-  --template-invert-border-color: #{$owl-ref-palette-gray-500};
+  --template-invert-border-color: #{$owl-ref-palette-white};
+  --template-invert-accent:       #fefaf0;
 
   --template-max-width:    1024px;
   --template-spacer:       5vmin;
@@ -125,10 +135,13 @@ body:has(input[value="theme--fiesta"]:checked),// Just for the theme switcher ex
   --template-icon-color:          #{$owl-ref-palette-cyan-500};
   --template-bg:                  #{$owl-ref-palette-pink-100};
   --template-border-color:        #{$owl-ref-palette-pink-500};
+  --template-accent:              #{$owl-ref-palette-cyan-500};
+
   --template-invert-color:        #{$owl-ref-palette-cyan-200};
-  --template-invert-icon-color:   #{$owl-ref-palette-orange-500};
+  --template-invert-icon-color:   #{$owl-ref-palette-pink-500};
   --template-invert-bg:           #{$owl-ref-palette-purple-800};
   --template-invert-border-color: #{$owl-ref-palette-pink-200};
+  --template-invert-accent:       #{$owl-ref-palette-cyan-500};
 
   --template-max-width:    1440px;
   --template-spacer:       8vmin;
@@ -138,4 +151,35 @@ body:has(input[value="theme--fiesta"]:checked),// Just for the theme switcher ex
   --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
   --template-font-lineheight-heading:     1.45;
   --template-font-letterspacing-heading:  0.025em;
+}
+
+body:has(input[value="theme--draplin"]:checked),// Just for the theme switcher example page
+.theme--draplin {
+  --template-color:               #{$owl-ref-palette-black};
+  --template-icon-color:          #{$owl-ref-palette-orange-500};
+  --template-bg:                  #{$owl-ref-palette-white};
+  --template-border-color:        #{$owl-ref-palette-black};
+  --template-accent:              #{$owl-ref-palette-black};
+
+  --template-invert-color:        #{$owl-ref-palette-black};
+  --template-invert-icon-color:   #{$owl-ref-palette-black};
+  --template-invert-bg:           #{$owl-ref-palette-orange-500};
+  --template-invert-border-color: #{$owl-ref-palette-white};
+  --template-invert-accent:       #{$owl-ref-palette-black};
+
+  --template-max-width:    1200px;
+  --template-spacer:       5vmin;
+
+  --template-font-family-base:            "Futura", #{$owl-ref-typeface-font-family-sans-serif};
+  --template-font-family-heading:         "Futura", #{$owl-ref-typeface-font-family-sans-serif};
+  --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
+  --template-font-lineheight-heading:     1.33;
+  --template-font-letterspacing-heading:  -0.025em;
+
+  .block-text {
+    h1 {
+      border-bottom: 0.125em dotted var(--template-accent);
+      padding-bottom: 0.5em;
+    }
+  }
 }

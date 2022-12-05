@@ -20,6 +20,7 @@
     --template-color: var(--template-invert-color);
     --template-icon-color: var(--template-invert-icon-color);
     --template-border-color: var(--template-invert-border-color);
+    --template-accent: var(--template-invert-accent);
   }
 
   &--inset {
@@ -61,10 +62,18 @@
           -webkit-box-decoration-break: clone;
         }
       }
+    }
 
-      & .template__body__content > :is(ol, ul, p, figure, sectionquote, dl) {
+    .template__body__content > :is(ol, ul, p, figure, sectionquote, dl) {
+      background: var(--template-bg);
+      box-shadow: 0 0 0 0.5em var(--template-bg);
+    }
+
+    .template__body__media {
+      *[class^="material-symbols"] {
         background: var(--template-bg);
-        box-shadow: 0 0 0 0.5em var(--template-bg);
+        border-radius: 9in;
+        line-height: 1;
       }
     }
   }
