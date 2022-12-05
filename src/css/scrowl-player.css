@@ -710,6 +710,7 @@ body:has(input[value=theme--draplin]:checked) .block-text h1,
 .block-text .template__body {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row-reverse;
   gap: calc(var(--template-spacer) / 2);
 }
 .block-text .template__body h1 {
@@ -717,7 +718,6 @@ body:has(input[value=theme--draplin]:checked) .block-text h1,
 }
 .block-text .template__body__content {
   flex: 1 1 70%;
-  order: 5;
   min-width: 300px;
   font-size: var(--template-font-size-md);
 }
@@ -729,9 +729,10 @@ body:has(input[value=theme--draplin]:checked) .block-text h1,
   font-size: 24vmin;
   font-variation-settings: "FILL" 0, "wght" 100, "GRAD" -25, "opsz" 48;
 }
-.block-text--right .template__body__content {
-  order: unset;
+.block-text--right .template__body {
+  flex-direction: row;
 }
+
 .two-column .template__body {
   display: flex;
   flex-wrap: wrap;

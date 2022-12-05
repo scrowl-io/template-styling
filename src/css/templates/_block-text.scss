@@ -4,6 +4,7 @@
   .template__body {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row-reverse;
     gap: calc(var(--template-spacer) / 2);
 
     h1 {
@@ -12,7 +13,6 @@
 
     &__content {
       flex: 1 1 70%;
-      order: 5;
       min-width: 300px;
       font-size: var(--template-font-size-md);
     }
@@ -34,13 +34,7 @@
 
   &--right {
     .template__body {
-      &__content {
-        order: unset;
-      }
-
-      &__media {
-
-      }
+      flex-direction: row;
     }
   }
 }
