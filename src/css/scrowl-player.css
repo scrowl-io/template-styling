@@ -516,6 +516,27 @@ body:has(input[value=theme--default]:checked),
   --template-font-letterspacing-heading: -0.025em;
 }
 
+body:has(input[value=theme--reader]:checked),
+.theme--reader {
+  --template-color: #000;
+  --template-icon-color: currentColor;
+  --template-bg: #fff;
+  --template-border-color: #000;
+  --template-accent: #000;
+  --template-invert-color: #000;
+  --template-invert-icon-color: currentColor;
+  --template-invert-bg: #fff;
+  --template-invert-border-color: #000;
+  --template-invert-accent: #000;
+  --template-max-width: 1200px;
+  --template-spacer: 1em;
+  --template-font-family-base: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --template-font-family-heading: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --template-font-lineheight-base: 1.6875;
+  --template-font-lineheight-heading: 1.25;
+  --template-font-letterspacing-heading: 0;
+}
+
 body:has(input[value=theme--default]:checked) .block-text h1,
 .theme--default .block-text h1 {
   border-bottom: 0.0625em solid var(--template-border-color);

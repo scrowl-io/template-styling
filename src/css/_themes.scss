@@ -55,6 +55,30 @@ body:has(input[value="theme--default"]:checked), // Just for the theme switcher 
   --template-font-letterspacing-heading:  -0.025em;
 }
 
+body:has(input[value="theme--reader"]:checked), // Just for the theme switcher example page
+.theme--reader {
+  --template-color:               #{$owl-ref-palette-black};
+  --template-icon-color:          currentColor;
+  --template-bg:                  #{$owl-ref-palette-white};
+  --template-border-color:        #{$owl-ref-palette-black};
+  --template-accent:              #{$owl-ref-palette-black};
+
+  --template-invert-color:        #{$owl-ref-palette-black};
+  --template-invert-icon-color:   currentColor;
+  --template-invert-bg:           #{$owl-ref-palette-white};
+  --template-invert-border-color: #{$owl-ref-palette-black};
+  --template-invert-accent:       #{$owl-ref-palette-black};
+
+  --template-max-width:    1200px;
+  --template-spacer:       1em;
+
+  --template-font-family-base:            #{$owl-ref-typeface-font-family-sans-serif};
+  --template-font-family-heading:         #{$owl-ref-typeface-font-family-sans-serif};
+  --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
+  --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
+  --template-font-letterspacing-heading:  0;
+}
+
 body:has(input[value="theme--default"]:checked),
 .theme--default {
   .block-text {
