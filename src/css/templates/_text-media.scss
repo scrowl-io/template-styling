@@ -1,6 +1,6 @@
-// Block Text Template
+// Text Media Template
 
-.block-text {
+.text-media {
   .template__body {
     display: flex;
     flex-wrap: wrap;
@@ -12,7 +12,7 @@
     }
 
     &__content {
-      flex: 1 1 65%;
+      flex: 1 1 60%;
       min-width: 18rem;
       font-size: var(--template-font-size-md);
     }

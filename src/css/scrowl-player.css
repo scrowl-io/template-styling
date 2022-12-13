@@ -575,10 +575,10 @@ body:has(input[value=theme--default]:checked),
   --template-font-letterspacing-heading: -0.025em;
 }
 
-body:has(input[value=theme--default]:checked) .block-text h1,
+body:has(input[value=theme--default]:checked) .text-media h1,
 body:has(input[value=theme--default]:checked) .icon-list h1,
 body:has(input[value=theme--default]:checked) .numbered-list h1,
-.theme--default .block-text h1,
+.theme--default .text-media h1,
 .theme--default .icon-list h1,
 .theme--default .numbered-list h1 {
   border-bottom: 0.0625em solid var(--template-border-color);
@@ -635,12 +635,12 @@ body:has(input[value=theme--reader]:checked) .template__body,
   display: block;
   max-width: var(--template-max-width);
 }
-body:has(input[value=theme--reader]:checked) .block-text .template__body__media,
-.theme--reader .block-text .template__body__media {
+body:has(input[value=theme--reader]:checked) .text-media .template__body__media,
+.theme--reader .text-media .template__body__media {
   text-align: left;
 }
-body:has(input[value=theme--reader]:checked) .block-text .template__body__media i,
-.theme--reader .block-text .template__body__media i {
+body:has(input[value=theme--reader]:checked) .text-media .template__body__media i,
+.theme--reader .text-media .template__body__media i {
   font-size: 5em;
 }
 body:has(input[value=theme--reader]:checked) .content-aside .template__body__aside,
@@ -681,10 +681,10 @@ body:has(input[value=theme--dark]:checked),
   --template-font-lineheight-heading: 1.25;
   --template-font-letterspacing-heading: -0.025em;
 }
-body:has(input[value=theme--dark]:checked) .block-text h1,
+body:has(input[value=theme--dark]:checked) .text-media h1,
 body:has(input[value=theme--dark]:checked) .icon-list h1,
 body:has(input[value=theme--dark]:checked) .numbered-list h1,
-.theme--dark .block-text h1,
+.theme--dark .text-media h1,
 .theme--dark .icon-list h1,
 .theme--dark .numbered-list h1 {
   border-bottom: 0.0625em solid var(--template-border-color);
@@ -710,10 +710,10 @@ body:has(input[value=theme--news]:checked),
   --template-font-lineheight-heading: 1.25;
   --template-font-letterspacing-heading: -0.025em;
 }
-body:has(input[value=theme--news]:checked) .block-text h1,
+body:has(input[value=theme--news]:checked) .text-media h1,
 body:has(input[value=theme--news]:checked) .icon-list h1,
 body:has(input[value=theme--news]:checked) .numbered-list h1,
-.theme--news .block-text h1,
+.theme--news .text-media h1,
 .theme--news .icon-list h1,
 .theme--news .numbered-list h1 {
   border: 0.125em solid var(--template-border-color);
@@ -761,10 +761,10 @@ body:has(input[value=theme--draplin]:checked),
   --template-font-lineheight-heading: 1.33;
   --template-font-letterspacing-heading: -0.025em;
 }
-body:has(input[value=theme--draplin]:checked) .block-text h1,
+body:has(input[value=theme--draplin]:checked) .text-media h1,
 body:has(input[value=theme--draplin]:checked) .icon-list h1,
 body:has(input[value=theme--draplin]:checked) .numbered-list h1,
-.theme--draplin .block-text h1,
+.theme--draplin .text-media h1,
 .theme--draplin .icon-list h1,
 .theme--draplin .numbered-list h1 {
   border-bottom: 0.125em dotted var(--template-accent);
@@ -855,6 +855,11 @@ body:has(input[value=theme--draplin]:checked) .numbered-list h1,
 .template__body__media figure img {
   max-width: 100%;
 }
+@media print {
+  .template__body__media figure img {
+    max-width: 300px;
+  }
+}
 .template__body__media figure figcaption {
   font-size: var(--template-font-size-sm);
   line-height: var(--template-font-lineheight-heading);
@@ -875,29 +880,29 @@ body:has(input[value=theme--draplin]:checked) .numbered-list h1,
   background-attachment: fixed;
 }
 
-.block-text .template__body {
+.text-media .template__body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row-reverse;
   gap: var(--template-spacer-sm);
 }
-.block-text .template__body h1 {
+.text-media .template__body h1 {
   flex: 1 0 100%;
 }
-.block-text .template__body__content {
-  flex: 1 1 65%;
+.text-media .template__body__content {
+  flex: 1 1 60%;
   min-width: 18rem;
   font-size: var(--template-font-size-md);
 }
-.block-text .template__body__media {
+.text-media .template__body__media {
   flex: 1 1 25%;
   text-align: center;
 }
-.block-text .template__body__media i {
+.text-media .template__body__media i {
   font-size: var(--template-icon-size);
   font-variation-settings: "FILL" 0, "wght" 100, "GRAD" -25, "opsz" 48;
 }
-.block-text--right .template__body {
+.text-media--right .template__body {
   flex-direction: row;
 }
 

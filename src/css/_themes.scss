@@ -74,7 +74,7 @@ body:has(input[value="theme--default"]:checked), // Just for the theme switcher 
 
 body:has(input[value="theme--default"]:checked),
 .theme--default {
-  .block-text,
+  .text-media,
   .icon-list,
   .numbered-list {
     h1 {
@@ -140,7 +140,7 @@ body:has(input[value="theme--reader"]:checked), // Just for the theme switcher e
     max-width: var(--template-max-width);
   }
 
-  .block-text {
+  .text-media {
     .template__body__media {
       text-align: left;
 
@@ -193,7 +193,7 @@ body:has(input[value="theme--dark"]:checked),// Just for the theme switcher exam
   --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
   --template-font-letterspacing-heading:  -0.025em;
 
-  .block-text,
+  .text-media,
   .icon-list,
   .numbered-list {
     h1 {
@@ -225,7 +225,7 @@ body:has(input[value="theme--news"]:checked),// Just for the theme switcher exam
   --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
   --template-font-letterspacing-heading:  -0.025em;
 
-  .block-text,
+  .text-media,
   .icon-list,
   .numbered-list {
     h1 {
@@ -282,7 +282,7 @@ body:has(input[value="theme--draplin"]:checked),// Just for the theme switcher e
   --template-font-lineheight-heading:     1.33;
   --template-font-letterspacing-heading:  -0.025em;
 
-  .block-text,
+  .text-media,
   .icon-list,
   .numbered-list {
     h1 {
