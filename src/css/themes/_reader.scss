@@ -1,0 +1,87 @@
+
+body:has(input[value="theme--reader"]:checked), // Just for the theme switcher example page
+.theme--reader {
+  --template-font-size-sm: 0.729rem;
+  --template-font-size-base: 0.875rem;
+  --template-font-size-md: 1.05rem;
+  --template-font-size-lg: 1.26rem;
+  --template-font-size-xl: 1.512rem;
+  --template-font-size-2xl: 1.814rem;
+  --template-font-size-3xl: 2.177rem;
+
+  --template-color:               #{$owl-ref-palette-black};
+  --template-icon-color:          currentColor;
+  --template-bg:                  #{$owl-ref-palette-white};
+  --template-border-color:        #{$owl-ref-palette-black};
+  --template-accent:              #{$owl-ref-palette-black};
+
+  --template-invert-color:        #{$owl-ref-palette-black};
+  --template-invert-icon-color:   currentColor;
+  --template-invert-bg:           #{$owl-ref-palette-white};
+  --template-invert-border-color: #{$owl-ref-palette-black};
+  --template-invert-accent:       #{$owl-ref-palette-black};
+
+  --template-max-width:    1200px;
+
+  --template-font-family-base:            Arial, sans-serif;
+  --template-font-family-heading:         Arial, sans-serif;
+  --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
+  --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
+  --template-font-letterspacing-heading:  0;
+
+  @media print {
+    .section {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .section--min-height {
+    min-height: 0;
+  }
+
+  .section--bg {
+    .template__background {
+      display: none;
+    }
+  }
+
+  .section--inset {
+    margin: 0;
+  }
+
+  .template__body{
+    display: block;
+    max-width: var(--template-max-width);
+  }
+
+  .text-media {
+    .template__body__media {
+      text-align: left;
+
+      i {
+        font-size: 5em;
+      }
+    }
+  }
+
+  .content-aside {
+    .template__body__aside {
+      color: inherit;
+      background: inherit;
+      border: 2px solid currentColor;
+    }
+  }
+
+  dt {
+    color: inherit;
+    background: inherit;
+    border: 2px solid currentColor;
+  }
+
+  .numbered-list .template__body__content ol li:before {
+    color: inherit;
+    background: inherit;
+    border: 2px solid currentColor;
+  }
+}

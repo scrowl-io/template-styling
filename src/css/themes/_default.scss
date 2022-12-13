@@ -1,0 +1,36 @@
+
+body:has(input[value="theme--default"]:checked), // Just for the theme switcher example page
+:root,
+.theme--default {
+  --template-color:               #{$owl-ref-palette-gray-800};
+  --template-icon-color:          #{$owl-ref-palette-primary-500};
+  --template-bg:                  #{$owl-ref-palette-white};
+  --template-border-color:        #{$owl-ref-palette-gray-300};
+  --template-accent:              #{$owl-ref-palette-primary-500};
+
+  --template-invert-color:        #{$owl-ref-palette-white};
+  --template-invert-icon-color:   currentColor;
+  --template-invert-bg:           #{$owl-ref-palette-gray-900};
+  --template-invert-border-color: #{$owl-ref-palette-gray-600};
+  --template-invert-accent:       #{$owl-ref-palette-cyan-500};
+
+  --template-max-width:    1200px;
+
+  --template-font-family-base:            #{$owl-ref-typeface-font-family-sans-serif};
+  --template-font-family-heading:         #{$owl-ref-typeface-font-family-sans-serif};
+  --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
+  --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
+  --template-font-letterspacing-heading:  -0.025em;
+}
+
+body:has(input[value="theme--default"]:checked),
+.theme--default {
+  .text-media,
+  .icon-list,
+  .numbered-list {
+    h1 {
+      border-bottom: 0.0625em solid var(--template-border-color);
+      padding-bottom: 0.5em;
+    }
+  }
+}

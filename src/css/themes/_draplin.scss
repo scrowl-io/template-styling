@@ -1,0 +1,32 @@
+
+body:has(input[value="theme--draplin"]:checked),// Just for the theme switcher example page
+.theme--draplin {
+  --template-color:               #{$owl-ref-palette-black};
+  --template-icon-color:          #{$owl-ref-palette-orange-500};
+  --template-bg:                  #{$owl-ref-palette-white};
+  --template-border-color:        #{$owl-ref-palette-black};
+  --template-accent:              #{$owl-ref-palette-black};
+
+  --template-invert-color:        #{$owl-ref-palette-black};
+  --template-invert-icon-color:   #{$owl-ref-palette-black};
+  --template-invert-bg:           #{$owl-ref-palette-orange-500};
+  --template-invert-border-color: #{$owl-ref-palette-white};
+  --template-invert-accent:       #{$owl-ref-palette-black};
+
+  --template-max-width:    1200px;
+
+  --template-font-family-base:            "Futura", #{$owl-ref-typeface-font-family-sans-serif};
+  --template-font-family-heading:         "Futura", #{$owl-ref-typeface-font-family-sans-serif};
+  --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
+  --template-font-lineheight-heading:     1.33;
+  --template-font-letterspacing-heading:  -0.025em;
+
+  .text-media,
+  .icon-list,
+  .numbered-list {
+    h1 {
+      border-bottom: 0.125em dotted var(--template-accent);
+      padding-bottom: 0.5em;
+    }
+  }
+}

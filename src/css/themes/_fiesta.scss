@@ -1,0 +1,23 @@
+
+body:has(input[value="theme--fiesta"]:checked),// Just for the theme switcher example page
+.theme--fiesta {
+  --template-color:               #{$owl-ref-palette-purple-800};
+  --template-icon-color:          #{$owl-ref-palette-pink-600};
+  --template-bg:                  #{$owl-ref-palette-pink-100};
+  --template-border-color:        #{$owl-ref-palette-pink-500};
+  --template-accent:              #{$owl-ref-palette-pink-700};
+
+  --template-invert-color:        #{$owl-ref-palette-pink-200};
+  --template-invert-icon-color:   #{$owl-ref-palette-pink-500};
+  --template-invert-bg:           #{$owl-ref-palette-purple-800};
+  --template-invert-border-color: #{$owl-ref-palette-pink-200};
+  --template-invert-accent:       #{$owl-ref-palette-pink-500};
+
+  --template-max-width:    1440px;
+
+  --template-font-family-base:            "Century Gothic", AppleGothic, "Tahoma", sans-serif;
+  --template-font-family-heading:         "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", cursive;
+  --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
+  --template-font-lineheight-heading:     1.45;
+  --template-font-letterspacing-heading:  0.025em;
+}

@@ -1,0 +1,34 @@
+
+body:has(input[value="theme--news"]:checked),// Just for the theme switcher example page
+.theme--news{
+  --template-color:               #{$owl-ref-palette-black};
+  --template-icon-color:          #{$owl-ref-palette-black};
+  --template-bg:                #fefaf0;
+  --template-border-color:        #{$owl-ref-palette-black};
+  --template-accent:              #{$owl-ref-palette-black};
+
+  --template-invert-color:        #{$owl-ref-palette-white};
+  --template-invert-icon-color:   #{$owl-ref-palette-white};
+  --template-invert-bg:           #{$owl-ref-palette-black};
+  --template-invert-border-color: #{$owl-ref-palette-white};
+  --template-invert-accent:       #fefaf0;
+
+  --template-max-width:    1024px;
+
+  --template-font-family-base:            Georgia, serif;
+  --template-font-family-heading:         Georgia, serif;
+  --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
+  --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
+  --template-font-letterspacing-heading:  -0.025em;
+
+  .text-media,
+  .icon-list,
+  .numbered-list {
+    h1 {
+      border: 0.125em solid var(--template-border-color);
+      border-top: none;
+      border-right: none;
+      padding: 0.5em;
+    }
+  }
+}
