@@ -611,6 +611,13 @@ body:has(input[value=theme--reader]:checked),
   --template-font-lineheight-heading: 1.25;
   --template-font-letterspacing-heading: 0;
 }
+@media print {
+  body:has(input[value=theme--reader]:checked) .section,
+.theme--reader .section {
+    margin: 0;
+    padding: 0;
+  }
+}
 body:has(input[value=theme--reader]:checked) .section--min-height,
 .theme--reader .section--min-height {
   min-height: 0;
@@ -636,8 +643,8 @@ body:has(input[value=theme--reader]:checked) .block-text .template__body__media 
 .theme--reader .block-text .template__body__media i {
   font-size: 5em;
 }
-body:has(input[value=theme--reader]:checked) .side-figure .template__body__figure,
-.theme--reader .side-figure .template__body__figure {
+body:has(input[value=theme--reader]:checked) .content-aside .template__body__aside,
+.theme--reader .content-aside .template__body__aside {
   color: inherit;
   background: inherit;
   border: 2px solid currentColor;
@@ -841,6 +848,18 @@ body:has(input[value=theme--draplin]:checked) .numbered-list h1,
   padding: var(--template-spacer) 0;
   text-align: center;
 }
+.template__body__media figure {
+  margin: 0;
+  display: inline-block;
+}
+.template__body__media figure img {
+  max-width: 100%;
+}
+.template__body__media figure figcaption {
+  font-size: var(--template-font-size-sm);
+  line-height: var(--template-font-lineheight-heading);
+  text-align: right;
+}
 .template__background {
   display: none;
   position: absolute;
@@ -1004,19 +1023,20 @@ body:has(input[value=theme--draplin]:checked) .numbered-list h1,
 .centered-text .template__body h1 {
   flex: 1 0 100%;
 }
-.side-figure .template__body {
+.content-aside .template__body {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   gap: var(--template-spacer-sm);
 }
-.side-figure .template__body h1 {
+.content-aside .template__body h1 {
   flex: 1 0 100%;
 }
-.side-figure .template__body__content {
+.content-aside .template__body__content {
   flex: 1 1 50%;
+  font-size: var(--template-font-size-md);
 }
-.side-figure .template__body__figure {
+.content-aside .template__body__aside {
   flex: 1 1 40%;
   min-width: 18rem;
   margin: 0;
@@ -1025,7 +1045,8 @@ body:has(input[value=theme--draplin]:checked) .numbered-list h1,
   background: var(--template-accent);
   font-size: var(--template-font-size-md);
 }
-.side-figure .template__body__figure figcaption {
+.content-aside .template__body__aside figcaption {
+  line-height: var(--template-font-lineheight-heading);
   font-weight: 700;
 }
 
@@ -1107,9 +1128,14 @@ hr {
     --template-accent: white;
     --template-icon-color: black;
     --template-color: black;
+    --template-border-color: black;
     color: black !important;
     background: transparent !important;
     box-shadow: none !important;
+  }
+  .template__body__aside,
+.numbered-list ol li:before {
+    border: 2px solid black;
   }
   .section {
     page-break-inside: avoid;

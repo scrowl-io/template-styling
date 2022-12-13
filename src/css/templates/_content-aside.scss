@@ -1,6 +1,6 @@
 // Side Figure Template
 
-.side-figure {
+.content-aside {
   .template__body {
     display: flex;
     flex-wrap: wrap;
@@ -13,9 +13,10 @@
 
     &__content {
       flex: 1 1 50%;
+      font-size: var(--template-font-size-md);
     }
 
-    &__figure {
+    &__aside {
       flex: 1 1 40%;
       min-width: 18rem;
       margin: 0;
@@ -25,6 +26,7 @@
       font-size: var(--template-font-size-md);
 
       figcaption {
+        line-height: var(--template-font-lineheight-heading);
         font-weight: 700;
       }
     }

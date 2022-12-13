@@ -14,7 +14,7 @@
 @import "templates/numbered-list";
 @import "templates/icon-list";
 @import "templates/centered-text";
-@import "templates/side-figure";
+@import "templates/content-aside";
 @import "templates/icon-points";
 
 * {
@@ -62,10 +62,16 @@ hr {
     --template-accent: white;
     --template-icon-color: black;
     --template-color: black;
+    --template-border-color: black;
 
     color: black !important;
     background: transparent !important;
     box-shadow: none !important;
+  }
+
+  .template__body__aside,
+  .numbered-list ol li:before {
+    border: 2px solid black;
   }
 
   .section {

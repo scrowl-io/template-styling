@@ -17,6 +17,23 @@
       padding: var(--template-spacer) 0;
       text-align: center;
     }
+
+    &__media {
+      figure {
+        margin: 0;
+        display: inline-block;
+
+        img {
+          max-width: 100%;
+        }
+
+        figcaption {
+          font-size: var(--template-font-size-sm);
+          line-height: var(--template-font-lineheight-heading);
+          text-align: right;
+        }
+      }
+    }
   }
 
   // This is the element that houses the background color or image when section--bg is in use.

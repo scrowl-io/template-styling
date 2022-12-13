@@ -114,6 +114,13 @@ body:has(input[value="theme--reader"]:checked), // Just for the theme switcher e
   --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
   --template-font-letterspacing-heading:  0;
 
+  @media print {
+    .section {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
   .section--min-height {
     min-height: 0;
   }
@@ -143,8 +150,8 @@ body:has(input[value="theme--reader"]:checked), // Just for the theme switcher e
     }
   }
 
-  .side-figure {
-    .template__body__figure {
+  .content-aside {
+    .template__body__aside {
       color: inherit;
       background: inherit;
       border: 2px solid currentColor;
