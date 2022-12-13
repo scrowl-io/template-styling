@@ -30,6 +30,18 @@
   }
 }
 
+@supports (font-size: clamp(1rem, 1vmin, 1rem)) {
+  :root {
+    --template-spacer: clamp(0.5rem, 5vw, 5rem);
+  }
+}
+
+@supports not (font-size: clamp(1rem, 1vmin, 1rem)) {
+  :root {
+    --template-spacer: 5vmin;
+  }
+}
+
 body:has(input[value="theme--default"]:checked), // Just for the theme switcher example page
 :root,
 .theme--default {
@@ -46,7 +58,6 @@ body:has(input[value="theme--default"]:checked), // Just for the theme switcher 
   --template-invert-accent:       #{$owl-ref-palette-cyan-500};
 
   --template-max-width:    1200px;
-  --template-spacer:       5vmin;
 
   --template-font-family-base:            #{$owl-ref-typeface-font-family-sans-serif};
   --template-font-family-heading:         #{$owl-ref-typeface-font-family-sans-serif};
@@ -55,8 +66,26 @@ body:has(input[value="theme--default"]:checked), // Just for the theme switcher 
   --template-font-letterspacing-heading:  -0.025em;
 }
 
+body:has(input[value="theme--default"]:checked),
+.theme--default {
+  .block-text {
+    h1 {
+      border-bottom: 0.0625em solid var(--template-border-color);
+      padding-bottom: 0.5em;
+    }
+  }
+}
+
 body:has(input[value="theme--reader"]:checked), // Just for the theme switcher example page
 .theme--reader {
+  --template-font-size-sm: 0.729rem;
+  --template-font-size-base: 0.875rem;
+  --template-font-size-md: 1.05rem;
+  --template-font-size-lg: 1.26rem;
+  --template-font-size-xl: 1.512rem;
+  --template-font-size-2xl: 1.814rem;
+  --template-font-size-3xl: 2.177rem;
+
   --template-color:               #{$owl-ref-palette-black};
   --template-icon-color:          currentColor;
   --template-bg:                  #{$owl-ref-palette-white};
@@ -70,22 +99,20 @@ body:has(input[value="theme--reader"]:checked), // Just for the theme switcher e
   --template-invert-accent:       #{$owl-ref-palette-black};
 
   --template-max-width:    1200px;
-  --template-spacer:       1em;
 
-  --template-font-family-base:            #{$owl-ref-typeface-font-family-sans-serif};
-  --template-font-family-heading:         #{$owl-ref-typeface-font-family-sans-serif};
+  --template-font-family-base:            Arial, sans-serif;
+  --template-font-family-heading:         Arial, sans-serif;
   --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
   --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
   --template-font-letterspacing-heading:  0;
-}
 
-body:has(input[value="theme--default"]:checked),
-.theme--default {
-  .block-text {
-    h1 {
-      border-bottom: 0.0625em solid var(--template-border-color);
-      padding-bottom: 0.5em;
-    }
+  .section--min-height {
+    min-height: 0;
+  }
+
+  .template__body{
+    display: block;
+    max-width: var(--template-max-width);
   }
 }
 
@@ -104,7 +131,6 @@ body:has(input[value="theme--dark"]:checked),// Just for the theme switcher exam
   --template-invert-accent:       #{$owl-ref-palette-primary-500};
 
   --template-max-width:    1200px;
-  --template-spacer:       5vmin;
 
   --template-font-family-base:            #{$owl-ref-typeface-font-family-sans-serif};
   --template-font-family-heading:         #{$owl-ref-typeface-font-family-sans-serif};
@@ -135,7 +161,6 @@ body:has(input[value="theme--news"]:checked),// Just for the theme switcher exam
   --template-invert-accent:       #fefaf0;
 
   --template-max-width:    1024px;
-  --template-spacer:       5vmin;
 
   --template-font-family-base:            Georgia, serif;
   --template-font-family-heading:         Georgia, serif;
@@ -156,19 +181,18 @@ body:has(input[value="theme--news"]:checked),// Just for the theme switcher exam
 body:has(input[value="theme--fiesta"]:checked),// Just for the theme switcher example page
 .theme--fiesta {
   --template-color:               #{$owl-ref-palette-purple-800};
-  --template-icon-color:          #{$owl-ref-palette-cyan-500};
+  --template-icon-color:          #{$owl-ref-palette-pink-600};
   --template-bg:                  #{$owl-ref-palette-pink-100};
   --template-border-color:        #{$owl-ref-palette-pink-500};
-  --template-accent:              #{$owl-ref-palette-cyan-500};
+  --template-accent:              #{$owl-ref-palette-pink-700};
 
-  --template-invert-color:        #{$owl-ref-palette-cyan-200};
+  --template-invert-color:        #{$owl-ref-palette-pink-200};
   --template-invert-icon-color:   #{$owl-ref-palette-pink-500};
   --template-invert-bg:           #{$owl-ref-palette-purple-800};
   --template-invert-border-color: #{$owl-ref-palette-pink-200};
-  --template-invert-accent:       #{$owl-ref-palette-cyan-500};
+  --template-invert-accent:       #{$owl-ref-palette-pink-500};
 
   --template-max-width:    1440px;
-  --template-spacer:       8vmin;
 
   --template-font-family-base:            "Century Gothic", AppleGothic, "Tahoma", sans-serif;
   --template-font-family-heading:         "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", cursive;
@@ -192,7 +216,6 @@ body:has(input[value="theme--draplin"]:checked),// Just for the theme switcher e
   --template-invert-accent:       #{$owl-ref-palette-black};
 
   --template-max-width:    1200px;
-  --template-spacer:       5vmin;
 
   --template-font-family-base:            "Futura", #{$owl-ref-typeface-font-family-sans-serif};
   --template-font-family-heading:         "Futura", #{$owl-ref-typeface-font-family-sans-serif};

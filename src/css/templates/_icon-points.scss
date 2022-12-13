@@ -1,0 +1,47 @@
+// Icon Points Template
+
+.icon-points {
+  .template__body {
+    display: flex;
+    flex-wrap: wrap;
+
+    h1 {
+      flex: 1 0 100%;
+    }
+
+    &__content {
+      width: 100%;
+      font-size: var(--template-font-size-md);
+
+      ul {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+        gap: 1rem;
+
+        li {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          margin-bottom: 0.5em;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    text-align: center;
+
+    i {
+      color: var(--template-accent);
+      font-size: 18vmin;
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 100,
+        'GRAD' -25,
+        'opsz' 48;
+    }
+  }
+}

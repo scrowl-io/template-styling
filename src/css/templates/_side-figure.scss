@@ -17,8 +17,9 @@
 
     &__figure {
       flex: 1 1 40%;
+      min-width: 18rem;
       margin: 0;
-      padding: var(--template-spacer);
+      padding: calc(var(--template-spacer) / 2);
       color: var(--template-bg);
       background: var(--template-accent);
       font-size: var(--template-font-size-md);

@@ -339,25 +339,25 @@ template {
 /* Fluid font size variables, for browsers that support clamp */
 @supports (font-size: clamp(1rem, 1vmin, 1rem)) {
   :root {
-    --template-font-size-sm: clamp(0.7rem, 0.262vmin + 0.635rem, 0.844rem);
+    --template-font-size-sm: clamp(0.729rem, 0.209vmin + 0.677rem, 0.844rem);
     --template-font-size-base: clamp(0.875rem, 0.455vmin + 0.761rem, 1.125rem);
-    --template-font-size-md: clamp(1.094rem, 0.738vmin + 0.909rem, 1.5rem);
-    --template-font-size-lg: clamp(1.367rem, 1.149vmin + 1.08rem, 1.999rem);
-    --template-font-size-xl: clamp(1.709rem, 1.738vmin + 1.275rem, 2.665rem);
-    --template-font-size-2xl: clamp(2.136rem, 2.574vmin + 1.493rem, 3.552rem);
-    --template-font-size-3xl: clamp(2.67rem, 3.754vmin + 1.732rem, 4.735rem);
+    --template-font-size-md: clamp(1.05rem, 0.817vmin + 0.846rem, 1.5rem);
+    --template-font-size-lg: clamp(1.26rem, 1.344vmin + 0.924rem, 1.999rem);
+    --template-font-size-xl: clamp(1.512rem, 2.096vmin + 0.988rem, 2.665rem);
+    --template-font-size-2xl: clamp(1.814rem, 3.159vmin + 1.025rem, 3.552rem);
+    --template-font-size-3xl: clamp(2.177rem, 4.65vmin + 1.015rem, 4.735rem);
   }
 }
 /* Fallback variables for browsers that don't support clamp */
 @supports not (font-size: clamp(1rem, 1vmin, 1rem)) {
   :root {
-    --template-font-size-sm: 0.7rem;
+    --template-font-size-sm: 0.729rem;
     --template-font-size-base: 0.875rem;
-    --template-font-size-md: 1.094rem;
-    --template-font-size-lg: 1.367rem;
-    --template-font-size-xl: 1.709rem;
-    --template-font-size-2xl: 2.136rem;
-    --template-font-size-3xl: 2.67rem;
+    --template-font-size-md: 1.05rem;
+    --template-font-size-lg: 1.26rem;
+    --template-font-size-xl: 1.512rem;
+    --template-font-size-2xl: 1.814rem;
+    --template-font-size-3xl: 2.177rem;
   }
   @media screen and (min-width: 1280px) {
     :root {
@@ -446,6 +446,16 @@ dd {
   max-width: 80ch;
 }
 
+ol,
+ul {
+  padding-left: 1em;
+}
+
+li {
+  line-height: 1.4;
+  margin-bottom: 0.5em;
+}
+
 dl {
   margin: 0 0 1em 0;
 }
@@ -462,6 +472,10 @@ dd {
   margin: 0.25em 0 1em 0;
   -moz-column-break-inside: avoid;
        break-inside: avoid;
+}
+
+a {
+  color: var(--template-accent);
 }
 
 .switcher {
@@ -494,6 +508,16 @@ dd {
   }
 }
 
+@supports (font-size: clamp(1rem, 1vmin, 1rem)) {
+  :root {
+    --template-spacer: clamp(0.5rem, 5vw, 5rem);
+  }
+}
+@supports not (font-size: clamp(1rem, 1vmin, 1rem)) {
+  :root {
+    --template-spacer: 5vmin;
+  }
+}
 body:has(input[value=theme--default]:checked),
 :root,
 .theme--default {
@@ -508,7 +532,6 @@ body:has(input[value=theme--default]:checked),
   --template-invert-border-color: #6c757d;
   --template-invert-accent: #3bbefe;
   --template-max-width: 1200px;
-  --template-spacer: 5vmin;
   --template-font-family-base: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --template-font-family-heading: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --template-font-lineheight-base: 1.6875;
@@ -516,8 +539,21 @@ body:has(input[value=theme--default]:checked),
   --template-font-letterspacing-heading: -0.025em;
 }
 
+body:has(input[value=theme--default]:checked) .block-text h1,
+.theme--default .block-text h1 {
+  border-bottom: 0.0625em solid var(--template-border-color);
+  padding-bottom: 0.5em;
+}
+
 body:has(input[value=theme--reader]:checked),
 .theme--reader {
+  --template-font-size-sm: 0.729rem;
+  --template-font-size-base: 0.875rem;
+  --template-font-size-md: 1.05rem;
+  --template-font-size-lg: 1.26rem;
+  --template-font-size-xl: 1.512rem;
+  --template-font-size-2xl: 1.814rem;
+  --template-font-size-3xl: 2.177rem;
   --template-color: #000;
   --template-icon-color: currentColor;
   --template-bg: #fff;
@@ -529,18 +565,20 @@ body:has(input[value=theme--reader]:checked),
   --template-invert-border-color: #000;
   --template-invert-accent: #000;
   --template-max-width: 1200px;
-  --template-spacer: 1em;
-  --template-font-family-base: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  --template-font-family-heading: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --template-font-family-base: Arial, sans-serif;
+  --template-font-family-heading: Arial, sans-serif;
   --template-font-lineheight-base: 1.6875;
   --template-font-lineheight-heading: 1.25;
   --template-font-letterspacing-heading: 0;
 }
-
-body:has(input[value=theme--default]:checked) .block-text h1,
-.theme--default .block-text h1 {
-  border-bottom: 0.0625em solid var(--template-border-color);
-  padding-bottom: 0.5em;
+body:has(input[value=theme--reader]:checked) .section--min-height,
+.theme--reader .section--min-height {
+  min-height: 0;
+}
+body:has(input[value=theme--reader]:checked) .template__body,
+.theme--reader .template__body {
+  display: block;
+  max-width: var(--template-max-width);
 }
 
 body:has(input[value=theme--dark]:checked),
@@ -556,7 +594,6 @@ body:has(input[value=theme--dark]:checked),
   --template-invert-border-color: #adb5bd;
   --template-invert-accent: #007aba;
   --template-max-width: 1200px;
-  --template-spacer: 5vmin;
   --template-font-family-base: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --template-font-family-heading: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --template-font-lineheight-base: 1.6875;
@@ -582,7 +619,6 @@ body:has(input[value=theme--news]:checked),
   --template-invert-border-color: #fff;
   --template-invert-accent: #fefaf0;
   --template-max-width: 1024px;
-  --template-spacer: 5vmin;
   --template-font-family-base: Georgia, serif;
   --template-font-family-heading: Georgia, serif;
   --template-font-lineheight-base: 1.6875;
@@ -600,17 +636,16 @@ body:has(input[value=theme--news]:checked) .block-text h1,
 body:has(input[value=theme--fiesta]:checked),
 .theme--fiesta {
   --template-color: #3c0e66;
-  --template-icon-color: #3bbefe;
+  --template-icon-color: #a94ecc;
   --template-bg: #f6dfff;
   --template-border-color: #d361ff;
-  --template-accent: #3bbefe;
-  --template-invert-color: #b1e5ff;
+  --template-accent: #7f3a99;
+  --template-invert-color: #edc0ff;
   --template-invert-icon-color: #d361ff;
   --template-invert-bg: #3c0e66;
   --template-invert-border-color: #edc0ff;
-  --template-invert-accent: #3bbefe;
+  --template-invert-accent: #d361ff;
   --template-max-width: 1440px;
-  --template-spacer: 8vmin;
   --template-font-family-base: "Century Gothic", AppleGothic, "Tahoma", sans-serif;
   --template-font-family-heading: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", cursive;
   --template-font-lineheight-base: 1.6875;
@@ -631,7 +666,6 @@ body:has(input[value=theme--draplin]:checked),
   --template-invert-border-color: #fff;
   --template-invert-accent: #000;
   --template-max-width: 1200px;
-  --template-spacer: 5vmin;
   --template-font-family-base: "Futura", Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --template-font-family-heading: "Futura", Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --template-font-lineheight-base: 1.6875;
@@ -739,7 +773,7 @@ body:has(input[value=theme--draplin]:checked) .block-text h1,
 }
 .block-text .template__body__content {
   flex: 1 1 70%;
-  min-width: 300px;
+  min-width: 18rem;
   font-size: var(--template-font-size-md);
 }
 .block-text .template__body__media {
@@ -818,12 +852,12 @@ body:has(input[value=theme--draplin]:checked) .block-text h1,
   list-style: none;
   padding: 0;
 }
-.numbered-list .template__body__content li {
+.numbered-list .template__body__content ol li {
   display: flex;
   margin-bottom: 1.5em;
   counter-increment: numbered-list-counter;
 }
-.numbered-list .template__body__content li:before {
+.numbered-list .template__body__content ol li:before {
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -864,14 +898,49 @@ body:has(input[value=theme--draplin]:checked) .block-text h1,
 }
 .side-figure .template__body__figure {
   flex: 1 1 40%;
+  min-width: 18rem;
   margin: 0;
-  padding: var(--template-spacer);
+  padding: calc(var(--template-spacer) / 2);
   color: var(--template-bg);
   background: var(--template-accent);
   font-size: var(--template-font-size-md);
 }
 .side-figure .template__body__figure figcaption {
   font-weight: 600;
+}
+
+.icon-points .template__body {
+  display: flex;
+  flex-wrap: wrap;
+}
+.icon-points .template__body h1 {
+  flex: 1 0 100%;
+}
+.icon-points .template__body__content {
+  width: 100%;
+  font-size: var(--template-font-size-md);
+}
+.icon-points .template__body__content ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+  gap: 1rem;
+}
+.icon-points .template__body__content ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+.icon-points__icon {
+  text-align: center;
+}
+.icon-points__icon i {
+  color: var(--template-accent);
+  font-size: 18vmin;
+  font-variation-settings: "FILL" 0, "wght" 100, "GRAD" -25, "opsz" 48;
 }
 
 * {
@@ -922,6 +991,9 @@ hr {
     margin: 0 !important;
     padding: 0 !important;
     min-height: 100vh;
+  }
+  main > footer {
+    display: none;
   }
   .switcher {
     display: none;
