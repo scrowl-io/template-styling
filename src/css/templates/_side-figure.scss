@@ -5,7 +5,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    gap: calc(var(--template-spacer) / 2);
+    gap: var(--template-spacer-sm);
 
     h1 {
       flex: 1 0 100%;
@@ -19,13 +19,13 @@
       flex: 1 1 40%;
       min-width: 18rem;
       margin: 0;
-      padding: calc(var(--template-spacer) / 2);
+      padding: var(--template-spacer-sm);
       color: var(--template-bg);
       background: var(--template-accent);
       font-size: var(--template-font-size-md);
 
       figcaption {
-        font-weight: 600;
+        font-weight: 700;
       }
     }
   }

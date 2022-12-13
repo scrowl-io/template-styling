@@ -11,6 +11,12 @@
     align-content: center;
     z-index: 1;
     padding: var(--template-spacer);
+
+    &__navigation {
+      width: 100%;
+      padding: var(--template-spacer) 0;
+      text-align: center;
+    }
   }
 
   // This is the element that houses the background color or image when section--bg is in use.

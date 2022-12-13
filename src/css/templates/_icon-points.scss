@@ -17,6 +17,7 @@
         list-style: none;
         padding: 0;
         display: grid;
+        grid-auto-rows: 1fr;
         grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
         gap: 1rem;
 
@@ -26,6 +27,8 @@
           align-items: center;
           text-align: center;
           margin-bottom: 0.5em;
+          font-size: var(--template-font-size-base);
+          font-weight: 600;
         }
       }
     }
@@ -36,7 +39,7 @@
 
     i {
       color: var(--template-accent);
-      font-size: 18vmin;
+      font-size: var(--template-icon-size-sm);
       font-variation-settings:
         'FILL' 0,
         'wght' 100,

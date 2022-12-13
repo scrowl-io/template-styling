@@ -5,7 +5,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row-reverse;
-    gap: calc(var(--template-spacer) / 2);
+    gap: var(--template-spacer-sm);
 
     h1 {
       flex: 1 0 100%;
@@ -22,7 +22,7 @@
       text-align: center;
 
       i {
-        font-size: 24vmin;
+        font-size: var(--template-icon-size);
         font-variation-settings:
           'FILL' 0,
           'wght' 100,

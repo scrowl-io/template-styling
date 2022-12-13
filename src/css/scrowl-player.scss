@@ -12,6 +12,7 @@
 @import "templates/two-column";
 @import "templates/definition-list";
 @import "templates/numbered-list";
+@import "templates/icon-list";
 @import "templates/centered-text";
 @import "templates/side-figure";
 @import "templates/icon-points";
@@ -27,7 +28,6 @@ html {
 
 body {
   margin: 0;
-  background: var(--template-bg);
 }
 
 // When browser size is this small, extra zoom out.
@@ -35,9 +35,14 @@ body {
   body {
     zoom: 0.75;
   }
+
+  main {
+    font-size: 10px !important;
+  }
 }
 
 main {
+  font-size: 16px;
   background: var(--template-bg);
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
@@ -71,7 +76,7 @@ hr {
     min-height: 100vh;
   }
 
-  main > footer {
+  .template__body__navigation {
     display: none;
   }
 

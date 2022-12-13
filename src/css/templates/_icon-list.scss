@@ -1,0 +1,33 @@
+// Icon List Template
+
+.icon-list {
+  .template__body {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 90ch;
+
+    h1 {
+      flex: 1 0 100%;
+    }
+
+    &__content {
+      font-size: var(--template-font-size-md);
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          display: flex;
+          margin-bottom: 1.5em;
+        }
+      }
+    }
+  }
+
+  &__icon{
+    margin-top: -0.33em;
+    margin-right: 0.33em;
+    font-size: 2em;
+  }
+}

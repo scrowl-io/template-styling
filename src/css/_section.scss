@@ -45,12 +45,12 @@
 
   &--bg {
     .template__background {
-      display: block;;
+      display: block;
     }
 
     .template__body {
       // This targets the top level elements of the section, and the spans directly inside of them to give them a background color when section--bg is in use.
-      & > :is(h1,h2,h3,h4,h5,h6) {
+      & :is(h1,h2,h3,h4,h5,h6) {
         span {
           padding: 0 0.0625em;
           margin: 0 -0.0625em;
@@ -75,6 +75,12 @@
         border-radius: 9in;
         line-height: 1;
       }
+    }
+  }
+
+  &--bg-fixed {
+    .template__background {
+      background-attachment: fixed;
     }
   }
 }

@@ -32,13 +32,19 @@
 
 @supports (font-size: clamp(1rem, 1vmin, 1rem)) {
   :root {
-    --template-spacer: clamp(0.5rem, 5vw, 5rem);
+    --template-spacer: clamp(1rem, 5vw, 5rem);
+    --template-spacer-sm: clamp(1rem, 2.5vw, 5rem);
+    --template-icon-size: clamp(5em, 24vmin, 15em);
+    --template-icon-size-sm: clamp(2em, 14vmin, 10em);
   }
 }
 
 @supports not (font-size: clamp(1rem, 1vmin, 1rem)) {
   :root {
     --template-spacer: 5vmin;
+    --template-spacer-sm: 2.5vmin;
+    --template-icon-size: 24vmin;
+    --template-icon-size-sm: 14vmin;
   }
 }
 
@@ -68,7 +74,9 @@ body:has(input[value="theme--default"]:checked), // Just for the theme switcher 
 
 body:has(input[value="theme--default"]:checked),
 .theme--default {
-  .block-text {
+  .block-text,
+  .icon-list,
+  .numbered-list {
     h1 {
       border-bottom: 0.0625em solid var(--template-border-color);
       padding-bottom: 0.5em;
@@ -110,9 +118,49 @@ body:has(input[value="theme--reader"]:checked), // Just for the theme switcher e
     min-height: 0;
   }
 
+  .section--bg {
+    .template__background {
+      display: none;
+    }
+  }
+
+  .section--inset {
+    margin: 0;
+  }
+
   .template__body{
     display: block;
     max-width: var(--template-max-width);
+  }
+
+  .block-text {
+    .template__body__media {
+      text-align: left;
+
+      i {
+        font-size: 5em;
+      }
+    }
+  }
+
+  .side-figure {
+    .template__body__figure {
+      color: inherit;
+      background: inherit;
+      border: 2px solid currentColor;
+    }
+  }
+
+  dt {
+    color: inherit;
+    background: inherit;
+    border: 2px solid currentColor;
+  }
+
+  .numbered-list .template__body__content ol li:before {
+    color: inherit;
+    background: inherit;
+    border: 2px solid currentColor;
   }
 }
 
@@ -138,7 +186,9 @@ body:has(input[value="theme--dark"]:checked),// Just for the theme switcher exam
   --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
   --template-font-letterspacing-heading:  -0.025em;
 
-  .block-text {
+  .block-text,
+  .icon-list,
+  .numbered-list {
     h1 {
       border-bottom: 0.0625em solid var(--template-border-color);
       padding-bottom: 0.5em;
@@ -168,7 +218,9 @@ body:has(input[value="theme--news"]:checked),// Just for the theme switcher exam
   --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
   --template-font-letterspacing-heading:  -0.025em;
 
-  .block-text {
+  .block-text,
+  .icon-list,
+  .numbered-list {
     h1 {
       border: 0.125em solid var(--template-border-color);
       border-top: none;
@@ -223,7 +275,9 @@ body:has(input[value="theme--draplin"]:checked),// Just for the theme switcher e
   --template-font-lineheight-heading:     1.33;
   --template-font-letterspacing-heading:  -0.025em;
 
-  .block-text {
+  .block-text,
+  .icon-list,
+  .numbered-list {
     h1 {
       border-bottom: 0.125em dotted var(--template-accent);
       padding-bottom: 0.5em;
