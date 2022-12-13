@@ -772,7 +772,7 @@ body:has(input[value=theme--draplin]:checked) .block-text h1,
   flex: 1 0 100%;
 }
 .block-text .template__body__content {
-  flex: 1 1 70%;
+  flex: 1 1 65%;
   min-width: 18rem;
   font-size: var(--template-font-size-md);
 }
@@ -936,6 +936,8 @@ body:has(input[value=theme--draplin]:checked) .block-text h1,
 }
 .icon-points__icon {
   text-align: center;
+  overflow: hidden;
+  display: block;
 }
 .icon-points__icon i {
   color: var(--template-accent);
