@@ -21,7 +21,7 @@ body:has(input[value="theme--default"]:checked), // Just for the theme switcher 
   --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
   --template-font-letterspacing-heading:  -0.025em;
 
-  h1:not(.exclude) {
+  h1:not(.tmpl-exclude) {
     border-bottom: 0.0625em solid var(--template-border-color);
     padding-bottom: 0.5em;
   }

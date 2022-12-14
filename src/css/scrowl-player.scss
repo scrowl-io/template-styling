@@ -1,9 +1,11 @@
 // Scrowl Player
 @import "normalize";
+
 @import "tokens";
+@import "themes";
+
 @import "icons";
 @import "typography";
-@import "themes";
 @import "section";
 @import "template";
 
@@ -52,6 +54,39 @@ hr {
   margin: 1em 0;
   border: 1px solid var(--template-border-color);
 }
+
+.switcher {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  padding: 0 0.25em 0.5em 0;
+  font-family: $owl-ref-typeface-font-family-sans-serif;
+  color: white;
+  border: 0;
+  background: $owl-ref-palette-black;
+
+  legend {
+    padding: 0 0.5em;
+    background-color: $owl-ref-palette-black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  label {
+    margin: 0 0.5em;
+    cursor: pointer;
+
+    input {
+      margin-right: 0.5em;
+    }
+
+    @media screen and (max-width: 500px) {
+      display: block;
+    }
+  }
+}
+
 
 @media print {
   @page {

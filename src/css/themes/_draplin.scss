@@ -21,7 +21,7 @@ body:has(input[value="theme--draplin"]:checked),// Just for the theme switcher e
   --template-font-lineheight-heading:     1.33;
   --template-font-letterspacing-heading:  -0.025em;
 
-  h1:not(.exclude) {
+  h1:not(.tmpl-exclude) {
     border-bottom: 0.125em dotted var(--template-accent);
     padding-bottom: 0.5em;
   }
