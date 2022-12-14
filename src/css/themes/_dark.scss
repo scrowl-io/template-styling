@@ -21,12 +21,8 @@ body:has(input[value="theme--dark"]:checked),// Just for the theme switcher exam
   --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
   --template-font-letterspacing-heading:  -0.025em;
 
-  .text-media,
-  .icon-list,
-  .numbered-list {
-    h1 {
-      border-bottom: 0.0625em solid var(--template-border-color);
-      padding-bottom: 0.5em;
-    }
+  h1:not(.exclude) {
+    border-bottom: 0.0625em solid var(--template-border-color);
+    padding-bottom: 0.5em;
   }
 }

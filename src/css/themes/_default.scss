@@ -1,6 +1,5 @@
 
 body:has(input[value="theme--default"]:checked), // Just for the theme switcher example page
-:root,
 .theme--default {
   --template-color:               #{$owl-ref-palette-gray-800};
   --template-icon-color:          #{$owl-ref-palette-primary-500};
@@ -21,16 +20,9 @@ body:has(input[value="theme--default"]:checked), // Just for the theme switcher 
   --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
   --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
   --template-font-letterspacing-heading:  -0.025em;
-}
 
-body:has(input[value="theme--default"]:checked),
-.theme--default {
-  .text-media,
-  .icon-list,
-  .numbered-list {
-    h1 {
-      border-bottom: 0.0625em solid var(--template-border-color);
-      padding-bottom: 0.5em;
-    }
+  h1:not(.exclude) {
+    border-bottom: 0.0625em solid var(--template-border-color);
+    padding-bottom: 0.5em;
   }
 }

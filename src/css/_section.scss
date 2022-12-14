@@ -1,12 +1,14 @@
 // Section Classes
-.section {
+section {
   position: relative;
   display: flex;
   justify-content: center;
   font-family: var(--template-font-family-base);
   color: var(--template-color);
   background: var(--template-bg);
+}
 
+.section {
   &--min-height {
     min-height: 100vh;
 

@@ -21,14 +21,10 @@ body:has(input[value="theme--news"]:checked),// Just for the theme switcher exam
   --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
   --template-font-letterspacing-heading:  -0.025em;
 
-  .text-media,
-  .icon-list,
-  .numbered-list {
-    h1 {
-      border: 0.125em solid var(--template-border-color);
-      border-top: none;
-      border-right: none;
-      padding: 0.5em;
-    }
+  h1:not(.exclude) {
+    border: 0.125em solid var(--template-border-color);
+    border-top: none;
+    border-right: none;
+    padding: 0.5em;
   }
 }

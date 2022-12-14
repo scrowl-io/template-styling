@@ -21,12 +21,8 @@ body:has(input[value="theme--draplin"]:checked),// Just for the theme switcher e
   --template-font-lineheight-heading:     1.33;
   --template-font-letterspacing-heading:  -0.025em;
 
-  .text-media,
-  .icon-list,
-  .numbered-list {
-    h1 {
-      border-bottom: 0.125em dotted var(--template-accent);
-      padding-bottom: 0.5em;
-    }
+  h1:not(.exclude) {
+    border-bottom: 0.125em dotted var(--template-accent);
+    padding-bottom: 0.5em;
   }
 }

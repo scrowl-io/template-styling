@@ -554,9 +554,7 @@ a {
     --template-icon-size-sm: 14vmin;
   }
 }
-body:has(input[value=theme--default]:checked),
-:root,
-.theme--default {
+:root {
   --template-color: #343a40;
   --template-icon-color: #007aba;
   --template-bg: #fff;
@@ -575,12 +573,27 @@ body:has(input[value=theme--default]:checked),
   --template-font-letterspacing-heading: -0.025em;
 }
 
-body:has(input[value=theme--default]:checked) .text-media h1,
-body:has(input[value=theme--default]:checked) .icon-list h1,
-body:has(input[value=theme--default]:checked) .numbered-list h1,
-.theme--default .text-media h1,
-.theme--default .icon-list h1,
-.theme--default .numbered-list h1 {
+body:has(input[value=theme--default]:checked),
+.theme--default {
+  --template-color: #343a40;
+  --template-icon-color: #007aba;
+  --template-bg: #fff;
+  --template-border-color: #dee2e6;
+  --template-accent: #007aba;
+  --template-invert-color: #fff;
+  --template-invert-icon-color: currentColor;
+  --template-invert-bg: #212529;
+  --template-invert-border-color: #6c757d;
+  --template-invert-accent: #3bbefe;
+  --template-max-width: 1200px;
+  --template-font-family-base: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --template-font-family-heading: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --template-font-lineheight-base: 1.6875;
+  --template-font-lineheight-heading: 1.25;
+  --template-font-letterspacing-heading: -0.025em;
+}
+body:has(input[value=theme--default]:checked) h1:not(.exclude),
+.theme--default h1:not(.exclude) {
   border-bottom: 0.0625em solid var(--template-border-color);
   padding-bottom: 0.5em;
 }
@@ -604,12 +617,8 @@ body:has(input[value=theme--dark]:checked),
   --template-font-lineheight-heading: 1.25;
   --template-font-letterspacing-heading: -0.025em;
 }
-body:has(input[value=theme--dark]:checked) .text-media h1,
-body:has(input[value=theme--dark]:checked) .icon-list h1,
-body:has(input[value=theme--dark]:checked) .numbered-list h1,
-.theme--dark .text-media h1,
-.theme--dark .icon-list h1,
-.theme--dark .numbered-list h1 {
+body:has(input[value=theme--dark]:checked) h1:not(.exclude),
+.theme--dark h1:not(.exclude) {
   border-bottom: 0.0625em solid var(--template-border-color);
   padding-bottom: 0.5em;
 }
@@ -633,12 +642,8 @@ body:has(input[value=theme--news]:checked),
   --template-font-lineheight-heading: 1.25;
   --template-font-letterspacing-heading: -0.025em;
 }
-body:has(input[value=theme--news]:checked) .text-media h1,
-body:has(input[value=theme--news]:checked) .icon-list h1,
-body:has(input[value=theme--news]:checked) .numbered-list h1,
-.theme--news .text-media h1,
-.theme--news .icon-list h1,
-.theme--news .numbered-list h1 {
+body:has(input[value=theme--news]:checked) h1:not(.exclude),
+.theme--news h1:not(.exclude) {
   border: 0.125em solid var(--template-border-color);
   border-top: none;
   border-right: none;
@@ -684,12 +689,8 @@ body:has(input[value=theme--draplin]:checked),
   --template-font-lineheight-heading: 1.33;
   --template-font-letterspacing-heading: -0.025em;
 }
-body:has(input[value=theme--draplin]:checked) .text-media h1,
-body:has(input[value=theme--draplin]:checked) .icon-list h1,
-body:has(input[value=theme--draplin]:checked) .numbered-list h1,
-.theme--draplin .text-media h1,
-.theme--draplin .icon-list h1,
-.theme--draplin .numbered-list h1 {
+body:has(input[value=theme--draplin]:checked) h1:not(.exclude),
+.theme--draplin h1:not(.exclude) {
   border-bottom: 0.125em dotted var(--template-accent);
   padding-bottom: 0.5em;
 }
@@ -771,7 +772,7 @@ body:has(input[value=theme--reader]:checked) .numbered-list .template__body__con
   border: 2px solid currentColor;
 }
 
-.section {
+section {
   position: relative;
   display: flex;
   justify-content: center;
@@ -779,6 +780,7 @@ body:has(input[value=theme--reader]:checked) .numbered-list .template__body__con
   color: var(--template-color);
   background: var(--template-bg);
 }
+
 .section--min-height {
   min-height: 100vh;
 }
