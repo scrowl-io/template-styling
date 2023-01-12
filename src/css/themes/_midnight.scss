@@ -1,0 +1,34 @@
+
+body:has(input[value="theme--midnight"]:checked),// Just for the theme switcher example page
+.theme--midnight {
+  --template-light-color:               #{$owl-ref-palette-white};
+  --template-light-icon-color:          #{$owl-ref-palette-cyan-500};
+  --template-light-bg:                  #{$owl-ref-palette-gray-900};
+  --template-light-border-color:        #{$owl-ref-palette-gray-600};
+  --template-light-accent-color:              #{$owl-ref-palette-cyan-500};
+
+  --template-alt-color:        #{$owl-ref-palette-white};
+  --template-alt-icon-color:   #{$owl-ref-palette-white};
+  --template-alt-bg:           #{$owl-ref-palette-primary-500};
+  --template-alt-border-color: #{$owl-ref-palette-primary-600};
+  --template-alt-accent-color: #{$owl-ref-palette-white};
+
+  --template-dark-color:        #{$owl-ref-palette-gray-800};
+  --template-dark-icon-color:   currentColor;
+  --template-dark-bg:           #{$owl-ref-palette-gray-100};
+  --template-dark-border-color: #{$owl-ref-palette-gray-500};
+  --template-dark-accent-color: #{$owl-ref-palette-primary-500};
+
+  --template-max-width:    1200px;
+
+  --template-font-family-base:            #{$owl-ref-typeface-font-family-sans-serif};
+  --template-font-family-heading:         #{$owl-ref-typeface-font-family-sans-serif};
+  --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
+  --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
+  --template-font-letterspacing-heading:  -0.025em;
+
+  h1:not(.tmpl-exclude) {
+    border-bottom: 0.0625em solid var(--template-light-border-color);
+    padding-bottom: 0.5em;
+  }
+}
