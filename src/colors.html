@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#0083C3" />
+
+  <!-- Importing Default Font and Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,200&family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
+
+  <!-- Importing Player Styling -->
+  <link href="css/scrowl-player.css" rel="stylesheet">
+
+  <title>Theme Color Token Tests</title>
+</head>
+<body>
+  <!-- THEME SWITCHER -->
+  <div role="contentinfo">
+    <fieldset class="switcher">
+      <legend>Course Theme</legend>
+      <label><input name="theme" type="radio" value="theme--reader">Reader</label>
+      <label><input name="theme" type="radio" value="theme--default" checked>Default</label>
+      <!-- <label><input name="theme" type="radio" value="theme--midnight">Midnight</label> -->
+      <label><input name="theme" type="radio" value="theme--news">News</label>
+      <label><input name="theme" type="radio" value="theme--fiesta">Fiesta</label>
+      <label><input name="theme" type="radio" value="theme--draplin">Draplin</label>
+    </fieldset>
+  </div>
+
+  <main>
+    <!-- SLIDES -->
+    <section id="section1" class="section--min-height section--bg color-table">
+      <div class="template__body">
+        <h1 class="h1"><span>Theming Color Tokens</span></h1>
+        <div class="template__body__content">
+          <table>
+            <tr>
+              <td></td>
+              <th scope="col"><code>--template-light-bg</code></th>
+              <th scope="col"><code>--template-alt-bg&nbsp;&nbsp;</code></th>
+              <th scope="col"><code>--template-dark-bg&nbsp;</code></th>
+            </tr>
+            <tr>
+              <th scope="row"><code>--template-<em>[variant]</em>-color</code></th>
+              <td style="background-color: var(--template-light-bg)">
+                <div style="color: var(--template-light-color)"><code>--template-light-color</code></div>
+                <div style="color: var(--template-alt-color)"><code>--template-alt-color</code></div>
+                <div style="color: var(--template-dark-color)"><code>--template-dark-color</code></div>
+              </td>
+              <td style="background-color: var(--template-alt-bg)">
+                <div style="color: var(--template-light-color)"><code>--template-light-color</code></div>
+                <div style="color: var(--template-alt-color)"><code>--template-alt-color</code></div>
+                <div style="color: var(--template-dark-color)"><code>--template-dark-color</code></div>
+              </td>
+              <td style="background-color: var(--template-dark-bg)">
+                <div style="color: var(--template-light-color)"><code>--template-light-color</code></div>
+                <div style="color: var(--template-alt-color)"><code>--template-alt-color</code></div>
+                <div style="color: var(--template-dark-color)"><code>--template-dark-color</code></div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row"><code>--template-<em>[variant]</em>-icon-color</code></th>
+              <td style="background-color: var(--template-light-bg)">
+                <div style="color: var(--template-light-icon-color)"><span style="color: currentColor" class="material-symbols-sharp">home</span><code>--template-light-icon-color</code></div>
+                <div style="color: var(--template-alt-icon-color)"><span style="color: currentColor" class="material-symbols-sharp">home</span><code>--template-alt-icon-color</code></div>
+                <div style="color: var(--template-dark-icon-color)"><span style="color: currentColor" class="material-symbols-sharp">home</span><code>--template-dark-icon-color</code></div>
+              </td>
+              <td style="background-color: var(--template-alt-bg)">
+                <div style="color: var(--template-light-icon-color)"><span style="color: currentColor" class="material-symbols-sharp">home</span><code>--template-light-icon-color</code></div>
+                <div style="color: var(--template-alt-icon-color)"><span style="color: currentColor" class="material-symbols-sharp">home</span><code>--template-alt-icon-color</code></div>
+                <div style="color: var(--template-dark-icon-color)"><span style="color: currentColor" class="material-symbols-sharp">home</span><code>--template-dark-icon-color</code></div>
+              </td>
+              <td style="background-color: var(--template-dark-bg)">
+                <div style="color: var(--template-light-icon-color)"><span style="color: currentColor" class="material-symbols-sharp">home</span><code>--template-light-icon-color</code></div>
+                <div style="color: var(--template-alt-icon-color)"><span style="color: currentColor" class="material-symbols-sharp">home</span><code>--template-alt-icon-color</code></div>
+                <div style="color: var(--template-dark-icon-color)"><span style="color: currentColor" class="material-symbols-sharp">home</span><code>--template-dark-icon-color</code></div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row"><code>--template-<em>[variant]</em>-border-color</code></th>
+              <td style="background-color: var(--template-light-bg)">
+                <div style="margin: 5px; color: var(--template-light-border-color); border: 2px solid currentColor"><code>--template-light-border-color</code></div>
+                <div style="margin: 5px; color: var(--template-alt-border-color); border: 2px solid currentColor"><code>--template-alt-border-color</code></div>
+                <div style="margin: 5px; color: var(--template-dark-border-color); border: 2px solid currentColor"><code>--template-dark-border-color</code></div>
+              </td>
+              <td style="background-color: var(--template-alt-bg)">
+                <div style="margin: 5px; color: var(--template-light-border-color); border: 2px solid currentColor"><code>--template-light-border-color</code></div>
+                <div style="margin: 5px; color: var(--template-alt-border-color); border: 2px solid currentColor"><code>--template-alt-border-color</code></div>
+                <div style="margin: 5px; color: var(--template-dark-border-color); border: 2px solid currentColor"><code>--template-dark-border-color</code></div>
+              </td>
+              <td style="background-color: var(--template-dark-bg)">
+                <div style="margin: 5px; color: var(--template-light-border-color); border: 2px solid currentColor"><code>--template-light-border-color</code></div>
+                <div style="margin: 5px; color: var(--template-alt-border-color); border: 2px solid currentColor"><code>--template-alt-border-color</code></div>
+                <div style="margin: 5px; color: var(--template-dark-border-color); border: 2px solid currentColor"><code>--template-dark-border-color</code></div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row"><code>--template-<em>[variant]</em>-accent-color</code></th>
+              <td style="background-color: var(--template-light-bg)">
+                <div style="margin: 5px; color: var(--template-light-accent-color); border: 2px solid currentColor"><code>--template-light-accent-color</code></div>
+                <div style="margin: 5px; color: var(--template-alt-accent-color); border: 2px solid currentColor"><code>--template-alt-accent-color</code></div>
+                <div style="margin: 5px; color: var(--template-dark-accent-color); border: 2px solid currentColor"><code>--template-dark-accent-color</code></div>
+              </td>
+              <td style="background-color: var(--template-alt-bg)">
+                <div style="margin: 5px; color: var(--template-light-accent-color); border: 2px solid currentColor"><code>--template-light-accent-color</code></div>
+                <div style="margin: 5px; color: var(--template-alt-accent-color); border: 2px solid currentColor"><code>--template-alt-accent-color</code></div>
+                <div style="margin: 5px; color: var(--template-dark-accent-color); border: 2px solid currentColor"><code>--template-dark-accent-color</code></div>
+              </td>
+              <td style="background-color: var(--template-dark-bg)">
+                <div style="margin: 5px; color: var(--template-light-accent-color); border: 2px solid currentColor"><code>--template-light-accent-color</code></div>
+                <div style="margin: 5px; color: var(--template-alt-accent-color); border: 2px solid currentColor"><code>--template-alt-accent-color</code></div>
+                <div style="margin: 5px; color: var(--template-dark-accent-color); border: 2px solid currentColor"><code>--template-dark-accent-color</code></div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="template__background"></div>
+    </section>
+
+    <div>&nbsp;</div>
+  </main>
+</body>
+</html>
