@@ -27,8 +27,19 @@ body:has(input[value="theme--news"]:checked),// Just for the theme switcher exam
   --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
   --template-font-letterspacing-heading:  -0.025em;
 
+  // Custom theme variables
+  --news-border-color: var(--template-light-border-color);
+
+  section[class*="--alt"]{
+    --news-border-color: var(--template-alt-border-color);
+  }
+
+  section[class*="--dark"]{
+    --news-border-color: var(--template-dark-border-color);
+  }
+
   h1:not(.tmpl-exclude) {
-    border: 0.125em solid var(--template-light-border-color);
+    border: 0.125em solid var(--news-border-color);
     border-top: none;
     border-right: none;
     padding: 0.5em;

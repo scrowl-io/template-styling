@@ -1,6 +1,20 @@
 // Numbered List Template
 
 .numbered-list {
+  // Custom vars just for this template
+  --number-counter-bg: var(--template-light-accent-color);
+  --number-counter-color: var(--template-dark-color);
+
+  &.section--alt {
+    --number-counter-bg: var(--template-dark-bg);
+    --number-counter-color: var(--template-alt-accent-color);
+  }
+
+  &.section--dark {
+    --number-counter-bg: var(--template-dark-accent-color);
+    --number-counter-color: var(--template-light-color);
+  }
+
   .template__body {
     display: flex;
     flex-wrap: wrap;
@@ -35,9 +49,9 @@
             font-weight: 600;
             text-indent: 0;
             font-variant-numeric: tabular-nums;
-            color: var(--template-light-bg);
+            color: var(--number-counter-color);
             border-radius: 50em;
-            background: var(--template-light-accent-color);
+            background: var(--number-counter-bg);
             content: counter(numbered-list-counter);
           }
         }

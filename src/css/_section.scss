@@ -1,11 +1,14 @@
 // Section Classes
 section {
+  --section-color: var(--template-light-color);
+  --section-bg: var(--template-light-bg);
+
   position: relative;
   display: flex;
   justify-content: center;
   font-family: var(--template-font-family-base);
-  color: var(--template-light-color);
-  background: var(--template-light-bg);
+  color: var(--section-color);
+  background: var(--section-bg);
 }
 
 .section {
@@ -17,18 +20,26 @@ section {
     }
   }
 
-  &--invert {
-    --template-light-bg: var(--template-dark-bg);
-    --template-light-color: var(--template-dark-color);
-    --template-light-icon-color: var(--template-dark-icon-color);
-    --template-light-border-color: var(--template-dark-border-color);
-    --template-light-accent-color: var(--template-dark-accent-color);
+  &--light {
+    --section-color: var(--template-light-color);
+    --section-bg: var(--template-light-bg);
+  }
+
+  &--dark {
+    --section-color: var(--template-dark-color);
+    --section-bg: var(--template-dark-bg);
+  }
+
+  &--alt {
+    --section-color: var(--template-alt-color);
+    --section-bg: var(--template-alt-bg);
   }
 
   &--inset {
     margin: var(--template-spacer);
 
-    &.section--invert.section--bg {
+    &.section--alt.section--bg,
+    &.section--dark.section--bg {
       padding: var(--template-spacer);
       margin: 0;
 
@@ -57,9 +68,9 @@ section {
           padding: 0 0.0625em;
           margin: 0 -0.0625em;
           display: inline;
-          color: var(--template-light-color);
-          background: var(--template-light-bg);
-          box-shadow: -0.0625em 0 0 0.05em var(--template-light-bg), 0.0625em 0 0 0.05em var(--template-light-bg);
+          color: var(--section-color);
+          background: var(--section-bg);
+          box-shadow: -0.0625em 0 0 0.05em var(--section-bg), 0.0625em 0 0 0.05em var(--section-bg);
           box-decoration-break: clone;
           -webkit-box-decoration-break: clone;
         }
@@ -67,13 +78,13 @@ section {
     }
 
     .template__body__content > :is(ol, ul, p, figure, sectionquote, dl) {
-      background: var(--template-light-bg);
-      box-shadow: 0 0 0 0.5em var(--template-light-bg);
+      background: var(--section-bg);
+      box-shadow: 0 0 0 0.5em var(--section-bg);
     }
 
     .template__body__media {
       *[class^="material-symbols"] {
-        background: var(--template-light-bg);
+        background: var(--section-bg);
         border-radius: 9in;
         line-height: 1;
       }

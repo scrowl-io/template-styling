@@ -1,6 +1,16 @@
 // Icon Points Template
 
 .icon-points {
+  --icon-points-icon-color: var(--template-light-accent-color);
+
+  &.section--alt {
+    --icon-points-icon-color: var(--template-alt-accent-color);
+  }
+
+  &.section--dark {
+    --icon-points-icon-color: var(--template-dark-accent-color);
+  }
+
   .template__body {
     display: flex;
     flex-wrap: wrap;
@@ -48,7 +58,7 @@
     text-align: center;
 
     i {
-      color: var(--template-light-accent-color);
+      color: var(--icon-points-icon-color);
       font-size: var(--template-icon-size-sm);
       font-variation-settings:
         'FILL' 0,

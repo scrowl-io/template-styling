@@ -1,6 +1,20 @@
 // Side Figure Template
 
 .content-aside {
+  // Custom vars just for this template
+  --aside-bg: var(--template-light-accent-color);
+  --aside-color: var(--template-dark-color);
+
+  &.section--alt {
+    --aside-bg: var(--template-dark-bg);
+    --aside-color: var(--template-alt-accent-color);
+  }
+
+  &.section--dark {
+    --aside-bg: var(--template-dark-accent-color);
+    --aside-color: var(--template-light-color);
+  }
+
   .template__body {
     display: flex;
     flex-wrap: wrap;
@@ -21,8 +35,8 @@
       min-width: 18rem;
       margin: 0;
       padding: var(--template-spacer-sm);
-      color: var(--template-light-bg);
-      background: var(--template-light-accent-color);
+      color: var(--aside-color);
+      background: var(--aside-bg);
       font-size: var(--template-font-size-md);
 
       figcaption {

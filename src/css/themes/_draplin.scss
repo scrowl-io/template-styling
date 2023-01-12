@@ -27,8 +27,19 @@ body:has(input[value="theme--draplin"]:checked),// Just for the theme switcher e
   --template-font-lineheight-heading:     1.33;
   --template-font-letterspacing-heading:  -0.025em;
 
+  // Custom theme variables
+  --draplin-border-color: var(--template-light-border-color);
+
+  section[class*="--alt"]{
+    --draplin-border-color: var(--template-alt-border-color);
+  }
+
+  section[class*="--dark"]{
+    --draplin-border-color: var(--template-dark-border-color);
+  }
+
   h1:not(.tmpl-exclude) {
-    border-bottom: 0.125em dotted var(--template-light-accent-color);
+    border-bottom: 0.125em dotted var(--draplin-border-color);
     padding-bottom: 0.5em;
   }
 }

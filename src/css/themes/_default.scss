@@ -21,8 +21,20 @@ body:has(input[value="theme--default"]:checked), // Just for the theme switcher 
   // --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
   // --template-font-letterspacing-heading:  -0.025em;
 
+  // Custom theme variables
+  --default-border-color: var(--template-light-border-color);
+
+  section[class*="--alt"]{
+    --default-border-color: var(--template-alt-border-color);
+  }
+
+  section[class*="--dark"]{
+    --default-border-color: var(--template-dark-border-color);
+  }
+
+
   h1:not(.tmpl-exclude) {
-    border-bottom: 0.0625em solid var(--template-light-border-color);
+    border-bottom: 0.0625em solid var(--default-border-color);
     padding-bottom: 0.5em;
   }
 }

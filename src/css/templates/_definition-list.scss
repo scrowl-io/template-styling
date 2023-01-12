@@ -1,6 +1,20 @@
 // Definition List Template
 
 .definition-list {
+  // Custom vars just for this template
+  --dt-bg: var(--template-light-accent-color);
+  --dt-color: var(--template-dark-color);
+
+  &.section--alt {
+    --dt-bg: var(--template-dark-bg);
+    --dt-color: var(--template-alt-accent-color);
+  }
+
+  &.section--dark {
+    --dt-bg: var(--template-dark-accent-color);
+    --dt-color: var(--template-light-color);
+  }
+
   .template__body {
     display: flex;
     flex-wrap: wrap;
@@ -21,9 +35,9 @@
       dt {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
-        color: var(--template-light-bg);
+        color: var(--dt-color);
         border: none;
-        background: var(--template-light-accent-color);
+        background: var(--dt-bg);
       }
 
       dd {

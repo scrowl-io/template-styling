@@ -50,6 +50,5 @@ To develop locally, a local sass compiler is necessary to build the scss changes
 | Background Fixed | `.section--bg-fixed`   | When `template__background` is visible it sets it's background-attachment to fixed. This can also be done by adding `.template__background--fixed` directly on that element. |
 | Inset            | `.section--inset`      | Adds padding/margin around the section of the `--template-spacer` amount.                                                                                                    |
 | Min Height       | `.section--min-height` | Sets the min-height of the section to be the full height of the window.                                                                                                      |
-| Invert           | `.section--invert`     | This is an alternate color option for the section. By default it swaps the `background-color` and `color` values                                                             |
 
 Testing these variations can be [Viewed here](src/section-options.html)

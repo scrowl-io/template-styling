@@ -21,7 +21,7 @@ body:has(input[value="theme--fiesta"]:checked),// Just for the theme switcher ex
 
   --template-max-width:    1440px;
 
-  --template-font-family-base:            "Century Gothic", AppleGothic, "Tahoma", sans-serif;
+  --template-font-family-base:            Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
   --template-font-family-heading:         "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", cursive;
   --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
   --template-font-lineheight-heading:     1.45;
