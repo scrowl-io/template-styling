@@ -1,17 +1,23 @@
 
 body:has(input[value="theme--draplin"]:checked),// Just for the theme switcher example page
 .theme--draplin {
-  --template-color:               #{$owl-ref-palette-black};
-  --template-icon-color:          #{$owl-ref-palette-orange-500};
-  --template-bg:                  #{$owl-ref-palette-white};
-  --template-border-color:        #{$owl-ref-palette-black};
-  --template-accent:              #{$owl-ref-palette-black};
+  --template-light-color:        #{$owl-ref-palette-black};
+  --template-light-icon-color:   #{$owl-ref-palette-orange-500};
+  --template-light-bg:           #{$owl-ref-palette-white};
+  --template-light-border-color: #{$owl-ref-palette-black};
+  --template-light-accent-color: #{$owl-ref-palette-black};
 
-  --template-invert-color:        #{$owl-ref-palette-black};
-  --template-invert-icon-color:   #{$owl-ref-palette-black};
-  --template-invert-bg:           #{$owl-ref-palette-orange-500};
-  --template-invert-border-color: #{$owl-ref-palette-white};
-  --template-invert-accent:       #{$owl-ref-palette-black};
+  --template-alt-color:        #{$owl-ref-palette-black};
+  --template-alt-icon-color:   #{$owl-ref-palette-black};
+  --template-alt-bg:           #{$owl-ref-palette-orange-500};
+  --template-alt-border-color: #{$owl-ref-palette-black};
+  --template-alt-accent-color: #{$owl-ref-palette-white};
+
+  --template-dark-color:        #{$owl-ref-palette-white};
+  --template-dark-icon-color:   #{$owl-ref-palette-white};
+  --template-dark-bg:           #{$owl-ref-palette-black};
+  --template-dark-border-color: #{$owl-ref-palette-gray-600};
+  --template-dark-accent-color: #{$owl-ref-palette-orange-500};
 
   --template-max-width:    1200px;
 
@@ -22,7 +28,7 @@ body:has(input[value="theme--draplin"]:checked),// Just for the theme switcher e
   --template-font-letterspacing-heading:  -0.025em;
 
   h1:not(.tmpl-exclude) {
-    border-bottom: 0.125em dotted var(--template-accent);
+    border-bottom: 0.125em dotted var(--template-light-accent-color);
     padding-bottom: 0.5em;
   }
 }

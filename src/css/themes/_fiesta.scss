@@ -1,17 +1,23 @@
 
 body:has(input[value="theme--fiesta"]:checked),// Just for the theme switcher example page
 .theme--fiesta {
-  --template-color:               #{$owl-ref-palette-purple-800};
-  --template-icon-color:          #{$owl-ref-palette-pink-600};
-  --template-bg:                  #{$owl-ref-palette-pink-100};
-  --template-border-color:        #{$owl-ref-palette-pink-500};
-  --template-accent:              #{$owl-ref-palette-pink-700};
+  --template-light-color:               #{$owl-ref-palette-purple-800};
+  --template-light-icon-color:          #{$owl-ref-palette-pink-600};
+  --template-light-bg:                  #{$owl-ref-palette-pink-100};
+  --template-light-border-color:        #{$owl-ref-palette-pink-500};
+  --template-light-accent-color:        #{$owl-ref-palette-pink-700};
 
-  --template-invert-color:        #{$owl-ref-palette-pink-200};
-  --template-invert-icon-color:   #{$owl-ref-palette-pink-500};
-  --template-invert-bg:           #{$owl-ref-palette-purple-800};
-  --template-invert-border-color: #{$owl-ref-palette-pink-200};
-  --template-invert-accent:       #{$owl-ref-palette-pink-500};
+  --template-alt-color:        #{$owl-ref-palette-purple-800};
+  --template-alt-icon-color:   #{$owl-ref-palette-black};
+  --template-alt-bg:           #{$owl-ref-palette-pink-400};
+  --template-alt-border-color: #{$owl-ref-palette-pink-600};
+  --template-alt-accent-color: #{$owl-ref-palette-black};
+
+  --template-dark-color:        #{$owl-ref-palette-pink-200};
+  --template-dark-icon-color:   #{$owl-ref-palette-pink-500};
+  --template-dark-bg:           #{$owl-ref-palette-purple-800};
+  --template-dark-border-color: #{$owl-ref-palette-pink-200};
+  --template-dark-accent-color: #{$owl-ref-palette-pink-500};
 
   --template-max-width:    1440px;
 

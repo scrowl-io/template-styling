@@ -93,7 +93,7 @@ dl {
 dt {
   font-size: var(--template-font-size-md);
   font-weight: 600;
-  border-bottom: 1px solid var(--template-border-color);
+  border-bottom: 1px solid var(--template-light-border-color);
   break-after: avoid;
 }
 
@@ -103,7 +103,7 @@ dd {
 }
 
 a {
-  color: var(--template-accent);
+  color: var(--template-light-accent-color);
 }
 
 // Temporary bootstrap style button

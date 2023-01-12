@@ -35,9 +35,9 @@
             font-weight: 600;
             text-indent: 0;
             font-variant-numeric: tabular-nums;
-            color: var(--template-bg);
+            color: var(--template-light-bg);
             border-radius: 50em;
-            background: var(--template-accent);
+            background: var(--template-light-accent-color);
             content: counter(numbered-list-counter);
           }
         }

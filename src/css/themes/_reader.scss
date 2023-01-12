@@ -9,17 +9,23 @@ body:has(input[value="theme--reader"]:checked), // Just for the theme switcher e
   --template-font-size-2xl: 1.814rem;
   --template-font-size-3xl: 2.177rem;
 
-  --template-color:               #{$owl-ref-palette-black};
-  --template-icon-color:          currentColor;
-  --template-bg:                  #{$owl-ref-palette-white};
-  --template-border-color:        #{$owl-ref-palette-black};
-  --template-accent:              #{$owl-ref-palette-black};
+  --template-light-color:               #{$owl-ref-palette-black};
+  --template-light-icon-color:          currentColor;
+  --template-light-bg:                  #{$owl-ref-palette-white};
+  --template-light-border-color:        #{$owl-ref-palette-black};
+  --template-light-accent-color:        #{$owl-ref-palette-black};
 
-  --template-invert-color:        #{$owl-ref-palette-black};
-  --template-invert-icon-color:   currentColor;
-  --template-invert-bg:           #{$owl-ref-palette-white};
-  --template-invert-border-color: #{$owl-ref-palette-black};
-  --template-invert-accent:       #{$owl-ref-palette-black};
+  --template-alt-color:               #{$owl-ref-palette-black};
+  --template-alt-icon-color:          currentColor;
+  --template-alt-bg:                  #{$owl-ref-palette-white};
+  --template-alt-border-color:        #{$owl-ref-palette-black};
+  --template-alt-accent-color:        #{$owl-ref-palette-black};
+
+  --template-dark-color:        #{$owl-ref-palette-black};
+  --template-dark-icon-color:   currentColor;
+  --template-dark-bg:           #{$owl-ref-palette-white};
+  --template-dark-border-color: #{$owl-ref-palette-black};
+  --template-dark-accent-color: #{$owl-ref-palette-black};
 
   --template-max-width:    1200px;
 
@@ -76,7 +82,7 @@ body:has(input[value="theme--reader"]:checked), // Just for the theme switcher e
   dt {
     color: inherit;
     background: inherit;
-    border: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
   }
 
   .numbered-list .template__body__content ol li:before {

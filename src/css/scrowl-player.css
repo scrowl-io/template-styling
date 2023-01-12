@@ -352,16 +352,21 @@ template {
   }
 }
 :root {
-  --template-color: #343a40;
-  --template-icon-color: #007aba;
-  --template-bg: #fff;
-  --template-border-color: #dee2e6;
-  --template-accent: #007aba;
-  --template-invert-color: #fff;
-  --template-invert-icon-color: currentColor;
-  --template-invert-bg: #212529;
-  --template-invert-border-color: #6c757d;
-  --template-invert-accent: #3bbefe;
+  --template-light-color: #343a40;
+  --template-light-icon-color: #343a40;
+  --template-light-bg: #fff;
+  --template-light-border-color: #dee2e6;
+  --template-light-accent-color: #007aba;
+  --template-alt-color: #fff;
+  --template-alt-icon-color: #fff;
+  --template-alt-bg: #007aba;
+  --template-alt-border-color: #006295;
+  --template-alt-accent-color: #fff;
+  --template-dark-color: #fff;
+  --template-dark-icon-color: #fff;
+  --template-dark-bg: #212529;
+  --template-dark-border-color: #495057;
+  --template-dark-accent-color: #3bbefe;
   --template-max-width: 1200px;
   --template-font-family-base: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --template-font-family-heading: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
@@ -370,43 +375,29 @@ template {
   --template-font-letterspacing-heading: -0.025em;
 }
 
-body:has(input[value=theme--default]:checked),
-.theme--default {
-  --template-color: #343a40;
-  --template-icon-color: #007aba;
-  --template-bg: #fff;
-  --template-border-color: #dee2e6;
-  --template-accent: #007aba;
-  --template-invert-color: #fff;
-  --template-invert-icon-color: currentColor;
-  --template-invert-bg: #212529;
-  --template-invert-border-color: #6c757d;
-  --template-invert-accent: #3bbefe;
-  --template-max-width: 1200px;
-  --template-font-family-base: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  --template-font-family-heading: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  --template-font-lineheight-base: 1.6875;
-  --template-font-lineheight-heading: 1.25;
-  --template-font-letterspacing-heading: -0.025em;
-}
 body:has(input[value=theme--default]:checked) h1:not(.tmpl-exclude),
 .theme--default h1:not(.tmpl-exclude) {
-  border-bottom: 0.0625em solid var(--template-border-color);
+  border-bottom: 0.0625em solid var(--template-light-border-color);
   padding-bottom: 0.5em;
 }
 
-body:has(input[value=theme--dark]:checked),
-.theme--dark {
-  --template-color: #fff;
-  --template-icon-color: #3bbefe;
-  --template-bg: #212529;
-  --template-border-color: #6c757d;
-  --template-accent: #3bbefe;
-  --template-invert-color: #343a40;
-  --template-invert-icon-color: currentColor;
-  --template-invert-bg: #fafbfc;
-  --template-invert-border-color: #adb5bd;
-  --template-invert-accent: #007aba;
+body:has(input[value=theme--midnight]:checked),
+.theme--midnight {
+  --template-light-color: #fff;
+  --template-light-icon-color: #3bbefe;
+  --template-light-bg: #212529;
+  --template-light-border-color: #6c757d;
+  --template-light-accent-color: #3bbefe;
+  --template-alt-color: #fff;
+  --template-alt-icon-color: #fff;
+  --template-alt-bg: #007aba;
+  --template-alt-border-color: #006295;
+  --template-alt-accent-color: #fff;
+  --template-dark-color: #343a40;
+  --template-dark-icon-color: currentColor;
+  --template-dark-bg: #fafbfc;
+  --template-dark-border-color: #adb5bd;
+  --template-dark-accent-color: #007aba;
   --template-max-width: 1200px;
   --template-font-family-base: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --template-font-family-heading: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
@@ -414,24 +405,29 @@ body:has(input[value=theme--dark]:checked),
   --template-font-lineheight-heading: 1.25;
   --template-font-letterspacing-heading: -0.025em;
 }
-body:has(input[value=theme--dark]:checked) h1:not(.tmpl-exclude),
-.theme--dark h1:not(.tmpl-exclude) {
-  border-bottom: 0.0625em solid var(--template-border-color);
+body:has(input[value=theme--midnight]:checked) h1:not(.tmpl-exclude),
+.theme--midnight h1:not(.tmpl-exclude) {
+  border-bottom: 0.0625em solid var(--template-light-border-color);
   padding-bottom: 0.5em;
 }
 
 body:has(input[value=theme--news]:checked),
 .theme--news {
-  --template-color: #000;
-  --template-icon-color: #000;
-  --template-bg: #fefaf0;
-  --template-border-color: #000;
-  --template-accent: #000;
-  --template-invert-color: #fff;
-  --template-invert-icon-color: #fff;
-  --template-invert-bg: #000;
-  --template-invert-border-color: #fff;
-  --template-invert-accent: #fefaf0;
+  --template-light-color: #000;
+  --template-light-icon-color: #000;
+  --template-light-bg: #fefaf0;
+  --template-light-border-color: #000;
+  --template-light-accent-color: #000;
+  --template-alt-color: #332500;
+  --template-alt-icon-color: #332500;
+  --template-alt-bg: #ffba00;
+  --template-alt-border-color: #997000;
+  --template-alt-accent-color: #000;
+  --template-dark-color: #fff;
+  --template-dark-icon-color: #fff;
+  --template-dark-bg: #000;
+  --template-dark-border-color: #fff;
+  --template-dark-accent-color:#fefaf0;
   --template-max-width: 1024px;
   --template-font-family-base: Georgia, serif;
   --template-font-family-heading: Georgia, serif;
@@ -441,7 +437,7 @@ body:has(input[value=theme--news]:checked),
 }
 body:has(input[value=theme--news]:checked) h1:not(.tmpl-exclude),
 .theme--news h1:not(.tmpl-exclude) {
-  border: 0.125em solid var(--template-border-color);
+  border: 0.125em solid var(--template-light-border-color);
   border-top: none;
   border-right: none;
   padding: 0.5em;
@@ -449,16 +445,21 @@ body:has(input[value=theme--news]:checked) h1:not(.tmpl-exclude),
 
 body:has(input[value=theme--fiesta]:checked),
 .theme--fiesta {
-  --template-color: #3c0e66;
-  --template-icon-color: #a94ecc;
-  --template-bg: #f6dfff;
-  --template-border-color: #d361ff;
-  --template-accent: #7f3a99;
-  --template-invert-color: #edc0ff;
-  --template-invert-icon-color: #d361ff;
-  --template-invert-bg: #3c0e66;
-  --template-invert-border-color: #edc0ff;
-  --template-invert-accent: #d361ff;
+  --template-light-color: #3c0e66;
+  --template-light-icon-color: #a94ecc;
+  --template-light-bg: #f6dfff;
+  --template-light-border-color: #d361ff;
+  --template-light-accent-color: #7f3a99;
+  --template-alt-color: #3c0e66;
+  --template-alt-icon-color: #000;
+  --template-alt-bg: #dc81ff;
+  --template-alt-border-color: #a94ecc;
+  --template-alt-accent-color: #000;
+  --template-dark-color: #edc0ff;
+  --template-dark-icon-color: #d361ff;
+  --template-dark-bg: #3c0e66;
+  --template-dark-border-color: #edc0ff;
+  --template-dark-accent-color: #d361ff;
   --template-max-width: 1440px;
   --template-font-family-base: "Century Gothic", AppleGothic, "Tahoma", sans-serif;
   --template-font-family-heading: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", cursive;
@@ -469,16 +470,21 @@ body:has(input[value=theme--fiesta]:checked),
 
 body:has(input[value=theme--draplin]:checked),
 .theme--draplin {
-  --template-color: #000;
-  --template-icon-color: #e66f00;
-  --template-bg: #fff;
-  --template-border-color: #000;
-  --template-accent: #000;
-  --template-invert-color: #000;
-  --template-invert-icon-color: #000;
-  --template-invert-bg: #e66f00;
-  --template-invert-border-color: #fff;
-  --template-invert-accent: #000;
+  --template-light-color: #000;
+  --template-light-icon-color: #e66f00;
+  --template-light-bg: #fff;
+  --template-light-border-color: #000;
+  --template-light-accent-color: #000;
+  --template-alt-color: #000;
+  --template-alt-icon-color: #000;
+  --template-alt-bg: #e66f00;
+  --template-alt-border-color: #000;
+  --template-alt-accent-color: #fff;
+  --template-dark-color: #fff;
+  --template-dark-icon-color: #fff;
+  --template-dark-bg: #000;
+  --template-dark-border-color: #6c757d;
+  --template-dark-accent-color: #e66f00;
   --template-max-width: 1200px;
   --template-font-family-base: "Futura", Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --template-font-family-heading: "Futura", Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
@@ -488,7 +494,7 @@ body:has(input[value=theme--draplin]:checked),
 }
 body:has(input[value=theme--draplin]:checked) h1:not(.tmpl-exclude),
 .theme--draplin h1:not(.tmpl-exclude) {
-  border-bottom: 0.125em dotted var(--template-accent);
+  border-bottom: 0.125em dotted var(--template-light-accent-color);
   padding-bottom: 0.5em;
 }
 
@@ -501,16 +507,21 @@ body:has(input[value=theme--reader]:checked),
   --template-font-size-xl: 1.512rem;
   --template-font-size-2xl: 1.814rem;
   --template-font-size-3xl: 2.177rem;
-  --template-color: #000;
-  --template-icon-color: currentColor;
-  --template-bg: #fff;
-  --template-border-color: #000;
-  --template-accent: #000;
-  --template-invert-color: #000;
-  --template-invert-icon-color: currentColor;
-  --template-invert-bg: #fff;
-  --template-invert-border-color: #000;
-  --template-invert-accent: #000;
+  --template-light-color: #000;
+  --template-light-icon-color: currentColor;
+  --template-light-bg: #fff;
+  --template-light-border-color: #000;
+  --template-light-accent-color: #000;
+  --template-alt-color: #000;
+  --template-alt-icon-color: currentColor;
+  --template-alt-bg: #fff;
+  --template-alt-border-color: #000;
+  --template-alt-accent-color: #000;
+  --template-dark-color: #000;
+  --template-dark-icon-color: currentColor;
+  --template-dark-bg: #fff;
+  --template-dark-border-color: #000;
+  --template-dark-accent-color: #000;
   --template-max-width: 1200px;
   --template-font-family-base: Arial, sans-serif;
   --template-font-family-heading: Arial, sans-serif;
@@ -560,7 +571,7 @@ body:has(input[value=theme--reader]:checked) dt,
 .theme--reader dt {
   color: inherit;
   background: inherit;
-  border: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
 }
 body:has(input[value=theme--reader]:checked) .numbered-list .template__body__content ol li:before,
 .theme--reader .numbered-list .template__body__content ol li:before {
@@ -576,7 +587,7 @@ body:has(input[value=theme--reader]:checked) .numbered-list .template__body__con
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  color: var(--template-icon-color);
+  color: var(--template-light-icon-color);
 }
 
 .material-symbols-rounded {
@@ -689,7 +700,7 @@ dl {
 dt {
   font-size: var(--template-font-size-md);
   font-weight: 600;
-  border-bottom: 1px solid var(--template-border-color);
+  border-bottom: 1px solid var(--template-light-border-color);
   -moz-column-break-after: avoid;
        break-after: avoid;
 }
@@ -701,7 +712,7 @@ dd {
 }
 
 a {
-  color: var(--template-accent);
+  color: var(--template-light-accent-color);
 }
 
 .btn {
@@ -739,8 +750,8 @@ section {
   display: flex;
   justify-content: center;
   font-family: var(--template-font-family-base);
-  color: var(--template-color);
-  background: var(--template-bg);
+  color: var(--template-light-color);
+  background: var(--template-light-bg);
 }
 
 .section--min-height {
@@ -750,11 +761,11 @@ section {
   min-height: calc(100vh - var(--template-spacer) * 2);
 }
 .section--invert {
-  --template-bg: var(--template-invert-bg);
-  --template-color: var(--template-invert-color);
-  --template-icon-color: var(--template-invert-icon-color);
-  --template-border-color: var(--template-invert-border-color);
-  --template-accent: var(--template-invert-accent);
+  --template-light-bg: var(--template-dark-bg);
+  --template-light-color: var(--template-dark-color);
+  --template-light-icon-color: var(--template-dark-icon-color);
+  --template-light-border-color: var(--template-dark-border-color);
+  --template-light-accent-color: var(--template-dark-accent-color);
 }
 .section--inset {
   margin: var(--template-spacer);
@@ -779,18 +790,18 @@ section {
   padding: 0 0.0625em;
   margin: 0 -0.0625em;
   display: inline;
-  color: var(--template-color);
-  background: var(--template-bg);
-  box-shadow: -0.0625em 0 0 0.05em var(--template-bg), 0.0625em 0 0 0.05em var(--template-bg);
+  color: var(--template-light-color);
+  background: var(--template-light-bg);
+  box-shadow: -0.0625em 0 0 0.05em var(--template-light-bg), 0.0625em 0 0 0.05em var(--template-light-bg);
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
 .section--bg .template__body__content > :is(ol, ul, p, figure, sectionquote, dl) {
-  background: var(--template-bg);
-  box-shadow: 0 0 0 0.5em var(--template-bg);
+  background: var(--template-light-bg);
+  box-shadow: 0 0 0 0.5em var(--template-light-bg);
 }
 .section--bg .template__body__media *[class^=material-symbols] {
-  background: var(--template-bg);
+  background: var(--template-light-bg);
   border-radius: 9in;
   line-height: 1;
 }
@@ -842,6 +853,30 @@ section {
 }
 .template__background--fixed {
   background-attachment: fixed;
+}
+
+.color-table .template__body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--template-spacer-sm);
+  font-size: var(--template-font-size-sm);
+}
+.color-table .template__body h1 {
+  flex: 1 0 100%;
+}
+.color-table .template__body__content {
+  flex: 1 1 100%;
+}
+.color-table .template__body__content table {
+  width: 100%;
+  text-align: left;
+}
+.color-table .template__body__content table td {
+  padding: 0.5em;
+}
+.color-table .template__body__content table td code {
+  font-size: var(--template-font-size-sm);
 }
 
 .text-media .template__body {
@@ -910,9 +945,9 @@ section {
 .definition-list .template__body__content dt {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  color: var(--template-bg);
+  color: var(--template-light-bg);
   border: none;
-  background: var(--template-accent);
+  background: var(--template-light-accent-color);
 }
 .definition-list .template__body__content dd {
   padding-left: 0.5rem;
@@ -952,9 +987,9 @@ section {
   font-weight: 600;
   text-indent: 0;
   font-variant-numeric: tabular-nums;
-  color: var(--template-bg);
+  color: var(--template-light-bg);
   border-radius: 50em;
-  background: var(--template-accent);
+  background: var(--template-light-accent-color);
   content: counter(numbered-list-counter);
 }
 
@@ -1011,8 +1046,8 @@ section {
   min-width: 18rem;
   margin: 0;
   padding: var(--template-spacer-sm);
-  color: var(--template-bg);
-  background: var(--template-accent);
+  color: var(--template-light-bg);
+  background: var(--template-light-accent-color);
   font-size: var(--template-font-size-md);
 }
 .content-aside .template__body__aside figcaption {
@@ -1062,7 +1097,7 @@ section {
   text-align: center;
 }
 .icon-points__icon i {
-  color: var(--template-accent);
+  color: var(--template-light-accent-color);
   font-size: var(--template-icon-size-sm);
   font-variation-settings: "FILL" 0, "wght" 100, "GRAD" -25, "opsz" 48;
 }
@@ -1090,14 +1125,14 @@ body {
 }
 main {
   font-size: 16px;
-  background: var(--template-bg);
+  background: var(--template-light-bg);
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
 }
 
 hr {
   margin: 1em 0;
-  border: 1px solid var(--template-border-color);
+  border: 1px solid var(--template-light-border-color);
 }
 
 .switcher {
@@ -1135,10 +1170,10 @@ hr {
     size: landscape;
   }
   * {
-    --template-accent: white;
-    --template-icon-color: black;
-    --template-color: black;
-    --template-border-color: black;
+    --template-light-accent-color: white;
+    --template-light-icon-color: black;
+    --template-light-color: black;
+    --template-light-border-color: black;
     color: black !important;
     background: transparent !important;
     box-shadow: none !important;

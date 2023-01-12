@@ -47,22 +47,23 @@
 }
 
 :root {
-  // Light Text color
-  --template-color:               #{$owl-ref-palette-gray-800};
-  // Light Icon Text Color
-  --template-icon-color:          #{$owl-ref-palette-primary-500};
-  // Light Background Color
-  --template-bg:                  #{$owl-ref-palette-white};
-  // Light Border Color
-  --template-border-color:        #{$owl-ref-palette-gray-300};
-  // Light Accent Color
-  --template-accent:              #{$owl-ref-palette-primary-500};
+  --template-light-color:               #{$owl-ref-palette-gray-800};
+  --template-light-icon-color:          #{$owl-ref-palette-gray-800};
+  --template-light-bg:                  #{$owl-ref-palette-white};
+  --template-light-border-color:        #{$owl-ref-palette-gray-300};
+  --template-light-accent-color:        #{$owl-ref-palette-primary-500};
 
-  --template-invert-color:        #{$owl-ref-palette-white};
-  --template-invert-icon-color:   currentColor;
-  --template-invert-bg:           #{$owl-ref-palette-gray-900};
-  --template-invert-border-color: #{$owl-ref-palette-gray-600};
-  --template-invert-accent:       #{$owl-ref-palette-cyan-500};
+  --template-alt-color:        #{$owl-ref-palette-white};
+  --template-alt-icon-color:   #{$owl-ref-palette-white};
+  --template-alt-bg:           #{$owl-ref-palette-primary-500};
+  --template-alt-border-color: #{$owl-ref-palette-primary-600};
+  --template-alt-accent-color: #{$owl-ref-palette-white};
+
+  --template-dark-color:        #{$owl-ref-palette-white};
+  --template-dark-icon-color:   #{$owl-ref-palette-white};
+  --template-dark-bg:           #{$owl-ref-palette-gray-900};
+  --template-dark-border-color: #{$owl-ref-palette-gray-700};
+  --template-dark-accent-color: #{$owl-ref-palette-cyan-500};
 
   --template-max-width:    1200px;
 
@@ -74,7 +75,7 @@
 }
 
 @import "themes/default";
-@import "themes/dark";
+@import "themes/midnight";
 @import "themes/news";
 @import "themes/fiesta";
 @import "themes/draplin";

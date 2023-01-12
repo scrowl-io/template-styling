@@ -45,14 +45,14 @@ body {
 
 main {
   font-size: 16px;
-  background: var(--template-bg);
+  background: var(--template-light-bg);
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
 }
 
 hr {
   margin: 1em 0;
-  border: 1px solid var(--template-border-color);
+  border: 1px solid var(--template-light-border-color);
 }
 
 .switcher {
@@ -94,10 +94,10 @@ hr {
   }
 
   * {
-    --template-accent: white;
-    --template-icon-color: black;
-    --template-color: black;
-    --template-border-color: black;
+    --template-light-accent-color: white;
+    --template-light-icon-color: black;
+    --template-light-color: black;
+    --template-light-border-color: black;
 
     color: black !important;
     background: transparent !important;

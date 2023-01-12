@@ -16,16 +16,21 @@ To develop locally, a local sass compiler is necessary to build the scss changes
 
 | Variable                                | Type             | Default Value                            |
 | --------------------------------------- | ---------------- | ---------------------------------------- |
-| `--template-color`                      | text color       | $owl-ref-palette-gray-800                |
-| `--template-icon-color`                 | text color       | currentColor                             |
-| `--template-bg`                         | background color | $owl-ref-palette-white                   |
-| `--template-accent`                     | color            | $owl-ref-palette-primary-500             |
-| `--template-border-color`               | border color     | $owl-ref-palette-gray-300                |
-| `--template-invert-color`               | text color       | $owl-ref-palette-white                   |
-| `--template-invert-icon-color`          | text color       | currentColor                             |
-| `--template-invert-bg`                  | background color | $owl-ref-palette-gray-900                |
-| `--template-invert-accent`              | color            | $owl-ref-palette-cyan-500                |
-| `--template-invert-border-color`        | border color     | $owl-ref-palette-gray-600                |
+| `--template-light-color`                | text color       | $owl-ref-palette-gray-800                |
+| `--template-light-icon-color`           | text color       | currentColor                             |
+| `--template-light-bg`                   | background color | $owl-ref-palette-white                   |
+| `--template-light-accent-color`         | color            | $owl-ref-palette-primary-500             |
+| `--template-light-border-color`         | border color     | $owl-ref-palette-gray-300                |
+| `--template-alt-color`                  | text color       | $owl-ref-palette-gray-800                |
+| `--template-alt-icon-color`             | text color       | currentColor                             |
+| `--template-alt-bg`                     | background color | $owl-ref-palette-white                   |
+| `--template-alt-accent-color`           | color            | $owl-ref-palette-primary-500             |
+| `--template-alt-border-color`           | border color     | $owl-ref-palette-gray-300                |
+| `--template-dark-color`                 | text color       | $owl-ref-palette-white                   |
+| `--template-dark-icon-color`            | text color       | currentColor                             |
+| `--template-dark-bg`                    | background color | $owl-ref-palette-gray-900                |
+| `--template-dark-accent-color`          | color            | $owl-ref-palette-cyan-500                |
+| `--template-dark-border-color`          | border color     | $owl-ref-palette-gray-600                |
 | `--template-max-width`                  | length           | 1200px                                   |
 | `--template-font-family-base`           | font family      | $owl-ref-typeface-font-family-sans-serif |
 | `--template-font-family-heading`        | font family      | $owl-ref-typeface-font-family-sans-serif |
