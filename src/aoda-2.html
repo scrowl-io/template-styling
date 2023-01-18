@@ -11,22 +11,7 @@
    <!-- Importing Player Styling -->
   <link href="css/scrowl-player.css" rel="stylesheet">
 
-  <script>
-    // Force repaint on load and orientation changes
-    const repaint = () => {
-      setTimeout(function() {
-        document.body.style.webkitTransform = 'translateZ(0)';
-      },20);
-    }
-
-    window.addEventListener("orientationchange", (event) => {
-      repaint();
-    }, false);
-
-    window.addEventListener('DOMContentLoaded', (event) => {
-      repaint();
-    }, false);
-  </script>
+  <script src="bugfix.js"></script>
 
   <title>AODA - Module 1</title>
 </head>
