@@ -354,9 +354,6 @@ template {
 :root {
   --template-max-width: 1200px;
   --template-max-width-sm: 90ch;
-  --template-grid-columns: 12;
-  --template-grid-gap: var(--template-spacer-sm);
-  --template-grid-rows: 1;
   --template-light-color: #343a40;
   --template-light-icon-color: #343a40;
   --template-light-bg: #fff;
@@ -387,6 +384,7 @@ template {
   --template-border-color: var(--template-light-border-color);
   --template-mark-color: var(--template-light-mark-color);
   --template-mark-bg: var(--template-light-mark-bg);
+  --template-border-radius: 0;
   --template-img-border-radius: 1em;
 }
 :root section[class*="--alt"] {
@@ -551,6 +549,7 @@ body:has(input[value=theme--draplin]:checked),
   --template-border-color: var(--template-light-border-color);
   --template-mark-color: var(--template-light-mark-color);
   --template-mark-bg: var(--template-light-mark-bg);
+  --template-border-radius: 1rem;
 }
 body:has(input[value=theme--draplin]:checked) h1:not(.tmpl-exclude),
 .theme--draplin h1:not(.tmpl-exclude) {
@@ -678,7 +677,7 @@ body:has(input[value=theme--reader]:checked) .styled-list .template__body__conte
 }
 
 .row {
-  --grid-gutter-x: 1rem;
+  --grid-gutter-x: 1.5rem;
   --grid-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
@@ -793,7 +792,7 @@ body:has(input[value=theme--reader]:checked) .styled-list .template__body__conte
   width: 91.66666667%;
 }
 
-.col-12, .template__body__media, .template__body__navigation, .template__body__aside, .template__body__content, .template__body__title {
+.col-12 {
   flex: 0 0 auto;
   width: 100%;
 }
@@ -2058,11 +2057,15 @@ a {
 }
 
 .text-media .template__body > .row {
-  --grid-gutter-x: 3rem;
   flex-direction: row-reverse;
+  align-items: center;
+}
+@media screen and (min-width: 576px) {
+  .text-media .template__body > .row {
+    --grid-gutter-x: 3rem;
+  }
 }
 .text-media .template__body__content {
-  min-width: 18rem;
   font-size: var(--template-font-size-md);
   text-align: left;
 }
@@ -2259,10 +2262,12 @@ a {
 }
 .content-aside .template__body__aside {
   margin: 0;
+  align-self: flex-start;
   padding: var(--template-spacer-sm);
   color: var(--aside-color);
   background: var(--aside-bg);
   font-size: var(--template-font-size-md);
+  border-radius: var(--template-border-radius);
 }
 .content-aside .template__body__aside figcaption {
   line-height: var(--template-font-lineheight-heading);
@@ -2346,7 +2351,7 @@ a {
 }
 @media screen and (min-width: 576px) {
   .half-photo .template__background {
-    right: calc(50% + 1rem);
+    right: calc(50% + 2rem);
   }
 }
 

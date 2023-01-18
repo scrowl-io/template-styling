@@ -38,6 +38,7 @@ body:has(input[value="theme--draplin"]:checked),// Just for the theme switcher e
   --template-border-color: var(--template-light-border-color);
   --template-mark-color: var(--template-light-mark-color);
   --template-mark-bg: var(--template-light-mark-bg);
+  --template-border-radius: 1rem;
 
 
   h1:not(.tmpl-exclude) {

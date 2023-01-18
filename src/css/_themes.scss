@@ -49,9 +49,9 @@
 :root {
   --template-max-width:    1200px;
   --template-max-width-sm: 90ch;
-  --template-grid-columns: 12;
-  --template-grid-gap:     var(--template-spacer-sm);
-  --template-grid-rows:    1;
+  // --template-grid-columns: 12;
+  // --template-grid-gap:     var(--template-spacer-sm);
+  // --template-grid-rows:    1;
 
   --template-light-color:        #{$owl-ref-palette-gray-800};
   --template-light-icon-color:   #{$owl-ref-palette-gray-800};
@@ -87,6 +87,7 @@
   --template-border-color:      var(--template-light-border-color);
   --template-mark-color:        var(--template-light-mark-color);
   --template-mark-bg:           var(--template-light-mark-bg);
+  --template-border-radius:     0;
   --template-img-border-radius: 1em;
 
   section[class*="--alt"]{

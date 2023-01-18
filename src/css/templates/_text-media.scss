@@ -3,13 +3,16 @@
 .text-media {
   .template__body {
     & > .row {
-      --grid-gutter-x: 3rem;
-      flex-direction: row-reverse;
 
+      flex-direction: row-reverse;
+      align-items: center;
+
+      @media screen and (min-width:576px) {
+        --grid-gutter-x: 3rem;
+      }
     }
 
     &__content {
-      min-width: 18rem;
       font-size: var(--template-font-size-md);
       text-align: left;
     }

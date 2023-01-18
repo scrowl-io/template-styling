@@ -28,10 +28,12 @@
 
     &__aside {
       margin: 0;
+      align-self: flex-start;
       padding: var(--template-spacer-sm);
       color: var(--aside-color);
       background: var(--aside-bg);
       font-size: var(--template-font-size-md);
+      border-radius: var(--template-border-radius);
 
       figcaption {
         line-height: var(--template-font-lineheight-heading);

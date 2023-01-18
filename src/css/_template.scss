@@ -6,31 +6,25 @@
     height: fit-content;
     flex: 1 1 auto;
     // Aligning the children
-    // align-items: center;
     z-index: 1;
     padding: var(--template-spacer);
 
     &__title {
-      @extend .col-12;
     }
 
     &__content {
-      @extend .col-12;
     }
 
     &__aside {
-      @extend .col-12;
     }
 
     &__navigation {
-      @extend .col-12;
       padding-top: var(--template-spacer);
       padding-bottom: var(--template-spacer);
       text-align: center;
     }
 
     &__media {
-      @extend .col-12;
       figure {
         margin: 0;
         display: inline-block;
