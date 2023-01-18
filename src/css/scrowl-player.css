@@ -1219,6 +1219,10 @@ ol,
 ul {
   padding-left: 1em;
 }
+ol.h4,
+ul.h4 {
+  padding-left: 1.5em;
+}
 
 li {
   line-height: 1.4;
@@ -1286,7 +1290,7 @@ a {
   transition: margin 0.2s ease-in-out;
 }
 
-section {
+.section {
   --section-color: var(--template-light-color);
   --section-bg: var(--template-light-bg);
   position: relative;
@@ -1297,7 +1301,6 @@ section {
   color: var(--section-color);
   background: var(--section-bg);
 }
-
 .section--min-height {
   min-height: 100vh;
 }

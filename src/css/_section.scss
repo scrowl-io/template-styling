@@ -1,5 +1,5 @@
 // Section Classes
-section {
+.section {
   --section-color: var(--template-light-color);
   --section-bg: var(--template-light-bg);
 
@@ -10,9 +10,7 @@ section {
   font-family: var(--template-font-family-base);
   color: var(--section-color);
   background: var(--section-bg);
-}
 
-.section {
   &--min-height {
     min-height: 100vh;
 
