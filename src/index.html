@@ -3,13 +3,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#0083C3" />
+  <meta name="theme-color" content="#000000" />
 
   <!-- Importing Default Font and Icons -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,200&family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
 
   <!-- Importing Player Styling -->
   <link href="css/scrowl-player.css" rel="stylesheet">
+
+  <script>
+    // Force repaint on load and orientation changes
+    const repaint = () => {
+      setTimeout(function() {
+        document.body.style.webkitTransform = 'translateZ(0)';
+      },20);
+    }
+
+    window.addEventListener("orientationchange", (event) => {
+      repaint();
+    }, false);
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+      repaint();
+    }, false);
+  </script>
 
   <title>Bear Awareness - Module 3</title>
 </head>

@@ -27,8 +27,8 @@ body:has(input[value="theme--draplin"]:checked),// Just for the theme switcher e
 
   --template-max-width:    1200px;
 
-  --template-font-family-base:            "Futura", #{$owl-ref-typeface-font-family-sans-serif};
-  --template-font-family-heading:         "Futura", #{$owl-ref-typeface-font-family-sans-serif};
+  --template-font-family-base:            Futura, Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", #{$owl-ref-typeface-font-family-sans-serif};
+  --template-font-family-heading:         Futura, Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", #{$owl-ref-typeface-font-family-sans-serif};
   --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
   --template-font-lineheight-heading:     1.33;
   --template-font-letterspacing-heading:  -0.025em;
