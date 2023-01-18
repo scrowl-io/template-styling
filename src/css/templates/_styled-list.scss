@@ -1,0 +1,99 @@
+// Styled List Template
+
+.styled-list {
+  // Custom vars just for this template
+  --list-columns: 1;
+  --list-columns-width: 30ch;
+  --number-counter-bg: var(--template-accent-color);
+  --list-style-bg: var(--template-accent-color);
+  --number-counter-color: var(--template-dark-color);
+  --list-max-width: var(--template-max-width-sm);
+
+  &.section--alt {
+    --number-counter-color: var(--template-alt-color);
+  }
+
+  &.section--dark {
+    --number-counter-color: var(--template-light-color);
+  }
+
+  .template__body {
+    max-width: var(--list-max-width);
+
+    h1 {
+      grid-column: $grid-full-width;
+    }
+
+    &__content {
+      font-size: var(--template-font-size-md);
+
+      ol,
+      ul {
+        column-fill: balance;
+        column-count: var(--list-columns);
+        column-width: var(--list-columns-width);
+        column-gap: var(--template-grid-gap);
+
+        li:last-child{
+          margin-bottom: 0;
+        }
+      }
+
+      ol {
+        list-style: none;
+        padding: 0;
+
+        li {
+          display: flex;
+          margin-bottom: 1.5em;
+          counter-increment: styled-list-counter;
+          break-inside: avoid-column;
+
+          &:before {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2em;
+            height: 2em;
+            margin-top: -0.33em;
+            margin-right: 1rem;
+            line-height: 1;
+            font-weight: 600;
+            text-indent: 0;
+            font-variant-numeric: tabular-nums;
+            color: var(--number-counter-color);
+            border-radius: 50em;
+            background: var(--number-counter-bg);
+            content: counter(styled-list-counter);
+          }
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          display: flex;
+          margin-bottom: 1.5em;
+
+          &:before {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 0.75em;
+            height: 0.75em;
+            margin-top: 0.33em;
+            margin-right: 1rem;
+            line-height: 1;
+            border-radius: 50em;
+            background: var(--list-style-bg);
+            content: '';
+          }
+        }
+      }
+    }
+  }
+}

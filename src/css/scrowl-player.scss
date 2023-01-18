@@ -3,6 +3,7 @@
 
 @import "tokens";
 @import "themes";
+@import "grid";
 
 @import "icons";
 @import "typography";
@@ -15,11 +16,13 @@
 @import "templates/text-media";
 @import "templates/two-column";
 @import "templates/definition-list";
-@import "templates/numbered-list";
+@import "templates/styled-list";
 @import "templates/icon-list";
 @import "templates/centered-text";
 @import "templates/content-aside";
 @import "templates/icon-points";
+@import "templates/big-tiles";
+@import "templates/half-photo";
 
 * {
   box-sizing: border-box;
@@ -52,9 +55,15 @@ main {
   padding-bottom: env(safe-area-inset-bottom);
 }
 
+img {
+  max-width: 100%;
+  border-radius: var(--template-img-border-radius);
+}
+
 hr {
   margin: 1em 0;
-  border: 1px solid var(--template-light-border-color);
+  border: 0;
+  border-bottom: 2px solid var(--template-border-color);
 }
 
 .switcher {
@@ -107,7 +116,7 @@ hr {
   }
 
   .template__body__aside,
-  .numbered-list ol li:before {
+  .styled-list ol li:before {
     border: 2px solid black;
   }
 

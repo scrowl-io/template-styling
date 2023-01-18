@@ -1,0 +1,35 @@
+// Half Photo Template
+
+.half-photo {
+
+  .template__body {
+    --template-grid-columns: 2;
+    // flex: 0 1 50vw;
+
+    h1,
+    &__content {
+      grid-column: 2 / span 1;
+    }
+  }
+
+
+  .template__background {
+    left: 0;
+    right: 50%;
+  }
+
+  &--right {
+
+    .template__body {
+      h1,
+      &__content {
+        grid-column: 1 / span 1;
+      }
+    }
+
+    .template__background {
+      left: 50%;
+      right: 0;
+    }
+  }
+}

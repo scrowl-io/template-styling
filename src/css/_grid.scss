@@ -1,0 +1,83 @@
+// Grid System
+$grid-full-width: 1 / span var(--template-grid-columns);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// Minimum breakpoint width. Null for the smallest (first) breakpoint.
+//
+//  >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px))
+//  576px
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+// Returns a blank string if smallest breakpoint, otherwise returns the name with a dash in front.
+// Useful for making responsive utilities.
+//
+//  >> breakpoint-infix(xs, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px))
+//  ""  (Returns a blank string)
+//  >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px))
+//  "-sm"
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+  @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+}
+
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+// Makes the @content apply to the given breakpoint and wider.
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin make-cssgrid($columns: 12, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      @if $columns > 0 {
+        @for $i from 1 through $columns {
+          .col#{$infix}-#{$i} {
+            grid-column: auto / span $i;
+          }
+        }
+
+        // Start with `1` because `0` is and invalid value.
+        // Ends with `$columns - 1` because offsetting by the width of an entire row isn't possible.
+        @for $i from 1 through ($columns - 1) {
+          .start#{$infix}-#{$i} {
+            grid-column-start: $i;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Default grid to work on template__body, but allow adding a grid anywhere by adding the .grid class
+.grid {
+  display: grid;
+  grid-template-rows: repeat(var(--template-grid-rows, 1), min-content);
+  grid-template-columns: repeat(var(--template-grid-columns, 12), 1fr);
+  gap: var(--template-grid-gap, 1rem);
+
+  @include make-cssgrid();
+
+  // Default children to be full width.
+  & > * {
+    grid-column: $grid-full-width;
+  }
+}

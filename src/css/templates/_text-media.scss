@@ -1,24 +1,24 @@
 // Text Media Template
 
 .text-media {
+
+
   .template__body {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
-    gap: var(--template-spacer-sm);
+    & > * {
+      direction: ltr;
+    }
 
     h1 {
-      flex: 1 0 100%;
+      grid-column: $grid-full-width;
     }
 
     &__content {
-      flex: 1 1 60%;
       min-width: 18rem;
       font-size: var(--template-font-size-md);
+      text-align: left;
     }
 
     &__media {
-      flex: 1 1 25%;
       text-align: center;
 
       i {
@@ -34,7 +34,7 @@
 
   &--right {
     .template__body {
-      flex-direction: row;
+      direction: rtl;
     }
   }
 }

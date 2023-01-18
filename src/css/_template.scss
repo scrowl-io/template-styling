@@ -1,14 +1,13 @@
 // Template Elements
 .template {
-
   &__body {
+    @extend .grid;
     // Centering the section on the page
     max-width: var(--template-max-width);
+    height: fit-content;
     flex: 1 1 auto;
     // Aligning the children
-    display: grid;
     align-items: center;
-    align-content: center;
     z-index: 1;
     padding: var(--template-spacer);
 

@@ -14,18 +14,24 @@ body:has(input[value="theme--reader"]:checked), // Just for the theme switcher e
   --template-light-bg:                  #{$owl-ref-palette-white};
   --template-light-border-color:        #{$owl-ref-palette-black};
   --template-light-accent-color:        #{$owl-ref-palette-black};
+  --template-light-mark-color:          #{$owl-ref-palette-black};
+  --template-light-mark-bg:             #{$owl-ref-palette-white};
 
   --template-alt-color:               #{$owl-ref-palette-black};
   --template-alt-icon-color:          currentColor;
   --template-alt-bg:                  #{$owl-ref-palette-white};
   --template-alt-border-color:        #{$owl-ref-palette-black};
   --template-alt-accent-color:        #{$owl-ref-palette-black};
+  --template-alt-mark-color:          #{$owl-ref-palette-black};
+  --template-alt-mark-bg:             #{$owl-ref-palette-white};
 
   --template-dark-color:        #{$owl-ref-palette-black};
   --template-dark-icon-color:   currentColor;
   --template-dark-bg:           #{$owl-ref-palette-white};
   --template-dark-border-color: #{$owl-ref-palette-black};
   --template-dark-accent-color: #{$owl-ref-palette-black};
+  --template-dark-mark-color:   #{$owl-ref-palette-black};
+  --template-dark-mark-bg:      #{$owl-ref-palette-white};
 
   --template-max-width:    1200px;
 
@@ -34,6 +40,22 @@ body:has(input[value="theme--reader"]:checked), // Just for the theme switcher e
   --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
   --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
   --template-font-letterspacing-heading:  0;
+
+  --template-accent-color: var(--template-light-accent-color);
+  --template-border-color: var(--template-light-border-color);
+  --template-mark-color: var(--template-light-mark-color);
+  --template-mark-bg: var(--template-light-mark-bg);
+
+  section[class*="--light"],
+  section[class*="--alt"],
+  section[class*="--dark"] {
+    --template-mark-color: #{$owl-ref-palette-black};
+    --template-mark-bg: #{$owl-ref-palette-gray-300};
+  }
+
+  img {
+    max-width: 30ch;
+  }
 
   @media print {
     .section {
@@ -85,7 +107,7 @@ body:has(input[value="theme--reader"]:checked), // Just for the theme switcher e
     border-bottom: 2px solid currentColor;
   }
 
-  .numbered-list .template__body__content ol li:before {
+  .styled-list .template__body__content ol li:before {
     color: inherit;
     background: inherit;
     border: 2px solid currentColor;

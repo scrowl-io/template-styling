@@ -6,18 +6,25 @@ body:has(input[value="theme--news"]:checked),// Just for the theme switcher exam
   --template-light-bg:               #fefaf0;
   --template-light-border-color:      #{$owl-ref-palette-black};
   --template-light-accent-color:      #{$owl-ref-palette-black};
+  --template-light-mark-color:   var(--template-light-color);
+  --template-light-mark-bg:      #{$owl-ref-palette-yellow-200};
 
   --template-alt-color:        #{$owl-ref-palette-yellow-900};
   --template-alt-icon-color:   #{$owl-ref-palette-yellow-900};
   --template-alt-bg:           #{$owl-ref-palette-yellow-500};
   --template-alt-border-color: #{$owl-ref-palette-yellow-700};
-  --template-alt-accent-color: #{$owl-ref-palette-black};
+  --template-alt-accent-color: #{$owl-ref-palette-yellow-100};
+  --template-alt-mark-color:   #{$owl-ref-palette-white};
+  --template-alt-mark-bg:      #{$owl-ref-palette-black};
 
   --template-dark-color:        #{$owl-ref-palette-white};
   --template-dark-icon-color:   #{$owl-ref-palette-white};
   --template-dark-bg:           #{$owl-ref-palette-black};
   --template-dark-border-color: #{$owl-ref-palette-white};
   --template-dark-accent-color:#fefaf0;
+  --template-dark-mark-color:   #{$owl-ref-palette-black};
+  --template-dark-mark-bg:      #{$owl-ref-palette-yellow-500};
+  --template-img-border-radius: 0;
 
   --template-max-width:    1024px;
 
@@ -28,20 +35,20 @@ body:has(input[value="theme--news"]:checked),// Just for the theme switcher exam
   --template-font-letterspacing-heading:  -0.025em;
 
   // Custom theme variables
-  --news-border-color: var(--template-light-border-color);
+  --template-accent-color: var(--template-light-accent-color);
+  --template-border-color: var(--template-light-border-color);
+  --template-mark-color: var(--template-light-mark-color);
+  --template-mark-bg: var(--template-light-mark-bg);
 
-  section[class*="--alt"]{
-    --news-border-color: var(--template-alt-border-color);
-  }
-
-  section[class*="--dark"]{
-    --news-border-color: var(--template-dark-border-color);
-  }
 
   h1:not(.tmpl-exclude) {
-    border: 0.125em solid var(--news-border-color);
+    border: 0.25rem solid var(--template-border-color);
     border-top: none;
     border-right: none;
     padding: 0.5em;
+  }
+
+  hr {
+    border-bottom-width: 0.25rem;
   }
 }

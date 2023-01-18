@@ -1,38 +1,36 @@
 // Side Figure Template
 
 .content-aside {
+  &--right {
+    .template__body__aside {
+
+    }
+  }
+
   // Custom vars just for this template
-  --aside-bg: var(--template-light-accent-color);
+  --aside-bg: var(--template-accent-color);
   --aside-color: var(--template-dark-color);
 
   &.section--alt {
-    --aside-bg: var(--template-dark-bg);
-    --aside-color: var(--template-alt-accent-color);
+    --aside-color: var(--template-alt-color);
   }
 
   &.section--dark {
-    --aside-bg: var(--template-dark-accent-color);
-    --aside-color: var(--template-light-color);
+    --aside-color: var(--template-dark-color);
   }
 
   .template__body {
-    display: flex;
-    flex-wrap: wrap;
     align-items: flex-start;
-    gap: var(--template-spacer-sm);
 
     h1 {
-      flex: 1 0 100%;
+      grid-column: $grid-full-width;
     }
 
     &__content {
-      flex: 1 1 50%;
-      font-size: var(--template-font-size-md);
+      font-size: var(--template-font-size-base);
     }
 
     &__aside {
-      flex: 1 1 40%;
-      min-width: 18rem;
       margin: 0;
       padding: var(--template-spacer-sm);
       color: var(--aside-color);

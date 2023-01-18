@@ -26,4 +26,10 @@ body:has(input[value="theme--fiesta"]:checked),// Just for the theme switcher ex
   --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
   --template-font-lineheight-heading:     1.45;
   --template-font-letterspacing-heading:  0.025em;
+
+  --template-accent-color: var(--template-light-accent-color);
+  --template-border-color: var(--template-light-border-color);
+  --template-mark-color: var(--template-light-mark-color);
+  --template-mark-bg: var(--template-light-mark-bg);
+
 }

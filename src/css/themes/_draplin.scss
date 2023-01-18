@@ -6,18 +6,24 @@ body:has(input[value="theme--draplin"]:checked),// Just for the theme switcher e
   --template-light-bg:           #{$owl-ref-palette-white};
   --template-light-border-color: #{$owl-ref-palette-black};
   --template-light-accent-color: #{$owl-ref-palette-black};
+  --template-light-mark-color:   var(--template-light-color);
+  --template-light-mark-bg:      #{$owl-ref-palette-orange-200};
 
   --template-alt-color:        #{$owl-ref-palette-black};
   --template-alt-icon-color:   #{$owl-ref-palette-black};
   --template-alt-bg:           #{$owl-ref-palette-orange-500};
   --template-alt-border-color: #{$owl-ref-palette-black};
   --template-alt-accent-color: #{$owl-ref-palette-white};
+  --template-alt-mark-color:   #{$owl-ref-palette-white};
+  --template-alt-mark-bg:      #{$owl-ref-palette-black};
 
   --template-dark-color:        #{$owl-ref-palette-white};
   --template-dark-icon-color:   #{$owl-ref-palette-white};
   --template-dark-bg:           #{$owl-ref-palette-black};
   --template-dark-border-color: #{$owl-ref-palette-gray-600};
   --template-dark-accent-color: #{$owl-ref-palette-orange-500};
+  --template-dark-mark-color:   #{$owl-ref-palette-white};
+  --template-dark-mark-bg:      #{$owl-ref-palette-orange-500};
 
   --template-max-width:    1200px;
 
@@ -27,19 +33,29 @@ body:has(input[value="theme--draplin"]:checked),// Just for the theme switcher e
   --template-font-lineheight-heading:     1.33;
   --template-font-letterspacing-heading:  -0.025em;
 
-  // Custom theme variables
-  --draplin-border-color: var(--template-light-border-color);
 
-  section[class*="--alt"]{
-    --draplin-border-color: var(--template-alt-border-color);
-  }
+  --template-accent-color: var(--template-light-accent-color);
+  --template-border-color: var(--template-light-border-color);
+  --template-mark-color: var(--template-light-mark-color);
+  --template-mark-bg: var(--template-light-mark-bg);
 
-  section[class*="--dark"]{
-    --draplin-border-color: var(--template-dark-border-color);
-  }
 
   h1:not(.tmpl-exclude) {
-    border-bottom: 0.125em dotted var(--draplin-border-color);
+    border-bottom: 0.25rem dotted var(--template-border-color);
     padding-bottom: 0.5em;
+  }
+
+  .h5:not(.tmpl-exclude) {
+    text-transform: uppercase;
+    letter-spacing: 0.125em;
+    border-bottom: 0;
+  }
+
+  hr {
+    border-bottom: 0.25rem dotted var(--template-border-color);
+  }
+
+  mark {
+    border-bottom: 2px solid currentColor;
   }
 }

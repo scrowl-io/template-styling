@@ -1,19 +1,9 @@
 // Icon Points Template
 
 .icon-points {
-  --icon-points-icon-color: var(--template-light-accent-color);
-
-  &.section--alt {
-    --icon-points-icon-color: var(--template-alt-accent-color);
-  }
-
-  &.section--dark {
-    --icon-points-icon-color: var(--template-dark-accent-color);
-  }
-
   .template__body {
-    display: flex;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-wrap: wrap;
 
     h1 {
       flex: 1 0 100%;
@@ -58,7 +48,7 @@
     text-align: center;
 
     i {
-      color: var(--icon-points-icon-color);
+      color: var(--template-accent-color);
       font-size: var(--template-icon-size-sm);
       font-variation-settings:
         'FILL' 0,

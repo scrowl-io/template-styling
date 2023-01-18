@@ -2,34 +2,30 @@
 
 .definition-list {
   // Custom vars just for this template
-  --dt-bg: var(--template-light-accent-color);
+  --dt-bg: var(--template-accent-color);
   --dt-color: var(--template-dark-color);
+  --list-columns: 2;
+  --list-columns-width: 30ch;
 
   &.section--alt {
-    --dt-bg: var(--template-dark-bg);
-    --dt-color: var(--template-alt-accent-color);
+    --dt-color: var(--template-alt-color);
   }
 
   &.section--dark {
-    --dt-bg: var(--template-dark-accent-color);
     --dt-color: var(--template-light-color);
   }
 
   .template__body {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--template-spacer-sm);
-
     h1 {
-      flex: 1 0 100%;
+      grid-column: $grid-full-width;
     }
 
     &__content {
       dl {
         column-fill: balance;
-        column-count: 2;
-        column-width: 40ch;
-        column-gap: var(--template-spacer);
+        column-count: var(--list-columns);
+        column-width: var(--list-columns-width);
+        column-gap: var(--template-grid-gap);
       }
 
       dt {
@@ -43,6 +39,7 @@
       dd {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
+        break-inside: avoid-column;
       }
     }
   }

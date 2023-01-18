@@ -47,31 +47,61 @@
 }
 
 :root {
-  --template-light-color:               #{$owl-ref-palette-gray-800};
-  --template-light-icon-color:          #{$owl-ref-palette-gray-800};
-  --template-light-bg:                  #{$owl-ref-palette-white};
-  --template-light-border-color:        #{$owl-ref-palette-gray-300};
-  --template-light-accent-color:        #{$owl-ref-palette-primary-500};
+  --template-max-width:    1200px;
+  --template-max-width-sm: 90ch;
+  --template-grid-columns: 12;
+  --template-grid-gap:     var(--template-spacer-sm);
+  --template-grid-rows:    1;
+
+  --template-light-color:        #{$owl-ref-palette-gray-800};
+  --template-light-icon-color:   #{$owl-ref-palette-gray-800};
+  --template-light-bg:           #{$owl-ref-palette-white};
+  --template-light-border-color: #{$owl-ref-palette-gray-300};
+  --template-light-accent-color: #{$owl-ref-palette-primary-500};
+  --template-light-mark-color:   var(--template-light-color);
+  --template-light-mark-bg:      #{$owl-ref-palette-primary-200};
 
   --template-alt-color:        #{$owl-ref-palette-white};
   --template-alt-icon-color:   #{$owl-ref-palette-white};
   --template-alt-bg:           #{$owl-ref-palette-primary-500};
   --template-alt-border-color: #{$owl-ref-palette-primary-600};
-  --template-alt-accent-color: #{$owl-ref-palette-white};
+  --template-alt-accent-color: #{$owl-ref-palette-gray-900};
+  --template-alt-mark-color:   var(--template-alt-color);
+  --template-alt-mark-bg:      #{$owl-ref-palette-gray-900};
 
   --template-dark-color:        #{$owl-ref-palette-white};
   --template-dark-icon-color:   #{$owl-ref-palette-white};
   --template-dark-bg:           #{$owl-ref-palette-gray-900};
   --template-dark-border-color: #{$owl-ref-palette-gray-700};
   --template-dark-accent-color: #{$owl-ref-palette-cyan-500};
-
-  --template-max-width:    1200px;
+  --template-dark-mark-color:   var(--template-dark-color);
+  --template-dark-mark-bg:      #{$owl-ref-palette-cyan-700};
 
   --template-font-family-base:            #{$owl-ref-typeface-font-family-sans-serif};
   --template-font-family-heading:         #{$owl-ref-typeface-font-family-sans-serif};
   --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
   --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
   --template-font-letterspacing-heading:  -0.025em;
+
+  --template-accent-color:      var(--template-light-accent-color);
+  --template-border-color:      var(--template-light-border-color);
+  --template-mark-color:        var(--template-light-mark-color);
+  --template-mark-bg:           var(--template-light-mark-bg);
+  --template-img-border-radius: 1em;
+
+  section[class*="--alt"]{
+    --template-accent-color: var(--template-alt-accent-color);
+    --template-border-color: var(--template-alt-border-color);
+    --template-mark-color: var(--template-alt-mark-color);
+    --template-mark-bg: var(--template-alt-mark-bg);
+  }
+
+  section[class*="--dark"]{
+    --template-accent-color: var(--template-dark-accent-color);
+    --template-border-color: var(--template-dark-border-color);
+    --template-mark-color: var(--template-dark-mark-color);
+    --template-mark-bg: var(--template-dark-mark-bg);
+  }
 }
 
 @import "themes/default";

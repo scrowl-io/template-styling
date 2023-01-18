@@ -84,6 +84,12 @@ ul {
 li {
   line-height: 1.4;
   margin-bottom: 0.5em;
+
+  & > ol,
+  & > ul {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
 }
 
 dl {
@@ -93,7 +99,7 @@ dl {
 dt {
   font-size: var(--template-font-size-md);
   font-weight: 600;
-  border-bottom: 1px solid var(--template-light-border-color);
+  border-bottom: 1px solid var(--template-border-color);
   break-after: avoid;
 }
 
@@ -102,8 +108,13 @@ dd {
   break-inside: avoid;
 }
 
+mark {
+  color: var(--template-mark-color);
+  background-color: var(--template-mark-bg);
+}
+
 a {
-  color: var(--template-light-accent-color);
+  color: var(--template-accent-color);
 }
 
 // Temporary bootstrap style button

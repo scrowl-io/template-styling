@@ -2,7 +2,8 @@
 
 Workspace for mocking up template stylesheets
 
-[View here](src/index.html)
+- [Course Example here](src/index.html)
+- [AODA Course Example here](src/aoda.html)
 
 ## Setup
 
@@ -50,5 +51,6 @@ To develop locally, a local sass compiler is necessary to build the scss changes
 | Background Fixed | `.section--bg-fixed`   | When `template__background` is visible it sets it's background-attachment to fixed. This can also be done by adding `.template__background--fixed` directly on that element. |
 | Inset            | `.section--inset`      | Adds padding/margin around the section of the `--template-spacer` amount.                                                                                                    |
 | Min Height       | `.section--min-height` | Sets the min-height of the section to be the full height of the window.                                                                                                      |
+| Theme            | `.section--[variant]`  | Sets the color theme of the template. `.section--light` by default without a class needed. `.section--alt` and `.section--dark` are options                                  |
 
 Testing these variations can be [Viewed here](src/section-options.html)

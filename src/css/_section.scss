@@ -5,6 +5,7 @@ section {
 
   position: relative;
   display: flex;
+  align-items: center;
   justify-content: center;
   font-family: var(--template-font-family-base);
   color: var(--section-color);
@@ -63,23 +64,22 @@ section {
 
     .template__body {
       // This targets the top level elements of the section, and the spans directly inside of them to give them a background color when section--bg is in use.
-      & :is(h1,h2,h3,h4,h5,h6) {
-        span {
-          padding: 0 0.0625em;
-          margin: 0 -0.0625em;
-          display: inline;
-          color: var(--section-color);
-          background: var(--section-bg);
-          box-shadow: -0.0625em 0 0 0.05em var(--section-bg), 0.0625em 0 0 0.05em var(--section-bg);
-          box-decoration-break: clone;
-          -webkit-box-decoration-break: clone;
-        }
+      & :is(h1,h2,h3,h4,h5,h6) span,
+      figcaption {
+        padding: 0 0.0625em;
+        margin: 0 -0.0625em;
+        display: inline;
+        color: var(--section-color);
+        background: var(--section-bg);
+        box-shadow: -0.0625em 0 0 0.05em var(--section-bg), 0.0625em 0 0 0.05em var(--section-bg);
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
       }
     }
 
     .template__body__content > :is(ol, ul, p, figure, sectionquote, dl) {
       background: var(--section-bg);
-      box-shadow: 0 0 0 0.5em var(--section-bg);
+      box-shadow: 0 0 0 0.6rem var(--section-bg);
     }
 
     .template__body__media {

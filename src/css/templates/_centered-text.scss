@@ -2,13 +2,10 @@
 
 .centered-text {
   .template__body {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--template-spacer-sm);
-    max-width: 90ch;
+    max-width: var(--template-max-width-sm);
 
     h1 {
-      flex: 1 0 100%;
+      grid-column: $grid-full-width;
     }
   }
 }

@@ -1,0 +1,35 @@
+// Big Tiles Template
+
+.big-tiles {
+
+
+  h1 {
+    grid-column: $grid-full-width;
+    text-align: center;
+  }
+
+  .template__body {
+    max-width: 1600px;
+    align-items: flex-start;
+
+    &__content {
+      .h2 {
+        margin-bottom: 0;
+      }
+
+      .h5 {
+        margin-top: 1em;
+        color: var(--template-accent-color);
+      }
+
+      figure {
+        margin: 0;
+        padding: 0;
+
+        figcaption {
+          font-size: var(--template-font-size-sm);
+        }
+      }
+    }
+  }
+}

@@ -27,6 +27,11 @@ body:has(input[value="theme--midnight"]:checked),// Just for the theme switcher 
   --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
   --template-font-letterspacing-heading:  -0.025em;
 
+  --template-accent-color: var(--template-light-accent-color);
+  --template-border-color: var(--template-light-border-color);
+  --template-mark-color: var(--template-light-mark-color);
+  --template-mark-bg: var(--template-light-mark-bg);
+
   h1:not(.tmpl-exclude) {
     border-bottom: 0.0625em solid var(--template-light-border-color);
     padding-bottom: 0.5em;
