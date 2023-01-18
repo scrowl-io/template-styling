@@ -2340,22 +2340,14 @@ a {
   margin-top: 0.25em;
 }
 
-.half-photo .template__body {
-  --template-grid-columns: 2;
-}
-.half-photo .template__body__title, .half-photo .template__body__content {
-  grid-column: 2/span 1;
-}
 .half-photo .template__background {
   left: 0;
-  right: 50%;
+  right: 36%;
 }
-.half-photo--right .template__body__title, .half-photo--right .template__body__content {
-  grid-column: 1/span 1;
-}
-.half-photo--right .template__background {
-  left: 50%;
-  right: 0;
+@media screen and (min-width: 576px) {
+  .half-photo .template__background {
+    right: calc(50% + 1rem);
+  }
 }
 
 * {
