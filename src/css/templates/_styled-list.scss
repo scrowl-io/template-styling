@@ -41,6 +41,7 @@
 
         li {
           display: flex;
+          align-items: baseline;
           margin-bottom: 1.5em;
           counter-increment: styled-list-counter;
           break-inside: avoid-column;
@@ -52,7 +53,6 @@
             justify-content: center;
             width: 2em;
             height: 2em;
-            margin-top: -0.33em;
             margin-right: 1rem;
             line-height: 1;
             font-weight: 600;
