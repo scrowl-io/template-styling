@@ -20,10 +20,6 @@
   .template__body {
     max-width: var(--list-max-width);
 
-    h1 {
-      grid-column: $grid-full-width;
-    }
-
     &__content {
       font-size: var(--template-font-size-md);
 

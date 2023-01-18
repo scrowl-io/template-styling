@@ -22,10 +22,6 @@
   .template__body {
     align-items: flex-start;
 
-    h1 {
-      grid-column: $grid-full-width;
-    }
-
     &__content {
       font-size: var(--template-font-size-base);
     }

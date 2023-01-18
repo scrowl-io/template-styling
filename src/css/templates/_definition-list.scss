@@ -16,10 +16,6 @@
   }
 
   .template__body {
-    h1 {
-      grid-column: $grid-full-width;
-    }
-
     &__content {
       dl {
         column-fill: balance;

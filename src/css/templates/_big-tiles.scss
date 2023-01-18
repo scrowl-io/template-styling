@@ -1,24 +1,20 @@
 // Big Tiles Template
 
 .big-tiles {
-
-
-  h1 {
-    grid-column: $grid-full-width;
-    text-align: center;
-  }
-
   .template__body {
-    max-width: 1600px;
+    max-width: 1440px;
     align-items: flex-start;
+
+    &__title {
+      text-align: center;
+    }
 
     &__content {
       .h2 {
-        margin-bottom: 0;
+        margin-bottom: 0.25em;
       }
 
       .h5 {
-        margin-top: 1em;
         color: var(--template-accent-color);
       }
 
@@ -27,6 +23,7 @@
         padding: 0;
 
         figcaption {
+          margin-bottom: 1em;
           font-size: var(--template-font-size-sm);
         }
       }

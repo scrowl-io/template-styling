@@ -2,12 +2,10 @@
 
 .text-media {
   .template__body {
-    & > * {
-      direction: ltr;
-    }
+    & > .row {
+      --grid-gutter-x: 3rem;
+      flex-direction: row-reverse;
 
-    h1 {
-      grid-column: $grid-full-width;
     }
 
     &__content {
@@ -32,7 +30,9 @@
 
   &--right {
     .template__body {
-      direction: rtl;
+      & > .row {
+        flex-direction: row;
+      }
     }
   }
 }

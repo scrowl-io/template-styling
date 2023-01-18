@@ -3,9 +3,5 @@
 .centered-text {
   .template__body {
     max-width: var(--template-max-width-sm);
-
-    h1 {
-      grid-column: $grid-full-width;
-    }
   }
 }
