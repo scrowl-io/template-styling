@@ -15,6 +15,7 @@
       }
 
       .h5 {
+        margin-bottom: 0.25em;
         color: var(--template-accent-color);
       }
 
@@ -25,6 +26,12 @@
         figcaption {
           margin-bottom: 1em;
           font-size: var(--template-font-size-sm);
+        }
+
+        p,
+        ul,
+        ol {
+          margin-top: 0.25em;
         }
       }
     }
