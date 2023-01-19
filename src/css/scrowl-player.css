@@ -566,10 +566,6 @@ body:has(input[value=theme--draplin]:checked) hr,
 .theme--draplin hr {
   border-bottom: 0.25rem dotted var(--template-border-color);
 }
-body:has(input[value=theme--draplin]:checked) mark,
-.theme--draplin mark {
-  border-bottom: 2px solid currentColor;
-}
 
 body:has(input[value=theme--reader]:checked),
 .theme--reader {
@@ -1753,7 +1749,7 @@ body:has(input[value=theme--reader]:checked) .styled-list .template__body__conte
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  color: var(--template-light-icon-color);
+  color: var(--template-icon-color);
 }
 
 .material-symbols-rounded {

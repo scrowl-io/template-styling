@@ -53,8 +53,4 @@ body:has(input[value="theme--draplin"]:checked),// Just for the theme switcher e
   hr {
     border-bottom: 0.25rem dotted var(--template-border-color);
   }
-
-  mark {
-    border-bottom: 2px solid currentColor;
-  }
 }
