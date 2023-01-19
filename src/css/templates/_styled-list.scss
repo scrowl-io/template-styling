@@ -3,7 +3,7 @@
 .styled-list {
   // Custom vars just for this template
   --list-columns: 1;
-  --list-columns-width: 30ch;
+  --list-columns-width: auto;
   --number-counter-bg: var(--template-accent-color);
   --list-style-bg: var(--template-accent-color);
   --number-counter-color: var(--template-dark-color);

@@ -14,7 +14,7 @@
   <!-- Importing Player Styling -->
   <link href="css/scrowl-player.css" rel="stylesheet">
 
-  <script src="bugfix.js"></script>
+  <!-- <script src="bugfix.js"></script> -->
 
   <title>Definition List Test</title>
 </head>
@@ -34,16 +34,16 @@
 
   <main>
     <!-- SLIDES -->
-    <section id="section1" class="section--bg color-table">
+    <section id="section1" class="section section--bg color-table">
       <div class="template__body">
         <h1 class="h1"><span>Theming "Definition List"</span></h1>
       </div>
       <div class="template__background"></div>
     </section>
 
-    <section id="section6" class="section--light definition-list">
+    <section id="section6" class="section section--light definition-list" >
       <div class="template__body">
-        <h1 class="h2"><span>Definitions (Light)</span></h1>
+        <h1 class="template__body__title h2"><span>Definitions (Light)</span></h1>
         <div class="template__body__content">
           <dl>
             <dt>Barrier</dt>
@@ -67,9 +67,9 @@
       </div>
       <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=8')"></div>
     </section>
-    <section id="section2" class="section--alt definition-list">
+    <section id="section2" class="section section--alt definition-list" style="--list-columns: 3">
       <div class="template__body">
-        <h1 class="h2"><span>Definitions (Alt)</span></h1>
+        <h1 class="template__body__title h2"><span>Definitions (Alt)</span></h1>
         <div class="template__body__content">
           <dl>
             <dt>Barrier</dt>
@@ -93,28 +93,30 @@
       </div>
       <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=8')"></div>
     </section>
-    <section id="section3" class="section--dark definition-list">
+    <section id="section3" class="section section--dark definition-list">
       <div class="template__body">
-        <h1 class="h2"><span>Definitions (Dark)</span></h1>
-        <div class="template__body__content">
-          <dl>
-            <dt>Barrier</dt>
-            <dd>Anything that prevents a person with a disability from fully participating in all aspects of society because of his or her disability.</dd>
-            <dt>Disability</dt>
-            <dd>Under AODA, disability includes a range of conditions, some of which are visible and some of which are not visible. Conditions may have been present from birth, have been caused by an accident, or have developed over time. Disabilities include: visual, hearing, physical, intellectual, learning, and mental health disabilities.</dd>
-            <dt>Organization</dt>
-            <dd>Any organization in the public or private sector</dd>
-            <dt>Large organization</dt>
-            <dd>50 or more employees</dd>
-            <dt>Small organization</dt>
-            <dd>1-49 employees</dd>
-            <dt>Redeveloped</dt>
-            <dd>Planned significant alterations to public spaces, but does not include maintenance activities, environmental mitigation or environmental restoration</dd>
-            <dt>Service animal</dt>
-            <dd>An identifiable, working animal, typically wearing a vest or harness, that assists a person with a disability</dd>
-            <dt>Support person</dt>
-            <dd>Someone who accompanies a person with a disability to help with communication, mobility, personal care, medical needs, or access to goods, services, or facilities </dd>
-          </dl>
+        <div class="row">
+          <h1 class="template__body__title h2"><span>Definitions (Dark)</span></h1>
+          <div class="template__body__content">
+            <dl>
+              <dt>Barrier</dt>
+              <dd>Anything that prevents a person with a disability from fully participating in all aspects of society because of his or her disability.</dd>
+              <dt>Disability</dt>
+              <dd>Under AODA, disability includes a range of conditions, some of which are visible and some of which are not visible. Conditions may have been present from birth, have been caused by an accident, or have developed over time. Disabilities include: visual, hearing, physical, intellectual, learning, and mental health disabilities.</dd>
+              <dt>Organization</dt>
+              <dd>Any organization in the public or private sector</dd>
+              <dt>Large organization</dt>
+              <dd>50 or more employees</dd>
+              <dt>Small organization</dt>
+              <dd>1-49 employees</dd>
+              <dt>Redeveloped</dt>
+              <dd>Planned significant alterations to public spaces, but does not include maintenance activities, environmental mitigation or environmental restoration</dd>
+              <dt>Service animal</dt>
+              <dd>An identifiable, working animal, typically wearing a vest or harness, that assists a person with a disability</dd>
+              <dt>Support person</dt>
+              <dd>Someone who accompanies a person with a disability to help with communication, mobility, personal care, medical needs, or access to goods, services, or facilities </dd>
+            </dl>
+          </div>
         </div>
       </div>
       <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=8')"></div>

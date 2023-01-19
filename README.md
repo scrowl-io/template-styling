@@ -3,6 +3,8 @@
 Workspace for mocking up template stylesheets
 
 - [Course Example here](src/index.html)
+- [Styled List and Definition List Example](src/styled-list.html)
+- [Section Variable Example](src/section-options.html)
 - [AODA Course Example here](src/aoda.html)
 
 ## Setup

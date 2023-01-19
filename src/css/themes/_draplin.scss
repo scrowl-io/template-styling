@@ -1,4 +1,3 @@
-
 body:has(input[value="theme--draplin"]:checked),// Just for the theme switcher example page
 .theme--draplin {
   --template-light-color:        #{$owl-ref-palette-black};
@@ -39,7 +38,6 @@ body:has(input[value="theme--draplin"]:checked),// Just for the theme switcher e
   --template-mark-color: var(--template-light-mark-color);
   --template-mark-bg: var(--template-light-mark-bg);
   --template-border-radius: 1rem;
-
 
   h1:not(.tmpl-exclude) {
     border-bottom: 0.25rem dotted var(--template-border-color);
