@@ -1,7 +1,5 @@
 // Grid System
-// $grid-full-width: 1 / span var(--template-grid-columns);
 
-$grid-columns:                12;
 $grid-gutter-width:           1.5rem;
 $grid-row-columns:            6;
 $grid-breakpoints: (
@@ -66,8 +64,6 @@ $gutters: $spacers !default;
   @return $result;
 }
 
-// Grid system
-//
 // Generate semantic grid columns with these mixins.
 
 @mixin make-row($gutter: $grid-gutter-width) {
@@ -75,18 +71,14 @@ $gutters: $spacers !default;
   --grid-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
-  // TODO: Revisit calc order after https://github.com/react-bootstrap/react-bootstrap/issues/6039 is fixed
-  // margin-top: calc(-1 * var(--grid-gutter-y)); // stylelint-disable-line function-disallowed-list
+  margin-top: calc(-1 * var(--grid-gutter-y)); // stylelint-disable-line function-disallowed-list
   margin-right: calc(-.5 * var(--grid-gutter-x)); // stylelint-disable-line function-disallowed-list
   margin-left: calc(-.5 * var(--grid-gutter-x)); // stylelint-disable-line function-disallowed-list
 }
 
 @mixin make-col-ready() {
-  // Add box sizing if only the grid is loaded
-  box-sizing: if(variable-exists(include-column-box-sizing) and $include-column-box-sizing, border-box, null);
   // Prevent columns from becoming too narrow when at smaller grid tiers by
-  // always setting `width: 100%;`. This works because we set the width
-  // later on to override this initial width.
+  // always setting `width: 100%;`. This works because we set the width later on to override this initial width.
   flex-shrink: 0;
   width: 100%;
   max-width: 100%; // Prevent `.col-auto`, `.col` (& responsive variants) from breaking out the grid
@@ -95,10 +87,10 @@ $gutters: $spacers !default;
   margin-top: var(--grid-gutter-y);
 }
 
-@mixin make-col($size: false, $columns: $grid-columns) {
+@mixin make-col($size: false) {
   @if $size {
     flex: 0 0 auto;
-    width: percentage(divide($size, $columns));
+    width: percentage(divide($size, 12));
 
   } @else {
     flex: 1 1 0;
@@ -111,16 +103,15 @@ $gutters: $spacers !default;
   width: auto;
 }
 
-@mixin make-col-offset($size, $columns: $grid-columns) {
-  $num: divide($size, $columns);
+@mixin make-col-offset($size) {
+  $num: divide($size, 12);
   margin-left: if($num == 0, 0, percentage($num));
 }
 
 // Row columns
 //
-// Specify on a parent element(e.g., .row) to force immediate children into NN
-// numberof columns. Supports wrapping to new lines, but does not do a Masonry
-// style grid.
+// Specify on a parent element(e.g., .row) to force immediate children into NN numberof columns.
+// Supports wrapping to new lines, but does not do a Masonry style grid.
 @mixin row-cols($count) {
   > * {
     flex: 0 0 auto;
@@ -129,11 +120,7 @@ $gutters: $spacers !default;
 }
 
 // Framework grid generation
-//
-// Used only by Bootstrap to generate the correct number of grid classes given
-// any value of `$grid-columns`.
-
-@mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+@mixin make-grid-columns($gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
   @each $breakpoint in map-keys($breakpoints) {
     $infix: breakpoint-infix($breakpoint, $breakpoints);
 
@@ -159,19 +146,17 @@ $gutters: $spacers !default;
         @include make-col-auto();
       }
 
-      @if $columns > 0 {
-        @for $i from 1 through $columns {
-          .col#{$infix}-#{$i} {
-            @include make-col($i, $columns);
-          }
+      @for $i from 1 through 12 {
+        .col#{$infix}-#{$i} {
+          @include make-col($i);
         }
+      }
 
-        // `$columns - 1` because offsetting by the width of an entire row isn't possible
-        @for $i from 0 through ($columns - 1) {
-          @if not ($infix == "" and $i == 0) { // Avoid emitting useless .offset-0
-            .offset#{$infix}-#{$i} {
-              @include make-col-offset($i, $columns);
-            }
+      // `12 - 1` because offsetting by the width of an entire row isn't possible
+      @for $i from 0 through 11 {
+        @if not ($infix == "" and $i == 0) { // Avoid emitting useles s .offset-0
+          .offset#{$infix}-#{$i} {
+            @include make-col-offset($i);
           }
         }
       }
@@ -195,27 +180,16 @@ $gutters: $spacers !default;
 }
 
 // Minimum breakpoint width. Null for the smallest (first) breakpoint.
-//
-//  >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px))
-//  576px
 @function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
   $min: map-get($breakpoints, $name);
   @return if($min != 0, $min, null);
 }
 
 // Returns a blank string if smallest breakpoint, otherwise returns the name with a dash in front.
-// Useful for making responsive utilities.
-//
-//  >> breakpoint-infix(xs, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px))
-//  ""  (Returns a blank string)
-//  >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px))
-//  "-sm"
 @function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
   @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
 }
 
-// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
-// Makes the @content apply to the given breakpoint and wider.
 @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
   $min: breakpoint-min($name, $breakpoints);
   @if $min {
@@ -227,45 +201,16 @@ $gutters: $spacers !default;
   }
 }
 
-// @mixin make-cssgrid($columns: 12, $breakpoints: $grid-breakpoints) {
-//   @each $breakpoint in map-keys($breakpoints) {
-//     $infix: breakpoint-infix($breakpoint, $breakpoints);
-
-//     @include media-breakpoint-up($breakpoint, $breakpoints) {
-//       @if $columns > 0 {
-//         @for $i from 1 through $columns {
-//           .col#{$infix}-#{$i} {
-//             grid-column: auto / span $i;
-//           }
-//         }
-
-//         // Start with `1` because `0` is and invalid value.
-//         // Ends with `$columns - 1` because offsetting by the width of an entire row isn't possible.
-//         @for $i from 1 through ($columns - 1) {
-//           .start#{$infix}-#{$i} {
-//             grid-column-start: $i;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-// Default grid to work on template__body, but allow adding a grid anywhere by adding the .grid class
-// .grid {
-//   display: flex;
-//   flex-wrap: wrap;
-//   grid-template-rows: repeat(var(--template-grid-rows, 1), min-content);
-//   grid-template-columns: repeat(var(--template-grid-columns, 12), 1fr);
-//   gap: var(--template-grid-gap, 1rem);
-
-//   @include make-cssgrid();
-
-//   // Default children to be full width.
-//   & > * {
-//     grid-column: $grid-full-width;
-//   }
-// }
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+  $max: breakpoint-max($name, $breakpoints);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
 
 .row {
   @include make-row();

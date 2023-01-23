@@ -1,243 +1,566 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#0083C3" />
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#0083C3" />
 
-  <!-- Importing Default Font and Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;800&family=Inter:wght@400..800&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,200&family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+    <!-- Importing Default Font and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@500;800&family=Inter:wght@400..800&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,200&family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+      rel="stylesheet"
+    />
 
+    <!-- Importing Player Styling -->
+    <link href="css/scrowl-player.css" rel="stylesheet" />
 
-  <!-- Importing Player Styling -->
-  <link href="css/scrowl-player.css" rel="stylesheet">
+    <!-- <script src="bugfix.js"></script> -->
 
-  <!-- <script src="bugfix.js"></script> -->
+    <title>AODA - Introduction</title>
+  </head>
+  <body>
+    <!-- THEME SWITCHER -->
+    <div role="contentinfo">
+      <fieldset class="switcher">
+        <legend>Course Theme</legend>
+        <label>
+          <input name="theme" type="radio" value="theme--reader" />
+          Reader
+        </label>
+        <label>
+          <input name="theme" type="radio" value="theme--default" checked />
+          Default
+        </label>
+        <!-- <label><input name="theme" type="radio" value="theme--midnight">Midnight</label> -->
+        <label>
+          <input name="theme" type="radio" value="theme--news" />
+          News
+        </label>
+        <label>
+          <input name="theme" type="radio" value="theme--fiesta" />
+          Fiesta
+        </label>
+        <label>
+          <input name="theme" type="radio" value="theme--draplin" />
+          Draplin
+        </label>
+      </fieldset>
+    </div>
 
-  <title>AODA - Introduction</title>
-</head>
-<body>
-  <!-- THEME SWITCHER -->
-  <div role="contentinfo">
-    <fieldset class="switcher">
-      <legend>Course Theme</legend>
-      <label><input name="theme" type="radio" value="theme--reader">Reader</label>
-      <label><input name="theme" type="radio" value="theme--default" checked>Default</label>
-      <!-- <label><input name="theme" type="radio" value="theme--midnight">Midnight</label> -->
-      <label><input name="theme" type="radio" value="theme--news">News</label>
-      <label><input name="theme" type="radio" value="theme--fiesta">Fiesta</label>
-      <label><input name="theme" type="radio" value="theme--draplin">Draplin</label>
-    </fieldset>
-  </div>
-
-  <main>
-    <!-- SLIDES -->
-    <section id="section1" class="section section--min-height section--bg main-title">
-      <div class="template__body">
-        <h1 class="template__body__title h1 tmpl-exclude"><span>Accessibility for Ontarians with Disabilities Act Training Program.</span></h1>
-      </div>
-      <div class="template__background template__background--fixed" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=1');"></div>
-    </section>
-
-    <section id="section2" class="section text-media">
-      <div class="template__body">
-        <h1 class="template__body__title h2 tmpl-exclude"><span>Overview</span></h1>
-        <div class="template__body__content"><p>This course provides you with information about the Accessibility for Ontarians with Disabilities Act (AODA).</p></div>
-        <div class="template__body__media"><i aria-hidden="true" class="material-symbols-rounded">menu_book</i></div>
-      </div>
-      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=3')"></div>
-    </section>
-
-    <section id="section3" class="section section--dark section--inset styled-list">
-      <div class="template__body">
-        <h1 class="template__body__title h2"><span>Course Modules</span></h1>
-        <div class="template__body__content">
-          <ol>
-            <li>Compliance Requirements</li>
-            <li>Information and Communication Standards</li>
-            <li>Employment Standards</li>
-            <li>Transportation Standards</li>
-            <li>Design of Public Spaces Standards</li>
-            <li>Customer Service Standards</li>
-          </ol>
+    <main>
+      <!-- SLIDES -->
+      <section
+        id="section1"
+        class="section section--min-height section--bg tmpl-main-title"
+      >
+        <div class="template__body">
+          <h1 class="template__body__title h1 tmpl-exclude">
+            <span>
+              Accessibility for Ontarians with Disabilities Act Training
+              Program.
+            </span>
+          </h1>
         </div>
-      </div>
-      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=4')"></div>
-    </section>
+        <div
+          class="template__background template__background--fixed"
+          style="
+            background-image: url('https://loremflickr.com/1200/1200/workplace?random=1');
+          "
+        ></div>
+      </section>
 
-    <section id="section4" class="section text-media text-media--right">
-      <div class="template__body">
-        <h1 class="template__body__title h2"><span>Course Objectives</span></h1>
-        <div class="template__body__content"><p>At the conclusion of the training course, you will be able to recognize your rights and responsibilities under the Accessibility for Ontarians with Disabilities Act.</p></div>
-        <div class="template__body__media"><i aria-hidden="true" class="material-symbols-rounded">search</i></div>
-      </div>
-      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=5')"></div>
-    </section>
-
-    <section id="section5" class="section section--min-height centered-text">
-      <div class="template__body">
-        <h1 class="template__body__title h2"><span>The Accessibility for Ontarians with Disabilities Act, 2005 (AODA)</span></h1>
-        <div class="template__body__content">
-          <p>The Accessibility for Ontarians with Disabilities Act, 2005 (AODA) became law on June 13, 2005. Under this landmark legislation, the government of Ontario developed mandatory accessibility standards that organizations must follow to become more accessible. The goal for the province is to be fully accessible by 2025. All levels of government, private sectors, and non-profits must comply.</p>
-          <p>The purpose of the AODA is to develop, implement, and enforce accessibility standards, so that all Ontarians will benefit from accessible services, programs, and employment.</p>
+      <section id="section2" class="section tmpl-text-media">
+        <div class="template__body">
+          <h1 class="template__body__title h2 tmpl-exclude">
+            <span>Overview</span>
+          </h1>
+          <div class="template__body__content">
+            <p>
+              This course provides you with information about the Accessibility
+              for Ontarians with Disabilities Act (AODA).
+            </p>
+          </div>
+          <div class="template__body__media">
+            <i aria-hidden="true" class="material-symbols-rounded">menu_book</i>
+          </div>
         </div>
-      </div>
-      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=7')"></div>
-    </section>
+        <div
+          class="template__background"
+          style="
+            background-image: url('https://loremflickr.com/1200/1200/workplace?random=3');
+          "
+        ></div>
+      </section>
 
-    <section id="section6" class="section section--dark definition-list">
-      <div class="template__body">
-        <h1 class="template__body__title h2"><span>Definitions</span></h1>
-        <div class="template__body__content">
-          <dl>
-            <dt>Barrier</dt>
-            <dd>Anything that prevents a person with a disability from fully participating in all aspects of society because of his or her disability.</dd>
-            <dt>Disability</dt>
-            <dd>Under AODA, disability includes a range of conditions, some of which are visible and some of which are not visible. Conditions may have been present from birth, have been caused by an accident, or have developed over time. Disabilities include: visual, hearing, physical, intellectual, learning, and mental health disabilities.</dd>
-            <dt>Organization</dt>
-            <dd>Any organization in the public or private sector</dd>
-            <dt>Large organization</dt>
-            <dd>50 or more employees</dd>
-            <dt>Small organization</dt>
-            <dd>1-49 employees</dd>
-            <dt>Redeveloped</dt>
-            <dd>Planned significant alterations to public spaces, but does not include maintenance activities, environmental mitigation or environmental restoration</dd>
-            <dt>Service animal</dt>
-            <dd>An identifiable, working animal, typically wearing a vest or harness, that assists a person with a disability</dd>
-            <dt>Support person</dt>
-            <dd>Someone who accompanies a person with a disability to help with communication, mobility, personal care, medical needs, or access to goods, services, or facilities </dd>
-          </dl>
+      <section
+        id="section3"
+        class="section section--dark section--inset tmpl-styled-list"
+      >
+        <div class="template__body">
+          <h1 class="template__body__title h2"><span>Course Modules</span></h1>
+          <div class="template__body__content">
+            <ol>
+              <li>Compliance Requirements</li>
+              <li>Information and Communication Standards</li>
+              <li>Employment Standards</li>
+              <li>Transportation Standards</li>
+              <li>Design of Public Spaces Standards</li>
+              <li>Customer Service Standards</li>
+            </ol>
+          </div>
         </div>
-      </div>
-      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=8')"></div>
-    </section>
+        <div
+          class="template__background"
+          style="
+            background-image: url('https://loremflickr.com/1200/1200/workplace?random=4');
+          "
+        ></div>
+      </section>
 
-    <section id="section7" class="section text-media text-media--right">
-      <div class="template__body">
-        <h1 class="template__body__title h2"><span>Why do we need AODA Training?</span></h1>
-        <div class="template__body__content"><p>AODA training gives employees basic knowledge about accessibility and how it impacts people with disabilities. We often think of disabilities as either physical or visible. However, AODA includes all disabilities: physical, visible, and invisible disabilities, such as learning and mental health disabilities.</p></div>
-        <div class="template__body__media"><i aria-hidden="true" class="material-symbols-rounded">help</i></div>
-      </div>
-      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=9')"></div>
-    </section>
-
-    <section id="section8" class="section content-aside">
-      <div class="template__body">
-        <h1 class="template__body__title h2"><span>The Integrated Accessibility Standards Regulation (IASR)</span></h1>
-        <div class="template__body__content"><p>Ontario businesses must follow the Ontario Regulation 191/11: Integrated Accessibility Standards Regulation (IASR) to prevent and remove barriers for people with disabilities. In 2016, the five standards of the AODA were consolidated under the Integrated Accessibility Standards Regulation (IASR).</p></div>
-        <aside class="template__body__aside">
-          <h2 class="h5">The Five standards are:</h2>
-          <ul>
-            <li>Information and communication</li>
-            <li>Employment</li>
-            <li>Transportation</li>
-            <li>Design of public spaces</li>
-            <li>Customer service</li>
-          </ul>
-        </aside>
-      </div>
-      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=10')"></div>
-    </section>
-
-    <section id="section9" class="section text-media">
-      <div class="template__body">
-        <h1 class="template__body__title h2"><span><abbr title="The Integrated Accessibility Standards Regulation">IASR</abbr> - Information and Communication Standard</span></h1>
-        <div class="template__body__content"><p>The information and communications standard outlines requirements for organizations to create, provide, and receive information and communications that are accessible for people with disabilities.</p></div>
-        <div class="template__body__media"><i aria-hidden="true" class="material-symbols-rounded">devices</i></div>
-      </div>
-      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=11')"></div>
-    </section>
-
-    <section id="section10" class="section text-media text-media--right">
-      <div class="template__body">
-        <h1 class="template__body__title h2"><span><abbr title="The Integrated Accessibility Standards Regulation">IASR</abbr> - Employment Standard</span></h1>
-        <div class="template__body__content"><p>The employment standard requires that employers must make their workplace and employment practices accessible to potential or current employees with disabilities.</p></div>
-        <div class="template__body__media"><i aria-hidden="true" class="material-symbols-rounded">groups</i></div>
-      </div>
-      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=12')"></div>
-    </section>
-
-    <section id="section11" class="section text-media">
-      <div class="template__body">
-        <h1 class="template__body__title h2"><span><abbr title="The Integrated Accessibility Standards Regulation">IASR</abbr> - Transportation Standard</span></h1>
-        <div class="template__body__content"><p>The transportation standard sets out the requirements for transportation service providers. Particularly, features and equipment on vehicles, routes, and services offered must be accessible to people with disabilities.</p></div>
-        <div class="template__body__media"><i aria-hidden="true" class="material-symbols-rounded">directions_bus</i></div>
-      </div>
-      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=13')"></div>
-    </section>
-
-    <section id="section12" class="section text-media text-media--right">
-      <div class="template__body">
-        <h1 class="template__body__title h2"><span><abbr title="The Integrated Accessibility Standards Regulation">IASR</abbr> - Design of Public Spaces Standard</span></h1>
-        <div class="template__body__content"><p>The design of public spaces standard outlines the need for newly constructed or redeveloped public spaces to be accessible for people with disabilities.</p></div>
-        <div class="template__body__media">
-          <figure>
-            <img src="https://loremflickr.com/cache/resized/65535_52272861400_a5188b39e6_b_640_640_nofilter.jpg" alt=""/>
-            <figcaption>Outside entrance of a public building</figcaption>
-          </figure>
-          <!-- <i aria-hidden="true" class="material-symbols-rounded">nature_people</i> -->
+      <section id="section4" class="section tmpl-text-media tmpl-text-media--right">
+        <div class="template__body">
+          <h1 class="template__body__title h2">
+            <span>Course Objectives</span>
+          </h1>
+          <div class="template__body__content">
+            <p>
+              At the conclusion of the training course, you will be able to
+              recognize your rights and responsibilities under the Accessibility
+              for Ontarians with Disabilities Act.
+            </p>
+          </div>
+          <div class="template__body__media">
+            <i aria-hidden="true" class="material-symbols-rounded">search</i>
+          </div>
         </div>
-      </div>
-      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=14')"></div>
-    </section>
+        <div
+          class="template__background"
+          style="
+            background-image: url('https://loremflickr.com/1200/1200/workplace?random=5');
+          "
+        ></div>
+      </section>
 
-    <section id="section13" class="section text-media">
-      <div class="template__body">
-        <h1 class="template__body__title h2"><span><abbr title="The Integrated Accessibility Standards Regulation">IASR</abbr> - Customer Service Standard</span></h1>
-        <div class="template__body__content"><p>The customer service standard outlines requirements for removing barriers so that people with disabilities can access goods, services, and/or facilities.</p></div>
-        <div class="template__body__media"><i aria-hidden="true" class="material-symbols-rounded">approval_delegation</i></div>
-      </div>
-      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=15')"></div>
-    </section>
-
-    <section id="section14" class="section section--alt section--inset styled-list">
-      <div class="template__body">
-        <h1 class="template__body__title h2 tmpl-exclude"><span>The Benefits of being Compliant with AODA</span></h1>
-        <div class="template__body__content">
-          <ol>
-            <li>Accessible information and employment will make it possible for this growing group of working-aged people to contribute to the economy.</li>
-            <li>Accessible transportation and public spaces will ensure that people can move around their communities, work outside their homes, and access goods and services.</li>
-            <li>Customer service that accommodates people's individual needs will allow them to exercise their spending power.</li>
-          </ol>
+      <section id="section5" class="section section--min-height tmpl-centered-text">
+        <div class="template__body">
+          <h1 class="template__body__title h2">
+            <span>
+              The Accessibility for Ontarians with Disabilities Act, 2005 (AODA)
+            </span>
+          </h1>
+          <div class="template__body__content">
+            <p>
+              The Accessibility for Ontarians with Disabilities Act, 2005 (AODA)
+              became law on June 13, 2005. Under this landmark legislation, the
+              government of Ontario developed mandatory accessibility standards
+              that organizations must follow to become more accessible. The goal
+              for the province is to be fully accessible by 2025. All levels of
+              government, private sectors, and non-profits must comply.
+            </p>
+            <p>
+              The purpose of the AODA is to develop, implement, and enforce
+              accessibility standards, so that all Ontarians will benefit from
+              accessible services, programs, and employment.
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="template__background" style="background-image:url('https://loremflickr.com/1200/1200/workplace?random=16')"></div>
-    </section>
+        <div
+          class="template__background"
+          style="
+            background-image: url('https://loremflickr.com/1200/1200/workplace?random=7');
+          "
+        ></div>
+      </section>
 
-    <section id="section15" class="section section--min-height section--inset icon-points">
-      <div class="template__body">
-        <h1 class="template__body__title h2 tmpl-exclude"><span>The Benefits of being Compliant with AODA</span></h1>
-        <div class="template__body__content">
-          <h2 class="h4"><span>Becoming an inclusive workplace promotes:</span></h2>
-          <ul>
-            <li>
-              <div class="icon-points__icon"><i aria-hidden="true" class="material-symbols-rounded">interests</i></div>
-              Diversity
-            </li>
-            <li>
-              <div class="icon-points__icon"><i aria-hidden="true" class="material-symbols-rounded">person_pin_circle</i></div>
-              Reduced absenteeism
-            </li>
-            <li>
-              <div class="icon-points__icon"><i aria-hidden="true" class="material-symbols-rounded">monitoring</i></div>
-              Productivity
-            </li>
-            <li>
-              <div class="icon-points__icon"><i aria-hidden="true" class="material-symbols-rounded">attach_money</i></div>
-              Increased talent and profitability
-            </li>
-          </ul>
+      <section id="section6" class="section section--dark tmpl-definition-list">
+        <div class="template__body">
+          <h1 class="template__body__title h2"><span>Definitions</span></h1>
+          <div class="template__body__content">
+            <dl>
+              <dt>Barrier</dt>
+              <dd>
+                Anything that prevents a person with a disability from fully
+                participating in all aspects of society because of his or her
+                disability.
+              </dd>
+              <dt>Disability</dt>
+              <dd>
+                Under AODA, disability includes a range of conditions, some of
+                which are visible and some of which are not visible. Conditions
+                may have been present from birth, have been caused by an
+                accident, or have developed over time. Disabilities include:
+                visual, hearing, physical, intellectual, learning, and mental
+                health disabilities.
+              </dd>
+              <dt>Organization</dt>
+              <dd>Any organization in the public or private sector</dd>
+              <dt>Large organization</dt>
+              <dd>50 or more employees</dd>
+              <dt>Small organization</dt>
+              <dd>1-49 employees</dd>
+              <dt>Redeveloped</dt>
+              <dd>
+                Planned significant alterations to public spaces, but does not
+                include maintenance activities, environmental mitigation or
+                environmental restoration
+              </dd>
+              <dt>Service animal</dt>
+              <dd>
+                An identifiable, working animal, typically wearing a vest or
+                harness, that assists a person with a disability
+              </dd>
+              <dt>Support person</dt>
+              <dd>
+                Someone who accompanies a person with a disability to help with
+                communication, mobility, personal care, medical needs, or access
+                to goods, services, or facilities
+              </dd>
+            </dl>
+          </div>
         </div>
+        <div
+          class="template__background"
+          style="
+            background-image: url('https://loremflickr.com/1200/1200/workplace?random=8');
+          "
+        ></div>
+      </section>
 
-        <footer class="template__body__navigation">
-          <nav><a class="btn" href="aoda-2.html">Continue to Next Module <i aria-hidden="true" class="material-symbols-rounded">navigate_next</i></a></nav>
-        </footer>
-      </div>
-      <div class="template__background" style="background: linear-gradient(90deg, #c89bcf, #e39fc8, #f8a6be, #ffb0b3, #ffbdaa, #ffcca4, #ffdda4, #ffeeab);"></div>
-    </section>
-    <div>&nbsp;</div>
-  </main>
-</body>
+      <section id="section7" class="section tmpl-text-media tmpl-text-media--right">
+        <div class="template__body">
+          <h1 class="template__body__title h2">
+            <span>Why do we need AODA Training?</span>
+          </h1>
+          <div class="template__body__content">
+            <p>
+              AODA training gives employees basic knowledge about accessibility
+              and how it impacts people with disabilities. We often think of
+              disabilities as either physical or visible. However, AODA includes
+              all disabilities: physical, visible, and invisible disabilities,
+              such as learning and mental health disabilities.
+            </p>
+          </div>
+          <div class="template__body__media">
+            <i aria-hidden="true" class="material-symbols-rounded">help</i>
+          </div>
+        </div>
+        <div
+          class="template__background"
+          style="
+            background-image: url('https://loremflickr.com/1200/1200/workplace?random=9');
+          "
+        ></div>
+      </section>
+
+      <section id="section8" class="section tmpl-content-aside">
+        <div class="template__body">
+          <h1 class="template__body__title h2">
+            <span>
+              The Integrated Accessibility Standards Regulation (IASR)
+            </span>
+          </h1>
+          <div class="template__body__content">
+            <p>
+              Ontario businesses must follow the Ontario Regulation 191/11:
+              Integrated Accessibility Standards Regulation (IASR) to prevent
+              and remove barriers for people with disabilities. In 2016, the
+              five standards of the AODA were consolidated under the Integrated
+              Accessibility Standards Regulation (IASR).
+            </p>
+          </div>
+          <aside class="template__body__aside">
+            <h2 class="h5">The Five standards are:</h2>
+            <ul>
+              <li>Information and communication</li>
+              <li>Employment</li>
+              <li>Transportation</li>
+              <li>Design of public spaces</li>
+              <li>Customer service</li>
+            </ul>
+          </aside>
+        </div>
+        <div
+          class="template__background"
+          style="
+            background-image: url('https://loremflickr.com/1200/1200/workplace?random=10');
+          "
+        ></div>
+      </section>
+
+      <section id="section9" class="section tmpl-text-media">
+        <div class="template__body">
+          <h1 class="template__body__title h2">
+            <span>
+              <abbr title="The Integrated Accessibility Standards Regulation">
+                IASR
+              </abbr>
+              - Information and Communication Standard
+            </span>
+          </h1>
+          <div class="template__body__content">
+            <p>
+              The information and communications standard outlines requirements
+              for organizations to create, provide, and receive information and
+              communications that are accessible for people with disabilities.
+            </p>
+          </div>
+          <div class="template__body__media">
+            <i aria-hidden="true" class="material-symbols-rounded">devices</i>
+          </div>
+        </div>
+        <div
+          class="template__background"
+          style="
+            background-image: url('https://loremflickr.com/1200/1200/workplace?random=11');
+          "
+        ></div>
+      </section>
+
+      <section id="section10" class="section tmpl-text-media tmpl-text-media--right">
+        <div class="template__body">
+          <h1 class="template__body__title h2">
+            <span>
+              <abbr title="The Integrated Accessibility Standards Regulation">
+                IASR
+              </abbr>
+              - Employment Standard
+            </span>
+          </h1>
+          <div class="template__body__content">
+            <p>
+              The employment standard requires that employers must make their
+              workplace and employment practices accessible to potential or
+              current employees with disabilities.
+            </p>
+          </div>
+          <div class="template__body__media">
+            <i aria-hidden="true" class="material-symbols-rounded">groups</i>
+          </div>
+        </div>
+        <div
+          class="template__background"
+          style="
+            background-image: url('https://loremflickr.com/1200/1200/workplace?random=12');
+          "
+        ></div>
+      </section>
+
+      <section id="section11" class="section tmpl-text-media">
+        <div class="template__body">
+          <h1 class="template__body__title h2">
+            <span>
+              <abbr title="The Integrated Accessibility Standards Regulation">
+                IASR
+              </abbr>
+              - Transportation Standard
+            </span>
+          </h1>
+          <div class="template__body__content">
+            <p>
+              The transportation standard sets out the requirements for
+              transportation service providers. Particularly, features and
+              equipment on vehicles, routes, and services offered must be
+              accessible to people with disabilities.
+            </p>
+          </div>
+          <div class="template__body__media">
+            <i aria-hidden="true" class="material-symbols-rounded">
+              directions_bus
+            </i>
+          </div>
+        </div>
+        <div
+          class="template__background"
+          style="
+            background-image: url('https://loremflickr.com/1200/1200/workplace?random=13');
+          "
+        ></div>
+      </section>
+
+      <section id="section12" class="section tmpl-text-media tmpl-text-media--right">
+        <div class="template__body">
+          <h1 class="template__body__title h2">
+            <span>
+              <abbr title="The Integrated Accessibility Standards Regulation">
+                IASR
+              </abbr>
+              - Design of Public Spaces Standard
+            </span>
+          </h1>
+          <div class="template__body__content">
+            <p>
+              The design of public spaces standard outlines the need for newly
+              constructed or redeveloped public spaces to be accessible for
+              people with disabilities.
+            </p>
+          </div>
+          <div class="template__body__media">
+            <figure>
+              <img
+                src="https://loremflickr.com/cache/resized/65535_52272861400_a5188b39e6_b_640_640_nofilter.jpg"
+                alt=""
+              />
+              <figcaption>Outside entrance of a public building</figcaption>
+            </figure>
+            <!-- <i aria-hidden="true" class="material-symbols-rounded">nature_people</i> -->
+          </div>
+        </div>
+        <div
+          class="template__background"
+          style="
+            background-image: url('https://loremflickr.com/1200/1200/workplace?random=14');
+          "
+        ></div>
+      </section>
+
+      <section id="section13" class="section tmpl-text-media">
+        <div class="template__body">
+          <h1 class="template__body__title h2">
+            <span>
+              <abbr title="The Integrated Accessibility Standards Regulation">
+                IASR
+              </abbr>
+              - Customer Service Standard
+            </span>
+          </h1>
+          <div class="template__body__content">
+            <p>
+              The customer service standard outlines requirements for removing
+              barriers so that people with disabilities can access goods,
+              services, and/or facilities.
+            </p>
+          </div>
+          <div class="template__body__media">
+            <i aria-hidden="true" class="material-symbols-rounded">
+              approval_delegation
+            </i>
+          </div>
+        </div>
+        <div
+          class="template__background"
+          style="
+            background-image: url('https://loremflickr.com/1200/1200/workplace?random=15');
+          "
+        ></div>
+      </section>
+
+      <section
+        id="section14"
+        class="section section--alt section--inset tmpl-styled-list"
+      >
+        <div class="template__body">
+          <h1 class="template__body__title h2 tmpl-exclude">
+            <span>The Benefits of being Compliant with AODA</span>
+          </h1>
+          <div class="template__body__content">
+            <ol>
+              <li>
+                Accessible information and employment will make it possible for
+                this growing group of working-aged people to contribute to the
+                economy.
+              </li>
+              <li>
+                Accessible transportation and public spaces will ensure that
+                people can move around their communities, work outside their
+                homes, and access goods and services.
+              </li>
+              <li>
+                Customer service that accommodates people's individual needs
+                will allow them to exercise their spending power.
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div
+          class="template__background"
+          style="
+            background-image: url('https://loremflickr.com/1200/1200/workplace?random=16');
+          "
+        ></div>
+      </section>
+
+      <section
+        id="section15"
+        class="section section--min-height section--inset tmpl-icon-points"
+      >
+        <div class="template__body">
+          <h1 class="template__body__title h2 tmpl-exclude">
+            <span>The Benefits of being Compliant with AODA</span>
+          </h1>
+          <div class="template__body__content">
+            <h2 class="h4">
+              <span>Becoming an inclusive workplace promotes:</span>
+            </h2>
+            <ul>
+              <li>
+                <div class="tmpl-icon-points__icon">
+                  <i aria-hidden="true" class="material-symbols-rounded">
+                    interests
+                  </i>
+                </div>
+                Diversity
+              </li>
+              <li>
+                <div class="tmpl-icon-points__icon">
+                  <i aria-hidden="true" class="material-symbols-rounded">
+                    person_pin_circle
+                  </i>
+                </div>
+                Reduced absenteeism
+              </li>
+              <li>
+                <div class="tmpl-icon-points__icon">
+                  <i aria-hidden="true" class="material-symbols-rounded">
+                    monitoring
+                  </i>
+                </div>
+                Productivity
+              </li>
+              <li>
+                <div class="tmpl-icon-points__icon">
+                  <i aria-hidden="true" class="material-symbols-rounded">
+                    attach_money
+                  </i>
+                </div>
+                Increased talent and profitability
+              </li>
+            </ul>
+          </div>
+
+          <footer class="template__body__navigation">
+            <nav>
+              <a class="btn" href="aoda-2.html">
+                Continue to Next Module
+                <i aria-hidden="true" class="material-symbols-rounded">
+                  navigate_next
+                </i>
+              </a>
+            </nav>
+          </footer>
+        </div>
+        <div
+          class="template__background"
+          style="
+            background: linear-gradient(
+              90deg,
+              #c89bcf,
+              #e39fc8,
+              #f8a6be,
+              #ffb0b3,
+              #ffbdaa,
+              #ffcca4,
+              #ffdda4,
+              #ffeeab
+            );
+          "
+        ></div>
+      </section>
+      <div>&nbsp;</div>
+    </main>
+  </body>
 </html>

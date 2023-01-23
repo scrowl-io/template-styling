@@ -83,7 +83,7 @@ body:has(input[value="theme--reader"]:checked), // Just for the theme switcher e
     max-width: var(--template-max-width);
   }
 
-  .text-media {
+  .tmpl-text-media {
     .template__body__media {
       text-align: left;
 
@@ -93,7 +93,7 @@ body:has(input[value="theme--reader"]:checked), // Just for the theme switcher e
     }
   }
 
-  .content-aside {
+  .tmpl-content-aside {
     .template__body__aside {
       color: inherit;
       background: inherit;
@@ -107,7 +107,7 @@ body:has(input[value="theme--reader"]:checked), // Just for the theme switcher e
     border-bottom: 2px solid currentColor;
   }
 
-  .styled-list .template__body__content ol li:before {
+  .tmpl-styled-list .template__body__content ol li:before {
     color: inherit;
     background: inherit;
     border: 2px solid currentColor;

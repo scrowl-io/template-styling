@@ -1,6 +1,6 @@
 // Styled List Template
 
-.styled-list {
+.tmpl-styled-list {
   // Custom vars just for this template
   --list-columns: 1;
   --list-columns-width: auto;
@@ -43,7 +43,7 @@
           display: flex;
           align-items: baseline;
           margin-bottom: 1.5em;
-          counter-increment: styled-list-counter;
+          counter-increment: tmpl-styled-list-counter;
           break-inside: avoid-column;
 
           &:before {
@@ -61,7 +61,7 @@
             color: var(--number-counter-color);
             border-radius: 50em;
             background: var(--number-counter-bg);
-            content: counter(styled-list-counter);
+            content: counter(tmpl-styled-list-counter);
           }
         }
       }

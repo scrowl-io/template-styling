@@ -10,20 +10,6 @@
 @import "section";
 @import "template";
 
-// Templates
-@import "templates/main-title";
-@import "templates/color-table";
-@import "templates/text-media";
-@import "templates/two-column";
-@import "templates/definition-list";
-@import "templates/styled-list";
-@import "templates/icon-list";
-@import "templates/centered-text";
-@import "templates/content-aside";
-@import "templates/icon-points";
-@import "templates/big-tiles";
-@import "templates/half-photo";
-
 * {
   box-sizing: border-box;
 }
@@ -117,7 +103,7 @@ hr {
   }
 
   .template__body__aside,
-  .styled-list ol li:before {
+  .tmpl-styled-list ol li:before {
     border: 2px solid black;
   }
 
