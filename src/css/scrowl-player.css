@@ -389,6 +389,8 @@ template {
   --template-border-radius-lg: 1em;
   --template-border-radius-pill: 50em;
   --template-img-border-radius: 1em;
+  --template-btn-letterspacing: 0.0125em;
+  --template-btn-font-weight: 600;
   --template-btn-padding: 0.375em 1.125em;
   --template-btn-padding-sm: 0.25em 0.75em;
   --template-btn-padding-lg: 0.5em 1em;
@@ -1877,8 +1879,8 @@ a {
   display: inline-block;
   margin: 5px;
   padding: var(--template-btn-padding);
-  font-weight: 600;
-  letter-spacing: 0.0125em;
+  font-weight: var(--template-btn-font-weight);
+  letter-spacing: var(--template-btn-letterspacing);
   color: var(--btn-color);
   font-size: var(--template-font-family-base);
   line-height: 1.5;

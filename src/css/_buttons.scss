@@ -12,8 +12,8 @@
   display: inline-block;
   margin: 5px;
   padding: var(--template-btn-padding);
-  font-weight: 600;
-  letter-spacing: 0.0125em;
+  font-weight: var(--template-btn-font-weight);
+  letter-spacing: var(--template-btn-letterspacing);
   color: var(--btn-color);
   font-size: var(--template-font-family-base);
   line-height: 1.5;
