@@ -59,7 +59,7 @@
             text-indent: 0;
             font-variant-numeric: tabular-nums;
             color: var(--number-counter-color);
-            border-radius: 50em;
+            border-radius: var(--template-border-radius-pill);
             background: var(--number-counter-bg);
             content: counter(tmpl-styled-list-counter);
           }
@@ -84,7 +84,7 @@
             margin-top: 0.33em;
             margin-right: 1rem;
             line-height: 1;
-            border-radius: 50em;
+            border-radius: var(--template-border-radius-pill);
             background: var(--list-style-bg);
             content: '';
           }

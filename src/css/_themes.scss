@@ -83,12 +83,22 @@
   --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
   --template-font-letterspacing-heading:  -0.025em;
 
-  --template-accent-color:      var(--template-light-accent-color);
-  --template-border-color:      var(--template-light-border-color);
-  --template-mark-color:        var(--template-light-mark-color);
-  --template-mark-bg:           var(--template-light-mark-bg);
-  --template-border-radius:     0;
-  --template-img-border-radius: 1em;
+  --template-accent-color:         var(--template-light-accent-color);
+  --template-border-color:         var(--template-light-border-color);
+  --template-mark-color:           var(--template-light-mark-color);
+  --template-mark-bg:              var(--template-light-mark-bg);
+  --template-border-radius:        0.25em;
+  --template-border-radius-sm:     3px;
+  --template-border-radius-lg:     1em;
+  --template-border-radius-pill:   50em;
+  --template-img-border-radius:    1em;
+
+  --template-btn-padding:          0.375em 1.125em;
+  --template-btn-padding-sm:       0.25em 0.75em;
+  --template-btn-padding-lg:       0.5em 1em;
+  --template-btn-border-radius:    0.25em;
+  --template-btn-border-radius-sm: 0.25em;
+  --template-btn-border-radius-lg: 0.25em;
 
   section[class*="--alt"]{
     --template-accent-color: var(--template-alt-accent-color);

@@ -1,0 +1,117 @@
+// Buttons
+
+.btn {
+  --btn-color: #{$owl-ref-palette-gray-900};
+  --btn-bg: #{$owl-ref-palette-white};
+  --btn-border-color: #{$owl-ref-palette-gray-300};
+  --btn-hover-color: var(--btn-color);
+  --btn-hover-bg: var(--btn-border-color);
+  --btn-hover-border-color: var(--btn-border-color);
+  --btn-outline: 0.125em var(--template-light-bg);
+
+  display: inline-block;
+  margin: 5px;
+  padding: var(--template-btn-padding);
+  font-weight: 600;
+  letter-spacing: 0.0125em;
+  color: var(--btn-color);
+  font-size: var(--template-font-family-base);
+  line-height: 1.5;
+  text-decoration: none;
+  background: var(--btn-bg);
+  border-radius: var(--template-btn-border-radius);
+  border: 2px solid var(--btn-border-color);
+  outline: var(--btn-outline);
+  outline-style: solid;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: var(--btn-hover-color);
+    background-color: var(--btn-hover-bg);
+    border-color: var(--btn-hover-border-color);
+  }
+
+  &:focus {
+    --btn-outline: 2px var(--template-accent-color);
+    outline-offset: 4px;
+  }
+
+  &--primary {
+    --btn-color: #{$owl-ref-palette-white};
+    --btn-bg: #{$owl-ref-palette-primary-500};
+    --btn-border-color: #{$owl-ref-palette-primary-500};
+    --btn-hover-bg:  #{$owl-ref-palette-primary-600};
+  }
+
+  &--secondary {
+    --btn-color: #{$owl-ref-palette-black};
+    --btn-bg: #{$owl-ref-palette-cyan-500};
+    --btn-border-color: #{$owl-ref-palette-cyan-500};
+    --btn-hover-bg: #{$owl-ref-palette-cyan-300};
+  }
+
+  &--dark {
+    --btn-color: #{$owl-ref-palette-white};
+    --btn-bg: #{$owl-ref-palette-gray-800};
+    --btn-border-color: #{$owl-ref-palette-gray-800};
+    --btn-hover-bg:  #{$owl-ref-palette-gray-700};
+  }
+
+  &--success {
+    --btn-color: #{$owl-ref-palette-white};
+    --btn-bg: #{$owl-ref-palette-green-500};
+    --btn-border-color: #{$owl-ref-palette-green-500};
+    --btn-hover-bg:  #{$owl-ref-palette-green-600};
+  }
+
+  &--warning {
+    --btn-color: #{$owl-ref-palette-black};
+    --btn-bg: #{$owl-ref-palette-yellow-500};
+    --btn-border-color: #{$owl-ref-palette-yellow-500};
+    --btn-hover-bg: #{$owl-ref-palette-yellow-300};
+  }
+
+  &--danger {
+    --btn-color: #{$owl-ref-palette-white};
+    --btn-bg: #{$owl-ref-palette-red-500};
+    --btn-border-color: #{$owl-ref-palette-red-500};
+    --btn-hover-bg:  #{$owl-ref-palette-red-600};
+  }
+
+  &--sm {
+    padding: var(--template-btn-padding-sm);
+    font-size: var(--template-font-size-sm);
+    border-radius: var(--template-btn-border-radius-sm);
+  }
+
+  &--lg {
+    padding: var(--template-btn-padding-lg);
+    font-size: var(--template-font-size-md);
+    border-radius: var(--template-btn-border-radius-lg);
+  }
+}
+
+// Icon in button
+.btn {
+  i {
+    line-height: 0.75;
+    font-size: 1.5em;
+    color: currentColor;
+    vertical-align: bottom;
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 700,
+      'GRAD' 100,
+      'opsz' 20;
+    transition: margin 0.2s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    i {
+      margin-left: 0.25em;
+      margin-right: -0.25em;
+    }
+  }
+}

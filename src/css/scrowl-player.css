@@ -384,8 +384,17 @@ template {
   --template-border-color: var(--template-light-border-color);
   --template-mark-color: var(--template-light-mark-color);
   --template-mark-bg: var(--template-light-mark-bg);
-  --template-border-radius: 0;
+  --template-border-radius: 0.25em;
+  --template-border-radius-sm: 3px;
+  --template-border-radius-lg: 1em;
+  --template-border-radius-pill: 50em;
   --template-img-border-radius: 1em;
+  --template-btn-padding: 0.375em 1.125em;
+  --template-btn-padding-sm: 0.25em 0.75em;
+  --template-btn-padding-lg: 0.5em 1em;
+  --template-btn-border-radius: 0.25em;
+  --template-btn-border-radius-sm: 0.25em;
+  --template-btn-border-radius-lg: 0.25em;
 }
 :root section[class*="--alt"] {
   --template-accent-color: var(--template-alt-accent-color);
@@ -1858,26 +1867,85 @@ a {
 }
 
 .btn {
+  --btn-color: #212529;
+  --btn-bg: #fff;
+  --btn-border-color: #dee2e6;
+  --btn-hover-color: var(--btn-color);
+  --btn-hover-bg: var(--btn-border-color);
+  --btn-hover-border-color: var(--btn-border-color);
+  --btn-outline: 0.125em var(--template-light-bg);
   display: inline-block;
-  padding: 0.375em 1.125em;
+  margin: 5px;
+  padding: var(--template-btn-padding);
   font-weight: 600;
   letter-spacing: 0.0125em;
-  color: #fff;
+  color: var(--btn-color);
   font-size: var(--template-font-family-base);
   line-height: 1.5;
   text-decoration: none;
-  border: 2px solid #178622;
-  background: #178622;
-  border-radius: 3px;
+  background: var(--btn-bg);
+  border-radius: var(--template-btn-border-radius);
+  border: 2px solid var(--btn-border-color);
+  outline: var(--btn-outline);
+  outline-style: solid;
+  cursor: pointer;
 }
 .btn:hover, .btn:focus {
-  border-color: #0e5014;
-  background: #126b1b;
+  color: var(--btn-hover-color);
+  background-color: var(--btn-hover-bg);
+  border-color: var(--btn-hover-border-color);
 }
-.btn:hover i, .btn:focus i {
-  margin-left: 0.25em;
-  margin-right: -0.25em;
+.btn:focus {
+  --btn-outline: 2px var(--template-accent-color);
+  outline-offset: 4px;
 }
+.btn--primary {
+  --btn-color: #fff;
+  --btn-bg: #007aba;
+  --btn-border-color: #007aba;
+  --btn-hover-bg: #006295;
+}
+.btn--secondary {
+  --btn-color: #000;
+  --btn-bg: #3bbefe;
+  --btn-border-color: #3bbefe;
+  --btn-hover-bg: #89d8fe;
+}
+.btn--dark {
+  --btn-color: #fff;
+  --btn-bg: #343a40;
+  --btn-border-color: #343a40;
+  --btn-hover-bg: #495057;
+}
+.btn--success {
+  --btn-color: #fff;
+  --btn-bg: #178622;
+  --btn-border-color: #178622;
+  --btn-hover-bg: #126b1b;
+}
+.btn--warning {
+  --btn-color: #000;
+  --btn-bg: #ffba00;
+  --btn-border-color: #ffba00;
+  --btn-hover-bg: #ffd666;
+}
+.btn--danger {
+  --btn-color: #fff;
+  --btn-bg: #dd1700;
+  --btn-border-color: #dd1700;
+  --btn-hover-bg: #b11200;
+}
+.btn--sm {
+  padding: var(--template-btn-padding-sm);
+  font-size: var(--template-font-size-sm);
+  border-radius: var(--template-btn-border-radius-sm);
+}
+.btn--lg {
+  padding: var(--template-btn-padding-lg);
+  font-size: var(--template-font-size-md);
+  border-radius: var(--template-btn-border-radius-lg);
+}
+
 .btn i {
   line-height: 0.75;
   font-size: 1.5em;
@@ -1886,8 +1954,12 @@ a {
   font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 100, "opsz" 20;
   transition: margin 0.2s ease-in-out;
 }
+.btn:hover i, .btn:focus i {
+  margin-left: 0.25em;
+  margin-right: -0.25em;
+}
 
-.section {
+section {
   --section-color: var(--template-light-color);
   --section-bg: var(--template-light-bg);
   position: relative;
@@ -1898,6 +1970,7 @@ a {
   color: var(--section-color);
   background: var(--section-bg);
 }
+
 .section--min-height {
   min-height: 100vh;
 }
@@ -2153,7 +2226,7 @@ a {
   text-indent: 0;
   font-variant-numeric: tabular-nums;
   color: var(--number-counter-color);
-  border-radius: 50em;
+  border-radius: var(--template-border-radius-pill);
   background: var(--number-counter-bg);
   content: counter(tmpl-styled-list-counter);
 }
@@ -2175,7 +2248,7 @@ a {
   margin-top: 0.33em;
   margin-right: 1rem;
   line-height: 1;
-  border-radius: 50em;
+  border-radius: var(--template-border-radius-pill);
   background: var(--list-style-bg);
   content: "";
 }
