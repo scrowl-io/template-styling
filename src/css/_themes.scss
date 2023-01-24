@@ -97,10 +97,10 @@
   --template-btn-font-weight:      600;
   --template-btn-padding:          0.375em 1.125em;
   --template-btn-padding-sm:       0.25em 0.75em;
-  --template-btn-padding-lg:       0.5em 1em;
-  --template-btn-border-radius:    0.25em;
-  --template-btn-border-radius-sm: 0.25em;
-  --template-btn-border-radius-lg: 0.25em;
+  --template-btn-padding-lg:       0.33em 1em;
+  --template-btn-border-radius:    #{$owl-ref-style-btn-border-radius};
+  --template-btn-border-radius-sm: #{$owl-ref-style-btn-border-radius};
+  --template-btn-border-radius-lg: #{$owl-ref-style-btn-border-radius};
 
   section[class*="--alt"]{
     --template-accent-color: var(--template-alt-accent-color);

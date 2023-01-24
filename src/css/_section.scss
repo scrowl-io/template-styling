@@ -85,7 +85,7 @@ section {
     .template__body__media {
       *[class^="material-symbols"] {
         background: var(--section-bg);
-        border-radius: 9in;
+        border-radius: var(--template-border-radius-pill);
         line-height: 1;
       }
     }

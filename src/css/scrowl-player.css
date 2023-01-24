@@ -393,7 +393,7 @@ template {
   --template-btn-font-weight: 600;
   --template-btn-padding: 0.375em 1.125em;
   --template-btn-padding-sm: 0.25em 0.75em;
-  --template-btn-padding-lg: 0.5em 1em;
+  --template-btn-padding-lg: 0.33em 1em;
   --template-btn-border-radius: 0.25em;
   --template-btn-border-radius-sm: 0.25em;
   --template-btn-border-radius-lg: 0.25em;
@@ -2027,7 +2027,7 @@ section {
 }
 .section--bg .template__body__media *[class^=material-symbols] {
   background: var(--section-bg);
-  border-radius: 9in;
+  border-radius: var(--template-border-radius-pill);
   line-height: 1;
 }
 .section--bg-fixed .template__background {
