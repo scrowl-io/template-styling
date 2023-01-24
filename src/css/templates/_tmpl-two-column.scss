@@ -4,7 +4,7 @@
   .template__body {
     // display: flex;
     // flex-wrap: wrap;
-    // gap: var(--template-spacer-sm);
+    // gap: var(--theme-spacer-sm);
 
     h1 {
       flex: 1 0 100%;
@@ -14,7 +14,7 @@
       column-fill: balance;
       column-count: 2;
       column-width: 40ch;
-      column-gap: var(--template-spacer);
+      column-gap: var(--theme-spacer);
     }
   }
 }

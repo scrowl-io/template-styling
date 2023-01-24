@@ -1,48 +1,48 @@
 
 body:has(input[value="theme--news"]:checked),// Just for the theme switcher example page
 .theme--news{
-  --template-light-color:             #{$owl-ref-palette-black};
-  --template-light-icon-color:        #{$owl-ref-palette-black};
-  --template-light-bg:               #fefaf0;
-  --template-light-border-color:      #{$owl-ref-palette-black};
-  --template-light-accent-color:      #{$owl-ref-palette-black};
-  --template-light-mark-color:   var(--template-light-color);
-  --template-light-mark-bg:      #{$owl-ref-palette-yellow-200};
+  --theme-light-color:             #{$owl-ref-palette-black};
+  --theme-light-icon-color:        #{$owl-ref-palette-black};
+  --theme-light-bg:               #fefaf0;
+  --theme-light-border-color:      #{$owl-ref-palette-black};
+  --theme-light-accent-color:      #{$owl-ref-palette-black};
+  --theme-light-highlight-color:   var(--theme-light-color);
+  --theme-light-highlight-bg:      #{$owl-ref-palette-yellow-200};
 
-  --template-alt-color:        #{$owl-ref-palette-yellow-900};
-  --template-alt-icon-color:   #{$owl-ref-palette-yellow-900};
-  --template-alt-bg:           #{$owl-ref-palette-yellow-500};
-  --template-alt-border-color: #{$owl-ref-palette-yellow-700};
-  --template-alt-accent-color: #{$owl-ref-palette-yellow-100};
-  --template-alt-mark-color:   #{$owl-ref-palette-white};
-  --template-alt-mark-bg:      #{$owl-ref-palette-black};
+  --theme-alt-color:        #{$owl-ref-palette-yellow-900};
+  --theme-alt-icon-color:   #{$owl-ref-palette-yellow-900};
+  --theme-alt-bg:           #{$owl-ref-palette-yellow-500};
+  --theme-alt-border-color: #{$owl-ref-palette-yellow-700};
+  --theme-alt-accent-color: #{$owl-ref-palette-yellow-100};
+  --theme-alt-highlight-color:   #{$owl-ref-palette-white};
+  --theme-alt-highlight-bg:      #{$owl-ref-palette-black};
 
-  --template-dark-color:        #{$owl-ref-palette-white};
-  --template-dark-icon-color:   #{$owl-ref-palette-white};
-  --template-dark-bg:           #{$owl-ref-palette-black};
-  --template-dark-border-color: #{$owl-ref-palette-white};
-  --template-dark-accent-color:#fefaf0;
-  --template-dark-mark-color:   #{$owl-ref-palette-black};
-  --template-dark-mark-bg:      #{$owl-ref-palette-yellow-500};
-  --template-img-border-radius: 0;
+  --theme-dark-color:        #{$owl-ref-palette-white};
+  --theme-dark-icon-color:   #{$owl-ref-palette-white};
+  --theme-dark-bg:           #{$owl-ref-palette-black};
+  --theme-dark-border-color: #{$owl-ref-palette-white};
+  --theme-dark-accent-color:#fefaf0;
+  --theme-dark-highlight-color:   #{$owl-ref-palette-black};
+  --theme-dark-highlight-bg:      #{$owl-ref-palette-yellow-500};
+  --theme-img-border-radius: 0;
 
-  --template-max-width:    1024px;
+  --theme-max-width:    1024px;
 
-  --template-font-family-base:            Georgia, serif;
-  --template-font-family-heading:         Georgia, serif;
-  --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
-  --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
-  --template-font-letterspacing-heading:  -0.025em;
+  --theme-font-family-base:            Georgia, serif;
+  --theme-font-family-heading:         Georgia, serif;
+  --theme-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
+  --theme-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
+  --theme-font-letterspacing-heading:  -0.025em;
 
   // Custom theme variables
-  --template-accent-color: var(--template-light-accent-color);
-  --template-border-color: var(--template-light-border-color);
-  --template-mark-color: var(--template-light-mark-color);
-  --template-mark-bg: var(--template-light-mark-bg);
+  --theme-accent-color: var(--theme-light-accent-color);
+  --theme-border-color: var(--theme-light-border-color);
+  --theme-highlight-color: var(--theme-light-highlight-color);
+  --theme-highlight-bg: var(--theme-light-highlight-bg);
 
 
   h1:not(.tmpl-exclude) {
-    border: 0.25rem solid var(--template-border-color);
+    border: 0.25rem solid var(--theme-border-color);
     border-top: none;
     border-right: none;
     padding: 0.5em;

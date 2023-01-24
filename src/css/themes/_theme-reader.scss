@@ -1,56 +1,56 @@
 
 body:has(input[value="theme--reader"]:checked), // Just for the theme switcher example page
 .theme--reader {
-  --template-font-size-sm: 0.729rem;
-  --template-font-size-base: 0.875rem;
-  --template-font-size-md: 1.05rem;
-  --template-font-size-lg: 1.26rem;
-  --template-font-size-xl: 1.512rem;
-  --template-font-size-2xl: 1.814rem;
-  --template-font-size-3xl: 2.177rem;
+  --theme-font-size-sm: 0.729rem;
+  --theme-font-size-base: 0.875rem;
+  --theme-font-size-md: 1.05rem;
+  --theme-font-size-lg: 1.26rem;
+  --theme-font-size-xl: 1.512rem;
+  --theme-font-size-2xl: 1.814rem;
+  --theme-font-size-3xl: 2.177rem;
 
-  --template-light-color:               #{$owl-ref-palette-black};
-  --template-light-icon-color:          currentColor;
-  --template-light-bg:                  #{$owl-ref-palette-white};
-  --template-light-border-color:        #{$owl-ref-palette-black};
-  --template-light-accent-color:        #{$owl-ref-palette-black};
-  --template-light-mark-color:          #{$owl-ref-palette-black};
-  --template-light-mark-bg:             #{$owl-ref-palette-white};
+  --theme-light-color:               #{$owl-ref-palette-black};
+  --theme-light-icon-color:          currentColor;
+  --theme-light-bg:                  #{$owl-ref-palette-white};
+  --theme-light-border-color:        #{$owl-ref-palette-black};
+  --theme-light-accent-color:        #{$owl-ref-palette-black};
+  --theme-light-highlight-color:          #{$owl-ref-palette-black};
+  --theme-light-highlight-bg:             #{$owl-ref-palette-white};
 
-  --template-alt-color:               #{$owl-ref-palette-black};
-  --template-alt-icon-color:          currentColor;
-  --template-alt-bg:                  #{$owl-ref-palette-white};
-  --template-alt-border-color:        #{$owl-ref-palette-black};
-  --template-alt-accent-color:        #{$owl-ref-palette-black};
-  --template-alt-mark-color:          #{$owl-ref-palette-black};
-  --template-alt-mark-bg:             #{$owl-ref-palette-white};
+  --theme-alt-color:               #{$owl-ref-palette-black};
+  --theme-alt-icon-color:          currentColor;
+  --theme-alt-bg:                  #{$owl-ref-palette-white};
+  --theme-alt-border-color:        #{$owl-ref-palette-black};
+  --theme-alt-accent-color:        #{$owl-ref-palette-black};
+  --theme-alt-highlight-color:          #{$owl-ref-palette-black};
+  --theme-alt-highlight-bg:             #{$owl-ref-palette-white};
 
-  --template-dark-color:        #{$owl-ref-palette-black};
-  --template-dark-icon-color:   currentColor;
-  --template-dark-bg:           #{$owl-ref-palette-white};
-  --template-dark-border-color: #{$owl-ref-palette-black};
-  --template-dark-accent-color: #{$owl-ref-palette-black};
-  --template-dark-mark-color:   #{$owl-ref-palette-black};
-  --template-dark-mark-bg:      #{$owl-ref-palette-white};
+  --theme-dark-color:        #{$owl-ref-palette-black};
+  --theme-dark-icon-color:   currentColor;
+  --theme-dark-bg:           #{$owl-ref-palette-white};
+  --theme-dark-border-color: #{$owl-ref-palette-black};
+  --theme-dark-accent-color: #{$owl-ref-palette-black};
+  --theme-dark-highlight-color:   #{$owl-ref-palette-black};
+  --theme-dark-highlight-bg:      #{$owl-ref-palette-white};
 
-  --template-max-width:    1200px;
+  --theme-max-width:    1200px;
 
-  --template-font-family-base:            Arial, sans-serif;
-  --template-font-family-heading:         Arial, sans-serif;
-  --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
-  --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
-  --template-font-letterspacing-heading:  0;
+  --theme-font-family-base:            Arial, sans-serif;
+  --theme-font-family-heading:         Arial, sans-serif;
+  --theme-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
+  --theme-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
+  --theme-font-letterspacing-heading:  0;
 
-  --template-accent-color: var(--template-light-accent-color);
-  --template-border-color: var(--template-light-border-color);
-  --template-mark-color: var(--template-light-mark-color);
-  --template-mark-bg: var(--template-light-mark-bg);
+  --theme-accent-color: var(--theme-light-accent-color);
+  --theme-border-color: var(--theme-light-border-color);
+  --theme-highlight-color: var(--theme-light-highlight-color);
+  --theme-highlight-bg: var(--theme-light-highlight-bg);
 
   section[class*="--light"],
   section[class*="--alt"],
   section[class*="--dark"] {
-    --template-mark-color: #{$owl-ref-palette-black};
-    --template-mark-bg: #{$owl-ref-palette-gray-300};
+    --theme-highlight-color: #{$owl-ref-palette-black};
+    --theme-highlight-bg: #{$owl-ref-palette-gray-300};
   }
 
   img {
@@ -80,7 +80,7 @@ body:has(input[value="theme--reader"]:checked), // Just for the theme switcher e
 
   .template__body{
     display: block;
-    max-width: var(--template-max-width);
+    max-width: var(--theme-max-width);
   }
 
   .tmpl-text-media {

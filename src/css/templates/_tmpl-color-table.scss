@@ -5,8 +5,8 @@
     // display: flex;
     // flex-wrap: wrap;
     // align-items: flex-start;
-    // gap: var(--template-spacer-sm);
-    font-size: var(--template-font-size-sm);
+    // gap: var(--theme-spacer-sm);
+    font-size: var(--theme-font-size-sm);
 
     h1 {
       // flex: 1 0 100%;
@@ -22,7 +22,7 @@
         td {
           padding: 0.5em;
           code {
-            font-size: var(--template-font-size-sm);
+            font-size: var(--theme-font-size-sm);
           }
         }
       }

@@ -2,17 +2,17 @@
 
 .tmpl-definition-list {
   // Custom vars just for this template
-  --dt-bg: var(--template-accent-color);
-  --dt-color: var(--template-dark-color);
+  --dt-bg: var(--theme-accent-color);
+  --dt-color: var(--theme-dark-color);
   --list-columns: 2;
   --list-columns-width: 30ch;
 
   &.section--alt {
-    --dt-color: var(--template-alt-color);
+    --dt-color: var(--theme-alt-color);
   }
 
   &.section--dark {
-    --dt-color: var(--template-light-color);
+    --dt-color: var(--theme-light-color);
   }
 
   .template__body {
@@ -21,7 +21,7 @@
         column-fill: balance;
         column-count: var(--list-columns);
         column-width: var(--list-columns-width);
-        column-gap: var(--template-grid-gap);
+        column-gap: var(--theme-grid-gap);
       }
 
       dt {

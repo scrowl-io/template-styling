@@ -1,46 +1,46 @@
 body:has(input[value="theme--draplin"]:checked),// Just for the theme switcher example page
 .theme--draplin {
-  --template-light-color:        #{$owl-ref-palette-black};
-  --template-light-icon-color:   #{$owl-ref-palette-orange-500};
-  --template-light-bg:           #{$owl-ref-palette-white};
-  --template-light-border-color: #{$owl-ref-palette-black};
-  --template-light-accent-color: #{$owl-ref-palette-black};
-  --template-light-mark-color:   var(--template-light-color);
-  --template-light-mark-bg:      #{$owl-ref-palette-orange-200};
+  --theme-light-color:        #{$owl-ref-palette-black};
+  --theme-light-icon-color:   #{$owl-ref-palette-orange-500};
+  --theme-light-bg:           #{$owl-ref-palette-white};
+  --theme-light-border-color: #{$owl-ref-palette-black};
+  --theme-light-accent-color: #{$owl-ref-palette-black};
+  --theme-light-highlight-color:   var(--theme-light-color);
+  --theme-light-highlight-bg:      #{$owl-ref-palette-orange-200};
 
-  --template-alt-color:        #{$owl-ref-palette-black};
-  --template-alt-icon-color:   #{$owl-ref-palette-black};
-  --template-alt-bg:           #{$owl-ref-palette-orange-500};
-  --template-alt-border-color: #{$owl-ref-palette-black};
-  --template-alt-accent-color: #{$owl-ref-palette-white};
-  --template-alt-mark-color:   #{$owl-ref-palette-white};
-  --template-alt-mark-bg:      #{$owl-ref-palette-black};
+  --theme-alt-color:        #{$owl-ref-palette-black};
+  --theme-alt-icon-color:   #{$owl-ref-palette-black};
+  --theme-alt-bg:           #{$owl-ref-palette-orange-500};
+  --theme-alt-border-color: #{$owl-ref-palette-black};
+  --theme-alt-accent-color: #{$owl-ref-palette-white};
+  --theme-alt-highlight-color:   #{$owl-ref-palette-white};
+  --theme-alt-highlight-bg:      #{$owl-ref-palette-black};
 
-  --template-dark-color:        #{$owl-ref-palette-white};
-  --template-dark-icon-color:   #{$owl-ref-palette-white};
-  --template-dark-bg:           #{$owl-ref-palette-black};
-  --template-dark-border-color: #{$owl-ref-palette-gray-600};
-  --template-dark-accent-color: #{$owl-ref-palette-orange-500};
-  --template-dark-mark-color:   #{$owl-ref-palette-white};
-  --template-dark-mark-bg:      #{$owl-ref-palette-orange-500};
+  --theme-dark-color:        #{$owl-ref-palette-white};
+  --theme-dark-icon-color:   #{$owl-ref-palette-white};
+  --theme-dark-bg:           #{$owl-ref-palette-black};
+  --theme-dark-border-color: #{$owl-ref-palette-gray-600};
+  --theme-dark-accent-color: #{$owl-ref-palette-orange-500};
+  --theme-dark-highlight-color:   #{$owl-ref-palette-white};
+  --theme-dark-highlight-bg:      #{$owl-ref-palette-orange-500};
 
-  --template-max-width:    1200px;
+  --theme-max-width:    1200px;
 
-  --template-font-family-base:            'Jost', Futura, Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", #{$owl-ref-typeface-font-family-sans-serif};
-  --template-font-family-heading:         'Jost', Futura, Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", #{$owl-ref-typeface-font-family-sans-serif};
-  --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
-  --template-font-lineheight-heading:     1.33;
-  --template-font-letterspacing-heading:  -0.025em;
+  --theme-font-family-base:            'Jost', Futura, Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", #{$owl-ref-typeface-font-family-sans-serif};
+  --theme-font-family-heading:         'Jost', Futura, Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", #{$owl-ref-typeface-font-family-sans-serif};
+  --theme-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
+  --theme-font-lineheight-heading:     1.33;
+  --theme-font-letterspacing-heading:  -0.025em;
 
 
-  --template-accent-color: var(--template-light-accent-color);
-  --template-border-color: var(--template-light-border-color);
-  --template-mark-color: var(--template-light-mark-color);
-  --template-mark-bg: var(--template-light-mark-bg);
-  --template-border-radius: 1rem;
+  --theme-accent-color: var(--theme-light-accent-color);
+  --theme-border-color: var(--theme-light-border-color);
+  --theme-highlight-color: var(--theme-light-highlight-color);
+  --theme-highlight-bg: var(--theme-light-highlight-bg);
+  --theme-border-radius: 1rem;
 
   h1:not(.tmpl-exclude) {
-    border-bottom: 0.25rem dotted var(--template-border-color);
+    border-bottom: 0.25rem dotted var(--theme-border-color);
     padding-bottom: 0.5em;
   }
 
@@ -51,6 +51,6 @@ body:has(input[value="theme--draplin"]:checked),// Just for the theme switcher e
   }
 
   hr {
-    border-bottom: 0.25rem dotted var(--template-border-color);
+    border-bottom: 0.25rem dotted var(--theme-border-color);
   }
 }

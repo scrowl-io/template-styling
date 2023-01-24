@@ -1,25 +1,25 @@
 
 body:has(input[value="theme--default"]:checked), // Just for the theme switcher example page
 .theme--default {
-  // --template-light-color:               #{$owl-ref-palette-gray-800};
-  // --template-light-icon-color:          #{$owl-ref-palette-primary-500};
-  // --template-light-bg:                  #{$owl-ref-palette-white};
-  // --template-light-border-color:        #{$owl-ref-palette-gray-300};
-  // --template-light-accent-color:              #{$owl-ref-palette-primary-500};
+  // --theme-light-color:               #{$owl-ref-palette-gray-800};
+  // --theme-light-icon-color:          #{$owl-ref-palette-primary-500};
+  // --theme-light-bg:                  #{$owl-ref-palette-white};
+  // --theme-light-border-color:        #{$owl-ref-palette-gray-300};
+  // --theme-light-accent-color:              #{$owl-ref-palette-primary-500};
 
-  // --template-dark-color:        #{$owl-ref-palette-white};
-  // --template-dark-icon-color:   currentColor;
-  // --template-dark-bg:           #{$owl-ref-palette-gray-900};
-  // --template-dark-border-color: #{$owl-ref-palette-gray-600};
-  // --template-dark-accent-color:       #{$owl-ref-palette-cyan-500};
+  // --theme-dark-color:        #{$owl-ref-palette-white};
+  // --theme-dark-icon-color:   currentColor;
+  // --theme-dark-bg:           #{$owl-ref-palette-gray-900};
+  // --theme-dark-border-color: #{$owl-ref-palette-gray-600};
+  // --theme-dark-accent-color:       #{$owl-ref-palette-cyan-500};
 
-  // --template-max-width:    1200px;
+  // --theme-max-width:    1200px;
 
-  // --template-font-family-base:            #{$owl-ref-typeface-font-family-sans-serif};
-  // --template-font-family-heading:         #{$owl-ref-typeface-font-family-sans-serif};
-  // --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
-  // --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
-  // --template-font-letterspacing-heading:  -0.025em;
+  // --theme-font-family-base:            #{$owl-ref-typeface-font-family-sans-serif};
+  // --theme-font-family-heading:         #{$owl-ref-typeface-font-family-sans-serif};
+  // --theme-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
+  // --theme-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
+  // --theme-font-letterspacing-heading:  -0.025em;
 
   // Custom theme variables
 
@@ -37,7 +37,7 @@ body:has(input[value="theme--default"]:checked), // Just for the theme switcher 
 
 
   h1:not(.tmpl-exclude) {
-    border-bottom: 0.0625em solid var(--template-border-color);
+    border-bottom: 0.0625em solid var(--theme-border-color);
     padding-bottom: 0.5em;
   }
 }

@@ -4,31 +4,31 @@
   // Custom vars just for this template
   --list-columns: 1;
   --list-columns-width: auto;
-  --number-counter-bg: var(--template-accent-color);
-  --list-style-bg: var(--template-accent-color);
-  --number-counter-color: var(--template-dark-color);
-  --list-max-width: var(--template-max-width-sm);
+  --number-counter-bg: var(--theme-accent-color);
+  --list-style-bg: var(--theme-accent-color);
+  --number-counter-color: var(--theme-dark-color);
+  --list-max-width: var(--theme-max-width-sm);
 
   &.section--alt {
-    --number-counter-color: var(--template-alt-color);
+    --number-counter-color: var(--theme-alt-color);
   }
 
   &.section--dark {
-    --number-counter-color: var(--template-light-color);
+    --number-counter-color: var(--theme-light-color);
   }
 
   .template__body {
     max-width: var(--list-max-width);
 
     &__content {
-      font-size: var(--template-font-size-md);
+      font-size: var(--theme-font-size-md);
 
       ol,
       ul {
         column-fill: balance;
         column-count: var(--list-columns);
         column-width: var(--list-columns-width);
-        column-gap: var(--template-grid-gap);
+        column-gap: var(--theme-grid-gap);
 
         li:last-child{
           margin-bottom: 0;
@@ -59,7 +59,7 @@
             text-indent: 0;
             font-variant-numeric: tabular-nums;
             color: var(--number-counter-color);
-            border-radius: var(--template-border-radius-pill);
+            border-radius: var(--theme-border-radius-pill);
             background: var(--number-counter-bg);
             content: counter(tmpl-styled-list-counter);
           }
@@ -84,7 +84,7 @@
             margin-top: 0.33em;
             margin-right: 1rem;
             line-height: 1;
-            border-radius: var(--template-border-radius-pill);
+            border-radius: var(--theme-border-radius-pill);
             background: var(--list-style-bg);
             content: '';
           }

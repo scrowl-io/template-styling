@@ -1,13 +1,13 @@
 // Section Classes
 section {
-  --section-color: var(--template-light-color);
-  --section-bg: var(--template-light-bg);
+  --section-color: var(--theme-light-color);
+  --section-bg: var(--theme-light-bg);
 
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--template-font-family-base);
+  font-family: var(--theme-font-family-base);
   color: var(--section-color);
   background: var(--section-bg);
 }
@@ -17,31 +17,31 @@ section {
     min-height: 100vh;
 
     &.section--inset {
-      min-height: calc(100vh - var(--template-spacer) *2);
+      min-height: calc(100vh - var(--theme-spacer) *2);
     }
   }
 
   &--light {
-    --section-color: var(--template-light-color);
-    --section-bg: var(--template-light-bg);
+    --section-color: var(--theme-light-color);
+    --section-bg: var(--theme-light-bg);
   }
 
   &--dark {
-    --section-color: var(--template-dark-color);
-    --section-bg: var(--template-dark-bg);
+    --section-color: var(--theme-dark-color);
+    --section-bg: var(--theme-dark-bg);
   }
 
   &--alt {
-    --section-color: var(--template-alt-color);
-    --section-bg: var(--template-alt-bg);
+    --section-color: var(--theme-alt-color);
+    --section-bg: var(--theme-alt-bg);
   }
 
   &--inset {
-    margin: var(--template-spacer);
+    margin: var(--theme-spacer);
 
     &.section--alt.section--bg,
     &.section--dark.section--bg {
-      padding: var(--template-spacer);
+      padding: var(--theme-spacer);
       margin: 0;
 
       &.section--min-height {
@@ -49,10 +49,10 @@ section {
       }
 
       .template__background {
-        top: var(--template-spacer);
-        left: var(--template-spacer);
-        bottom: var(--template-spacer);
-        right: var(--template-spacer);
+        top: var(--theme-spacer);
+        left: var(--theme-spacer);
+        bottom: var(--theme-spacer);
+        right: var(--theme-spacer);
       }
     }
   }
@@ -85,7 +85,7 @@ section {
     .template__body__media {
       *[class^="material-symbols"] {
         background: var(--section-bg);
-        border-radius: var(--template-border-radius-pill);
+        border-radius: var(--theme-border-radius-pill);
         line-height: 1;
       }
     }

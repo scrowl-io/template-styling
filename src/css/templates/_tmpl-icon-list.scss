@@ -4,14 +4,14 @@
   .template__body {
     // display: flex;
     // flex-wrap: wrap;
-    max-width: var(--template-max-width-sm);
+    max-width: var(--theme-max-width-sm);
 
     h1 {
       flex: 1 0 100%;
     }
 
     &__content {
-      font-size: var(--template-font-size-md);
+      font-size: var(--theme-font-size-md);
 
       ul {
         list-style: none;

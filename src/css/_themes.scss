@@ -2,118 +2,116 @@
 /* Fluid font size variables, for browsers that support clamp */
 @supports (font-size: clamp(1rem, 1vmin, 1rem)) {
   :root {
-    --template-spacer: clamp(1rem, 5vw, 5rem);
-    --template-spacer-sm: clamp(1rem, 2.5vw, 5rem);
-    --template-icon-size: clamp(5em, 24vmin, 15em);
-    --template-icon-size-sm: clamp(2em, 14vmin, 10em);
+    --theme-spacer: clamp(1rem, 5vw, 5rem);
+    --theme-spacer-sm: clamp(1rem, 2.5vw, 5rem);
+    --theme-icon-size: clamp(5em, 24vmin, 15em);
+    --theme-icon-size-sm: clamp(2em, 14vmin, 10em);
 
-    --template-font-size-sm: clamp(0.729rem, 0.209vmin + 0.677rem, 0.844rem);
-    --template-font-size-base: clamp(0.875rem, 0.455vmin + 0.761rem, 1.125rem);
-    --template-font-size-md: clamp(1.05rem, 0.817vmin + 0.846rem, 1.5rem);
-    --template-font-size-lg: clamp(1.26rem, 1.344vmin + 0.924rem, 1.999rem);
-    --template-font-size-xl: clamp(1.512rem, 2.096vmin + 0.988rem, 2.665rem);
-    --template-font-size-2xl: clamp(1.814rem, 3.159vmin + 1.025rem, 3.552rem);
-    --template-font-size-3xl: clamp(2.177rem, 4.65vmin + 1.015rem, 4.735rem);
+    --theme-font-size-sm: clamp(0.729rem, 0.209vmin + 0.677rem, 0.844rem);
+    --theme-font-size-base: clamp(0.875rem, 0.455vmin + 0.761rem, 1.125rem);
+    --theme-font-size-md: clamp(1.05rem, 0.817vmin + 0.846rem, 1.5rem);
+    --theme-font-size-lg: clamp(1.26rem, 1.344vmin + 0.924rem, 1.999rem);
+    --theme-font-size-xl: clamp(1.512rem, 2.096vmin + 0.988rem, 2.665rem);
+    --theme-font-size-2xl: clamp(1.814rem, 3.159vmin + 1.025rem, 3.552rem);
+    --theme-font-size-3xl: clamp(2.177rem, 4.65vmin + 1.015rem, 4.735rem);
   }
 }
 /* Fallback variables for browsers that don't support clamp */
 @supports not (font-size: clamp(1rem, 1vmin, 1rem)) {
   :root {
-    --template-spacer: 5vmin;
-    --template-spacer-sm: 2.5vmin;
-    --template-icon-size: 24vmin;
-    --template-icon-size-sm: 14vmin;
+    --theme-spacer: 5vmin;
+    --theme-spacer-sm: 2.5vmin;
+    --theme-icon-size: 24vmin;
+    --theme-icon-size-sm: 14vmin;
 
-    --template-font-size-sm: 0.729rem;
-    --template-font-size-base: 0.875rem;
-    --template-font-size-md: 1.05rem;
-    --template-font-size-lg: 1.26rem;
-    --template-font-size-xl: 1.512rem;
-    --template-font-size-2xl: 1.814rem;
-    --template-font-size-3xl: 2.177rem;
+    --theme-font-size-sm: 0.729rem;
+    --theme-font-size-base: 0.875rem;
+    --theme-font-size-md: 1.05rem;
+    --theme-font-size-lg: 1.26rem;
+    --theme-font-size-xl: 1.512rem;
+    --theme-font-size-2xl: 1.814rem;
+    --theme-font-size-3xl: 2.177rem;
   }
 
   @media screen and (min-width: 1280px) {
     :root {
-      --template-font-size-sm: 0.844rem;
-      --template-font-size-base: 1.125rem;
-      --template-font-size-md: 1.5rem;
-      --template-font-size-lg: 1.999rem;
-      --template-font-size-xl: 2.665rem;
-      --template-font-size-2xl: 3.552rem;
-      --template-font-size-3xl: 4.735rem;
+      --theme-font-size-sm: 0.844rem;
+      --theme-font-size-base: 1.125rem;
+      --theme-font-size-md: 1.5rem;
+      --theme-font-size-lg: 1.999rem;
+      --theme-font-size-xl: 2.665rem;
+      --theme-font-size-2xl: 3.552rem;
+      --theme-font-size-3xl: 4.735rem;
     }
   }
 }
 
 :root {
-  --template-max-width:    1200px;
-  --template-max-width-sm: 90ch;
-  // --template-grid-columns: 12;
-  // --template-grid-gap:     var(--template-spacer-sm);
-  // --template-grid-rows:    1;
+  --theme-max-width:    1200px;
+  --theme-max-width-sm: 90ch;
 
-  --template-light-color:        #{$owl-ref-palette-gray-800};
-  --template-light-icon-color:   #{$owl-ref-palette-gray-800};
-  --template-light-bg:           #{$owl-ref-palette-white};
-  --template-light-border-color: #{$owl-ref-palette-gray-300};
-  --template-light-accent-color: #{$owl-ref-palette-primary-500};
-  --template-light-mark-color:   var(--template-light-color);
-  --template-light-mark-bg:      #{$owl-ref-palette-primary-200};
+  --theme-light-bg:           #{$owl-ref-palette-white};
+  --theme-light-color:        #{$owl-ref-palette-gray-800};
+  --theme-light-icon-color:   #{$owl-ref-palette-gray-800};
+  --theme-light-border-color: #{$owl-ref-palette-gray-300};
+  --theme-light-accent-color: #{$owl-ref-palette-primary-500};
+  --theme-light-highlight-color:   var(--theme-light-color);
+  --theme-light-highlight-bg:      #{$owl-ref-palette-primary-200};
 
-  --template-alt-color:        #{$owl-ref-palette-white};
-  --template-alt-icon-color:   #{$owl-ref-palette-white};
-  --template-alt-bg:           #{$owl-ref-palette-primary-500};
-  --template-alt-border-color: #{$owl-ref-palette-primary-600};
-  --template-alt-accent-color: #{$owl-ref-palette-gray-900};
-  --template-alt-mark-color:   var(--template-alt-color);
-  --template-alt-mark-bg:      #{$owl-ref-palette-gray-900};
+  --theme-alt-bg:           #{$owl-ref-palette-primary-500};
+  --theme-alt-color:        #{$owl-ref-palette-white};
+  --theme-alt-icon-color:   #{$owl-ref-palette-white};
+  --theme-alt-border-color: #{$owl-ref-palette-primary-600};
+  --theme-alt-accent-color: #{$owl-ref-palette-gray-900};
+  --theme-alt-highlight-color:   var(--theme-alt-color);
+  --theme-alt-highlight-bg:      #{$owl-ref-palette-gray-900};
 
-  --template-dark-color:        #{$owl-ref-palette-white};
-  --template-dark-icon-color:   #{$owl-ref-palette-white};
-  --template-dark-bg:           #{$owl-ref-palette-gray-900};
-  --template-dark-border-color: #{$owl-ref-palette-gray-700};
-  --template-dark-accent-color: #{$owl-ref-palette-cyan-500};
-  --template-dark-mark-color:   var(--template-dark-color);
-  --template-dark-mark-bg:      #{$owl-ref-palette-cyan-700};
+  --theme-dark-bg:           #{$owl-ref-palette-gray-900};
+  --theme-dark-color:        #{$owl-ref-palette-white};
+  --theme-dark-icon-color:   #{$owl-ref-palette-white};
+  --theme-dark-border-color: #{$owl-ref-palette-gray-700};
+  --theme-dark-accent-color: #{$owl-ref-palette-cyan-500};
+  --theme-dark-highlight-color:   var(--theme-dark-color);
+  --theme-dark-highlight-bg:      #{$owl-ref-palette-cyan-700};
 
-  --template-font-family-base:            #{$owl-ref-typeface-font-family-sans-serif};
-  --template-font-family-heading:         #{$owl-ref-typeface-font-family-sans-serif};
-  --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
-  --template-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
-  --template-font-letterspacing-heading:  -0.025em;
+  --theme-font-family-base:            #{$owl-ref-typeface-font-family-sans-serif};
+  --theme-font-family-heading:         #{$owl-ref-typeface-font-family-sans-serif};
+  --theme-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
+  --theme-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
+  --theme-font-letterspacing-heading:  -0.025em;
 
-  --template-accent-color:         var(--template-light-accent-color);
-  --template-border-color:         var(--template-light-border-color);
-  --template-mark-color:           var(--template-light-mark-color);
-  --template-mark-bg:              var(--template-light-mark-bg);
-  --template-border-radius:        0.25em;
-  --template-border-radius-sm:     3px;
-  --template-border-radius-lg:     1em;
-  --template-border-radius-pill:   50em;
-  --template-img-border-radius:    1em;
+  --theme-accent-color:         var(--theme-light-accent-color);
+  --theme-border-color:         var(--theme-light-border-color);
+  --theme-highlight-color:      var(--theme-light-highlight-color);
+  --theme-highlight-bg:         var(--theme-light-highlight-bg);
+  --theme-border-radius:        0.25em;
+  --theme-border-radius-sm:     3px;
+  --theme-border-radius-lg:     1em;
+  --theme-border-radius-pill:   50em;
+  --theme-img-border-radius:    1em;
 
-  --template-btn-letterspacing:    0.0125em;
-  --template-btn-font-weight:      600;
-  --template-btn-padding:          0.375em 1.125em;
-  --template-btn-padding-sm:       0.25em 0.75em;
-  --template-btn-padding-lg:       0.33em 1em;
-  --template-btn-border-radius:    #{$owl-ref-style-btn-border-radius};
-  --template-btn-border-radius-sm: #{$owl-ref-style-btn-border-radius};
-  --template-btn-border-radius-lg: #{$owl-ref-style-btn-border-radius};
+  --theme-btn-letterspacing:    0.0125em;
+  --theme-btn-font-weight:      600;
+  --theme-btn-padding:          0.375em 1.125em;
+  --theme-btn-padding-sm:       0.25em 0.75em;
+  --theme-btn-padding-lg:       0.33em 1em;
+  --theme-btn-border-radius:    #{$owl-ref-style-btn-border-radius};
+  --theme-btn-border-radius-sm: #{$owl-ref-style-btn-border-radius};
+  --theme-btn-border-radius-lg: #{$owl-ref-style-btn-border-radius};
+  --theme-btn-outline:          0.125em var(--theme-light-bg);
 
   section[class*="--alt"]{
-    --template-accent-color: var(--template-alt-accent-color);
-    --template-border-color: var(--template-alt-border-color);
-    --template-mark-color: var(--template-alt-mark-color);
-    --template-mark-bg: var(--template-alt-mark-bg);
+    --theme-accent-color: var(--theme-alt-accent-color);
+    --theme-border-color: var(--theme-alt-border-color);
+    --theme-highlight-color: var(--theme-alt-highlight-color);
+    --theme-highlight-bg: var(--theme-alt-highlight-bg);
   }
 
   section[class*="--dark"]{
-    --template-accent-color: var(--template-dark-accent-color);
-    --template-border-color: var(--template-dark-border-color);
-    --template-mark-color: var(--template-dark-mark-color);
-    --template-mark-bg: var(--template-dark-mark-bg);
+    --theme-accent-color: var(--theme-dark-accent-color);
+    --theme-border-color: var(--theme-dark-border-color);
+    --theme-highlight-color: var(--theme-dark-highlight-color);
+    --theme-highlight-bg: var(--theme-dark-highlight-bg);
   }
 }
 

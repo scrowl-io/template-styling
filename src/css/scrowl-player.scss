@@ -38,20 +38,20 @@ body {
 
 main {
   font-size: 16px;
-  background: var(--template-light-bg);
+  background: var(--theme-light-bg);
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
 }
 
 img {
   max-width: 100%;
-  border-radius: var(--template-img-border-radius);
+  border-radius: var(--theme-img-border-radius);
 }
 
 hr {
   margin: 1em 0;
   border: 0;
-  border-bottom: 2px solid var(--template-border-color);
+  border-bottom: 2px solid var(--theme-border-color);
 }
 
 .switcher {
@@ -93,10 +93,10 @@ hr {
   }
 
   * {
-    --template-light-accent-color: white;
-    --template-light-icon-color: black;
-    --template-light-color: black;
-    --template-light-border-color: black;
+    --theme-light-accent-color: white;
+    --theme-light-icon-color: black;
+    --theme-light-color: black;
+    --theme-light-border-color: black;
 
     color: black !important;
     background: transparent !important;

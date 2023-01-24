@@ -7,21 +7,20 @@
   --btn-hover-color: var(--btn-color);
   --btn-hover-bg: var(--btn-border-color);
   --btn-hover-border-color: var(--btn-border-color);
-  --btn-outline: 0.125em var(--template-light-bg);
 
   display: inline-block;
   margin: 5px;
-  padding: var(--template-btn-padding);
-  font-weight: var(--template-btn-font-weight);
-  letter-spacing: var(--template-btn-letterspacing);
+  padding: var(--theme-btn-padding);
+  font-weight: var(--theme-btn-font-weight);
+  letter-spacing: var(--theme-btn-letterspacing);
   color: var(--btn-color);
-  font-size: var(--template-font-family-base);
+  font-size: var(--theme-font-family-base);
   line-height: 1.5;
   text-decoration: none;
   background: var(--btn-bg);
-  border-radius: var(--template-btn-border-radius);
+  border-radius: var(--theme-btn-border-radius);
   border: 2px solid var(--btn-border-color);
-  outline: var(--btn-outline);
+  outline: var(--theme-btn-outline);
   outline-style: solid;
   cursor: pointer;
 
@@ -33,7 +32,7 @@
   }
 
   &:focus {
-    --btn-outline: 2px var(--template-accent-color);
+    --theme-btn-outline: 2px var(--theme-accent-color);
     outline-offset: 4px;
   }
 
@@ -80,15 +79,15 @@
   }
 
   &--sm {
-    padding: var(--template-btn-padding-sm);
-    font-size: var(--template-font-size-sm);
-    border-radius: var(--template-btn-border-radius-sm);
+    padding: var(--theme-btn-padding-sm);
+    font-size: var(--theme-font-size-sm);
+    border-radius: var(--theme-btn-border-radius-sm);
   }
 
   &--lg {
-    padding: var(--template-btn-padding-lg);
-    font-size: var(--template-font-size-md);
-    border-radius: var(--template-btn-border-radius-lg);
+    padding: var(--theme-btn-padding-lg);
+    font-size: var(--theme-font-size-md);
+    border-radius: var(--theme-btn-border-radius-lg);
   }
 }
 

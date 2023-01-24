@@ -2,12 +2,12 @@
 .template {
   &__body {
     // Centering the section on the page
-    max-width: var(--template-max-width);
+    max-width: var(--theme-max-width);
     height: fit-content;
     flex: 1 1 auto;
     // Aligning the children
     z-index: 1;
-    padding: var(--template-spacer);
+    padding: var(--theme-spacer);
 
     &__title {
     }
@@ -19,8 +19,8 @@
     }
 
     &__navigation {
-      padding-top: var(--template-spacer);
-      padding-bottom: var(--template-spacer);
+      padding-top: var(--theme-spacer);
+      padding-bottom: var(--theme-spacer);
       text-align: center;
     }
 
@@ -38,8 +38,8 @@
         }
 
         figcaption {
-          font-size: var(--template-font-size-sm);
-          line-height: var(--template-font-lineheight-heading);
+          font-size: var(--theme-font-size-sm);
+          line-height: var(--theme-font-lineheight-heading);
           text-align: right;
         }
       }

@@ -11,7 +11,7 @@
 
     &__content {
       width: 100%;
-      font-size: var(--template-font-size-md);
+      font-size: var(--theme-font-size-md);
 
       ul {
         list-style: none;
@@ -37,7 +37,7 @@
           max-width: 20ch;
           justify-self: center;
           text-align: center;
-          font-size: var(--template-font-size-base);
+          font-size: var(--theme-font-size-base);
           font-weight: 600;
         }
       }
@@ -48,8 +48,8 @@
     text-align: center;
 
     i {
-      color: var(--template-accent-color);
-      font-size: var(--template-icon-size-sm);
+      color: var(--theme-accent-color);
+      font-size: var(--theme-icon-size-sm);
       font-variation-settings:
         'FILL' 0,
         'wght' 100,

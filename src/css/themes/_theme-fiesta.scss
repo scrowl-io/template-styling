@@ -1,35 +1,35 @@
 
 body:has(input[value="theme--fiesta"]:checked),// Just for the theme switcher example page
 .theme--fiesta {
-  --template-light-color:               #{$owl-ref-palette-purple-800};
-  --template-light-icon-color:          #{$owl-ref-palette-pink-600};
-  --template-light-bg:                  #{$owl-ref-palette-pink-100};
-  --template-light-border-color:        #{$owl-ref-palette-pink-500};
-  --template-light-accent-color:        #{$owl-ref-palette-pink-700};
+  --theme-light-color:               #{$owl-ref-palette-purple-800};
+  --theme-light-icon-color:          #{$owl-ref-palette-pink-600};
+  --theme-light-bg:                  #{$owl-ref-palette-pink-100};
+  --theme-light-border-color:        #{$owl-ref-palette-pink-500};
+  --theme-light-accent-color:        #{$owl-ref-palette-pink-700};
 
-  --template-alt-color:        #{$owl-ref-palette-purple-800};
-  --template-alt-icon-color:   #{$owl-ref-palette-black};
-  --template-alt-bg:           #{$owl-ref-palette-pink-400};
-  --template-alt-border-color: #{$owl-ref-palette-pink-600};
-  --template-alt-accent-color: #{$owl-ref-palette-black};
+  --theme-alt-color:        #{$owl-ref-palette-purple-800};
+  --theme-alt-icon-color:   #{$owl-ref-palette-black};
+  --theme-alt-bg:           #{$owl-ref-palette-pink-400};
+  --theme-alt-border-color: #{$owl-ref-palette-pink-600};
+  --theme-alt-accent-color: #{$owl-ref-palette-black};
 
-  --template-dark-color:        #{$owl-ref-palette-pink-200};
-  --template-dark-icon-color:   #{$owl-ref-palette-pink-500};
-  --template-dark-bg:           #{$owl-ref-palette-purple-800};
-  --template-dark-border-color: #{$owl-ref-palette-pink-200};
-  --template-dark-accent-color: #{$owl-ref-palette-pink-500};
+  --theme-dark-color:        #{$owl-ref-palette-pink-200};
+  --theme-dark-icon-color:   #{$owl-ref-palette-pink-500};
+  --theme-dark-bg:           #{$owl-ref-palette-purple-800};
+  --theme-dark-border-color: #{$owl-ref-palette-pink-200};
+  --theme-dark-accent-color: #{$owl-ref-palette-pink-500};
 
-  --template-max-width:    1440px;
+  --theme-max-width:    1440px;
 
-  --template-font-family-base:            Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
-  --template-font-family-heading:         "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", cursive;
-  --template-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
-  --template-font-lineheight-heading:     1.45;
-  --template-font-letterspacing-heading:  0.025em;
+  --theme-font-family-base:            Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+  --theme-font-family-heading:         "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", cursive;
+  --theme-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
+  --theme-font-lineheight-heading:     1.45;
+  --theme-font-letterspacing-heading:  0.025em;
 
-  --template-accent-color: var(--template-light-accent-color);
-  --template-border-color: var(--template-light-border-color);
-  --template-mark-color: var(--template-light-mark-color);
-  --template-mark-bg: var(--template-light-mark-bg);
+  --theme-accent-color: var(--theme-light-accent-color);
+  --theme-border-color: var(--theme-light-border-color);
+  --theme-highlight-color: var(--theme-light-highlight-color);
+  --theme-highlight-bg: var(--theme-light-highlight-bg);
 
 }
