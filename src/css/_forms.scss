@@ -1,0 +1,117 @@
+// Form Elements
+
+form {
+  padding: var(--theme-spacer-sm);
+}
+
+label {
+  user-select: none;
+  font-weight: var(--theme-label-font-weight);
+  font-size: var(--theme-font-size-base);
+}
+
+input[type="text"],
+textarea {
+  padding: var(--theme-input-padding);
+  font-size: var(--theme-font-size-base);
+  border: var(--theme-border-color) solid 2px;
+  border-radius: var(--theme-border-radius);
+}
+
+.form--sm {
+  label {
+    font-size: var(--theme-font-size-sm);
+  }
+
+  input[type="text"],
+  textarea {
+    padding: var(--theme-input-padding-sm);
+    font-size: var(--theme-font-size-sm);
+    border-radius: var(--theme-border-radius-sm);
+  }
+}
+
+.form--lg {
+  label {
+    font-size: var(--theme-font-size-md);
+  }
+
+  input[type="text"],
+  textarea {
+    padding: var(--theme-input-padding-lg);
+    font-size: var(--theme-font-size-md);
+  }
+}
+
+
+.checkbox {
+	position: relative;
+
+  &__label {
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 32px;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #c5c5c5;
+      margin-right: 8px;
+    }
+
+    &:hover {
+      color: blue;
+    }
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: -1px;
+      width: 24px;
+      height: 24px;
+      transition: all 0.35s ease-out;
+    }
+
+    svg {
+      position: absolute;
+      left: 4px;
+      top: 3px;
+      width: 15px;
+      height: 15px;
+      //pointer-events: none;
+    }
+
+    .path {
+      stroke-dashoffset: 111.46px;
+      stroke-dasharray: 111.46px;
+      stroke: #3863d9;
+      transition: all 0.35s ease-out;
+    }
+  }
+
+  input {
+    &.clicked:focus + .checkbox__label {
+      outline: none;
+    }
+
+    &:focus + .checkbox__label {
+      outline: dashed 2px lightgrey;
+      outline-offset: 5px;
+    }
+
+    &:checked + .checkbox__label {
+      &:before {
+        background: #3863d9;
+        border-color: #3863d9;
+      }
+
+      .path {
+        stroke: #fff;
+        stroke-dashoffset: 0;
+      }
+    }
+  }
+}

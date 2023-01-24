@@ -398,6 +398,10 @@ template {
   --theme-btn-border-radius-sm: 0.25em;
   --theme-btn-border-radius-lg: 0.25em;
   --theme-btn-outline: 0.125em var(--theme-light-bg);
+  --theme-input-padding: 0.375em;
+  --theme-input-padding-sm: 0.25em;
+  --theme-input-padding-lg: 0.33em;
+  --theme-label-font-weight: 600;
 }
 :root section[class*="--alt"] {
   --theme-accent-color: var(--theme-alt-accent-color);
@@ -1869,6 +1873,103 @@ a {
   color: var(--theme-accent-color);
 }
 
+form {
+  padding: var(--theme-spacer-sm);
+}
+
+label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-weight: var(--theme-label-font-weight);
+  font-size: var(--theme-font-size-base);
+}
+
+input[type=text],
+textarea {
+  padding: var(--theme-input-padding);
+  font-size: var(--theme-font-size-base);
+  border: var(--theme-border-color) solid 2px;
+  border-radius: var(--theme-border-radius);
+}
+
+.form--sm label {
+  font-size: var(--theme-font-size-sm);
+}
+.form--sm input[type=text],
+.form--sm textarea {
+  padding: var(--theme-input-padding-sm);
+  font-size: var(--theme-font-size-sm);
+  border-radius: var(--theme-border-radius-sm);
+}
+
+.form--lg label {
+  font-size: var(--theme-font-size-md);
+}
+.form--lg input[type=text],
+.form--lg textarea {
+  padding: var(--theme-input-padding-lg);
+  font-size: var(--theme-font-size-md);
+}
+
+.checkbox {
+  position: relative;
+}
+.checkbox__label {
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 32px;
+}
+.checkbox__label:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #c5c5c5;
+  margin-right: 8px;
+}
+.checkbox__label:hover {
+  color: blue;
+}
+.checkbox__label:before {
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 24px;
+  height: 24px;
+  transition: all 0.35s ease-out;
+}
+.checkbox__label svg {
+  position: absolute;
+  left: 4px;
+  top: 3px;
+  width: 15px;
+  height: 15px;
+}
+.checkbox__label .path {
+  stroke-dashoffset: 111.46px;
+  stroke-dasharray: 111.46px;
+  stroke: #3863d9;
+  transition: all 0.35s ease-out;
+}
+.checkbox input.clicked:focus + .checkbox__label {
+  outline: none;
+}
+.checkbox input:focus + .checkbox__label {
+  outline: dashed 2px lightgrey;
+  outline-offset: 5px;
+}
+.checkbox input:checked + .checkbox__label:before {
+  background: #3863d9;
+  border-color: #3863d9;
+}
+.checkbox input:checked + .checkbox__label .path {
+  stroke: #fff;
+  stroke-dashoffset: 0;
+}
+
 .btn {
   --btn-color: #212529;
   --btn-bg: #fff;
@@ -1900,6 +2001,15 @@ a {
 .btn:focus {
   --theme-btn-outline: 2px var(--theme-accent-color);
   outline-offset: 4px;
+}
+.btn.disabled, .btn:disabled, .btn[aria-disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.btn.disabled:hover, .btn.disabled:focus, .btn:disabled:hover, .btn:disabled:focus, .btn[aria-disabled]:hover, .btn[aria-disabled]:focus {
+  color: var(--btn-color);
+  background-color: var(--btn-bg);
+  border-color: var(--btn-border-color);
 }
 .btn--primary {
   --btn-color: #fff;
@@ -2431,6 +2541,16 @@ hr {
   margin: 1em 0;
   border: 0;
   border-bottom: 2px solid var(--theme-border-color);
+}
+
+.sr-only {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }
 
 .switcher {

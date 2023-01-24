@@ -100,6 +100,11 @@
   --theme-btn-border-radius-lg: #{$owl-ref-style-btn-border-radius};
   --theme-btn-outline:          0.125em var(--theme-light-bg);
 
+  --theme-input-padding:          0.375em;
+  --theme-input-padding-sm:       0.25em;
+  --theme-input-padding-lg:       0.33em;
+  --theme-label-font-weight:      600;
+
   section[class*="--alt"]{
     --theme-accent-color: var(--theme-alt-accent-color);
     --theme-border-color: var(--theme-alt-border-color);

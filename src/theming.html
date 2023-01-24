@@ -155,6 +155,8 @@
           <button class="btn">Button</button>
           <button class="btn btn--lg">Button Large</button>
           <button class="btn btn--sm">Button Small</button>
+
+          <button class="btn" aria-disabled="true">Button Disabled</button>
         </div>
       </div>
     </section>
@@ -173,6 +175,8 @@
           <button class="btn">Button</button>
           <button class="btn btn--lg">Button Large</button>
           <button class="btn btn--sm">Button Small</button>
+
+          <button class="btn" aria-disabled="true">Button Disabled</button>
         </div>
       </div>
     </section>
@@ -191,7 +195,222 @@
           <button class="btn">Button</button>
           <button class="btn btn--lg">Button Large</button>
           <button class="btn btn--sm">Button Small</button>
+
+          <button class="btn" aria-disabled="true">Button Disabled</button>
         </div>
+      </div>
+    </section>
+
+    <section class="section--light section--min-height">
+      <div class="template__body">
+        <h1 class="template__body__title h2">Form Elements</h1>
+        <form>
+
+          <label for="name">Name:</label>
+          <input id="name" type="text" autocomplete="name">
+
+          <label for="address">Enter your address:</label>
+          <textarea id="address" autocomplete="street-address"></textarea>
+
+          <fieldset>
+            <legend>Select your pizza toppings:</legend>
+            <input id="ham" type="checkbox" name="toppings" value="ham">
+            <label for="ham">Ham</label>
+            <input id="pepperoni" type="checkbox" name="toppings" value="pepperoni">
+            <label for="pepperoni">Pepperoni</label>
+            <input id="mushrooms" type="checkbox" name="toppings" value="mushrooms">
+            <label for="mushrooms">Mushrooms</label>
+            <input id="olives" type="checkbox" name="toppings" value="olives">
+            <label for="olives">Olives</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Choose a shipping method:</legend>
+            <input id="overnight" type="radio" name="shipping" value="overnight">
+            <label for="overnight">Overnight</label>
+            <input id="twoday" type="radio" name="shipping" value="twoday">
+            <label for="twoday">Two day</label>
+            <input id="ground" type="radio" name="shipping" value="ground">
+            <label for="ground">Ground</label>
+          </fieldset>
+
+          <label for="favcity2">Which is your favorite city?</label>
+          <select id="favcity2" name="favcity2">
+            <option value="20">Other</option>
+            <optgroup label="Asia">
+              <option value="3">Delhi</option>
+              <option value="4">Hong Kong</option>
+              <option value="8">Mumbai</option>
+              <option value="11">Tokyo</option>
+            </optgroup>
+            <optgroup label="Europe">
+              <option value="1">Amsterdam</option>
+              <option value="5">London</option>
+              <option value="7">Moscow</option>
+            </optgroup>
+            <optgroup label="North America">
+              <option value="6">Los Angeles</option>
+              <option value="9">New York</option>
+            </optgroup>
+            <optgroup label="South America">
+              <option value="2">Buenos Aires</option>
+              <option value="10">São Paulo</option>
+            </optgroup>
+          </select>
+
+
+
+          <div class="checkbox">
+            <input class="sr-only" id="cb" type="checkbox">
+            <label class="checkbox__label" for="cb">
+              <svg viewBox="0 0 100 100">
+                <path class="path" fill="none" stroke="#000" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M12.1 52.1l24.4 24.4 53-53"/>
+              </svg>
+              Custom Checkbox
+            </label>
+          </div>
+
+          <input type="submit" class="btn btn--dark" />
+        </form>
+
+        <form class="form--lg">
+
+          <label for="name">Name:</label>
+          <input id="name" type="text" autocomplete="name">
+
+          <label for="address">Enter your address:</label>
+          <textarea id="address" autocomplete="street-address"></textarea>
+
+          <fieldset>
+            <legend>Select your pizza toppings:</legend>
+            <input id="ham" type="checkbox" name="toppings" value="ham">
+            <label for="ham">Ham</label>
+            <input id="pepperoni" type="checkbox" name="toppings" value="pepperoni">
+            <label for="pepperoni">Pepperoni</label>
+            <input id="mushrooms" type="checkbox" name="toppings" value="mushrooms">
+            <label for="mushrooms">Mushrooms</label>
+            <input id="olives" type="checkbox" name="toppings" value="olives">
+            <label for="olives">Olives</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Choose a shipping method:</legend>
+            <input id="overnight" type="radio" name="shipping" value="overnight">
+            <label for="overnight">Overnight</label>
+            <input id="twoday" type="radio" name="shipping" value="twoday">
+            <label for="twoday">Two day</label>
+            <input id="ground" type="radio" name="shipping" value="ground">
+            <label for="ground">Ground</label>
+          </fieldset>
+
+          <label for="favcity2">Which is your favorite city?</label>
+          <select id="favcity2" name="favcity2">
+            <option value="20">Other</option>
+            <optgroup label="Asia">
+              <option value="3">Delhi</option>
+              <option value="4">Hong Kong</option>
+              <option value="8">Mumbai</option>
+              <option value="11">Tokyo</option>
+            </optgroup>
+            <optgroup label="Europe">
+              <option value="1">Amsterdam</option>
+              <option value="5">London</option>
+              <option value="7">Moscow</option>
+            </optgroup>
+            <optgroup label="North America">
+              <option value="6">Los Angeles</option>
+              <option value="9">New York</option>
+            </optgroup>
+            <optgroup label="South America">
+              <option value="2">Buenos Aires</option>
+              <option value="10">São Paulo</option>
+            </optgroup>
+          </select>
+
+
+
+          <div class="checkbox">
+            <input class="sr-only" id="cb" type="checkbox">
+            <label class="checkbox__label" for="cb">
+              <svg viewBox="0 0 100 100">
+                <path class="path" fill="none" stroke="#000" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M12.1 52.1l24.4 24.4 53-53"/>
+              </svg>
+              Custom Checkbox
+            </label>
+          </div>
+
+          <input type="reset" class="btn" />
+          <input type="submit" class="btn btn--dark" />
+        </form>
+
+        <form class="form--sm">
+
+          <label for="name">Name:</label>
+          <input id="name" type="text" autocomplete="name">
+
+          <label for="address">Enter your address:</label>
+          <textarea id="address" autocomplete="street-address"></textarea>
+
+          <fieldset>
+            <legend>Select your pizza toppings:</legend>
+            <input id="ham" type="checkbox" name="toppings" value="ham">
+            <label for="ham">Ham</label>
+            <input id="pepperoni" type="checkbox" name="toppings" value="pepperoni">
+            <label for="pepperoni">Pepperoni</label>
+            <input id="mushrooms" type="checkbox" name="toppings" value="mushrooms">
+            <label for="mushrooms">Mushrooms</label>
+            <input id="olives" type="checkbox" name="toppings" value="olives">
+            <label for="olives">Olives</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Choose a shipping method:</legend>
+            <input id="overnight" type="radio" name="shipping" value="overnight">
+            <label for="overnight">Overnight</label>
+            <input id="twoday" type="radio" name="shipping" value="twoday">
+            <label for="twoday">Two day</label>
+            <input id="ground" type="radio" name="shipping" value="ground">
+            <label for="ground">Ground</label>
+          </fieldset>
+
+          <label for="favcity2">Which is your favorite city?</label>
+          <select id="favcity2" name="favcity2">
+            <option value="20">Other</option>
+            <optgroup label="Asia">
+              <option value="3">Delhi</option>
+              <option value="4">Hong Kong</option>
+              <option value="8">Mumbai</option>
+              <option value="11">Tokyo</option>
+            </optgroup>
+            <optgroup label="Europe">
+              <option value="1">Amsterdam</option>
+              <option value="5">London</option>
+              <option value="7">Moscow</option>
+            </optgroup>
+            <optgroup label="North America">
+              <option value="6">Los Angeles</option>
+              <option value="9">New York</option>
+            </optgroup>
+            <optgroup label="South America">
+              <option value="2">Buenos Aires</option>
+              <option value="10">São Paulo</option>
+            </optgroup>
+          </select>
+
+
+
+          <div class="checkbox">
+            <input class="sr-only" id="cb" type="checkbox">
+            <label class="checkbox__label" for="cb">
+              <svg viewBox="0 0 100 100">
+                <path class="path" fill="none" stroke="#000" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M12.1 52.1l24.4 24.4 53-53"/>
+              </svg>
+              Custom Checkbox
+            </label>
+          </div>
+
+          <input type="submit" class="btn btn--dark" />
+        </form>
       </div>
     </section>
 
