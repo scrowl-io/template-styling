@@ -21,8 +21,8 @@ body:has(input[value="theme--draplin"]:checked),// Just for the theme switcher e
   --theme-dark-bg:           #{$owl-ref-palette-black};
   --theme-dark-border-color: #{$owl-ref-palette-gray-600};
   --theme-dark-accent-color: #{$owl-ref-palette-orange-500};
-  --theme-dark-highlight-color:   #{$owl-ref-palette-white};
-  --theme-dark-highlight-bg:      #{$owl-ref-palette-orange-500};
+  --theme-dark-highlight-color:   #{$owl-ref-palette-black};
+  --theme-dark-highlight-bg:      #{$owl-ref-palette-gray-400};
 
   --theme-max-width:    1200px;
 
@@ -37,11 +37,16 @@ body:has(input[value="theme--draplin"]:checked),// Just for the theme switcher e
   --theme-border-color: var(--theme-light-border-color);
   --theme-highlight-color: var(--theme-light-highlight-color);
   --theme-highlight-bg: var(--theme-light-highlight-bg);
-  --theme-border-radius: 1rem;
+  --theme-border-radius: 1em;
 
-  h1:not(.tmpl-exclude) {
+  .template__body__title:not(.tmpl-exclude) {
     border-bottom: 0.25rem dotted var(--theme-border-color);
-    padding-bottom: 0.5em;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+
+    & > *:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .h5:not(.tmpl-exclude) {

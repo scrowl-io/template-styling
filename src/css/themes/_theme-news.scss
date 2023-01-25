@@ -41,11 +41,16 @@ body:has(input[value="theme--news"]:checked),// Just for the theme switcher exam
   --theme-highlight-bg: var(--theme-light-highlight-bg);
 
 
-  h1:not(.tmpl-exclude) {
+  .template__body__title:not(.tmpl-exclude) {
     border: 0.25rem solid var(--theme-border-color);
     border-top: none;
     border-right: none;
     padding: 0.5em;
+    margin-bottom: 2rem;
+
+    & > *:last-child {
+      margin-bottom: 0;
+    }
   }
 
   hr {

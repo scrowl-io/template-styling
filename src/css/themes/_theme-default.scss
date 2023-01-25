@@ -36,8 +36,13 @@ body:has(input[value="theme--default"]:checked), // Just for the theme switcher 
   }
 
 
-  h1:not(.tmpl-exclude) {
-    border-bottom: 0.0625em solid var(--theme-border-color);
-    padding-bottom: 0.5em;
+  .template__body__title:not(.tmpl-exclude) {
+    border-bottom: 2px solid var(--theme-border-color);
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+
+    & > *:last-child {
+      margin-bottom: 0;
+    }
   }
 }
