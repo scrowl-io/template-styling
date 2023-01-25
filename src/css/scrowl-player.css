@@ -2658,6 +2658,7 @@ section {
 .tmpl-quiz fieldset {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 .tmpl-quiz .template__body {
   max-width: var(--theme-max-width-sm);
