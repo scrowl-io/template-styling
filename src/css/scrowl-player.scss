@@ -71,6 +71,7 @@ hr {
   right: 0;
   z-index: 2;
   padding: 0 0.25em 0.5em 0;
+  margin: 0;
   font-family: $owl-ref-typeface-font-family-sans-serif;
   color: white;
   border: 0;
@@ -78,6 +79,7 @@ hr {
 
   legend {
     padding: 0 0.5em;
+    margin: 0;
     background-color: $owl-ref-palette-black;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;

@@ -1,0 +1,23 @@
+ // Quiz template
+
+.tmpl-quiz {
+
+  fieldset {
+    display: flex;
+    flex-direction: column;
+  }
+
+  legend {
+
+  }
+
+  .template__body {
+    max-width: var(--theme-max-width-sm);
+  }
+
+  .template__body__navigation {
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: right;
+  }
+}
