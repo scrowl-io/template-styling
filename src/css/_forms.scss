@@ -147,6 +147,11 @@ input[type="checkbox"] {
   max-width: 100%;
   font-size: var(--theme-font-size-md);
 
+  &:focus-within {
+    outline: 2px var(--theme-accent-color);
+    outline-offset: 4px;
+  }
+
   input[type="radio"],
   input[type="checkbox"] {
     position: absolute;
@@ -166,11 +171,6 @@ input[type="checkbox"] {
       &:hover + label {
         border-color: var(--theme-border-color);
       }
-
-      &:focus {
-        outline: 2px var(--theme-accent-color);
-        outline-offset: 4px;
-      }
     }
 
     &:checked + label {
@@ -182,6 +182,14 @@ input[type="checkbox"] {
         box-shadow: inset 0 0 0 3px var(--theme-highlight-bg);
         background: currentColor;
         border-color: currentColor;
+      }
+    }
+
+    &:focus-visible + label {
+      &:before {
+        border-color: currentColor;
+        outline: 2px solid var(--theme-accent-color);
+        outline-offset: 4px;
       }
     }
   }

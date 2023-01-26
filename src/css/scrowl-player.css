@@ -2017,6 +2017,11 @@ input[type=checkbox] ~ label:after {
   max-width: 100%;
   font-size: var(--theme-font-size-md);
 }
+.quiz-radio:focus-within,
+.quiz-checkbox:focus-within {
+  outline: 2px var(--theme-accent-color);
+  outline-offset: 4px;
+}
 .quiz-radio input[type=radio],
 .quiz-radio input[type=checkbox],
 .quiz-checkbox input[type=radio],
@@ -2054,16 +2059,6 @@ input[type=checkbox] ~ label:after {
 .quiz-checkbox input[type=checkbox].disabled:hover + label {
   border-color: var(--theme-border-color);
 }
-.quiz-radio input[type=radio]:disabled:focus, .quiz-radio input[type=radio].disabled:focus,
-.quiz-radio input[type=checkbox]:disabled:focus,
-.quiz-radio input[type=checkbox].disabled:focus,
-.quiz-checkbox input[type=radio]:disabled:focus,
-.quiz-checkbox input[type=radio].disabled:focus,
-.quiz-checkbox input[type=checkbox]:disabled:focus,
-.quiz-checkbox input[type=checkbox].disabled:focus {
-  outline: 2px var(--theme-accent-color);
-  outline-offset: 4px;
-}
 .quiz-radio input[type=radio]:checked + label,
 .quiz-radio input[type=checkbox]:checked + label,
 .quiz-checkbox input[type=radio]:checked + label,
@@ -2079,6 +2074,14 @@ input[type=checkbox] ~ label:after {
   box-shadow: inset 0 0 0 3px var(--theme-highlight-bg);
   background: currentColor;
   border-color: currentColor;
+}
+.quiz-radio input[type=radio]:focus-visible + label:before,
+.quiz-radio input[type=checkbox]:focus-visible + label:before,
+.quiz-checkbox input[type=radio]:focus-visible + label:before,
+.quiz-checkbox input[type=checkbox]:focus-visible + label:before {
+  border-color: currentColor;
+  outline: 2px solid var(--theme-accent-color);
+  outline-offset: 4px;
 }
 .quiz-radio label,
 .quiz-checkbox label {
