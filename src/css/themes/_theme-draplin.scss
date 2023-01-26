@@ -39,6 +39,8 @@ body:has(input[value="theme--draplin"]:checked),// Just for the theme switcher e
   --theme-highlight-bg: var(--theme-light-highlight-bg);
   --theme-border-radius: 1em;
 
+  --theme-input-padding: 0.375em 0.5em;
+
   .template__body__title:not(.tmpl-exclude) {
     border-bottom: 0.25rem dotted var(--theme-border-color);
     margin-bottom: 2rem;

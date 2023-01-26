@@ -548,6 +548,7 @@ body:has(input[value=theme--draplin]:checked),
   --theme-highlight-color: var(--theme-light-highlight-color);
   --theme-highlight-bg: var(--theme-light-highlight-bg);
   --theme-border-radius: 1em;
+  --theme-input-padding: 0.375em 0.5em;
 }
 body:has(input[value=theme--draplin]:checked) .template__body__title:not(.tmpl-exclude),
 .theme--draplin .template__body__title:not(.tmpl-exclude) {
@@ -1923,17 +1924,30 @@ legend {
 }
 
 input[type=text],
+input[type=email],
 textarea {
   padding: var(--theme-input-padding);
   font-size: var(--theme-font-size-base);
   border: var(--theme-border-color) solid 2px;
   border-radius: var(--theme-border-radius);
 }
+input[type=text]:focus:not(:focus-visible),
+input[type=email]:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible) {
+  border-color: var(--theme-accent-color);
+}
+input[type=text]:focus-visible,
+input[type=email]:focus-visible,
+textarea:focus-visible {
+  outline-offset: 5px;
+  outline-color: var(--theme-accent-color);
+}
 
 .form--sm label {
   font-size: var(--theme-font-size-sm);
 }
 .form--sm input[type=text],
+.form--sm input[type=email],
 .form--sm textarea {
   padding: var(--theme-input-padding-sm);
   font-size: var(--theme-font-size-sm);
@@ -1943,7 +1957,7 @@ textarea {
 .form--lg label {
   font-size: var(--theme-font-size-md);
 }
-.form--lg input[type=text],
+.form--lg input[type=text] input[type=email],
 .form--lg textarea {
   padding: var(--theme-input-padding-lg);
   font-size: var(--theme-font-size-md);
@@ -1992,6 +2006,7 @@ input[type=checkbox] ~ label:after {
 .quiz-checkbox input[type=checkbox].disabled + label {
   cursor: not-allowed;
   opacity: 0.5;
+  filter: grayscale(1);
 }
 .quiz-radio input[type=radio]:disabled:hover + label, .quiz-radio input[type=radio].disabled:hover + label,
 .quiz-radio input[type=checkbox]:disabled:hover + label,
@@ -2072,6 +2087,25 @@ input[type=checkbox] ~ label:after {
   font-size: var(--theme-font-size-sm);
   font-weight: 400;
 }
+.quiz-radio--sm,
+.quiz-checkbox--sm {
+  font-size: var(--theme-font-size-base);
+}
+.quiz-radio--sm input[type=radio] + label,
+.quiz-radio--sm input[type=checkbox] + label,
+.quiz-checkbox--sm input[type=radio] + label,
+.quiz-checkbox--sm input[type=checkbox] + label {
+  padding-left: 0;
+  padding-right: 0;
+  border-width: 0;
+}
+.quiz-radio--sm input[type=radio]:checked + label,
+.quiz-radio--sm input[type=checkbox]:checked + label,
+.quiz-checkbox--sm input[type=radio]:checked + label,
+.quiz-checkbox--sm input[type=checkbox]:checked + label {
+  color: var(--theme-color);
+  background: transparent;
+}
 
 .quiz-radio label:before {
   width: 1em;
@@ -2084,6 +2118,25 @@ input[type=checkbox] ~ label:after {
   height: 1em;
   border-radius: 0;
   color: currentColor;
+}
+
+.quiz-text {
+  margin-bottom: 1em;
+  max-width: 100%;
+  width: 100%;
+}
+.quiz-text label {
+  display: block;
+}
+.quiz-text input {
+  width: 30ch;
+  max-width: 100%;
+  display: block;
+}
+.quiz-text textarea {
+  width: 100%;
+  max-width: 100%;
+  resize: none;
 }
 
 .btn {
@@ -2121,6 +2174,7 @@ input[type=checkbox] ~ label:after {
 .btn.disabled, .btn:disabled, .btn[aria-disabled] {
   cursor: not-allowed;
   opacity: 0.7;
+  filter: grayscale(1);
 }
 .btn.disabled:hover, .btn.disabled:focus, .btn:disabled:hover, .btn:disabled:focus, .btn[aria-disabled]:hover, .btn[aria-disabled]:focus {
   color: var(--btn-color);

@@ -26,11 +26,21 @@ legend {
 }
 
 input[type="text"],
+input[type="email"],
 textarea {
   padding: var(--theme-input-padding);
   font-size: var(--theme-font-size-base);
   border: var(--theme-border-color) solid 2px;
   border-radius: var(--theme-border-radius);
+
+  &:focus:not(:focus-visible)  {
+    border-color: var(--theme-accent-color);
+  }
+
+  &:focus-visible {
+    outline-offset: 5px;
+    outline-color: var(--theme-accent-color);
+  }
 }
 
 
@@ -40,6 +50,7 @@ textarea {
   }
 
   input[type="text"],
+  input[type="email"],
   textarea {
     padding: var(--theme-input-padding-sm);
     font-size: var(--theme-font-size-sm);
@@ -52,7 +63,8 @@ textarea {
     font-size: var(--theme-font-size-md);
   }
 
-  input[type="text"],
+  input[type="text"]
+  input[type="email"],
   textarea {
     padding: var(--theme-input-padding-lg);
     font-size: var(--theme-font-size-md);
@@ -74,6 +86,7 @@ input[type="checkbox"] {
   max-width: 100%;
   font-size: var(--theme-font-size-md);
 
+
   &:focus-within {
     outline: 2px var(--theme-accent-color);
     outline-offset: 4px;
@@ -90,9 +103,11 @@ input[type="checkbox"] {
       cursor: not-allowed;
       opacity: 0.5;
 
+
       & + label {
         cursor: not-allowed;
         opacity: 0.5;
+        filter: grayscale(1);
       }
 
       &:hover + label {
@@ -174,6 +189,25 @@ input[type="checkbox"] {
     font-size: var(--theme-font-size-sm);
     font-weight: 400;
   }
+
+  &--sm {
+    font-size: var(--theme-font-size-base);
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      & + label {
+        padding-left: 0;
+        padding-right: 0;
+        border-width: 0;
+      }
+
+      &:checked + label {
+        color: var(--theme-color);
+        background: transparent;
+      }
+    }
+  }
+
 }
 
 .quiz-radio {
@@ -195,5 +229,27 @@ input[type="checkbox"] {
       color: currentColor;
 
     }
+  }
+}
+
+.quiz-text {
+  margin-bottom: 1em;
+  max-width: 100%;
+  width: 100%;
+
+  label {
+    display: block;
+  }
+
+  input {
+    width: 30ch;
+    max-width: 100%;
+    display: block;
+  }
+
+  textarea {
+    width: 100%;
+    max-width: 100%;
+    resize: none;
   }
 }
