@@ -32,12 +32,12 @@ body:has(input[value="theme--draplin"]:checked),// Just for the theme switcher e
   --theme-font-lineheight-heading:     1.33;
   --theme-font-letterspacing-heading:  -0.025em;
 
-
   --theme-accent-color: var(--theme-light-accent-color);
   --theme-border-color: var(--theme-light-border-color);
   --theme-highlight-color: var(--theme-light-highlight-color);
   --theme-highlight-bg: var(--theme-light-highlight-bg);
   --theme-border-radius: 1em;
+  --theme-btn-font-weight:      400;
 
   --theme-input-padding: 0.375em 0.5em;
 

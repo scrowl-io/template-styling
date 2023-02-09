@@ -52,45 +52,45 @@
   }
 
   &--primary {
-    --btn-color: #{$owl-ref-palette-white};
-    --btn-bg: #{$owl-ref-palette-primary-500};
-    --btn-border-color: #{$owl-ref-palette-primary-500};
-    --btn-hover-bg:  #{$owl-ref-palette-primary-600};
+    --btn-color: var(--theme-primary-color);
+    --btn-bg: var(--theme-primary-bg);
+    --btn-border-color: var(--theme-primary-border-color);
+    --btn-hover-bg: var(--theme-primary-hover-bg);
   }
 
   &--secondary {
-    --btn-color: #{$owl-ref-palette-black};
-    --btn-bg: #{$owl-ref-palette-cyan-500};
-    --btn-border-color: #{$owl-ref-palette-cyan-500};
-    --btn-hover-bg: #{$owl-ref-palette-cyan-300};
+    --btn-color: var(--theme-secondary-color);
+    --btn-bg: var(--theme-secondary-bg);
+    --btn-border-color: var(--theme-secondary-border-color);
+    --btn-hover-bg: var(--theme-secondary-hover-bg);
   }
 
-  &--dark {
-    --btn-color: #{$owl-ref-palette-white};
-    --btn-bg: #{$owl-ref-palette-gray-800};
-    --btn-border-color: #{$owl-ref-palette-gray-800};
-    --btn-hover-bg:  #{$owl-ref-palette-gray-700};
+  &--deep {
+    --btn-color: var(--theme-deep-color);
+    --btn-bg: var(--theme-deep-bg);
+    --btn-border-color: var(--theme-deep-border-color);
+    --btn-hover-bg: var(--theme-deep-hover-bg);
   }
 
   &--success {
-    --btn-color: #{$owl-ref-palette-white};
-    --btn-bg: #{$owl-ref-palette-green-500};
-    --btn-border-color: #{$owl-ref-palette-green-500};
-    --btn-hover-bg:  #{$owl-ref-palette-green-600};
+    --btn-color: var(--theme-success-color);
+    --btn-bg: var(--theme-success-bg);
+    --btn-border-color: var(--theme-success-border-color);
+    --btn-hover-bg: var(--theme-success-hover-bg);
   }
 
   &--warning {
-    --btn-color: #{$owl-ref-palette-black};
-    --btn-bg: #{$owl-ref-palette-yellow-500};
-    --btn-border-color: #{$owl-ref-palette-yellow-500};
-    --btn-hover-bg: #{$owl-ref-palette-yellow-300};
+    --btn-color: var(--theme-warning-color);
+    --btn-bg: var(--theme-warning-bg);
+    --btn-border-color: var(--theme-warning-border-color);
+    --btn-hover-bg: var(--theme-warning-hover-bg);
   }
 
   &--danger {
-    --btn-color: #{$owl-ref-palette-white};
-    --btn-bg: #{$owl-ref-palette-red-500};
-    --btn-border-color: #{$owl-ref-palette-red-500};
-    --btn-hover-bg:  #{$owl-ref-palette-red-600};
+    --btn-color: var(--theme-danger-color);
+    --btn-bg: var(--theme-danger-bg);
+    --btn-border-color: var(--theme-danger-border-color);
+    --btn-hover-bg: var(--theme-danger-hover-bg);
   }
 
   &--sm {

@@ -31,7 +31,7 @@ small {
   margin: 0 0 0.5em 0;
   line-height: var(--theme-font-lineheight-heading);
   font-family: var(--theme-font-family-heading);
-  font-weight: 700;
+  font-weight: var(--theme-font-weight-heading);
   letter-spacing: var(--theme-font-letterspacing-heading);
 }
 
