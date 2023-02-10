@@ -145,7 +145,10 @@ body:has(input[value="theme--honeycrisp"]:checked), // Just for the theme switch
   }
 
   .tmpl-content-aside .template__body__aside {
-    box-shadow: 0 0 0.125em var(--theme-accent-color), 0 0 0.25em var(--theme-accent-color), 0 0 1em var(--theme-accent-color);
+    box-shadow: 0 0 0.5em var(--theme-accent-color),
+    0 0 1em var(--theme-accent-color),
+    inset 2px 2px rgba(255,255,255,0.125),
+    inset -2px -2px rgba(0,0,0,0.25);
   }
 
   section[class*="--dark"] {
