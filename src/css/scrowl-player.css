@@ -425,6 +425,7 @@ template {
   --theme-label-font-weight: 600;
   --theme-color: var(--theme-light-color);
   --theme-bg: var(--theme-light-bg);
+  --theme-icon-color: var(--theme-light-icon-color);
   --theme-accent-color: var(--theme-light-accent-color);
   --theme-border-color: var(--theme-light-border-color);
   --theme-highlight-color: var(--theme-light-highlight-color);
@@ -433,6 +434,7 @@ template {
 :root section[class*="--alt"] {
   --theme-color: var(--theme-alt-color);
   --theme-bg: var(--theme-alt-bg);
+  --theme-icon-color: var(--theme-alt-icon-color);
   --theme-accent-color: var(--theme-alt-accent-color);
   --theme-border-color: var(--theme-alt-border-color);
   --theme-highlight-color: var(--theme-alt-highlight-color);
@@ -441,6 +443,7 @@ template {
 :root section[class*="--dark"] {
   --theme-color: var(--theme-dark-color);
   --theme-bg: var(--theme-dark-bg);
+  --theme-icon-color: var(--theme-dark-icon-color);
   --theme-accent-color: var(--theme-dark-accent-color);
   --theme-border-color: var(--theme-dark-border-color);
   --theme-highlight-color: var(--theme-dark-highlight-color);
@@ -488,10 +491,33 @@ body:has(input[value=theme--news]:checked),
   --theme-font-lineheight-base: 1.6875;
   --theme-font-lineheight-heading: 1.25;
   --theme-font-letterspacing-heading: -0.025em;
+  --theme-color: var(--theme-light-color);
+  --theme-bg: var(--theme-light-bg);
+  --theme-icon-color: var(--theme-light-icon-color);
   --theme-accent-color: var(--theme-light-accent-color);
   --theme-border-color: var(--theme-light-border-color);
   --theme-highlight-color: var(--theme-light-highlight-color);
   --theme-highlight-bg: var(--theme-light-highlight-bg);
+}
+body:has(input[value=theme--news]:checked) section[class*="--alt"],
+.theme--news section[class*="--alt"] {
+  --theme-color: var(--theme-alt-color);
+  --theme-bg: var(--theme-alt-bg);
+  --theme-icon-color: var(--theme-alt-icon-color);
+  --theme-accent-color: var(--theme-alt-accent-color);
+  --theme-border-color: var(--theme-alt-border-color);
+  --theme-highlight-color: var(--theme-alt-highlight-color);
+  --theme-highlight-bg: var(--theme-alt-highlight-bg);
+}
+body:has(input[value=theme--news]:checked) section[class*="--dark"],
+.theme--news section[class*="--dark"] {
+  --theme-color: var(--theme-dark-color);
+  --theme-bg: var(--theme-dark-bg);
+  --theme-icon-color: var(--theme-dark-icon-color);
+  --theme-accent-color: var(--theme-dark-accent-color);
+  --theme-border-color: var(--theme-dark-border-color);
+  --theme-highlight-color: var(--theme-dark-highlight-color);
+  --theme-highlight-bg: var(--theme-dark-highlight-bg);
 }
 body:has(input[value=theme--news]:checked) .template__body__title:not(.tmpl-exclude),
 .theme--news .template__body__title:not(.tmpl-exclude) {
@@ -508,6 +534,11 @@ body:has(input[value=theme--news]:checked) .template__body__title:not(.tmpl-excl
 body:has(input[value=theme--news]:checked) hr,
 .theme--news hr {
   border-bottom-width: 0.25rem;
+}
+body:has(input[value=theme--news]:checked) fieldset,
+.theme--news fieldset {
+  border-width: 4px;
+  border-style: double;
 }
 
 body:has(input[value=theme--fiesta]:checked),
@@ -533,10 +564,33 @@ body:has(input[value=theme--fiesta]:checked),
   --theme-font-lineheight-base: 1.6875;
   --theme-font-lineheight-heading: 1.45;
   --theme-font-letterspacing-heading: 0.025em;
+  --theme-color: var(--theme-light-color);
+  --theme-bg: var(--theme-light-bg);
+  --theme-icon-color: var(--theme-light-icon-color);
   --theme-accent-color: var(--theme-light-accent-color);
   --theme-border-color: var(--theme-light-border-color);
   --theme-highlight-color: var(--theme-light-highlight-color);
   --theme-highlight-bg: var(--theme-light-highlight-bg);
+}
+body:has(input[value=theme--fiesta]:checked) section[class*="--alt"],
+.theme--fiesta section[class*="--alt"] {
+  --theme-color: var(--theme-alt-color);
+  --theme-bg: var(--theme-alt-bg);
+  --theme-icon-color: var(--theme-alt-icon-color);
+  --theme-accent-color: var(--theme-alt-accent-color);
+  --theme-border-color: var(--theme-alt-border-color);
+  --theme-highlight-color: var(--theme-alt-highlight-color);
+  --theme-highlight-bg: var(--theme-alt-highlight-bg);
+}
+body:has(input[value=theme--fiesta]:checked) section[class*="--dark"],
+.theme--fiesta section[class*="--dark"] {
+  --theme-color: var(--theme-dark-color);
+  --theme-bg: var(--theme-dark-bg);
+  --theme-icon-color: var(--theme-dark-icon-color);
+  --theme-accent-color: var(--theme-dark-accent-color);
+  --theme-border-color: var(--theme-dark-border-color);
+  --theme-highlight-color: var(--theme-dark-highlight-color);
+  --theme-highlight-bg: var(--theme-dark-highlight-bg);
 }
 
 body:has(input[value=theme--draplin]:checked),
@@ -568,13 +622,36 @@ body:has(input[value=theme--draplin]:checked),
   --theme-font-lineheight-base: 1.6875;
   --theme-font-lineheight-heading: 1.33;
   --theme-font-letterspacing-heading: -0.025em;
+  --theme-border-radius: 1em;
+  --theme-btn-font-weight: 400;
+  --theme-input-padding: 0.375em 0.5em;
+  --theme-color: var(--theme-light-color);
+  --theme-bg: var(--theme-light-bg);
+  --theme-icon-color: var(--theme-light-icon-color);
   --theme-accent-color: var(--theme-light-accent-color);
   --theme-border-color: var(--theme-light-border-color);
   --theme-highlight-color: var(--theme-light-highlight-color);
   --theme-highlight-bg: var(--theme-light-highlight-bg);
-  --theme-border-radius: 1em;
-  --theme-btn-font-weight: 400;
-  --theme-input-padding: 0.375em 0.5em;
+}
+body:has(input[value=theme--draplin]:checked) section[class*="--alt"],
+.theme--draplin section[class*="--alt"] {
+  --theme-color: var(--theme-alt-color);
+  --theme-bg: var(--theme-alt-bg);
+  --theme-icon-color: var(--theme-alt-icon-color);
+  --theme-accent-color: var(--theme-alt-accent-color);
+  --theme-border-color: var(--theme-alt-border-color);
+  --theme-highlight-color: var(--theme-alt-highlight-color);
+  --theme-highlight-bg: var(--theme-alt-highlight-bg);
+}
+body:has(input[value=theme--draplin]:checked) section[class*="--dark"],
+.theme--draplin section[class*="--dark"] {
+  --theme-color: var(--theme-dark-color);
+  --theme-bg: var(--theme-dark-bg);
+  --theme-icon-color: var(--theme-dark-icon-color);
+  --theme-accent-color: var(--theme-dark-accent-color);
+  --theme-border-color: var(--theme-dark-border-color);
+  --theme-highlight-color: var(--theme-dark-highlight-color);
+  --theme-highlight-bg: var(--theme-dark-highlight-bg);
 }
 body:has(input[value=theme--draplin]:checked) .template__body__title:not(.tmpl-exclude),
 .theme--draplin .template__body__title:not(.tmpl-exclude) {
@@ -637,6 +714,27 @@ body:has(input[value=theme--reader]:checked),
   --theme-border-color: var(--theme-light-border-color);
   --theme-highlight-color: var(--theme-light-highlight-color);
   --theme-highlight-bg: var(--theme-light-highlight-bg);
+  --theme-color: var(--theme-light-color);
+  --theme-bg: var(--theme-light-bg);
+  --theme-icon-color: var(--theme-light-icon-color);
+  --theme-accent-color: var(--theme-light-accent-color);
+  --theme-border-color: var(--theme-light-border-color);
+}
+body:has(input[value=theme--reader]:checked) section[class*="--alt"],
+.theme--reader section[class*="--alt"] {
+  --theme-color: var(--theme-alt-color);
+  --theme-bg: var(--theme-alt-bg);
+  --theme-icon-color: var(--theme-alt-icon-color);
+  --theme-accent-color: var(--theme-alt-accent-color);
+  --theme-border-color: var(--theme-alt-border-color);
+}
+body:has(input[value=theme--reader]:checked) section[class*="--dark"],
+.theme--reader section[class*="--dark"] {
+  --theme-color: var(--theme-dark-color);
+  --theme-bg: var(--theme-dark-bg);
+  --theme-icon-color: var(--theme-dark-icon-color);
+  --theme-accent-color: var(--theme-dark-accent-color);
+  --theme-border-color: var(--theme-dark-border-color);
 }
 body:has(input[value=theme--reader]:checked) section[class*="--light"],
 body:has(input[value=theme--reader]:checked) section[class*="--alt"],
@@ -732,30 +830,30 @@ body:has(input[value=theme--honeycrisp]:checked),
   --theme-danger-hover-bg: #f44a41;
   --theme-light-bg: #ffffff;
   --theme-light-color: #343a40;
-  --theme-light-icon-color: #ced4da;
+  --theme-light-icon-color: #6c757d;
   --theme-light-border-color: #dee2e6;
-  --theme-light-accent-color: #922ddb;
-  --theme-light-highlight-color: #ac39ff;
+  --theme-light-accent-color: #0071e3;
+  --theme-light-highlight-color: #0071e3;
   --theme-light-highlight-bg: transparent;
   --theme-alt-bg: #111;
   --theme-alt-color: #ffffff;
   --theme-alt-icon-color: #86868b;
   --theme-alt-border-color: #6e6e73;
-  --theme-alt-accent-color: #922ddb;
-  --theme-alt-highlight-color: #ac39ff;
+  --theme-alt-accent-color: #ac39ff;
+  --theme-alt-highlight-color: #922ddb;
   --theme-alt-highlight-bg: transparent;
   --theme-dark-bg: #000000;
   --theme-dark-color: #cecece;
   --theme-dark-icon-color: #86868b;
   --theme-dark-border-color: #6e6e73;
-  --theme-dark-accent-color: #922ddb;
+  --theme-dark-accent-color: #ac39ff;
   --theme-dark-highlight-color: #ac39ff;
   --theme-dark-highlight-bg: transparent;
   --theme-font-family-base: -apple-system, BlinkMacSystemFont, sans-serif;
   --theme-font-family-heading: -apple-system-headline, -apple-system, BlinkMacSystemFont, sans-serif;
   --theme-font-lineheight-base: 1.6875;
   --theme-font-lineheight-heading: 1.25;
-  --theme-font-letterspacing-heading: -0.025em;
+  --theme-font-letterspacing-heading: -0.033em;
   --theme-font-weight-heading: 800;
   --theme-border-radius: 0.5em;
   --theme-btn-font-weight: 400;
@@ -764,6 +862,7 @@ body:has(input[value=theme--honeycrisp]:checked),
   --theme-btn-border-radius-lg: var(--theme-border-radius-pill);
   --theme-color: var(--theme-light-color);
   --theme-bg: var(--theme-light-bg);
+  --theme-icon-color: var(--theme-light-icon-color);
   --theme-accent-color: var(--theme-light-accent-color);
   --theme-border-color: var(--theme-light-border-color);
   --theme-highlight-color: var(--theme-light-highlight-color);
@@ -773,6 +872,7 @@ body:has(input[value=theme--honeycrisp]:checked) section[class*="--alt"],
 .theme--honeycrisp section[class*="--alt"] {
   --theme-color: var(--theme-alt-color);
   --theme-bg: var(--theme-alt-bg);
+  --theme-icon-color: var(--theme-alt-icon-color);
   --theme-accent-color: var(--theme-alt-accent-color);
   --theme-border-color: var(--theme-alt-border-color);
   --theme-highlight-color: var(--theme-alt-highlight-color);
@@ -782,6 +882,7 @@ body:has(input[value=theme--honeycrisp]:checked) section[class*="--dark"],
 .theme--honeycrisp section[class*="--dark"] {
   --theme-color: var(--theme-dark-color);
   --theme-bg: var(--theme-dark-bg);
+  --theme-icon-color: var(--theme-dark-icon-color);
   --theme-accent-color: var(--theme-dark-accent-color);
   --theme-border-color: var(--theme-dark-border-color);
   --theme-highlight-color: var(--theme-dark-highlight-color);
@@ -791,7 +892,56 @@ body:has(input[value=theme--honeycrisp]:checked) .btn:not(:focus),
 .theme--honeycrisp .btn:not(:focus) {
   outline-width: 0;
 }
+body:has(input[value=theme--honeycrisp]:checked) .section--bg .template__body :is(h1, h2, h3, h4, h5, h6) span,
+body:has(input[value=theme--honeycrisp]:checked) .section--bg .template__body figcaption,
+.theme--honeycrisp .section--bg .template__body :is(h1, h2, h3, h4, h5, h6) span,
+.theme--honeycrisp .section--bg .template__body figcaption {
+  text-shadow: 0 0 0.125em var(--section-bg), 0 0 0.25em var(--section-bg), 0 0 0.5em var(--section-bg);
+  background: transparent;
+  box-shadow: none;
+}
+body:has(input[value=theme--honeycrisp]:checked) .section--bg .template__body__content > :is(ol, ul, p, figure, sectionquote, dl),
+.theme--honeycrisp .section--bg .template__body__content > :is(ol, ul, p, figure, sectionquote, dl) {
+  text-shadow: 0 0 0.125em var(--section-bg), 0 0 0.25em var(--section-bg), 0 0 0.5em var(--section-bg);
+  background: transparent;
+  box-shadow: none;
+}
+body:has(input[value=theme--honeycrisp]:checked) .tmpl-content-aside .template__body__aside,
+.theme--honeycrisp .tmpl-content-aside .template__body__aside {
+  box-shadow: 0 0 0.125em var(--theme-accent-color), 0 0 0.25em var(--theme-accent-color), 0 0 1em var(--theme-accent-color);
+}
+body:has(input[value=theme--honeycrisp]:checked) section[class*="--dark"] .h1,
+body:has(input[value=theme--honeycrisp]:checked) section[class*="--dark"] .h2,
+body:has(input[value=theme--honeycrisp]:checked) section[class*="--dark"] .h3,
+.theme--honeycrisp section[class*="--dark"] .h1,
+.theme--honeycrisp section[class*="--dark"] .h2,
+.theme--honeycrisp section[class*="--dark"] .h3 {
+  color: #ffffff;
+}
+body:has(input[value=theme--honeycrisp]:checked) .h1,
+.theme--honeycrisp .h1 {
+  line-height: 0.9;
+}
 
+@supports (font-size: clamp(1rem, 1vmin, 1rem)) {
+  body:has(input[value=theme--honeycrisp]:checked),
+.theme--honeycrisp {
+    --theme-font-size-3xl: clamp(3.338rem, 5.407vw + 1.986rem, 6.312rem);
+  }
+}
+/* Fallback variables for browsers that don't support clamp */
+@supports not (font-size: clamp(1rem, 1vmin, 1rem)) {
+  body:has(input[value=theme--honeycrisp]:checked),
+.theme--honeycrisp {
+    --theme-font-size-3xl: 3.338rem;
+  }
+  @media screen and (min-width: 1280px) {
+    body:has(input[value=theme--honeycrisp]:checked),
+.theme--honeycrisp {
+      --theme-font-size-3xl: 6.312rem;
+    }
+  }
+}
 .row {
   --grid-gutter-x: 1.5rem;
   --grid-gutter-y: 0;
@@ -2586,6 +2736,7 @@ section {
 }
 .tmpl-styled-list .template__body__content ol,
 .tmpl-styled-list .template__body__content ul {
+  padding: var(--theme-spacer-sm) 0 0 0;
   -moz-column-fill: balance;
        column-fill: balance;
   -moz-column-count: var(--list-columns);
@@ -2601,7 +2752,6 @@ section {
 }
 .tmpl-styled-list .template__body__content ol {
   list-style: none;
-  padding: 0;
 }
 .tmpl-styled-list .template__body__content ol li {
   display: flex;
@@ -2630,7 +2780,6 @@ section {
 }
 .tmpl-styled-list .template__body__content ul {
   list-style: none;
-  padding: 0;
 }
 .tmpl-styled-list .template__body__content ul li {
   display: flex;
@@ -2662,7 +2811,7 @@ section {
 }
 .tmpl-icon-list .template__body__content ul {
   list-style: none;
-  padding: 0;
+  padding: var(--theme-spacer-sm) 0 0 0;
 }
 .tmpl-icon-list .template__body__content ul li {
   display: flex;
@@ -2787,6 +2936,9 @@ section {
   .tmpl-half-photo .template__background {
     right: calc(50% + 2rem);
   }
+}
+.tmpl-half-photo .template__body__content {
+  margin-bottom: 2rem;
 }
 
 .tmpl-quiz fieldset {

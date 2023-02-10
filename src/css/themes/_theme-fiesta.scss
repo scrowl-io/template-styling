@@ -27,9 +27,31 @@ body:has(input[value="theme--fiesta"]:checked),// Just for the theme switcher ex
   --theme-font-lineheight-heading:     1.45;
   --theme-font-letterspacing-heading:  0.025em;
 
-  --theme-accent-color: var(--theme-light-accent-color);
-  --theme-border-color: var(--theme-light-border-color);
-  --theme-highlight-color: var(--theme-light-highlight-color);
-  --theme-highlight-bg: var(--theme-light-highlight-bg);
+  --theme-color:                var(--theme-light-color);
+  --theme-bg:                   var(--theme-light-bg);
+  --theme-icon-color:           var(--theme-light-icon-color);
+  --theme-accent-color:         var(--theme-light-accent-color);
+  --theme-border-color:         var(--theme-light-border-color);
+  --theme-highlight-color:      var(--theme-light-highlight-color);
+  --theme-highlight-bg:         var(--theme-light-highlight-bg);
 
+  section[class*="--alt"]{
+    --theme-color:           var(--theme-alt-color);
+    --theme-bg:              var(--theme-alt-bg);
+    --theme-icon-color:      var(--theme-alt-icon-color);
+    --theme-accent-color:    var(--theme-alt-accent-color);
+    --theme-border-color:    var(--theme-alt-border-color);
+    --theme-highlight-color: var(--theme-alt-highlight-color);
+    --theme-highlight-bg:    var(--theme-alt-highlight-bg);
+  }
+
+  section[class*="--dark"]{
+    --theme-color:           var(--theme-dark-color);
+    --theme-bg:              var(--theme-dark-bg);
+    --theme-icon-color:      var(--theme-dark-icon-color);
+    --theme-accent-color:    var(--theme-dark-accent-color);
+    --theme-border-color:    var(--theme-dark-border-color);
+    --theme-highlight-color: var(--theme-dark-highlight-color);
+    --theme-highlight-bg:    var(--theme-dark-highlight-bg);
+  }
 }

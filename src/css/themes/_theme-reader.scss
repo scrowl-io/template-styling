@@ -46,6 +46,28 @@ body:has(input[value="theme--reader"]:checked), // Just for the theme switcher e
   --theme-highlight-color: var(--theme-light-highlight-color);
   --theme-highlight-bg: var(--theme-light-highlight-bg);
 
+  // Apply to all Themes
+  --theme-color:                var(--theme-light-color);
+  --theme-bg:                   var(--theme-light-bg);
+  --theme-icon-color:           var(--theme-light-icon-color);
+  --theme-accent-color:         var(--theme-light-accent-color);
+  --theme-border-color:         var(--theme-light-border-color);
+
+  section[class*="--alt"]{
+    --theme-color:           var(--theme-alt-color);
+    --theme-bg:              var(--theme-alt-bg);
+    --theme-icon-color:      var(--theme-alt-icon-color);
+    --theme-accent-color:    var(--theme-alt-accent-color);
+    --theme-border-color:    var(--theme-alt-border-color);
+  }
+
+  section[class*="--dark"]{
+    --theme-color:           var(--theme-dark-color);
+    --theme-bg:              var(--theme-dark-bg);
+    --theme-icon-color:      var(--theme-dark-icon-color);
+    --theme-accent-color:    var(--theme-dark-accent-color);
+    --theme-border-color:    var(--theme-dark-border-color);
+  }
   section[class*="--light"],
   section[class*="--alt"],
   section[class*="--dark"] {

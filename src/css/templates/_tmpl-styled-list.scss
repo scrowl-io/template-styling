@@ -25,6 +25,7 @@
 
       ol,
       ul {
+        padding: var(--theme-spacer-sm) 0 0 0;
         column-fill: balance;
         column-count: var(--list-columns);
         column-width: var(--list-columns-width);
@@ -37,7 +38,6 @@
 
       ol {
         list-style: none;
-        padding: 0;
 
         li {
           display: flex;
@@ -68,7 +68,6 @@
 
       ul {
         list-style: none;
-        padding: 0;
 
         li {
           display: flex;

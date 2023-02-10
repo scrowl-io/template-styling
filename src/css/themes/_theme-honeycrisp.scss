@@ -37,25 +37,25 @@ body:has(input[value="theme--honeycrisp"]:checked), // Just for the theme switch
 
   --theme-light-bg:               #ffffff;
   --theme-light-color:            #{$owl-ref-palette-gray-800};
-  --theme-light-icon-color:       #{$owl-ref-palette-gray-400};
+  --theme-light-icon-color:       #{$owl-ref-palette-gray-600};
   --theme-light-border-color:     #{$owl-ref-palette-gray-300};
-  --theme-light-accent-color:     #922ddb;
-  --theme-light-highlight-color:  #ac39ff;
+  --theme-light-accent-color:     #0071e3;
+  --theme-light-highlight-color:  #0071e3;
   --theme-light-highlight-bg:     transparent;
 
   --theme-alt-bg:                 #111;
   --theme-alt-color:              #ffffff;
   --theme-alt-icon-color:         #86868b;
   --theme-alt-border-color:       #6e6e73;
-  --theme-alt-accent-color:       #922ddb;
-  --theme-alt-highlight-color:    #ac39ff;
+  --theme-alt-accent-color:       #ac39ff;
+  --theme-alt-highlight-color:    #922ddb;
   --theme-alt-highlight-bg:       transparent;
 
   --theme-dark-bg:                #000000;
   --theme-dark-color:             #cecece;
   --theme-dark-icon-color:        #86868b;
   --theme-dark-border-color:      #6e6e73;
-  --theme-dark-accent-color:      #922ddb;
+  --theme-dark-accent-color:      #ac39ff;
   --theme-dark-highlight-color:   #ac39ff;
   --theme-dark-highlight-bg:      transparent;
 
@@ -63,7 +63,7 @@ body:has(input[value="theme--honeycrisp"]:checked), // Just for the theme switch
   --theme-font-family-heading:         -apple-system-headline, -apple-system, BlinkMacSystemFont, sans-serif;
   --theme-font-lineheight-base:        #{$owl-ref-typeface-lineheight-base};
   --theme-font-lineheight-heading:     #{$owl-ref-typeface-lineheight-sm};
-  --theme-font-letterspacing-heading:  -0.025em;
+  --theme-font-letterspacing-heading:  -0.033em;
   --theme-font-weight-heading:         800;
 
   // --theme-color:                var(--theme-light-color);
@@ -93,8 +93,10 @@ body:has(input[value="theme--honeycrisp"]:checked), // Just for the theme switch
   // --theme-input-padding-lg:       0.33em;
   // --theme-label-font-weight:      600;
 
+  // Apply to all Themes
   --theme-color:                var(--theme-light-color);
   --theme-bg:                   var(--theme-light-bg);
+  --theme-icon-color:           var(--theme-light-icon-color);
   --theme-accent-color:         var(--theme-light-accent-color);
   --theme-border-color:         var(--theme-light-border-color);
   --theme-highlight-color:      var(--theme-light-highlight-color);
@@ -103,6 +105,7 @@ body:has(input[value="theme--honeycrisp"]:checked), // Just for the theme switch
   section[class*="--alt"]{
     --theme-color:           var(--theme-alt-color);
     --theme-bg:              var(--theme-alt-bg);
+    --theme-icon-color:      var(--theme-alt-icon-color);
     --theme-accent-color:    var(--theme-alt-accent-color);
     --theme-border-color:    var(--theme-alt-border-color);
     --theme-highlight-color: var(--theme-alt-highlight-color);
@@ -112,6 +115,7 @@ body:has(input[value="theme--honeycrisp"]:checked), // Just for the theme switch
   section[class*="--dark"]{
     --theme-color:           var(--theme-dark-color);
     --theme-bg:              var(--theme-dark-bg);
+    --theme-icon-color:      var(--theme-dark-icon-color);
     --theme-accent-color:    var(--theme-dark-accent-color);
     --theme-border-color:    var(--theme-dark-border-color);
     --theme-highlight-color: var(--theme-dark-highlight-color);
@@ -120,5 +124,61 @@ body:has(input[value="theme--honeycrisp"]:checked), // Just for the theme switch
 
   .btn:not(:focus) {
     outline-width: 0;
+  }
+
+  .section--bg {
+    .template__body {
+      // This targets the top level elements of the section, and the spans directly inside of them to give them a background color when section--bg is in use.
+      & :is(h1,h2,h3,h4,h5,h6) span,
+      figcaption {
+        text-shadow: 0 0 0.125em var(--section-bg), 0 0 0.25em var(--section-bg), 0 0 0.5em var(--section-bg);
+        background: transparent;
+        box-shadow: none;
+      }
+    }
+
+    .template__body__content > :is(ol, ul, p, figure, sectionquote, dl) {
+      text-shadow: 0 0 0.125em var(--section-bg), 0 0 0.25em var(--section-bg), 0 0 0.5em var(--section-bg);
+      background: transparent;
+      box-shadow: none;
+    }
+  }
+
+  .tmpl-content-aside .template__body__aside {
+    box-shadow: 0 0 0.125em var(--theme-accent-color), 0 0 0.25em var(--theme-accent-color), 0 0 1em var(--theme-accent-color);
+  }
+
+  section[class*="--dark"] {
+    .h1,
+    .h2,
+    .h3 {
+      color: #ffffff;
+    }
+  }
+
+  .h1 {
+    line-height: 0.9;
+  }
+}
+
+// Make largest font size 1 level larger
+@supports (font-size: clamp(1rem, 1vmin, 1rem)) {
+  body:has(input[value="theme--honeycrisp"]:checked), // Just for the theme switcher example page
+  .theme--honeycrisp {
+    --theme-font-size-3xl: clamp(3.338rem, 5.407vw + 1.986rem, 6.312rem);
+  }
+}
+/* Fallback variables for browsers that don't support clamp */
+@supports not (font-size: clamp(1rem, 1vmin, 1rem)) {
+  body:has(input[value="theme--honeycrisp"]:checked), // Just for the theme switcher example page
+  .theme--honeycrisp {
+    --theme-font-size-3xl: 3.338rem;
+  }
+
+  @media screen and (min-width: 1280px) {
+    body:has(input[value="theme--honeycrisp"]:checked), // Just for the theme switcher example page
+    .theme--honeycrisp {
+      --theme-font-size-3xl: 6.312rem;
+    }
   }
 }
