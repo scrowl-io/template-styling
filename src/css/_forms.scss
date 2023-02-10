@@ -1,5 +1,25 @@
 // Form Elements
 
+// Stop zoom on mobile
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  font-size: 16px;
+}
+
 form {
   padding: var(--theme-spacer-sm);
 }
@@ -32,7 +52,6 @@ textarea {
   font-size: 16px;
   border: var(--theme-border-color) solid 2px;
   border-radius: var(--theme-border-radius);
-
 
   &:focus:not(:focus-visible)  {
     border-color: var(--theme-accent-color);
@@ -84,7 +103,6 @@ input[type="checkbox"] {
 .quiz-checkbox {
   max-width: 100%;
   font-size: var(--theme-font-size-md);
-
 
   &:focus-within {
     outline: 2px var(--theme-accent-color);
