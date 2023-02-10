@@ -910,6 +910,10 @@ body:has(input[value=theme--honeycrisp]:checked) .tmpl-content-aside .template__
 .theme--honeycrisp .tmpl-content-aside .template__body__aside {
   box-shadow: 0 0 1em var(--theme-accent-color), inset 2px 2px rgba(255, 255, 255, 0.125), inset -2px -2px rgba(0, 0, 0, 0.25);
 }
+body:has(input[value=theme--honeycrisp]:checked) section[class*="--alt"].tmpl-content-aside,
+.theme--honeycrisp section[class*="--alt"].tmpl-content-aside {
+  --aside-color: #000;
+}
 body:has(input[value=theme--honeycrisp]:checked) section[class*="--dark"] .h1,
 body:has(input[value=theme--honeycrisp]:checked) section[class*="--dark"] .h2,
 body:has(input[value=theme--honeycrisp]:checked) section[class*="--dark"] .h3,
