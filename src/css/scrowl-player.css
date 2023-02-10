@@ -908,7 +908,7 @@ body:has(input[value=theme--honeycrisp]:checked) .section--bg .template__body__c
 }
 body:has(input[value=theme--honeycrisp]:checked) .tmpl-content-aside .template__body__aside,
 .theme--honeycrisp .tmpl-content-aside .template__body__aside {
-  box-shadow: 0 0 0.5em var(--theme-accent-color), 0 0 1em var(--theme-accent-color), inset 2px 2px rgba(255, 255, 255, 0.125), inset -2px -2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 1em var(--theme-accent-color), inset 2px 2px rgba(255, 255, 255, 0.125), inset -2px -2px rgba(0, 0, 0, 0.25);
 }
 body:has(input[value=theme--honeycrisp]:checked) section[class*="--dark"] .h1,
 body:has(input[value=theme--honeycrisp]:checked) section[class*="--dark"] .h2,
@@ -2193,7 +2193,7 @@ input[type=text],
 input[type=email],
 textarea {
   padding: var(--theme-input-padding);
-  font-size: var(--theme-font-size-base);
+  font-size: 16px;
   border: var(--theme-border-color) solid 2px;
   border-radius: var(--theme-border-radius);
 }
@@ -2216,7 +2216,6 @@ textarea:focus-visible {
 .form--sm input[type=email],
 .form--sm textarea {
   padding: var(--theme-input-padding-sm);
-  font-size: var(--theme-font-size-sm);
   border-radius: var(--theme-border-radius-sm);
 }
 
@@ -2226,7 +2225,6 @@ textarea:focus-visible {
 .form--lg input[type=text] input[type=email],
 .form--lg textarea {
   padding: var(--theme-input-padding-lg);
-  font-size: var(--theme-font-size-md);
 }
 
 input[type=radio] ~ label:after,

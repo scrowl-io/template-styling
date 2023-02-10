@@ -29,9 +29,10 @@ input[type="text"],
 input[type="email"],
 textarea {
   padding: var(--theme-input-padding);
-  font-size: var(--theme-font-size-base);
+  font-size: 16px;
   border: var(--theme-border-color) solid 2px;
   border-radius: var(--theme-border-radius);
+
 
   &:focus:not(:focus-visible)  {
     border-color: var(--theme-accent-color);
@@ -53,7 +54,6 @@ textarea {
   input[type="email"],
   textarea {
     padding: var(--theme-input-padding-sm);
-    font-size: var(--theme-font-size-sm);
     border-radius: var(--theme-border-radius-sm);
   }
 }
@@ -67,7 +67,6 @@ textarea {
   input[type="email"],
   textarea {
     padding: var(--theme-input-padding-lg);
-    font-size: var(--theme-font-size-md);
   }
 }
 
