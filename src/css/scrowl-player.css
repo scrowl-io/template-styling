@@ -922,6 +922,14 @@ body:has(input[value=theme--honeycrisp]:checked) section[class*="--dark"] .h3,
 .theme--honeycrisp section[class*="--dark"] .h3 {
   color: #ffffff;
 }
+body:has(input[value=theme--honeycrisp]:checked) section[class*="--dark"] .h1,
+.theme--honeycrisp section[class*="--dark"] .h1 {
+  line-height: 1.2;
+  background: linear-gradient(-30deg, var(--theme-secondary-bg), #fff);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 body:has(input[value=theme--honeycrisp]:checked) .h1,
 .theme--honeycrisp .h1 {
   line-height: 0.9;

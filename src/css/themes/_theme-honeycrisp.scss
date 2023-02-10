@@ -162,6 +162,13 @@ body:has(input[value="theme--honeycrisp"]:checked), // Just for the theme switch
     .h3 {
       color: #ffffff;
     }
+
+    .h1 {
+      line-height: 1.2;
+      background: linear-gradient(-30deg, var(--theme-secondary-bg),#fff );
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   .h1 {
